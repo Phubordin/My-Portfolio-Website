@@ -1,0 +1,131 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phubordin's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="certificate-style.css">
+</head>
+
+<div class="theme-switch-wrapper">
+    <!-- ปุ่ม Blur Background -->
+    <label class="switch">
+        <span><img src="darkmode4.png" width="30" class="notion-icon"></span>
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+        <span class="switch-label"></span>
+    </label>
+</div>
+
+<div class="theme-switch1-wrapper">
+    <!-- ปุ่ม Blur Background -->
+    <label class="switch1">
+        <img src="focus.png" width="30" class="notion-icon">
+        <input type="checkbox" id="blur-toggle">
+        <span class="slider1"></span>
+        <span class="switch-label1"></span>
+    </label>
+</div>
+
+<!-- Table of Contents -->
+<button id="toggle-toc-btn">≡</button>
+<aside id="table-of-contents" class="active">
+    <h3>Navigation Menu</h3>
+    <ul id="toc-list"></ul>
+</aside>
+
+<body class="fade-slide-in home-page">
+    <header>
+        <div class= "header-background"></div>
+        <h2>I am a Junior <span class= "strong1">Data Analyst.</span></h2>
+    </header>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
+            <li><a href="home.html">🏠 Home</a></li> <!-- Home Tab with House Emoji -->
+            <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li> <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
+            <!-- Work Experience Dropdown -->
+            <li class="dropdown">
+                <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
+                <ul class="dropdown-menu">
+                    <li><a href="experience_leowood.html" onclick="navigateToExperience_Leowood()">Job 1</a></li>
+                    <li><a href="experience_arrow.html" onclick="navigateToExperience_Arrow()">Job 2</a></li>
+                </ul>
+            </li>
+
+            <!-- Projects Dropdown -->
+            <li class="dropdown">
+                <a href="projects.html" onclick="navigateToProject()">Project Overview</a>
+                <ul class="dropdown-menu">
+                    <li><a href="project_DB.html" onclick="navigateToProject_DB()" >Project 1</a></li>
+                    <li><a href="project_pyc.html" onclick="navigateToProject_PYC()">Project 2</a></li>
+                </ul>
+            </li>
+            <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li>
+            <li><a href="contact.html" onclick="navigateToContact()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="hover-expand" onclick="navigateToAbout()">
+        
+        <h2>About Me</h2>
+        
+        <ul>
+            <li>Timeline (เส้นทางรถไฟฟ้า) เรียนจบที่ไหน - ทำงานอะไร (10 เดือน)</li>
+            <li>ชื่อ-นามสกุล เกิดปี (อายุ) ปัจจุบันอยู่จังหวัด</li>
+            <li>Skills Knowledge Tools</li>
+            <li>เป็นคนยังไง</li>
+            <li>เป้าหมายในการทำงาน ระยะสั้น, ระยะยาว</li>
+        </ul>
+
+    </section>
+
+    <section id="experience" class="hover-expand">
+        <h2>Work Experiences</h2>
+    
+        <div class="experience">
+            <h3>Data Analyst</h3>
+            <p>Leowood Intertrade Co Ltd. <span class="date-info" data-space="80"><i>Jul 2023 - Apr 2024 (10 Months)</i></span></p>
+        </div>
+    
+        <div class="experience">
+            <h3>Internship</h3>
+            <p>Arrow IT Systems Co Ltd. <span class="date-info" data-space="50"><i>Jan 2022 - Jun 2022 (6 Months)</i></span></p>
+        </div>
+
+    </section>
+
+    <section id="projects" class="hover-expand" onclick="navigateToProject()">
+        <h2>Project Overview</h2>
+        <div class="project hover-expand" onclick="navigateToProject_DB1()">
+            <h3>Data Visualization of Store Dataset</h3>
+            <p>Built an interactive dashboard using Power BI...</p>
+        </div>
+        <div class="project">
+            <h3>Customer Segmentation</h3>
+            <p>Applied Machine Learning to analyze customer behavior...</p>
+        </div>
+    </section>
+
+    <section id="certificate" class="hover-expand" onclick="navigateToCertificate()">
+        <h2>Certificates</h2>
+        <p><a href="#">DataRockie School</a></p>
+        <p><a href="#">W3Schools</a></p>
+        <p><a href="#">Skooldio</a></p>
+        <p><a href="#">FutureSkill</a></p>
+    </section>
+
+    <section id="contact" class="hover-expand" onclick="navigateToContact()">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:phubordin@example.com">phubordin@example.com</a></p>
+        <p>LinkedIn: <a href="#">linkedin.com/in/phubordin</a></p>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="certificate-script.js"></script>
+</body>
+</html>

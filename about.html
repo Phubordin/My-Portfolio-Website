@@ -1,0 +1,154 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Phubordin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div class="theme-switch-wrapper">
+    <!-- ปุ่ม Blur Background -->
+    <label class="switch">
+        <span><img src="darkmode4.png" width="30" class="notion-icon"></span>
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+        <span class="switch-label"></span>
+    </label>
+</div>
+
+<div class="theme-switch1-wrapper">
+    <!-- ปุ่ม Blur Background -->
+    <label class="switch1">
+        <img src="focus.png" width="30" class="notion-icon">
+        <input type="checkbox" id="blur-toggle">
+        <span class="slider1"></span>
+        <span class="switch-label1"></span>
+    </label>
+</div>
+
+<!-- Table of Contents -->
+<button id="toggle-toc-btn">≡</button>
+<aside id="table-of-contents" class="active">
+    <h3>Navigation Menu</h3>
+    <ul id="toc-list"></ul>
+</aside>
+
+<body class="fade-slide-in">
+    <header>
+        <div class="header-background"></div>
+        <h2 class="strong1">About me.</h2>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
+            <li><a href="home.html" onclick="navigateToHome()">🏠 Home</a></li>
+            <li><a href="about.html" class="active" onclick="scrollToTop(event)">About Me</a></li>
+            <!-- Work Experience Dropdown -->
+            <li class="dropdown">
+                <a href="#experience">Work Experience</a>
+                <ul class="dropdown-menu">
+                    <li><a href="experience1.html">Job 1</a></li>
+                    <li><a href="experience2.html">Job 2</a></li>
+                </ul>
+            </li>
+
+            <!-- Projects Dropdown -->
+            <li class="dropdown">
+                <a href="#projects" onclick="navigateToProject()">Project Overview</a>
+                <ul class="dropdown-menu">
+                    <li><a href="project_DB.html" onclick="navigateToProject_DB()" >Project 1</a></li>
+                    <li><a href="project2.html">Project 2</a></li>
+                </ul>
+            </li>
+            <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li>
+            <li><a href="contact.html" onclick="navigateToContact()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about-details">
+        <h2>Profile</h2>
+
+        <div class="iframe-container">
+            <iframe 
+                width="582" 
+                height="580" 
+                src="https://drive.google.com/file/d/14XK5drSbl_PcUmPNxcQGzXZkE4vHSqob/preview" 
+                frameborder="0" style="border:0" 
+                allowfullscreen
+                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+            </iframe>
+        </div>
+
+        <p>Hello! I'm Phu, a data analyst passionate about turning raw data into meaningful insights.
+            I have experience in data visualization, machine learning, and database management.
+            Currently looking for opportunities in data analytics, where I can leverage my skills to solve business problems.
+        </p>
+    
+        <h3>Skills & Expertise</h3>
+        <ul>
+            <li>📊 Data Analysis (Python, R, SQL, Excel)</li>
+            <li>📈 Data Visualization (Power BI, Tableau, Matplotlib, Seaborn)</li>
+            <li>🧠 Machine Learning (Scikit-Learn, TensorFlow, Statistics)</li>
+            <li>🗄️ Database Management (SQL, PostgreSQL, MySQL)</li>
+        </ul>
+
+        <h3>Personal Interests</h3>
+        <p>Outside of work, I enjoy coding, exploring new technology, and traveling. I also love Japanese culture, especially convenience stores like Lawson and FamilyMart!</p>
+    </section>
+
+    <section id="timeline">
+        <h2>Career TimeLine</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="content">
+                    <h3>Jul 2023 - Apr 2024</h3>
+                    <p><b>Data Analyst (10 Months)</b></p>
+                    <p>Leowood Intertrade Co Ltd.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="content">
+                    <h3>Jan 2022 - Jun 2022</h3>
+                    <p><b>Project Internship (6 Months)</b></p>
+                    <p>Arrow IT Co Ltd.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="content">
+                    <h3>Aug 2018 - Jun 2022</h3>
+                    <p><b>Applied Mathematics Student (4 years)</b></p>
+                    <p>King Mongkut's University of Technology North Bangkok (KMUTNB).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+
+    <section id = "resume">
+        <h2 style="text-align: left; margin-top: 10px;">
+            Resume :
+            <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing" class="download-btn">
+                📥 
+            </a>
+        </h2>
+        <iframe 
+            width="100%" 
+            height="1110px"
+            src="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/preview"
+            frameborder="0" style="border:0" 
+            allowfullscreen 
+            loading="lazy" 
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+        </iframe>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
