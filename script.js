@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 localStorage.setItem("theme", "light");
             }
             document.body.classList.remove("no-transition");
-        }, 50); // หน่วงเวลาสั้น ๆ ให้ transition ทำงานได้
+        }, 100); // หน่วงเวลาสั้น ๆ ให้ transition ทำงานได้
     }
 
     function setBlur(isBlurred) {
@@ -49,6 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // โหลดค่าเริ่มต้นจาก Local Storage
     const savedTheme = localStorage.getItem("theme");
     setTheme(savedTheme === "dark");
+
+    if (themeToggle) {
+        themeToggle.checked = savedTheme === "dark"; // ✅ เพิ่มโค้ดนี้เพื่อให้ switch อยู่ในสถานะที่ถูกต้อง
+    }
 
     const savedBlur = localStorage.getItem("blurState") === "on";
     if (blurToggle) {
