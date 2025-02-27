@@ -16,17 +16,6 @@ body {
     overflow-x: hidden;
     cursor: url('cursor.png'), auto;
     background-image: var(--body-bg);
-    transition: opacity 0.8s ease-in-out;
-    opacity: 1;
-}
-
-.body::after {
-    transition: opacity 0.8s ease-in-out;
-}
-
-
-.dark-mode .body::after::after {
-    background-image: url('mac.webp');
     opacity: 1;
 }
 
@@ -35,11 +24,6 @@ body.blur {
     backdrop-filter: blur(8px);
     opacity: 0.8;
     -webkit-backdrop-filter: blur(8px);
-}
-
-/* ✅ แก้ไข transition ให้ทำงานเสมอ แม้เปิด blur */
-body:not(.no-transition) {
-    transition: opacity 0.8s ease-in-out;
 }
 
 /* ป้องกัน transition ตอนโหลดหน้า */
@@ -94,7 +78,6 @@ header {
     background-position: center 43.5%;
     opacity: 1;
     z-index: -1;
-    transition: opacity 0.8s ease-in-out;
 }
 
 .header-background::after {
@@ -110,10 +93,6 @@ header {
     pointer-events: none;
 }
 
-.dark-mode .header-background::after {
-    background-image: url('sunset.webp');
-    opacity: 1;
-}
 
 /* Navigation Bar ------------------------------------------------------------------------------------------------*/
 nav {
