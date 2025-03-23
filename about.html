@@ -1,15 +1,28 @@
 <!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MKCCGG3QF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0MKCCGG3QF');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Phubordin</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="certificate-style.css">
+    <link rel="icon" type="image/png" href="website.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 
 <div class="theme-switch-wrapper">
-    <!-- ปุ่ม Blur Background -->
+    <!-- ปุ่ม body Background -->
     <label class="switch">
         <span><img src="darkmode4.png" width="30" class="notion-icon"></span>
         <input type="checkbox" id="theme-toggle">
@@ -31,37 +44,68 @@
 <!-- Table of Contents -->
 <button id="toggle-toc-btn">≡</button>
 <aside id="table-of-contents" class="active">
-    <h3>Navigation Menu</h3>
+    <h3 class="link-cursor">Navigation Menu</h3>
     <ul id="toc-list"></ul>
 </aside>
 
-<body class="fade-slide-in">
+<body class="fade-slide-in about-page">
     <header>
         <div class="header-background"></div>
-        <h2 class="strong1">About me.</h2>
+        <div class="strong1 link-cursor" style="font-size: 1.5em; font-weight: bold;">About me</div>
     </header>
 
     <!-- Navigation Bar -->
     <nav>
         <ul>
             <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
-            <li><a href="home.html" onclick="navigateToHome()">🏠 Home</a></li>
+            <li><a href="home.html" onclick="navigateToHome()">🏠 Home </a></li> <!-- Home Tab with House Emoji -->
             <li><a href="about.html" class="active" onclick="scrollToTop(event)">About Me</a></li>
+            <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
             <!-- Work Experience Dropdown -->
-            <li class="dropdown">
-                <a href="#experience">Work Experience</a>
-                <ul class="dropdown-menu">
-                    <li><a href="experience1.html">Job 1</a></li>
-                    <li><a href="experience2.html">Job 2</a></li>
+            <li class="dropdown1">
+                <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
+                <ul class="dropdown-menu1">
+                    <li><a onclick="navigateToExperience_leowood()">Leowood Intertrade Co Ltd. </a></li>
+                    <li><a onclick="navigateToExperience_arrow()">Arrow IT Systems Co Ltd.</a></li>
                 </ul>
             </li>
 
             <!-- Projects Dropdown -->
             <li class="dropdown">
-                <a href="#projects" onclick="navigateToProject()">Project Overview</a>
+                <a href="projects.html" onclick="navigateToProject()">Project Overview</a>
                 <ul class="dropdown-menu">
-                    <li><a href="project_DB.html" onclick="navigateToProject_DB()" >Project 1</a></li>
-                    <li><a href="project2.html">Project 2</a></li>
+                    <li><a onclick="navigateToProject_ggsheet_dsb10()">P1 : Data Exploration and Transformation with
+                            <img src="sheets.png" style="vertical-align:middle" width="25"> Google Sheets</a></li>
+                    <li><a onclick="navigateToProject_cafe_r_sql_dsb10()">P2 : Building a Café Restaurant Database
+                            Using  <img src="R.png" style="vertical-align:middle" width="25"> R and <img src="SQL.png"
+                                style="vertical-align:middle" width="25"> SQL</a></li>
+                    <li><a onclick="navigateToProject_rfm_py_dsb10()">P3 : Customer Segmentation and RFM Analysis Using
+                            <img src="python.png" style="vertical-align:middle" width="25">Python and <img src="R.png"
+                                style="vertical-align:middle" width="25"> R for Strategic Business Insight</a></li>
+                    <li><a onclick="navigateToProject_pyc_r_py_dsb10()">P4 : Creating a Multi-Round Rock-Paper-Scissors
+                            Game in <img src="R.png" style="vertical-align:middle" width="25"> R and <img src="python.png"
+                                style="vertical-align:middle" width="25"> Python</a></li>
+                    <li><a onclick="navigateToProject_nycflight13_23_dsb10()">P5 : EDA and Comparison of NYC Flights
+                            Data (2013 vs. 2023) with  <img src="R.png" style="vertical-align:middle" width="25"> R</a>
+                    </li>
+                    <li><a onclick="navigateToProject_vizdimond_dsb10()">P6 : EDA Visualization of the Diamond Dataset
+                            Using  <img src="R.png" style="vertical-align:middle" width="25"> R and R Markdown </a></li>
+                    <li><a onclick="navigateToProject_titanic_glm_dsb10()">P7 : Logistic Regression Analysis on the
+                            Titanic Dataset Using  <img src="R.png" style="vertical-align:middle" width="25"> R</a></li>
+                    <li><a onclick="navigateToProject_looker_dsb10()">P8 : Data-Driven Insights: Sales Performance &
+                            Profitability in <img src="looker.png" style="vertical-align:middle" width="25">Looker
+                            Studio</a></li>
+                    <li><a onclick="navigateToProject_pizza_chatbot_dsb10()">P9 : Chatbot Development for a Pizza
+                            Business Using  <img src="R.png" style="vertical-align:middle" width="25"> R Programming</a>
+                    </li>
+                    <li><a onclick="navigateToProject_atm_oop_py_dsb10()">P10 : Object-Oriented ATM System: Financial
+                            Transactions with <img src="python.png" style="vertical-align:middle" width="25"> Python
+                            OOP</a></li>
+                    <li><a onclick="navigateToProject_mini_api_py()">mini P11 : Extracting Public API Data with <img
+                                src="python.png" style="vertical-align:middle" width="25"> Python: Air Quality
+                            Analytics</a></li>
+                    <li><a onclick="navigateToProject_mini_xml_cafe()">mini P12 : Cafe Menu Data Structure with <img
+                                src="xml.png" style="vertical-align:middle" width="25"> XML</a></li>
                 </ul>
             </li>
             <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li>
@@ -69,75 +113,298 @@
         </ul>
     </nav>
 
+    <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
+    <section id="toc-section">
+        <p style="font-size: 1.5em; font-weight: bold;" class="link-cursor">Content of Tables</p>
+        <div id="toc-marker"></div>
+        <div id="toc-section"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
+    </section>
+
     <section id="about-details">
-        <h2>Profile</h2>
+        <h2 class="link-cursor">Personal Information</h2>
 
         <div class="iframe-container">
-            <iframe 
-                width="582" 
-                height="580" 
-                src="https://drive.google.com/file/d/14XK5drSbl_PcUmPNxcQGzXZkE4vHSqob/preview" 
-                frameborder="0" style="border:0" 
-                allowfullscreen
-                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
-            </iframe>
+            <img src="my-photo.jpg" width="250" class="cursor-zoom-in" onclick="openGalleryModal('my-photo.jpg')">
         </div>
+        <p class="link-cursor">
+            <b>ชื่อ</b>: นายภูบดินทร์ พันธุ์โยศรี (Mr.Phubordin Phanyosri)<br>
+            <b>ชื่อเล่น</b>: ภู (Phu)<br>
+            <b>อายุ</b>: 25 ปี (April 19,2000) <br>
+            <b>รูปแบบงาน</b>: <u>Onsite</u> (กรุงเทพ, สมุทรปรากร), Hybrid, Work from Home<br>
+            <b>การจ้างงาน</b>: Full-time<br>
+            <b>เงินเดือนคาดหวัง</b> : ฿32,000 <br>
+            <b>จบการศึกษา</b>: วิทยาศาสตรบัณฑิต มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;สาขาคณิตศาสตร์ประยุกร์<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;Bachelor of Science King Mongkut's University of Technology North Bangkok (KMUTNB)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;(Applied Mathematics)
+            <span class="gpa-hover">
+                <span class="gpa-value">3.02<span class="text-description"> Hold on</span></span>
+                <div class="tooltip">
+                    <div class="graph-title">ประวัติ GPA รายเทอม</div>
+                    <div class="gpa-label">GPA: 3.02</div>
+                    <!-- Pre-rendered SVG with exact dimensions and positions -->
+                    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background grid -->
+                        <line x1="40" y1="150" x2="280" y2="150" stroke="#ccc" stroke-width="1" />
+                        <line x1="40" y1="100" x2="280" y2="100" stroke="#ccc" stroke-width="1" />
+                        <line x1="40" y1="50" x2="280" y2="50" stroke="#ccc" stroke-width="1" />
+                        <line x1="40" y1="0" x2="40" y2="150" stroke="#ccc" stroke-width="1" />
 
-        <p>Hello! I'm Phu, a data analyst passionate about turning raw data into meaningful insights.
-            I have experience in data visualization, machine learning, and database management.
-            Currently looking for opportunities in data analytics, where I can leverage my skills to solve business problems.
+                        <!-- X-axis labels -->
+                        <text x="40" y="170" font-size="10" text-anchor="middle">1|1st</text>
+                        <text x="75" y="170" font-size="10" text-anchor="middle">1|2nd</text>
+                        <text x="110" y="170" font-size="10" text-anchor="middle">2|1st</text>
+                        <text x="145" y="170" font-size="10" text-anchor="middle">2|2nd</text>
+                        <text x="180" y="170" font-size="10" text-anchor="middle">3|1st</text>
+                        <text x="215" y="170" font-size="10" text-anchor="middle">3|2nd</text>
+                        <text x="250" y="170" font-size="10" text-anchor="middle">4|1st</text>
+                        <text x="285" y="170" font-size="10" text-anchor="middle">4|2nd</text>
+
+                        <!-- Y-axis labels -->
+                        <text x="30" y="150" font-size="10" text-anchor="end">2.0</text>
+                        <text x="30" y="100" font-size="10" text-anchor="end">3.0</text>
+                        <text x="30" y="50" font-size="10" text-anchor="end">4.0</text>
+
+                        <!-- Constant GPA line (3.02) -->
+                        <line x1="40" y1="99" x2="280" y2="99" stroke="#ff5252" stroke-width="1.5"
+                            stroke-dasharray="3,3" />
+
+                        <!-- Data points and line -->
+                        <polyline points="40,100 75,143 110,124 145,112 180,100 215,20 250,15 285,50" stroke="#2070dd"
+                            stroke-width="2" fill="none" />
+
+                        <circle cx="40" cy="100" r="3" fill="#2070dd" />
+                        <circle cx="75" cy="143" r="3" fill="#2070dd" />
+                        <circle cx="110" cy="124" r="3" fill="#2070dd" />
+                        <circle cx="145" cy="112" r="3" fill="#2070dd" />
+                        <circle cx="180" cy="100" r="3" fill="#2070dd" />
+                        <circle cx="215" cy="20" r="3" fill="#2070dd" />
+                        <circle cx="250" cy="15" r="3" fill="#2070dd" />
+                        <circle cx="285" cy="50" r="3" fill="#2070dd" />
+                    </svg>
+                </div>
+            </span>
         </p>
-    
-        <h3>Skills & Expertise</h3>
-        <ul>
-            <li>📊 Data Analysis (Python, R, SQL, Excel)</li>
-            <li>📈 Data Visualization (Power BI, Tableau, Matplotlib, Seaborn)</li>
-            <li>🧠 Machine Learning (Scikit-Learn, TensorFlow, Statistics)</li>
-            <li>🗄️ Database Management (SQL, PostgreSQL, MySQL)</li>
-        </ul>
-
-        <h3>Personal Interests</h3>
-        <p>Outside of work, I enjoy coding, exploring new technology, and traveling. I also love Japanese culture, especially convenience stores like Lawson and FamilyMart!</p>
     </section>
 
     <section id="timeline">
-        <h2>Career TimeLine</h2>
+        <h2 class="link-cursor">TimeLine</h2>
         <div class="timeline">
             <div class="timeline-item">
-                <div class="content">
-                    <h3>Jul 2023 - Apr 2024</h3>
+                <div class="content link-cursor">
+                    <p style="font-size: 1.4em; font-weight: bold;">Jul 2023 - Apr 2024</p>
                     <p><b>Data Analyst (10 Months)</b></p>
                     <p>Leowood Intertrade Co Ltd.</p>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <div class="content">
-                    <h3>Jan 2022 - Jun 2022</h3>
+                <div class="content link-cursor">
+                    <p style="font-size: 1.4em; font-weight: bold;">Jan 2022 - Jun 2022</p>
                     <p><b>Project Internship (6 Months)</b></p>
                     <p>Arrow IT Co Ltd.</p>
                 </div>
             </div>
-            
+
             <div class="timeline-item">
-                <div class="content">
-                    <h3>Aug 2018 - Jun 2022</h3>
+                <div class="content link-cursor">
+                    <p style="font-size: 1.4em; font-weight: bold;">Aug 2018 - Jun 2022</p>
                     <p><b>Applied Mathematics Student (4 years)</b></p>
                     <p>King Mongkut's University of Technology North Bangkok (KMUTNB).</p>
                 </div>
             </div>
         </div>
     </section>
-        
 
-    <section id = "resume">
-        <h2 style="text-align: left; margin-top: 10px;">
-            Resume :
-            <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing" class="download-btn">
-                📥 
-            </a>
-        </h2>
-        <iframe 
+    <section id="skill">
+        <h2 class="link-cursor">Skills & Tools</h2>
+        <h3 class="link-cursor">Technical Skills</h3>
+        <ul class="link-cursor">
+            <li><b>Data Visualization</b>: Looker Studio, Power BI, Tableau</li>
+            <li><b>Generative AI</b>: ChatGPT, Claude, Gamma, etc.</li>
+            <li><b>Programming & Tools</b>
+                <ul>
+                    <li>Spreadsheets (Excel, Google Sheet) : Power Query, Pivot Table, Lookup, CSV, JSON</li>
+                    <li>Python (Pandas, NumPy, Gazpacho)</li>
+                    <li>SQL Database</li>
+                    <li>R (dplyr, ggplot2, caret)</li>
+                    <li>Machine Learning (Random Forest, Decision Tree, Regression, KNN, Unpervised Learning)</li>
+                    <li>Statistics (Sampling, Desciptive, Inferential, Experimental)</li>
+                    <li>Webscraping.io</li>
+                    <li>HTML, XML, CSS, Java Script</li>
+                </ul>
+        </ul>
+
+        <h3 class="link-cursor">Soft Skills</h3>
+        <ul class="link-cursor">
+            <li>Adaptability & Continuous Learning </li>
+            <li>Communication & Storytelling with Data</li>
+            <li>Problem-Solving & Critical Thinking</li>
+            <li>Collaboration & Teamwork</li>
+        </ul>
+
+        <h3 class="link-cursor">Monkeytype <a href="https://monkeytype.com/profile/Phu_Phanyosri"
+                class="hover-expand"><img src="monkeytype.png" width="30" class="notion-icon"></a></h3>
+        <p class="link-cursor">เว็บไซต์ใช้ฝึกพิมพ์ทุกๆวัน เพื่อให้เกิด Muscle memory นิ้วมือ
+            <b>ช่วยให้ทำงานได้สะดวกมากขึ้น ! <span class="text-description">Last Update Apr-2025</span></b>
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="monkeytype1.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('monkeytype1.png')">
+        </div>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="monkeytype2.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('monkeytype2.gif')">
+        </div>
+
+    </section>
+
+    <section id="profile-summary">
+        <h2 class="link-cursor">Work Style & Personality</h2>
+        <p><b><u>ลักษณะนิสัย</u></b></p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 2em;">
+            เท่าที่ผมรู้จักตัวเองและได้ feedback มาผมเป็นคนที่
+            มุ่งมั่น ตั้งใจ เรียนรู้เร็ว ชอบคิดริเริ่มสร้างสรรค์หาความรู้อะไรใหม่ๆมา รับผิดชอบ
+            จัดลำดับความสำคัญได้ดี สู้งาน
+            มีความเป็น ownership สูง ทำงานเป็นทีมได้ดีเข้ากับคนในทีมได้ง่าย ชอบคิดวิเคราะห์ แก้ไขปัญหา คิดแบบมีตรรกะ
+            รู้จักเวลาไหนเล่นก็เล่น เวลาไหนจริงจังก็จริงจัง
+            <mark>มีทัศนคติที่ดีในการทำงาน</mark>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 2em;">
+            สามารถดูได้ที่
+            <a style="color: black; cursor: url('cursor2.png'), auto;"
+                href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing">
+                ใบประเมินทดลองงาน</a>
+            ใน Work Experience > Leowood Intertrade Co Ltd. > Github & Google Drive
+            เพื่อที่พอจะรับรองตัวผมได้ในระดับนึงครับ
+        </p>
+
+        <p><b><u>Impact Player</u></b></p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 2em;">ผมได้มีโอกาสอ่านบทความ <a
+                style="color: black; cursor: url('cursor2.png'), auto;"
+                href="https://blog.skooldio.com/work-smarter-like-an-impact-player/">
+                แกะสูตรลับวิธี Worksmart ของพนักงานเกรด A+ ที่เจ้านายทุ่มจ่ายโบนัส ทีมพร้อม Support!</a> ของ <a
+                href="https://www.skooldio.com/"><img src="logo-skooldio.png" style="vertical-align:middle"
+                    width="25"></a> Skooldio ซึ่งกล่าวถึง <mark>Impact Players ผมมีแนวคิดว่าการเป็น Impact Players
+                ที่ดีได้
+                คือเราต้องมีความเป็น Ownership + Leadership</mark> ซึ่งมีความหมายต่อไปนี้
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 2em;"><mark><b>Ownership</b> คือการให้ Win-win
+                solution กับผู้ที่มีส่วนได้ส่วนเสีย (Stakeholders) ให้กับทุกๆคนในในระบบ</mark> ระบบในที่นี้ผมขอแบ่งเป็น
+            3 มุมมอง
+            ดังนี้ครับ
+        <ol class="link-cursor" style="text-align: justify;">
+            <li><b>Corporate Citizen</b> : ถ้าเราทำตัวเองให้เก่งขึ้นสร้างรายได้ให้เรามากขึ้น
+                แล้วความเก่งนั้นเพิ่มโอกาสสร้างรายได้ให้องค์กรได้ด้วยเช่นกัน แถม Product ขององค์กรเพิ่ม Value/Trust
+                ให้ลูกค้า ทำให้ลูกค้ารู้ว่า Product ของเราช่วยลูกค้าให้ดีขึ้นได้ ผมมองว่า เราได้ องค์กรได้ ลูกค้าได้
+                เป็นสิ่งที่แฟร์
+                ถามว่าทำไมเราต้องเก่งเพื่อสร้างรายได้ให้กับองค์กร?..ลองดูข้อถัดไปเพื่อให้เข้ามากยิ่งขึ้นครับ</li>
+            <li><b>National Citizen</b> : สมมติว่า คนทำงานประจำทั้งประเทศรับผิดชอบงานอยู่ 800 บาท/งาน/ชม. ผ่านไป 1
+                ปีเงินเดือนเพิ่ม ถ้าสิ่งที่เกิดขึ้นคือจำนวนงานที่ทำเสร็จต่อชั่วโมงเท่าเดิม ประเทศจะจนลงโดยภาพรวม..
+                (ผมได้มีโอกาสฟัง <a style="color: black; cursor: url('cursor2.png'), auto;"
+                    href="https://www.youtube.com/watch?v=2qVB2pljIeo">
+                    Podcast ของคุณ CK Cheong กับ คุณธนาธร ช่วงวินาทีที่ 1:30:36 - 1:33:01</a>)
+                ผมขอสรุปแบบนี้ว่า
+                เมื่อเวลาผ่านไปคนชราสูงขึ้น กับ เด็กเกิดน้อยลง คนวัยทำงานสร้างจำนวนงานออกมาเท่าเดิม แต่กลับเพิ่ม cost
+                ให้กับบริษัททุกๆปี รายได้ภาคเอกชนไม่โต > GDP ของประเทศนิ่ง > แข่นขันกับประเทศอื่นไม่ได้
+                ผมตระหนักรู้คำนี้มากซึ่งมันไม่เกินจริงเลย แน่นอนว่ามันน่ากลัวไม่น้อย ดังนั้นสิ่งที่เราควบคุมได้คือ
+                เราทำให้ตัวเองเก่งขึ้นได้ เพื่อสร้างข้อ 1 ที่ผ่านมา ภาคเอกชนดี เราดี ประเทศก็ดี.. บทบาทต่อไปคือ
+                Globalization เป็นยังไงลองอ่านข้อต่อไปได้เลยครับ </li>
+            <li><b>Global Citizen</b> : ขออนุญาตยกตัวอย่าง AI สุดฮิต ผมมองว่า</li>
+        </ol>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 2em;"><mark><b>Leadership</b> คือ
+                รู้จักว่าตอนไหนควรขึ้นมานำ
+                ไม่ใช่แค่ต้องรอให้ผู้บริหารมานำ หรือเป็นคนเริ่ม action ต่างๆด้วยตัวเอง</mark> เช่น เราเจออะไรน่าสนใจ
+            เราเรียก small group กับคนในทีมได้เลยทันที ซึ่งผมคิดว่าตัวผม
+            มีสัดส่วนตาม Pie Chart ด้านล่าง
+        </p>
+
+        <div class="iframe-container">
+            <img src="ownership.png" width="500" class="cursor-zoom-in" onclick="openGalleryModal('ownership.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 2em;">แน่นอนว่า Pie Chart
+            จะต้องใหญ่ขึ้นเรื่อยๆตามทักษะของเราที่เพิ่มขึ้น ตามแนวคิดคล้ายกับตัวอย่าง Ownership ที่ผ่านมา
+            ต่อไปเพื่อขยายภาพให้ชัดเจนขึ้น ผมได้ทำการทดสอบตัวเองด้วย 16Personalities ซึ่งผมได้คือ <mark>INTJ-A</mark>
+        </p>
+
+        <p><a href="https://www.16personalities.com/"><img src="16personalities.svg" width="200"
+                    class="notion-icon hover-expand"></a></p>
+        
+        <div class="iframe-container">
+            <img src="16personalities0.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('16personalities0.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 2em;">
+            <mark>INTJ-A สรุปสั้นๆคือเป็นคนที่ชอบความท้าทายและมักจะหาทางปรับปรุงสิ่งต่างๆให้ดีขึ้นเสมอ</mark></a>
+            ไม่กลัวที่จะลงมือทำเพื่อให้สำเร็จ อ่านเพิ่มเติมเกี่ยวกับ <a style="color: black; cursor: url('cursor2.png'), auto;"href="https://blog.skooldio.com/work-smarter-like-an-impact-player/"><mark><b>INTJ-A Click!</b></mark></a> ภาพประกอบอื่นด้านล่าง
+        </p>
+        
+        <div class="iframe-container">
+            <img src="16personalities1.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('16personalities1.png')">
+        </div>
+
+        <div class="iframe-container">
+            <img src="16personalities2.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('16personalities2.png')">
+        </div>
+
+    </section>
+
+    <section id="goal">
+        <h2 class="link-cursor">Goal</h2>
+        <p class="link-cursor">
+        <p class="link-cursor" style="text-align: justify; text-indent: 2em;">จริงๆแต่ก่อนผมมีเป้าหมายอยากเติบโตเป็น
+            Data Scienctist แต่ตอนนี้อยากเรียนรู้หลายๆทักษะ เช่น
+            Coding, ML, BI, Business Domain, Storytelling etc. และในยุคที่มี AI ทำให้ผมกล้าที่เรียนรู้มากขึ้น
+            ดังนั้น <mark>เป้าหมายสั้นๆตอนนี้ของผมคือ อยากเน้นทักษะ Data Analyst ที่สามารถใช้ทักษะ Data Scientist
+                ควบคู่ไปด้วยกัน
+                เพื่อวิเคราะห์ข้อมูลได้ลึกขึ้น หลายมุมมากขึ้น</mark>
+            ตอบโจทย์เชิงธุรกิจได้ใกล้เคียงความเป็นจริงมากที่สุดในแง่ของ budget เป็นต้น
+            โดยมี AI มาเป็นผู้ช่วย มันคงจะดีไม่น้อยถ้าเราลดเวลาหรือเพิ่มประสิทธิภาพในแต่ละ 4 Phase Analytics ได้ เช่น
+
+        <ol class="link-cursor" style="text-align: justify;">
+            <li>เราจัดการข้อมูลจนรู้ว่า คนใช้ Product เราลดน้อยลงเมื่อเทียบกับ Trend <mark>(What?)</mark></li>
+            <li>หาทุกอย่างที่เป็นไปได้ เช่น ลูกค้าเจอ defect บ่อย <mark>(Why?)</mark></li>
+            <li>สร้าง forcast math model เพื่ออธิบายโอกาสที่อาจเกิดขึ้น เช่น มีความน่าจะเป็นเท่าไรที่ product ชิ้นนั้นจะ
+                defect <mark>(Will?)</mark></li>
+            <li>จัดทำข้อแนะนำสิ่งที่ควร action จาก 1-3 ทันที เช่น ลดการนำเข้า ingredient ที่ low quality เป็นต้น
+                <mark>(How?)</mark>
+            </li>
+        </ol>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="4phase.png" width="600" class="cursor-zoom-in" onclick="openGalleryModal('4phase.png')">
+        </div>
+
+        <p class="link-cursor">ผมยังมีอีกหลายอย่างเลยที่อยากทำ เอาไว้เรียกผมสัมภาษณ์ด้วยนะครับ 😅 ขอบคุณครับ 🫡</p>
+        </p>
+    </section>
+
+    <section id="file">
+        <h2 class="link-cursor">Files</h2>
+        <p>
+            <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing"
+                class="download-btn" style="text-align: center; margin-top: 10px;">
+                Resume : 📥
+            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
+            <a href="https://drive.google.com/file/d/15nJgYPrUrUmD8pAVQZIr0tJVHaJVO8g4/view?usp=sharing"
+                class="download-btn" style="text-align: center; margin-top: 10px;">
+                Transcript : 📥
+            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
+            <a href="https://drive.google.com/file/d/15n_nmZaSY619ehogn_O0V75CKyuq7max/view?usp=sharing"
+                class="download-btn" style="text-align: center; margin-top: 10px;">
+                Graduation Certificate : 📥
+            </a> <span class="text-description link-cursor">Open with google drive</span>
+        </p>
+        <!-- <iframe 
             width="100%" 
             height="1110px"
             src="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/preview"
@@ -145,10 +412,43 @@
             allowfullscreen 
             loading="lazy" 
             sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
-        </iframe>
+        </iframe> -->
     </section>
 
-    <script src="script.js"></script>
+    <section>
+        <h2 class="link-cursor">Demo Coding</h2>
+        <details class="detail1">
+            <summary>Coding</summary>
 
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label link-cursor">JavaScript</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-js">
+function showToast() {
+    let toast = document.getElementById("toast");
+    if (!toast) return;
+    toast.classList.add("show");
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 2000);
+}
+                </code></pre>
+            </div>
+            
+        </details>
+
+        <!-- ย้าย Toast ออกมาไว้ใน <body> -->
+        <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="script.js"></script>
+    <script src="certificate-script.js"></script>
 </body>
+
 </html>

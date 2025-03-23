@@ -1,11 +1,24 @@
 <!-- project.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MKCCGG3QF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0MKCCGG3QF');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project - Phubordin</title>
+    <title>Project Overview</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="certificate-style.css">
+    <link rel="icon" type="image/png" href="website.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 
 <div class="theme-switch-wrapper">
@@ -31,30 +44,29 @@
 <!-- Table of Contents -->
 <button id="toggle-toc-btn">≡</button>
 <aside id="table-of-contents" class="active">
-    <h3>Navigation Menu</h3>
+    <h3 class= "link-cursor">Navigation Menu</h3>
     <ul id="toc-list"></ul>
 </aside>
-
-
 
 <body class="fade-slide-in project-page">
     <header>
         <div class="header-background"></div>
-        <h2><span class= "strong1" >Project</span> Overview</h2>
+        <div style="font-size: 1.5em; font-weight: bold;" class= "link-cursor"><span class="strong1">Project</span> Overview</div>
     </header>
 
     <!-- Navigation Bar -->
     <nav>
         <ul>
             <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
-            <li><a href="home.html" onclick="navigateToHome()">🏠 Home</a></li>
+            <li><a href="home.html" onclick="navigateToHome()">🏠 Home </a></li> <!-- Home Tab with House Emoji -->
             <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li>
+            <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
             <!-- Work Experience Dropdown -->
-            <li class="dropdown">
-                <a href="#experience">Work Experience</a>
-                <ul class="dropdown-menu">
-                    <li><a href="experience1.html">Job 1</a></li>
-                    <li><a href="experience2.html">Job 2</a></li>
+            <li class="dropdown1">
+                <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
+                <ul class="dropdown-menu1">
+                    <li><a onclick="navigateToExperience_leowood()">Leowood Intertrade Co Ltd. </a></li>
+                    <li><a onclick="navigateToExperience_arrow()">Arrow IT Systems Co Ltd.</a></li>
                 </ul>
             </li>
 
@@ -62,8 +74,38 @@
             <li class="dropdown">
                 <a href="projects.html" class="active" onclick="scrollToTop(event)">Project Overview</a>
                 <ul class="dropdown-menu">
-                    <li><a href="project_DB.html" onclick="navigateToProject_DB()" >Project 1</a></li>
-                    <li><a href="project2.html">Project 2</a></li>
+                    <li><a onclick="navigateToProject_ggsheet_dsb10()">P1 : Data Exploration and Transformation with
+                            <img src="sheets.png" style="vertical-align:middle" width="25"> Google Sheets</a></li>
+                    <li><a onclick="navigateToProject_cafe_r_sql_dsb10()">P2 : Building a Café Restaurant Database
+                            Using  <img src="R.png" style="vertical-align:middle" width="25"> R and <img src="SQL.png"
+                                style="vertical-align:middle" width="25"> SQL</a></li>
+                    <li><a onclick="navigateToProject_rfm_py_dsb10()">P3 : Customer Segmentation and RFM Analysis Using
+                            <img src="python.png" style="vertical-align:middle" width="25">Python and <img src="R.png"
+                                style="vertical-align:middle" width="25"> R for Strategic Business Insight</a></li>
+                    <li><a onclick="navigateToProject_pyc_r_py_dsb10()">P4 : Creating a Multi-Round Rock-Paper-Scissors
+                            Game in <img src="R.png" style="vertical-align:middle" width="25"> R and <img src="python.png"
+                                style="vertical-align:middle" width="25"> Python</a></li>
+                    <li><a onclick="navigateToProject_nycflight13_23_dsb10()">P5 : EDA and Comparison of NYC Flights
+                            Data (2013 vs. 2023) with  <img src="R.png" style="vertical-align:middle" width="25"> R</a>
+                    </li>
+                    <li><a onclick="navigateToProject_vizdimond_dsb10()">P6 : EDA Visualization of the Diamond Dataset
+                            Using  <img src="R.png" style="vertical-align:middle" width="25"> R and R Markdown </a></li>
+                    <li><a onclick="navigateToProject_titanic_glm_dsb10()">P7 : Logistic Regression Analysis on the
+                            Titanic Dataset Using  <img src="R.png" style="vertical-align:middle" width="25"> R</a></li>
+                    <li><a onclick="navigateToProject_looker_dsb10()">P8 : Data-Driven Insights: Sales Performance &
+                            Profitability in <img src="looker.png" style="vertical-align:middle" width="25">Looker
+                            Studio</a></li>
+                    <li><a onclick="navigateToProject_pizza_chatbot_dsb10()">P9 : Chatbot Development for a Pizza
+                            Business Using  <img src="R.png" style="vertical-align:middle" width="25"> R Programming</a>
+                    </li>
+                    <li><a onclick="navigateToProject_atm_oop_py_dsb10()">P10 : Object-Oriented ATM System: Financial
+                            Transactions with <img src="python.png" style="vertical-align:middle" width="25"> Python
+                            OOP</a></li>
+                    <li><a onclick="navigateToProject_mini_api_py()">mini P11 : Extracting Public API Data with <img
+                                src="python.png" style="vertical-align:middle" width="25"> Python: Air Quality
+                            Analytics</a></li>
+                    <li><a onclick="navigateToProject_mini_xml_cafe()">mini P12 : Cafe Menu Data Structure with <img
+                                src="xml.png" style="vertical-align:middle" width="25"> XML</a></li>
                 </ul>
             </li>
             <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li>
@@ -71,287 +113,424 @@
         </ul>
     </nav>
 
+    <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
+    <section id="toc-section">
+        <p style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Content of Tables</p>
+        <div id="toc-marker"></div>
+        <div id="toc-section"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
+    </section>
+
     <section id="project1">
-        <h2>P1 : Building a Sales Dashboard<br></h2>
-        <p> โปจเจตนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie<details>
-            <summary>อ่านเพิ่มเติม</summary>
-                    <h3>Project Questions</h3>
-                        <ul>
-                            <li>คำถาม 1</li>
-                            <li>คำถาม 2</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม N</li>
-                        </ul>
-
-                    <h3>Skills & Tools</h3>
-                        <ul>
-                            <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
-                            <li>📈 Data Visualization (chart ต่างๆ)</li>
-                            <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
-                            <li>🗄️ Dashboard (Looker Studio)</li>
-                        </ul>   
-
-                    <h3>Project Summary </h3>
-                        <p>สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ 
-                            <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
-                        </p>
-        </details></p>
-    </section>
-
-    <section id="project2">
-        <h2>P2 : Building a Sales Dashboard<br></h2>
-        <p> โปจเจตนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie<details>
-            <summary>อ่านเพิ่มเติม</summary>
-                    <h3>Project Questions</h3>
-                        <ul>
-                            <li>คำถาม 1</li>
-                            <li>คำถาม 2</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม N</li>
-                        </ul>
-
-                    <h3>Skills & Tools</h3>
-                        <ul>
-                            <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
-                            <li>📈 Data Visualization (chart ต่างๆ)</li>
-                            <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
-                            <li>🗄️ Dashboard (Looker Studio)</li>
-                        </ul>   
-
-                    <h3>Project Summary </h3>
-                        <p>สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ 
-                            <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
-                        </p>
-        </details></p>
-    </section>
-
-    <section id="project3">
-        <h2>P3 : Building a Sales Dashboard<br></h2>
-        <p> โปจเจตนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie<details>
-            <summary>อ่านเพิ่มเติม</summary>
-                    <h3>Project Questions</h3>
-                        <ul>
-                            <li>คำถาม 1</li>
-                            <li>คำถาม 2</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม N</li>
-                        </ul>
-
-                    <h3>Skills & Tools</h3>
-                        <ul>
-                            <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
-                            <li>📈 Data Visualization (chart ต่างๆ)</li>
-                            <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
-                            <li>🗄️ Dashboard (Looker Studio)</li>
-                        </ul>   
-
-                    <h3>Project Summary </h3>
-                        <p>สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ 
-                            <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
-                        </p>
-        </details></p>
-    </section>
-
-    <section id="project4">
-        <h2>P4 : Building a Sales Dashboard<br></h2>
-        <p> โปจเจตนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie<details>
-            <summary>อ่านเพิ่มเติม</summary>
-                    <h3>Project Questions</h3>
-                        <ul>
-                            <li>คำถาม 1</li>
-                            <li>คำถาม 2</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม N</li>
-                        </ul>
-
-                    <h3>Skills & Tools</h3>
-                        <ul>
-                            <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
-                            <li>📈 Data Visualization (chart ต่างๆ)</li>
-                            <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
-                            <li>🗄️ Dashboard (Looker Studio)</li>
-                        </ul>   
-
-                    <h3>Project Summary </h3>
-                        <p>สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ 
-                            <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
-                        </p>
-        </details></p>
-    </section>
-
-    <section id="project5">
-        <h2>P5 : Building a Sales Dashboard<br></h2>
-        <p> โปจเจตนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie<details>
-            <summary>อ่านเพิ่มเติม</summary>
-                    <h3>Project Questions</h3>
-                        <ul>
-                            <li>คำถาม 1</li>
-                            <li>คำถาม 2</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม N</li>
-                        </ul>
-
-                    <h3>Skills & Tools</h3>
-                        <ul>
-                            <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
-                            <li>📈 Data Visualization (chart ต่างๆ)</li>
-                            <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
-                            <li>🗄️ Dashboard (Looker Studio)</li>
-                        </ul>   
-
-                    <h3>Project Summary </h3>
-                        <p>สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ 
-                            <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
-                        </p>
-        </details></p>
-    </section>
-
-    <section id="project6">
-        <h2>P6 : Building a Sales Dashboard<br></h2>
-        <p> โปจเจตนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie<details>
-            <summary>อ่านเพิ่มเติม</summary>
-                    <h3>Project Questions</h3>
-                        <ul>
-                            <li>คำถาม 1</li>
-                            <li>คำถาม 2</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม N</li>
-                        </ul>
-
-                    <h3>Skills & Tools</h3>
-                        <ul>
-                            <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
-                            <li>📈 Data Visualization (chart ต่างๆ)</li>
-                            <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
-                            <li>🗄️ Dashboard (Looker Studio)</li>
-                        </ul>   
-
-                    <h3>Project Summary </h3>
-                        <p>สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ 
-                            <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
-                        </p>
-        </details></p>
-    </section>
-
-    <section id="project7">
-        <h2>P7 : Building a Sales Dashboard<br></h2>
-        <p> โปจเจตนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie<details>
-            <summary>อ่านเพิ่มเติม</summary>
-                    <h3>Project Questions</h3>
-                        <ul>
-                            <li>คำถาม 1</li>
-                            <li>คำถาม 2</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม N</li>
-                        </ul>
-
-                    <h3>Skills & Tools</h3>
-                        <ul>
-                            <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
-                            <li>📈 Data Visualization (chart ต่างๆ)</li>
-                            <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
-                            <li>🗄️ Dashboard (Looker Studio)</li>
-                        </ul>   
-
-                    <h3>Project Summary </h3>
-                        <p>สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ 
-                            <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
-                        </p>
-        </details></p>
-    </section>
-
-    <section id="project8">
-        <h2>P8 : Building a Sales Dashboard<br></h2>
-        <p> โปจเจตนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie<details>
-            <summary>อ่านเพิ่มเติม</summary>
-            <h3>Project Questions</h3>
-            <ul>
+        <h2 class= "link-cursor">P1 : Data Exploration and Transformation with <img src="sheets.png" style="vertical-align:middle"
+                width="25"> Google Sheets</h2>
+        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
+        <details class= "detail1">
+            <summary>คำอธิบาย</summary>
+            <h3 class= "link-cursor">Project Questions</h3>
+            <ul class= "link-cursor">
                 <li>คำถาม 1</li>
                 <li>คำถาม 2</li>
                 <li>คำถาม .</li>
                 <li>คำถาม .</li>
                 <li>คำถาม N</li>
             </ul>
-            
-            <h3>Skills & Tools</h3>
-            <ul>
+
+            <h3 class= "link-cursor">Skills & Tools</h3>
+            <ul class= "link-cursor">
                 <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
                 <li>📈 Data Visualization (chart ต่างๆ)</li>
                 <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
                 <li>🗄️ Dashboard (Looker Studio)</li>
-            </ul>   
-            
-            <h3>Project Summary </h3>
-            <p>สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ 
+            </ul>
+
+            <h3 class= "link-cursor">Project Summary </h3>
+            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
                 <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
             </p>
-        </details></p>
+        </details>
+        </p>
+
+        <div class="corner-text" onclick="navigateToProject_ggsheet_dsb10()">Read More</div>
+
     </section>
 
+    <section id="project2">
+        <h2 class= "link-cursor">P2 : Building a Café Restaurant Database Using  <img src="R.png" style="vertical-align:middle" width="25"> R
+            and <img src="SQL.png" style="vertical-align:middle" width="25"> SQL</h2>
+        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
+        <details class= "detail">
+            <summary>คำอธิบาย</summary>
+            <h3 class= "link-cursor">Project Questions</h3>
+            <ul class= "link-cursor">
+                <li>คำถาม 1</li>
+                <li>คำถาม 2</li>
+                <li>คำถาม .</li>
+                <li>คำถาม .</li>
+                <li>คำถาม N</li>
+            </ul>
+
+            <h3 class= "link-cursor">Skills & Tools</h3>
+            <ul class= "link-cursor">
+                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
+                <li>📈 Data Visualization (chart ต่างๆ)</li>
+                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
+                <li>🗄️ Dashboard (Looker Studio)</li>
+            </ul>
+
+            <h3 class= "link-cursor">Project Summary </h3>
+            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
+            </p>
+        </details>
+        </p>
+        <div class="corner-text" onclick="navigateToProject_cafe_r_sql_dsb10()">Read More</div>
+
+    </section>
+
+    <section id="project3">
+        <h2 class= "link-cursor">P3 : Customer Segmentation and RFM Analysis Using <img src="python.png" style="vertical-align:middle"
+                width="25">Python and  <img src="R.png" style="vertical-align:middle" width="25"> R for Strategic Business
+            Insight</h2>
+        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
+        <details class= "detail">
+            <summary>คำอธิบาย</summary>
+            <h3 class= "link-cursor">Project Questions</h3>
+            <ul class= "link-cursor">
+                <li>คำถาม 1</li>
+                <li>คำถาม 2</li>
+                <li>คำถาม .</li>
+                <li>คำถาม .</li>
+                <li>คำถาม N</li>
+            </ul>
+
+            <h3 class= "link-cursor">Skills & Tools</h3>
+            <ul class= "link-cursor">
+                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
+                <li>📈 Data Visualization (chart ต่างๆ)</li>
+                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
+                <li>🗄️ Dashboard (Looker Studio)</li>
+            </ul>
+
+            <h3 class= "link-cursor">Project Summary </h3>
+            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
+            </p>
+        </details>
+        </p>
+
+        <div class="corner-text" onclick="navigateToProject_rfm_py_dsb10()">Read More</div>
+
+    </section>
+
+    <section id="project4">
+        <h2 class= "link-cursor">P4 : Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png" style="vertical-align:middle"
+                width="25"> R and <img src="python.png" style="vertical-align:middle" width="25"> Python</h2>
+        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
+        <details class= "detail">
+            <summary>คำอธิบาย</summary>
+            <h3 class= "link-cursor">Project Questions</h3>
+            <ul class= "link-cursor">
+                <li>คำถาม 1</li>
+                <li>คำถาม 2</li>
+                <li>คำถาม .</li>
+                <li>คำถาม .</li>
+                <li>คำถาม N</li>
+            </ul>
+
+            <h3 class= "link-cursor">Skills & Tools</h3>
+            <ul class= "link-cursor">
+                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
+                <li>📈 Data Visualization (chart ต่างๆ)</li>
+                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
+                <li>🗄️ Dashboard (Looker Studio)</li>
+            </ul>
+
+            <h3 class= "link-cursor">Project Summary </h3>
+            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
+            </p>
+        </details>
+        </p>
+
+        <div class="corner-text" onclick="navigateToProject_pyc_r_py_dsb10()">Read More</div>
+
+    </section>
+
+    <section id="project5">
+        <h2 class= "link-cursor">P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png"
+                style="vertical-align:middle" width="25"> R</h2>
+        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
+        <details class= "detail">
+            <summary>คำอธิบาย</summary>
+            <h3 class= "link-cursor">Project Questions</h3>
+            <ul class= "link-cursor">
+                <li>คำถาม 1</li>
+                <li>คำถาม 2</li>
+                <li>คำถาม .</li>
+                <li>คำถาม .</li>
+                <li>คำถาม N</li>
+            </ul>
+
+            <h3 class= "link-cursor">Skills & Tools</h3>
+            <ul class= "link-cursor">
+                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
+                <li>📈 Data Visualization (chart ต่างๆ)</li>
+                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
+                <li>🗄️ Dashboard (Looker Studio)</li>
+            </ul>
+
+            <h3 class= "link-cursor">Project Summary </h3>
+            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
+            </p>
+        </details>
+        </p>
+
+        <div class="corner-text" onclick="navigateToProject_nycflight13_23_dsb10()">Read More</div>
+
+    </section>
+
+    <section id="project6">
+        <h2 class= "link-cursor">P6 : EDA Visualization of the Diamond Dataset Using <img src="R.png" style="vertical-align:middle"
+                width="25"> R and R Markdown</h2>
+        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
+        <details class= "detail">
+            <summary>คำอธิบาย</summary>
+            <h3 class= "link-cursor">Project Questions</h3>
+            <ul class= "link-cursor">
+                <li>คำถาม 1</li>
+                <li>คำถาม 2</li>
+                <li>คำถาม .</li>
+                <li>คำถาม .</li>
+                <li>คำถาม N</li>
+            </ul>
+
+            <h3 class= "link-cursor">Skills & Tools</h3>
+            <ul class= "link-cursor">
+                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
+                <li>📈 Data Visualization (chart ต่างๆ)</li>
+                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
+                <li>🗄️ Dashboard (Looker Studio)</li>
+            </ul>
+
+            <h3 class= "link-cursor">Project Summary </h3>
+            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
+            </p>
+        </details>
+        </p>
+
+        <div class="corner-text" onclick="navigateToProject_vizdimond_dsb10()">Read More</div>
+
+    </section>
+
+    <section id="project7">
+        <h2 class= "link-cursor">P7 : Logistic Regression Analysis on the Titanic Dataset Using <img src="R.png"
+                style="vertical-align:middle" width="25"> R</h2>
+        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
+        <details class= "detail">
+            <summary>คำอธิบาย</summary>
+            <h3 class= "link-cursor">Project Questions</h3>
+            <ul class= "link-cursor">
+                <li>คำถาม 1</li>
+                <li>คำถาม 2</li>
+                <li>คำถาม .</li>
+                <li>คำถาม .</li>
+                <li>คำถาม N</li>
+            </ul>
+
+            <h3 class= "link-cursor">Skills & Tools</h3>
+            <ul class= "link-cursor">
+                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
+                <li>📈 Data Visualization (chart ต่างๆ)</li>
+                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
+                <li>🗄️ Dashboard (Looker Studio)</li>
+            </ul>
+
+            <h3 class= "link-cursor">Project Summary </h3>
+            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
+            </p>
+        </details>
+        </p>
+
+        <div class="corner-text" onclick="navigateToProject_titanic_glm_dsb10()">Read More</div>
+
+    </section>
+
+    <section id="project8">
+        <h2 class= "link-cursor">P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"
+                style="vertical-align:middle" width="25">Looker Studio</h2>
+        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
+        <details class= "detail">
+            <summary>คำอธิบาย</summary>
+            <h3 class= "link-cursor">Project Questions</h3>
+            <ul class= "link-cursor">
+                <li>คำถาม 1</li>
+                <li>คำถาม 2</li>
+                <li>คำถาม .</li>
+                <li>คำถาม .</li>
+                <li>คำถาม N</li>
+            </ul>
+
+            <h3 class= "link-cursor">Skills & Tools</h3>
+            <ul class= "link-cursor">
+                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
+                <li>📈 Data Visualization (chart ต่างๆ)</li>
+                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
+                <li>🗄️ Dashboard (Looker Studio)</li>
+            </ul>
+
+            <h3 class= "link-cursor">Project Summary </h3>
+            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
+            </p>
+        </details>
+        </p>
+
+        <div class="corner-text" onclick="navigateToProject_looker_dsb10()">Read More</div>
+
+    </section>
 
     <section id="project9">
-        <h2>P9 : Building a Sales Dashboard<br></h2>
-        <p> โปจเจตนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie<details>
-            <summary>อ่านเพิ่มเติม</summary>
-                    <h3>Project Questions</h3>
-                        <ul>
-                            <li>คำถาม 1</li>
-                            <li>คำถาม 2</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม N</li>
-                        </ul>
+        <h2 class= "link-cursor">P9 : Chatbot Development for a Pizza Business Using <img src="R.png" style="vertical-align:middle"
+                width="25"> R Programming</h2>
+        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
+        <details class= "detail">
+            <summary>คำอธิบาย</summary>
+            <h3 class= "link-cursor">Project Questions</h3>
+            <ul class= "link-cursor">
+                <li>คำถาม 1</li>
+                <li>คำถาม 2</li>
+                <li>คำถาม .</li>
+                <li>คำถาม .</li>
+                <li>คำถาม N</li>
+            </ul>
 
-                    <h3>Skills & Tools</h3>
-                        <ul>
-                            <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
-                            <li>📈 Data Visualization (chart ต่างๆ)</li>
-                            <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
-                            <li>🗄️ Dashboard (Looker Studio)</li>
-                        </ul>   
+            <h3 class= "link-cursor">Skills & Tools</h3>
+            <ul class= "link-cursor">
+                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
+                <li>📈 Data Visualization (chart ต่างๆ)</li>
+                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
+                <li>🗄️ Dashboard (Looker Studio)</li>
+            </ul>
 
-                    <h3>Project Summary </h3>
-                        <p>สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ 
-                            <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
-                        </p>
-        </details></p>
+            <h3 class= "link-cursor">Project Summary </h3>
+            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
+            </p>
+        </details>
+        </p>
+
+        <div class="corner-text" onclick="navigateToProject_pizza_chatbot_dsb10()">Read More</div>
+
     </section>
 
     <section id="project10">
-        <h2>P10 : Building a Sales Dashboard<br></h2>
-        <p> โปจเจตนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie<details>
-            <summary>อ่านเพิ่มเติม</summary>
-                    <h3>Project Questions</h3>
-                        <ul>
-                            <li>คำถาม 1</li>
-                            <li>คำถาม 2</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม .</li>
-                            <li>คำถาม N</li>
-                        </ul>
+        <h2 class= "link-cursor">P10 : Object-Oriented ATM System: Financial Transactions with <img src="python.png"
+                style="vertical-align:middle" width="25"> Python OOP</h2>
+        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
+        <details class= "detail">
+            <summary>คำอธิบาย</summary>
+            <h3 class= "link-cursor">Project Questions</h3>
+            <ul class= "link-cursor">
+                <li>คำถาม 1</li>
+                <li>คำถาม 2</li>
+                <li>คำถาม .</li>
+                <li>คำถาม .</li>
+                <li>คำถาม N</li>
+            </ul>
 
-                    <h3>Skills & Tools</h3>
-                        <ul>
-                            <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
-                            <li>📈 Data Visualization (chart ต่างๆ)</li>
-                            <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
-                            <li>🗄️ Dashboard (Looker Studio)</li>
-                        </ul>   
+            <h3 class= "link-cursor">Skills & Tools</h3>
+            <ul class= "link-cursor">
+                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
+                <li>📈 Data Visualization (chart ต่างๆ)</li>
+                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
+                <li>🗄️ Dashboard (Looker Studio)</li>
+            </ul>
 
-                    <h3>Project Summary </h3>
-                        <p>สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ 
-                            <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
-                        </p>
-        </details></p>
+            <h3 class= "link-cursor">Project Summary </h3>
+            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
+            </p>
+        </details>
+        </p>
+
+        <div class="corner-text" onclick="navigateToProject_atm_oop_py_dsb10()">Read More</div>
+
     </section>
 
+    <section id="project11">
+        <h2 class= "link-cursor">mini P11 : Extracting Public API Data with <img src="python.png" style="vertical-align:middle"
+                width="25"> Python: Air Quality Analytics</h2>
+        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
+        <details class= "detail">
+            <summary>คำอธิบาย</summary>
+            <h3 class= "link-cursor">Project Questions</h3>
+            <ul class= "link-cursor">
+                <li>คำถาม 1</li>
+                <li>คำถาม 2</li>
+                <li>คำถาม .</li>
+                <li>คำถาม .</li>
+                <li>คำถาม N</li>
+            </ul>
+
+            <h3 class= "link-cursor">Skills & Tools</h3>
+            <ul class= "link-cursor">
+                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
+                <li>📈 Data Visualization (chart ต่างๆ)</li>
+                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
+                <li>🗄️ Dashboard (Looker Studio)</li>
+            </ul>
+
+            <h3 class= "link-cursor">Project Summary </h3>
+            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
+            </p>
+        </details>
+        </p>
+
+        <div class="corner-text" onclick="navigateToProject_mini_api_py()">Read More</div>
+
+    </section>
+
+    <section id="project12">
+        <h2 class= "link-cursor">mini P12 : Cafe Menu Data Structure with <img src="xml.png" style="vertical-align:middle" width="25"> XML
+        </h2>
+        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
+        <details class= "detail">
+            <summary>คำอธิบาย</summary>
+            <h3 class= "link-cursor">Project Questions</h3>
+            <ul class= "link-cursor">
+                <li>คำถาม 1</li>
+                <li>คำถาม 2</li>
+                <li>คำถาม .</li>
+                <li>คำถาม .</li>
+                <li>คำถาม N</li>
+            </ul>
+
+            <h3 class= "link-cursor">Skills & Tools</h3>
+            <ul class= "link-cursor">
+                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
+                <li>📈 Data Visualization (chart ต่างๆ)</li>
+                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
+                <li>🗄️ Dashboard (Looker Studio)</li>
+            </ul>
+
+            <h3 class= "link-cursor">Project Summary </h3>
+            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
+            </p>
+        </details>
+        </p>
+
+        <div class="corner-text" onclick="navigateToProject_mini_xml_cafe()">Read More</div>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="script.js"></script>
+    <script src="certificate-script.js"></script>
 </body>
+
 </html>

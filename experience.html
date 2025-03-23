@@ -1,7 +1,6 @@
-<!-- certificate.html -->
+<!-- project.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MKCCGG3QF"></script>
@@ -14,7 +13,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificate - Phubordin</title>
+    <title>Work Experience</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="certificate-style.css">
     <link rel="icon" type="image/png" href="website.png">
@@ -41,10 +40,17 @@
     </label>
 </div>
 
-<body class="fade-slide-in certificate-page">
+<!-- Table of Contents -->
+<button id="toggle-toc-btn">≡</button>
+<aside id="table-of-contents" class="active">
+    <h3  class= "link-cursor">Navigation Menu</h3>
+    <ul id="toc-list"></ul>
+</aside>
+
+<body class="fade-slide-in experience-page">
     <header>
-        <div class= "header-background"></div>
-        <div style="font-size: 1.5em; font-weight: bold;" class= "link-cursor strong1">Certificates</div>
+        <div class="header-background"></div>
+        <div style="font-size: 1.5em; font-weight: bold;" class= "link-cursor"><span class= "strong1" >Work Experience</span></div>
     </header>
 
     <!-- Navigation Bar -->
@@ -55,7 +61,7 @@
             <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li> <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
             <!-- Work Experience Dropdown -->
             <li class="dropdown1">
-                <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
+                <a href="experience.html" class="active" onclick="scrollToTop(event)">Work Experience</a>
                 <ul class="dropdown-menu1">
                     <li><a onclick="navigateToExperience_leowood()">Leowood Intertrade Co Ltd. </a></li>
                     <li><a onclick="navigateToExperience_arrow()">Arrow IT Systems Co Ltd.</a></li>
@@ -80,27 +86,84 @@
                     <li><a onclick="navigateToProject_mini_xml_cafe()" >mini P12 : Cafe Menu Data Structure with <img src="xml.png"  style="vertical-align:middle" width="25" >XML</a></li>
                 </ul>
             </li>
-            <li><a href="certificate.html" class="active" onclick="scrollToTop(event)">Certificates</a></li>
+            <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li>
             <li><a href="contact.html" onclick="navigateToContact()">Contact</a></li>
         </ul>
     </nav>
 
-    <div id="certificate-container" class="max-w-7xl mx-auto p-6">
-        <div class="view-controls">
-            <select id="school-selector" class="school-select">
-                <option value="all">All Schools</option>
-            </select>
-            <button id="view-toggle" class="view-toggle-btn">
-                <span class="toggle-icon"></span>
-                <span id="toggleText">Switch to Slideshow View</span>
-            </button>
-        </div>
-
-        <div id="gallery-view" class="certificate-view active"></div>
-        <div id="slideshow-view" class="certificate-view"></div>
-        
-    </div>
+    <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
+    <section id="toc-section">
+        <p style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Content of Tables</p>
+        <div id="toc-marker"></div>
+        <div id="toc-section"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
+    </section>
     
+    <section id="experience-leowood">
+        <h2 class= "link-cursor">Leowood Intertrade Co Ltd. <span class= "certificate-school1 link-cursor notion-icon"> | Data Analyst</span></h2>
+        <p><i class= "link-cursor">Jul 2023 - Apr 2024 (10 Months)</i></span>
+            <details class= "detail1">
+                <summary>คำอธิบาย</summary>
+                    <h3 class= "link-cursor">ลักษณะงาน</h3>
+                        <ul class= "link-cursor">
+                            <li>ลักษณะงาน</li>
+                            <li>คำถาม 2</li>
+                            <li>คำถาม .</li>
+                            <li>คำถาม .</li>
+                            <li>คำถาม N</li>
+                        </ul>
+
+                    <h3 class= "link-cursor">Skills & Tools</h3>
+                        <ul class= "link-cursor">
+                            <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
+                            <li>📈 Data Visualization (chart ต่างๆ)</li>
+                            <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
+                            <li>🗄️ Dashboard (Looker Studio)</li>
+                        </ul>   
+
+                    <h3 class= "link-cursor">Project Summary </h3>
+                        <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ 
+                            <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
+                        </p>
+            </details>
+        </p>
+
+        <div class="corner-text" onclick="navigateToExperience_leowood()">Read More</div>
+
+    </section>
+
+    <section id="experience-arrow">
+        <h2 class= "link-cursor">Arrow IT Systems Co Ltd. <span class= "certificate-school1 link-cursor notion-icon">&nbsp; | Project Internship</span></h2>
+        <p><span><i class= "link-cursor">Jan 2022 - Jun 2022 (6 Months)</i></span>
+            <details>
+                <summary>คำอธิบาย</summary>
+                    <h3 class= "link-cursor">ลักษณะงาน</h3>
+                        <ul class= "link-cursor">
+                            <li>คำถาม 1</li>
+                            <li>คำถาม 2</li>
+                            <li>คำถาม .</li>
+                            <li>คำถาม .</li>
+                            <li>คำถาม N</li>
+                        </ul>
+
+                    <h3 class= "link-cursor">Skills & Tools</h3>
+                        <ul class= "link-cursor">
+                            <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
+                            <li>📈 Data Visualization (chart ต่างๆ)</li>
+                            <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
+                            <li>🗄️ Dashboard (Looker Studio)</li>
+                        </ul>   
+
+                    <h3 class= "link-cursor">Project Summary </h3>
+                        <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ 
+                            <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
+                        </p>
+            </details>
+        </p>
+
+        <div class="corner-text" onclick="navigateToExperience_arrow()">Read More</div>
+
+    </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>

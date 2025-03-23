@@ -1,0 +1,330 @@
+<!-- project_DB.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MKCCGG3QF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0MKCCGG3QF');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - Sheets</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="certificate-style.css">
+    <link rel="icon" type="image/png" href="website.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+
+<div class="theme-switch-wrapper">
+    <!-- ปุ่ม Blur Background -->
+    <label class="switch">
+        <span><img src="darkmode4.png" width="30" class="notion-icon"></span>
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+        <span class="switch-label"></span>
+    </label>
+</div>
+
+<div class="theme-switch1-wrapper">
+    <!-- ปุ่ม Blur Background -->
+    <label class="switch1">
+        <img src="focus.png" width="30" class="notion-icon">
+        <input type="checkbox" id="blur-toggle">
+        <span class="slider1"></span>
+        <span class="switch-label1"></span>
+    </label>
+</div>
+
+<!-- Table of Contents -->
+<button id="toggle-toc-btn">≡</button>
+<aside id="table-of-contents" class="active">
+    <h3 class="link-cursor">Navigation Menu</h3>
+    <ul id="toc-list"></ul>
+</aside>
+
+<body class="fade-slide-in project_ggsheet-page">
+    <header>
+        <div class="header-background"></div>
+        <div style="font-size: 1.5em; font-weight: bold;" class="link-cursor">Project 1 : <span class="strong1">Data
+                Exploration and Transformation with <img src="sheets.png" style="vertical-align:middle" width="25">
+                Google Sheets</span></div>
+    </header>
+
+    <!-- Navigation Bar -->
+
+    <nav>
+        <ul>
+            <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
+            <li><a href="home.html" onclick="navigateToHome()">🏠 Home </a></li> <!-- Home Tab with House Emoji -->
+            <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li>
+            <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
+            <!-- Work Experience Dropdown -->
+            <li class="dropdown1">
+                <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
+                <ul class="dropdown-menu1">
+                    <li><a onclick="navigateToExperience_leowood()">Leowood Intertrade Co Ltd. </a></li>
+                    <li><a onclick="navigateToExperience_arrow()">Arrow IT Systems Co Ltd.</a></li>
+                </ul>
+            </li>
+
+            <!-- Projects Dropdown -->
+            <li class="dropdown">
+                <a href="projects.html" class="active" onclick="scrollToTop(event)">Project Overview</a>
+                <ul class="dropdown-menu">
+                    <li><a class="active1" onclick="scrollToTop(event)" onclick="navigateToProject_ggsheet_dsb10()">P1 :
+                            Data Exploration and Transformation with <img src="sheets.png" style="vertical-align:middle"
+                                width="25"> Google Sheets</a></li>
+                    <li><a onclick="navigateToProject_cafe_r_sql_dsb10()">P2 : Building a Café Restaurant Database Using
+                            <img src="R.png" style="vertical-align:middle" width="25"> and <img src="SQL.png"
+                                style="vertical-align:middle" width="25"></a></li>
+                    <li><a onclick="navigateToProject_rfm_py_dsb10()">P3 : Customer Segmentation and RFM Analysis Using
+                            <img src="python.png" style="vertical-align:middle" width="25">Python and <img src="R.png"
+                                style="vertical-align:middle" width="25"> for Strategic Business Insight</a></li>
+                    <li><a onclick="navigateToProject_pyc_r_py_dsb10()">P4 : Creating a Multi-Round Rock-Paper-Scissors
+                            Game in <img src="R.png" style="vertical-align:middle" width="25"> and <img src="python.png"
+                                style="vertical-align:middle" width="25"></a></li>
+                    <li><a onclick="navigateToProject_nycflight13_23_dsb10()">P5 : EDA and Comparison of NYC Flights
+                            Data (2013 vs. 2023) with <img src="R.png" style="vertical-align:middle" width="25"></a>
+                    </li>
+                    <li><a onclick="navigateToProject_vizdimond_dsb10()">P6 : EDA Visualization of the Diamond Dataset
+                            Using <img src="R.png" style="vertical-align:middle" width="25"> and R Markdown </a></li>
+                    <li><a onclick="navigateToProject_titanic_glm_dsb10()">P7 : Logistic Regression Analysis on the
+                            Titanic Dataset Using <img src="R.png" style="vertical-align:middle" width="25"></a></li>
+                    <li><a onclick="navigateToProject_looker_dsb10()">P8 : Data-Driven Insights: Sales Performance &
+                            Profitability in <img src="looker.png" style="vertical-align:middle" width="25">Looker
+                            Studio</a></li>
+                    <li><a onclick="navigateToProject_pizza_chatbot_dsb10()">P9 : Chatbot Development for a Pizza
+                            Business Using <img src="R.png" style="vertical-align:middle" width="25"> Programming</a>
+                    </li>
+                    <li><a onclick="navigateToProject_atm_oop_py_dsb10()">P10 : Object-Oriented ATM System: Financial
+                            Transactions with <img src="python.png" style="vertical-align:middle" width="25">Python
+                            OOP</a></li>
+                    <li><a onclick="navigateToProject_mini_api_py()">mini P11 : Extracting Public API Data with <img
+                                src="python.png" style="vertical-align:middle" width="25">Python: Air Quality
+                            Analytics</a></li>
+                    <li><a onclick="navigateToProject_mini_xml_cafe()">mini P12 : Cafe Menu Data Structure with <img
+                                src="xml.png" style="vertical-align:middle" width="25">XML</a></li>
+                </ul>
+            </li>
+            <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li>
+            <li><a href="contact.html" onclick="navigateToContact()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
+    <section id="toc-section">
+        <p style="font-size: 1.5em; font-weight: bold;" class="link-cursor">Content of Tables</p>
+        <div id="toc-marker"></div>
+        <div id="toc-section"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
+    </section>
+
+    <a style="text-decoration: none;" href="project.html">
+        <button class="back-button">⬅︎ <b>Project Overview</b></button>
+    </a>
+
+    <section>
+        <h2 class="link-cursor">1. Filter & Sort Dynamic</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สวัสดีครับ สำหรับตัวอย่างนี้เรามาสำรวจ และจัดการข้อมูลของพนักงานบริษัทแห่งหนึ่งโดยการใช้สูตร Google Sheets
+            แบบ Dynamic
+            เพื่อที่จะได้นำไปสรุปข้อมูลเบื้องต้นหรือติดตามงานบางอย่างฉบับฉับไว ตามรูปกันเลยค้าบ !
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-1-6.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-1-6.gif')">
+        </div>
+
+        <p>
+        <details class="detail1">
+
+            <summary>Formula</summary>
+
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+                                    =IFERROR(SORT(FILTER(EMPLOYEE, (GENDER = B2) * (PERFORMANCE = B3)), 5, Not(D2)),"NO DATA")
+                            </code></pre>
+            </div>
+
+        </details>
+        <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+
+        </p>
+
+        <p class = "link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1590154876#gid=1590154876"
+                class="hover-expand" style="text-decoration: none; color: black;"><img src="sheets.png" width="25"
+                    class="notion-icon">><b> 1. Filter & Sort Dynamic</b></a>
+        </p>
+
+        <p class = "link-cursor">📌 <b>อธิบายสูตร</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/c7a15b9a926cfd01ab2f94ee2000915758f9ba4e/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md"
+                class="hover-expand" style="text-decoration: none; color: black;"><img src="github.png" width="25"
+                    class="notion-icon"><b> Github</b></a>
+        <ol>
+            <li class = "link-cursor"><mark>FILTER(EMPLOYEE, (GENDER = B2) * (PERFORMANCE = B3))</mark>
+                <ul>
+                    <li class="link-cursor" style="text-align: justify;">ผมตั้งชื่อ range
+                        ต่างๆที่มีชื่อว่า EMPLOYEE(Table), GENDER(Column), PERFORMANCE(Column) เพื่อง่ายต่อการเลือกช่วง
+                        cell มาใช้ ผมจึงเลือกช่วง EMPLOYEE โดยที่เพศ คือ cell B2 ที่ Dynamic และ(*) ผลการปฏิบัติงาน คือ
+                        cell B3 ที่ Dynamic ผลลัพธืจึงถูก Filter ออกมา หลังจากนั้น..</li>
+                </ul>
+            </li>
+            <li class = "link-cursor"><mark>SORT(FILTER(..ข้อ 1), 5, Not(D2))</mark>
+                <ul>
+                    <li class="link-cursor" style="text-align: justify;">ผมตั้งชื่อ range
+                        ผมเรียงลำดับ Salary จากมากไปน้อย โดยที่ Salary อยู่คอลัมน์ที่ 5 และ Default ของการ Sort
+                        ที่จะเรียงจากน้อยไปมากได้ก็ต่อเมื่อมีค่า TRUE ในอาร์กิวเมนต์ที่ 3 ของ Sort ดังนั้น ผมจึงเลือกคอลัมน์ Salary และเรียงลำดับตาม cell
+                        D2 เป็น Checkbox เพื่อให้มีความ Dynamic เมื่อ users ติ้ก D2 = True ซึ่งมันจะเรียงจากน้อยไปมาก
+                        ดังนั้นผมจึงใช้ NOT(D2) เพื่อบังคับให้การติ้กของ users นั้นเรียง Salary จากมากไปน้อยโดยอัตโนมัติ
+                    </li>
+                </ul>
+            </li>
+            <li class = "link-cursor"><mark>IFERROR(..ข้อ 2,"NO DATA")</mark>
+                <ul>
+                    <li class="link-cursor" style="text-align: justify;">ถ้าหาก Formula ข้อ 1 หรือ 2 ส่งผลลัพธ์ Error
+                        จะให้แสดง NO DATA แต่แน่นอนว่าในตาราง EMPLOYEE จะต้องมีการ filter ที่ไม่ match กัน
+                        นั้นหมายความว่าไม่มีค่า filter ที่ต้องการดังนั้นผลลัพธ์จึงแสดง NO DATA นั่นเอง !</li>
+                </ul>
+            </li>
+        </ol>
+
+        </p>
+
+        <p class = "link-cursor">📌 <b>อธิบายผลลัพธ์:</b></p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            จากตัวอย่างข้างต้น ผมได้อธิบายถึงการกรองข้อมูลของพนักงานที่มีเพศตามกำหนด และมีผลการปฎิบัติงานตามกำหนด
+            โดยที่เรียงลำดับจากเงินเดือนตามเงื่อนไขที่ users ต้องการ ซึ่งผมใช้ Formula ต่างๆ เช่น Filter, Sort, IFERROR
+            ในการจัดการข้อมูลให้มีความ Dynamic มากขึ้น
+            สำหรับตัวอย่างต่อไปจะเป็นการใช้ HCF (Highlight Conditional Formatting)
+            ไปดูกันเลยค้่าบ !
+        </p>
+        <p>
+        </p>
+    </section>
+    </a>
+
+    <section>
+        <h2 class="link-cursor">2. Conditional Formatting: Highlight Row</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สวัสดีครับ สำหรับตัวอย่างนี้เรามาสำรวจ และจัดการข้อมูลของพนักงานบริษัทแห่งหนึ่งโดยการใช้สูตร Google Sheets
+            แบบ Dynamic
+            เพื่อที่จะได้นำไปสรุปข้อมูลเบื้องต้นหรือติดตามงานบางอย่างฉบับฉับไว ตามรูปกันเลยค้าบ !
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-1-6.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-1-6.gif')">
+        </div>
+
+        <p>
+        <details class="detail1">
+
+            <summary>Formula</summary>
+
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+                                    =IFERROR(SORT(FILTER(EMPLOYEE, (GENDER = B2) * (PERFORMANCE = B3)), 5, Not(D2)),"NO DATA")
+                            </code></pre>
+            </div>
+
+        </details>
+        <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+
+        </p>
+
+        <p class = "link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1590154876#gid=1590154876"
+                class="hover-expand" style="text-decoration: none; color: black;"><img src="sheets.png" width="25"
+                    class="notion-icon">><b> 1. Filter & Sort Dynamic</b></a>
+        </p>
+
+        <p class = "link-cursor">📌 <b>อธิบายสูตร</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/c7a15b9a926cfd01ab2f94ee2000915758f9ba4e/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md"
+                class="hover-expand" style="text-decoration: none; color: black;"><img src="github.png" width="25"
+                    class="notion-icon"><b> Github</b></a>
+        <ol>
+            <li class = "link-cursor"><mark>FILTER(EMPLOYEE, (GENDER = B2) * (PERFORMANCE = B3))</mark>
+                <ul>
+                    <li class="link-cursor" style="text-align: justify;">ผมตั้งชื่อ range
+                        ต่างๆที่มีชื่อว่า EMPLOYEE(Table), GENDER(Column), PERFORMANCE(Column) เพื่อง่ายต่อการเลือกช่วง
+                        cell มาใช้ ผมจึงเลือกช่วง EMPLOYEE โดยที่เพศ คือ cell B2 ที่ Dynamic และ(*) ผลการปฏิบัติงาน คือ
+                        cell B3 ที่ Dynamic ผลลัพธืจึงถูก Filter ออกมา หลังจากนั้น..</li>
+                </ul>
+            </li>
+            <li class = "link-cursor"><mark>SORT(FILTER(..ข้อ 1), 5, Not(D2))</mark>
+                <ul>
+                    <li class="link-cursor" style="text-align: justify;">ผมตั้งชื่อ range
+                        ผมเรียงลำดับ Salary จากมากไปน้อย โดยที่ Salary อยู่คอลัมน์ที่ 5 และ Default ของการ Sort
+                        ที่จะเรียงจากน้อยไปมากได้ก็ต่อเมื่อมีค่า TRUE ในอาร์กิวเมนต์ที่ 3 ของ Sort ดังนั้น ผมจึงเลือกคอลัมน์ Salary และเรียงลำดับตาม cell
+                        D2 เป็น Checkbox เพื่อให้มีความ Dynamic เมื่อ users ติ้ก D2 = True ซึ่งมันจะเรียงจากน้อยไปมาก
+                        ดังนั้นผมจึงใช้ NOT(D2) เพื่อบังคับให้การติ้กของ users นั้นเรียง Salary จากมากไปน้อยโดยอัตโนมัติ
+                    </li>
+                </ul>
+            </li>
+            <li class = "link-cursor"><mark>IFERROR(..ข้อ 2,"NO DATA")</mark>
+                <ul>
+                    <li class="link-cursor" style="text-align: justify;">ถ้าหาก Formula ข้อ 1 หรือ 2 ส่งผลลัพธ์ Error
+                        จะให้แสดง NO DATA แต่แน่นอนว่าในตาราง EMPLOYEE จะต้องมีการ filter ที่ไม่ match กัน
+                        นั้นหมายความว่าไม่มีค่า filter ที่ต้องการดังนั้นผลลัพธ์จึงแสดง NO DATA นั่นเอง !</li>
+                </ul>
+            </li>
+        </ol>
+
+        </p>
+
+        <p class = "link-cursor">📌 <b>อธิบายผลลัพธ์:</b></p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            จากตัวอย่างข้างต้น ผมได้อธิบายถึงการกรองข้อมูลของพนักงานที่มีเพศตามกำหนด และมีผลการปฎิบัติงานตามกำหนด
+            โดยที่เรียงลำดับจากเงินเดือนตามเงื่อนไขที่ users ต้องการ ซึ่งผมใช้ Formula ต่างๆ เช่น Filter, Sort, IFERROR
+            ในการจัดการข้อมูลให้มีความ Dynamic มากขึ้น
+            สำหรับตัวอย่างต่อไปจะเป็นการใช้ HCF (Highlight Conditional Formatting)
+            ไปดูกันเลยค้่าบ !
+        </p>
+        <p>
+        </p>
+    </section>
+        
+    <section id="file">
+        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
+                    width="30" class="notion-icon"></a> Github & <a
+                href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing"
+                class="hover-expand"><img src="sheets.png" width="30" class="notion-icon"></a> Google Sheets</h2>
+        <p>
+            <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing"
+                class="download-btn" style="text-align: center; margin-top: 10px;">
+                Resume : 📥
+            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
+            <a href="https://drive.google.com/file/d/15nJgYPrUrUmD8pAVQZIr0tJVHaJVO8g4/view?usp=sharing"
+                class="download-btn" style="text-align: center; margin-top: 10px;">
+                Transcript : 📥
+            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
+            <a href="https://drive.google.com/file/d/15n_nmZaSY619ehogn_O0V75CKyuq7max/view?usp=sharing"
+                class="download-btn" style="text-align: center; margin-top: 10px;">
+                Graduation Certificate : 📥
+            </a> <span class="text-description link-cursor">Open with google drive</span>
+        </p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="script.js"></script>
+    <script src="certificate-script.js"></script>
+</body>
+
+</html>

@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MKCCGG3QF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
     <meta charset="UTF-8">
-    <title>Welcome to Page</title>
+    <title>Phubordin's Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap');
 
@@ -21,7 +31,7 @@
             align-items: center;
             text-align: center;
             background-color: #121212;
-            background-image: url("sky.webp");
+            background-image: url("mountain.webp");
             background-position: center 25%;
             background-size: cover;
             background-attachment: fixed;
@@ -42,7 +52,8 @@
         .start-button {
             padding: 15px 30px;
             font-size: 18px;
-            background-color: rgb(0, 0, 0);
+            font-style: "Prompt";
+            background: linear-gradient(145deg, #aeaff5 0%, #8587ff 50%, #ff6600 80%);
             color: rgb(255, 255, 255);
             border: none;
             border-radius: 8px;
@@ -66,9 +77,9 @@
             text-align: left;
             border-radius: 20px;
             padding: 0.3rem 0.8rem;
-            background-color: rgba(0, 0, 0, 0.931);
+            background: linear-gradient(145deg, #aeaff5 0%, #8587ff 50%, #ff6600 100%);
             content: "🔍";
-            font-size: 14px;    
+            font-size: 14px;
         }
 
         .active:hover {
@@ -170,7 +181,13 @@
         /* Content elements */
         .main-content {
             position: relative;
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-top: 3%;
+            padding-bottom: 3%;
             z-index: 5;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -284,21 +301,27 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 100%;  /* ความกว้างของเส้น */
-            height: 100%; /* ความสูงของเส้น */
+            width: 100%;
+            /* ความกว้างของเส้น */
+            height: 100%;
+            /* ความสูงของเส้น */
             background-color: rgb(255, 136, 0);
-            
+
             /* ทำให้เส้นเอียงขึ้นโดยใช้เส้นทแยง */
             clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
-            
-            transform: scaleX(0); /* เริ่มต้นเส้นให้เล็ก */
-            transform-origin: left bottom; /* ให้ขยายจากมุมล่างซ้าย */
+
+            transform: scaleX(0);
+            /* เริ่มต้นเส้นให้เล็ก */
+            transform-origin: left bottom;
+            /* ให้ขยายจากมุมล่างซ้าย */
             transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .chart-line.show {
-            transform: scaleX(1); /* ค่อย ๆ ขยายเส้นไปตามแกน x */
+            transform: scaleX(1);
+            /* ค่อย ๆ ขยายเส้นไปตามแกน x */
         }
+
         /* จุดที่ปลายเส้น */
         .chart-line::before,
         .chart-line::after {
@@ -452,30 +475,39 @@
             opacity: 0;
             transition: opacity 0.8s ease;
         }
+
+        .link-cursor {
+            cursor: text;
+        }
     </style>
+    <link rel="icon" type="image/png" href="website.png">
 </head>
+
 <body id="pageBody">
     <div class="main-content" id="mainContent">
         <div>
             <img src="my-photo.jpg" width="300">
         </div>
-        <h1>Welcome to My Portfolio Website</h1>
-        <div class="content">
-            <p>เว็บไซต์นี้สร้างขึ้นมาเพื่อ Represent ตัวผมเอง</p>
+        <h1 class = "link-cursor">Welcome to My Portfolio Website</h1>
+        <div class="content link-cursor">
+            <p>เว็บไซต์นี้สร้างขึ้นมาเพื่อ Represent ตัวของผมเอง</p>
             <p>ไว้ใช้สำหรับการสมัครงานและ Review เนื้อหาความรู้ต่างๆที่เรียนมา</p>
-            <p>ยินดีต้อนรับ และขอบคุณที่รับชมครับ</p>
+            <p>ยินดีต้อนรับทุกๆคน และขอบคุณที่รับชมครับ</p>
+            <p style="color: red; font-size: 15px;"><u style="font-weight: bold;">ไม่อนุญาต</u>ให้นำไปเผยแพร่ต่อ และเว็บไซต์นี้<u style="font-weight: bold;">ไม่มีการให้ users กรอกข้อมูล</u>ใดๆทั้งสิ้น</p>
+            <p style="color: red; font-size: 15px;"></p>
         </div>
 
         <div class="content">
             <details>
                 <summary class="active">🔍 Eng</summary>
 
-                <p>This website was created to represent myself</p>
-                <p>for job applications and to review the knowledge I have learned.</p>
-                <p>Welcome and thank you for watching.</p>
-                
+                <p class = "link-cursor">This website was created to represent myself</p>
+                <p class = "link-cursor">for job applications and to review the knowledge I have learned.</p>
+                <p class = "link-cursor">Welcome everyone and thank you for watching.</p>
+                <p style="color: red; font-size: 15px;" class = "link-cursor"><u style="font-weight: bold;">Not allowed</u> to redistribute and This website <u style="font-weight: bold;">does not require users to enter any information</u> whatsoever.</p>
+
             </details>
-        </div>  
+        </div>
 
         <button class="start-button" onclick="startAnimation()">View Portfolio 🚀</button>
     </div>
@@ -486,7 +518,7 @@
         <div class="data-visualization" id="dataVisualization"></div>
         <div class="pattern-container" id="patternContainer"></div>
         <div class="pattern-grid" id="patternGrid"></div>
-        
+
         <!-- Animation labels -->
         <div class="animation-label" id="scatterDataLabel">Business Asking</div>
         <div class="animation-label" id="connectingDataLabel">Economic</div>
@@ -494,11 +526,11 @@
         <div class="animation-label" id="clusteringDataLabel">Analyzing Patterns</div>
         <div class="animation-label" id="modelingDataLabel">Generative AI Insights</div>
         <div class="animation-label" id="finalizingDataLabel">Collaboration Skills</div>
-        
+
         <!-- เพิ่ม Title สำหรับ Dashboard -->
         <h1 class="portfolio-title" id="portfolioTitle">Learn AI for a Better World.</h1>
         <p class="subtitle" id="portfolioSubtitle">Always Improve Yourself</p>
-        
+
         <!-- Bar Chart -->
         <div class="chart-container bar-chart" id="barChart">
             <div class="chart-title">Opportunity Distribution</div>
@@ -510,17 +542,23 @@
                 <div class="bar" style="height: 70px; transition-delay: 1.4s;"></div>
             </div>
         </div>
-        
+
         <!-- Pie Chart -->
         <div class="chart-container pie-chart" id="pieChart">
             <div class="chart-title">GenAI Data Science</div>
             <div id="pieChartContent">
-                <div class="pie-segment" style="background-color: rgba(255, 136, 0, 0.9); transform: rotate(0deg); transition-delay: 1.2s;"></div>
-                <div class="pie-segment" style="background-color: rgba(255, 170, 0, 0.7); transform: rotate(130deg); transition-delay: 1.4s;"></div>
-                <div class="pie-segment" style="background-color: rgba(254, 242, 198, 0.6); transform: rotate(230deg); transition-delay: 1.6s;"></div>
+                <div class="pie-segment"
+                    style="background-color: rgba(255, 136, 0, 0.9); transform: rotate(0deg); transition-delay: 1.2s;">
+                </div>
+                <div class="pie-segment"
+                    style="background-color: rgba(255, 170, 0, 0.7); transform: rotate(130deg); transition-delay: 1.4s;">
+                </div>
+                <div class="pie-segment"
+                    style="background-color: rgba(254, 242, 198, 0.6); transform: rotate(230deg); transition-delay: 1.6s;">
+                </div>
             </div>
         </div>
-        
+
         <!-- Line Chart -->
         <div class="chart-container line-chart" id="lineChart">
             <div class="chart-title">Growth Mindset</div>
@@ -528,7 +566,7 @@
                 <div class="chart-line" id="chartLine"></div>
             </div>
         </div>
-        
+
         <div class="dashboard-grid" id="dashboardGrid"></div>
         <div class="loading-bar-container" id="loadingBarContainer">
             <div class="loading-bar" id="loadingBar"></div>
@@ -604,11 +642,11 @@
             setTimeout(() => {
                 dataVisualization.style.opacity = '1';
                 patternContainer.style.opacity = '1';
-                
+
                 // Show "Scatter Raw Data" label
                 scatterDataLabel.style.opacity = '1';
                 scatterDataLabel.style.transform = 'translate(-50%, -50%)';
-                
+
                 // Create random data points
                 for (let i = 0; i < 40; i++) {
                     createDataPoint();
@@ -621,19 +659,19 @@
                 scatterDataLabel.style.opacity = '0';
                 connectingDataLabel.style.opacity = '1';
                 connectingDataLabel.style.transform = 'translate(-50%, -50%)';
-                
+
                 // Create connection lines between points
                 for (let i = 0; i < 20; i++) {
                     createDataLine();
                 }
             }, 550);
-            
+
             // Step 8: Show analyzing label and create pattern circles
             setTimeout(() => {
                 connectingDataLabel.style.opacity = '0';
                 analyzingDataLabel.style.opacity = '1';
                 analyzingDataLabel.style.transform = 'translate(-50%, -50%)';
-                
+
                 // Create pattern circles
                 for (let i = 0; i < 3; i++) {
                     createPatternCircle(30 + (i * 10), 50, 50);
@@ -645,7 +683,7 @@
                 analyzingDataLabel.style.opacity = '0';
                 clusteringDataLabel.style.opacity = '1';
                 clusteringDataLabel.style.transform = 'translate(-50%, -50%)';
-                
+
                 // Create pattern groups
                 createPatternGroup(20, 30, 25, 20);
                 createPatternGroup(60, 40, 20, 15);
@@ -658,30 +696,30 @@
                 clusteringDataLabel.style.opacity = '0';
                 modelingDataLabel.style.opacity = '1';
                 modelingDataLabel.style.transform = 'translate(-50%, -50%)';
-                
+
                 // Create pattern grid
                 patternGrid.style.opacity = '1';
-                
+
                 // Create horizontal lines
                 for (let i = 0; i <= 10; i++) {
                     createGridLine(true, i * 10);
                 }
-                
+
                 // Create vertical lines
                 for (let i = 0; i <= 10; i++) {
                     createGridLine(false, i * 10);
                 }
             }, 750);
-        
+
             // Step 11: Show title and subtitle
             setTimeout(() => {
                 modelingDataLabel.style.opacity = '0';
                 finalizingDataLabel.style.opacity = '1';
                 finalizingDataLabel.style.transform = 'translate(-50%, -50%)';
-                
+
                 portfolioTitle.style.opacity = '1';
                 portfolioTitle.style.transform = 'translateY(0)';
-                
+
                 portfolioSubtitle.style.opacity = '1';
                 portfolioSubtitle.style.transform = 'translateY(0)';
             }, 800);
@@ -690,7 +728,7 @@
             setTimeout(() => {
                 // Hide the finalizing label
                 finalizingDataLabel.style.opacity = '0';
-                
+
                 // Show bar chart
                 barChart.style.opacity = '1';
                 barChart.style.transform = 'translateY(0)';
@@ -698,7 +736,7 @@
                 bars.forEach(bar => {
                     bar.style.transform = 'scaleY(1)';
                 });
-                
+
                 // Show pie chart
                 pieChart.style.opacity = '1';
                 pieChart.style.transform = 'translateY(0)';
@@ -706,7 +744,7 @@
                 pieSegments.forEach(segment => {
                     segment.style.transform = segment.style.transform.replace('scale(0)', 'scale(1)');
                 });
-                
+
                 // Show line chart
                 lineChart.style.opacity = '1';
                 lineChart.style.transform = 'translateY(0)';
@@ -714,7 +752,7 @@
                 chartLine.classList.add('animated');
             }, 1000);
 
-             // Step 13: Show rocket animation
+            // Step 13: Show rocket animation
             setTimeout(() => {
                 rocketIcon.style.opacity = '1';
                 rocketIcon.style.transform = 'translateY(0) scale(1)';
@@ -725,7 +763,7 @@
             setTimeout(() => {
                 completionMessage.style.opacity = '1';
             }, 2000);
-            
+
             // Step 15: Redirect to home.html
             setTimeout(() => {
                 window.location.href = 'home.html';
@@ -735,27 +773,27 @@
             function createDataPoint() {
                 const dataPoint = document.createElement('div');
                 dataPoint.className = 'data-point';
-                
+
                 // Random position
                 const x = Math.random() * 80 + 10; // 10% to 90% width
                 const y = Math.random() * 80 + 10; // 10% to 90% height
-                
+
                 // Random size
                 const size = Math.random() * 8 + 2; // 2px to 10px
-                
+
                 // Set styles
                 dataPoint.style.left = `${x}%`;
                 dataPoint.style.top = `${y}%`;
                 dataPoint.style.width = `${size}px`;
                 dataPoint.style.height = `${size}px`;
-                
+
                 // Animation with delay
                 const delay = Math.random() * 1;
                 dataPoint.style.transition = `transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) ${delay}s, opacity 0.8s ease ${delay}s`;
-                
+
                 // Add to visualization
                 dataVisualization.appendChild(dataPoint);
-                
+
                 // Trigger animation
                 setTimeout(() => {
                     dataPoint.style.transform = 'scale(1)';
@@ -766,82 +804,82 @@
             function createRegressionLine() {
                 const regressionLine = document.createElement('div');
                 regressionLine.className = 'regression-line';
-                
+
                 // Define the slope and intercept based on multiple linear regression
                 const slope = 0.85; // Adjust for correlation within 0.8 - 0.9
                 const intercept = 10;
-                
+
                 // Define start and end points for the regression line
                 const xStart = 10;
                 const yStart = intercept + slope * xStart;
                 const xEnd = 90;
                 const yEnd = intercept + slope * xEnd;
-                
+
                 // Calculate line properties
                 const length = Math.sqrt(Math.pow(xEnd - xStart, 2) + Math.pow(yEnd - yStart, 2));
                 const angle = Math.atan2(yEnd - yStart, xEnd - xStart) * 180 / Math.PI;
-                
+
                 // Set styles
                 regressionLine.style.left = `${xStart}%`;
                 regressionLine.style.top = `${yStart}%`;
                 regressionLine.style.width = `${length}%`;
                 regressionLine.style.transform = `rotate(${angle}deg) scaleX(0)`;
-                
+
                 // Animation with delay
                 regressionLine.style.transition = `transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s, opacity 0.8s ease 0.5s`;
-                
+
                 // Add to visualization
                 dataVisualization.appendChild(regressionLine);
-                
+
                 // Trigger animation
                 setTimeout(() => {
                     regressionLine.style.transform = `rotate(${angle}deg) scaleX(1)`;
                     regressionLine.style.opacity = '0.8';
                 }, 10);
             }
-            
+
             function createPatternCircle(size, centerX, centerY) {
                 const circle = document.createElement('div');
                 circle.className = 'pattern-circle';
-                
+
                 // Set styles
                 circle.style.width = `${size}%`;
                 circle.style.height = `${size}%`;
-                circle.style.left = `${centerX - (size/2)}%`;
-                circle.style.top = `${centerY - (size/2)}%`;
-                
+                circle.style.left = `${centerX - (size / 2)}%`;
+                circle.style.top = `${centerY - (size / 2)}%`;
+
                 // Animation with delay
                 const delay = Math.random() * 0.5;
                 circle.style.transition = `transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) ${delay}s, opacity 1.2s ease ${delay}s`;
-                
+
                 // Add to pattern container
                 patternContainer.appendChild(circle);
-                
+
                 // Trigger animation
                 setTimeout(() => {
                     circle.style.transform = 'scale(1)';
                     circle.style.opacity = '0.6';
                 }, 10);
             }
-            
+
             function createGridLine(horizontal, position) {
                 const line = document.createElement('div');
                 line.className = horizontal ? 'pattern-grid-line-h' : 'pattern-grid-line-v';
-                
+
                 // Set styles
                 if (horizontal) {
                     line.style.top = `${position}%`;
                 } else {
                     line.style.left = `${position}%`;
                 }
-                
+
                 // Animation with delay
                 const delay = position / 100;
                 line.style.transition = `transform 1s ease ${delay}s`;
-                
+
                 // Add to pattern grid
                 patternGrid.appendChild(line);
-                
+
                 // Trigger animation
                 setTimeout(() => {
                     line.style.transform = horizontal ? 'scaleX(1)' : 'scaleY(1)';
@@ -851,20 +889,20 @@
             function createPatternGroup(x, y, width, height) {
                 const group = document.createElement('div');
                 group.className = 'pattern-group';
-                
+
                 // Set styles
                 group.style.left = `${x}%`;
                 group.style.top = `${y}%`;
                 group.style.width = `${width}%`;
                 group.style.height = `${height}%`;
-                
+
                 // Animation with delay
                 const delay = Math.random() * 0.5 + 0.5;
                 group.style.transition = `opacity 0.8s ease ${delay}s, transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) ${delay}s`;
-                
+
                 // Add to pattern container
                 patternContainer.appendChild(group);
-                
+
                 // Trigger animation
                 setTimeout(() => {
                     group.style.opacity = '1';
@@ -874,4 +912,5 @@
         }
     </script>
 </body>
+
 </html>

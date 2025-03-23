@@ -33,11 +33,79 @@ body.no-transition {
 
 /* ปรับความสูงเฉพาะหน้า */
 .home-page {
-    min-height: 280vh;
+    min-height: 560vh;
 }
 
-.project-page {
+.about-page {
+    min-height: 618vh;
+}
+
+.experience-page {
+    min-height: 180vh;
+}
+
+.experience_leowood-page {
+    min-height: 115vh;
+}
+
+.experience_arrow-page {
+    min-height: 115vh;
+}
+
+.project_atm-page {
     min-height: 500vh;
+}
+
+.project_cafe-page {
+    min-height: 500vh;
+}
+
+.project_ggsheet-page {
+    min-height: 500vh;
+}
+
+.project_looker-page {
+    min-height: 500vh;
+}
+
+.project_api-page {
+    min-height: 500vh;
+}
+
+.project_xml-page {
+    min-height: 500vh;
+}
+
+.project_nycflight-page {
+    min-height: 500vh;
+}
+
+.project_pizza-page {
+    min-height: 500vh;
+}
+
+.project_pyc-page {
+    min-height: 500vh;
+}
+
+.project_rfm-page {
+    min-height: 500vh;
+}
+
+.project_titanic-page {
+    min-height: 500vh;
+}
+
+.project_vizdiamond-page {
+    min-height: 500vh;
+}
+
+.certificate-page {
+    min-height: 100vh;
+}
+
+.contact-page {
+    min-height: 100vh;
 }
 
 @media screen and (max-width: 768px) {
@@ -138,6 +206,7 @@ nav ul li a:hover, nav ul li a:focus {
 
 /* Sections -----------------------------------------------------------------------------------------------------------*/
 section {
+    position: relative;
     padding: 30px;
     margin: 40px auto;
     background: rgba(255, 255, 255, 0.8);
@@ -145,6 +214,27 @@ section {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     max-width: 800px;
     transition: transform 0.3s ease-in-out;
+}
+
+.corner-text {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: #555;
+    cursor: url('cursor1.png'), auto;
+}
+
+.corner-text:hover {
+    background-color: #000000;
+    color: white;
+    text-shadow: 0px 0px 10px cyan,
+                 0px 0px 20px cyan,
+                 0px 0px 30px cyan,
+                 0px 0px 60px cyan;
+    border-radius: 10px;
+    padding: 0.1rem 0.4rem;
+    
 }
 
 /* ทำให้เฉพาะ About Me, Certificate, Contact ขยาย ---------------------------------------------------------------------------------------------*/
@@ -191,15 +281,6 @@ section {
     margin-left: 294px;
 }
 
-nav ul li a {
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ff6600; /* เปลี่ยนสีข้อความ */
-    border-bottom: 2px solid #ff6600; /* เพิ่มเส้นใต้ */
-}
-
 /* ใช้ fade-in เข้าหน้าเว็บ ---------------------------------------------------------------------------------------------*/
 .fade-slide-in {
     opacity: 0;
@@ -233,7 +314,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #ff6600; /* เปลี่ยนสีพื้นหลัง */
+    background: linear-gradient(145deg, #aeaff5 0%, #8587ff 50%, #ff6600 100%);
     color: white;
 }
 
@@ -248,21 +329,25 @@ nav ul li a:hover {
     background: #bbdefb;
 }
 
+.hover-expand1:hover {
+    cursor: url("cursor.png"), auto;
+}
+
 nav ul li a.active {
     background: white;
     color: black;
     border-radius: 5px;
+    text-shadow: black
 }
 
 nav ul li a.active1 {
-    background: #ff6600;
-    color: black;
+    background: linear-gradient(145deg, #aeaff5 0%, #8587ff 50%, #ff6600 100%);
+    color: white;
     border-radius: 5px;
 }
 
 /* customปุ่ม downlod, view---------------------------------------------------------------------------------------------*/
 .download-btn {
-    background-color: transparent;
     color: #333;
     padding: 5px 10px;
     border: 2px solid #333;
@@ -273,32 +358,19 @@ nav ul li a.active1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: inline-flex;
     align-items: center;
-    gap: 8px;
     font-weight: 500;
     text-decoration: none;
 }
 
-.download-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255, 255, 255, 0.2),
-        transparent
-    );
-    transition: 0.5s;
-}
-
 .download-btn:hover {
-    background-color: #333;
-    color: white;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 0px 10px cyan,
+                 0px 0px 20px cyan,
+                 0px 0px 30px cyan,
+                 0px 0px 60px cyan;
 }
 
 /* เพิ่มสไตล์สำหรับ dropdown menu---------------------------------------------------------------------------------------------------------------------------- */
@@ -324,83 +396,159 @@ nav ul li a {
     cursor: url('cursor1.png'), auto;
 }
 
-nav ul li.dropdown a {
+nav ul li.dropdown a, nav ul li.dropdown1 a {
     cursor: url('cursor1.png'), auto;
 }
+
 /* Dropdown menu */
 nav ul li .dropdown-menu {
     display: none;
     position: absolute;
     left: 0;
-    top: 140%;
+    top: 130%;
     background: rgba(0, 0, 0, 0.9);
-    min-width: 500px;
+    min-width: 80vh;
+    max-height: calc(1000vh - 965vh); /* ปรับความสูงให้ไม่เกินขอบจอ */
     padding: 10px 0;
-    border-radius: 5px;
+    border-radius: 10px;
     z-index: 1000;
+    overflow-y: auto; /* ทำให้เลื่อนขึ้น-ลงได้ */
+    scrollbar-width: thin; /* ทำให้ scrollbar บางลง */
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* กำหนดสี scrollbar */
 }
 
-nav ul li .dropdown-menu li {
+nav ul li .dropdown-menu1 {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 130%;
+    background: rgba(0, 0, 0, 0.9);
+    min-width: 30vh;
+    max-height: calc(1000vh - 945vh); /* ปรับความสูงให้ไม่เกินขอบจอ */
+    padding: 10px 0;
+    border-radius: 10px;
+    z-index: 1000;
+    overflow-y: auto; /* ทำให้เลื่อนขึ้น-ลงได้ */
+    scrollbar-width: thin; /* ทำให้ scrollbar บางลง */
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* กำหนดสี scrollbar */
+}
+
+
+nav ul li .dropdown-menu li, nav ul li .dropdown-menu1 li {
     display: block;
     margin: 0;
 }
 
-nav ul li .dropdown-menu li a {
+nav ul li .dropdown-menu li a, nav ul li .dropdown-menu1 li a {
     display: block;
     padding: 10px;
     color: rgb(255, 255, 255);
     font-size: 15px;
     text-align: left;
     text-decoration: none;
-    transition: background 0.3s ease-in-out;
 }
 
-nav ul li .dropdown-menu li a:hover {
-    background: #ff6600;
+nav ul li .dropdown-menu li a:hover, nav ul li .dropdown-menu1 li a:hover {
+    background: linear-gradient(145deg, #aeaff5 0%, #8587ff 50%, #ff6600 100%);
 }
 
 /* แสดง dropdown menu เมื่อ hover */
-nav ul li.dropdown:hover .dropdown-menu {
+nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-menu {
     display: block;
 }
 
 /* ปุ่มกลับหน้า ที่ต้องการ-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .back-button {
-    background-color: transparent;
-    color: #333;
-    padding: 12px 24px;
-    border: 2px solid #333;
-    cursor: url('cursor1.png'), auto;
-    font-size: 16px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: inline-flex;
+    top: 12rem; /* ปรับตำแหน่งจากขอบบน */
+    left: 2vw; /* ปรับตำแหน่งจากขอบซ้าย */
+    display: flex;
     align-items: center;
-    gap: 8px;
-    font-weight: 500;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(145deg, #6366f1 0%, #3b82f6 50%, #2563eb 100%);
+    color: #fff;
+    border-radius: 12px;
+    cursor: url('cursor1.png'), auto;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border: none;
+    position: fixed;
+    overflow: hidden;
+    transform: translateZ(0);
+    box-shadow: 
+        0 4px 6px rgba(59, 130, 246, 0.2),
+        0 10px 15px rgba(59, 130, 246, 0.1);
     text-decoration: none;
 }
 
+.back-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: all 0.6s ease;
+}
+
 .back-button:hover {
-    background-color: #333;
-    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 
+        0 8px 12px rgba(59, 130, 246, 0.3),
+        0 15px 25px rgba(59, 130, 246, 0.2);
+}
+
+.back-button:hover::before {
+    left: 100%;
 }
 
 .back-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(1px);
+    box-shadow: 
+        0 2px 4px rgba(59, 130, 246, 0.2),
+        inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:focus-visible {
+    outline: 2px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+.back-button svg { /* สำหรับไอคอนถ้ามี */
+    transition: transform 0.3s ease;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.back-button:hover svg {
+    transform: scale(1.1);
+}
+
+.dark-mode .back-button {
+    background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+}
+
+.dark-mode .back-button {
+    background: linear-gradient(135deg, #4338ca 0%, #312e81 100%);
 }
 
 /* กำหนด frame ลิงก์หรือไฟล์ภาพ วิดิโอ ต่างๆ-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .iframe-container {
     display: flex;
-    justify-content: center;  /* จัดกึ่งกลางแนวนอน */
-    align-items: center;  /* จัดกึ่งกลางแนวตั้ง */
-    height: 45vh;  /* ปรับความสูงให้เท่ากับความกว้าง */
-    transform: scale(0.60); /* ให้สูงเต็มหน้าจอ */
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 20px 0;
 }
 
 /* Table of Contents Styles -----------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -605,10 +753,10 @@ details summary {
     display: inline-flex; /* ใช้ inline-flex เพื่อให้เหมือน tag */
     align-items: center;
     gap: 0.5rem;
-    color: #191a1c; /* สีตัวอักษรปกติ */
+    color: rgb(0, 0, 0); /* สีตัวอักษรปกติ */
     font-size: 15.5px; /* ขนาดฟอนต์พอดีกับข้อความ */
     font-weight: 500; /* ตัวหนาเล็กน้อย */
-    background-color: rgba(234, 255, 0, 0); /* พื้นหลังใส */
+    background-color: #bbdefb; /* สีพื้นหลังเป็นสีน้ำเงินฟ้าเมื่อ hover */
     padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
     border-radius: 20px; /* ขอบมุมโค้งมน */
     text-decoration: none; /* ไม่มีเส้นใต้ */
@@ -645,7 +793,6 @@ details summary:hover {
 /* Timeline Container */
 .timeline {
     position: relative;
-    max-width: 864px;
     margin: 2rem auto;
     padding: 2rem 0;
 }
@@ -676,7 +823,6 @@ details summary:hover {
     opacity: 1;
     position: relative;
     width: 46%;
-    margin: 2rem 0;
     padding: 0 2rem;
 }
 
@@ -843,18 +989,187 @@ input:checked + .slider1:before {
     margin-left: -10px; /* เพิ่มระยะห่างด้านซ้ายของปุ่ม */
 }
 
-/* netflix ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-/* #container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-image: url("sky.webp");
-    background-position: center 25%;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow: hidden;
-  } */
+/* Grade ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* GPA text styling */
+.gpa-hover {
+    position: relative;
+    display: inline-block;
+}
 
+.gpa-value {
+    cursor: url("cursor1.png"), auto;
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    width: 300px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 15px;
+    z-index: 1000;
+    opacity: 0;  /* ซ่อน tooltip */
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.graph-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.gpa-label {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 12px;
+    color: #ff5252;
+    font-weight: bold;
+    z-index: 1100;
+}
+
+/* หนา---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.text-bold {
+    font-weight: 500;
+}
+
+.link-cursor {
+    cursor: text;
+}
+
+.copy-btn {
+    border: none;
+    background: none;
+    cursor: url("cursor2.png"), auto;
+}
+
+.copy-btn img {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.copy-btn:hover img {
+    opacity: 1 ;
+}
+
+/* Toast Notification */
+.toast {
+    visibility: hidden;
+    min-width: 16%;
+    background-color: #323232;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    position: absolute; /* ให้แนบติด viewport */
+    bottom: 30px;  /* ตำแหน่งที่ต้องการ */
+    right: 30px;
+    z-index: 9999; /* เพิ่มให้สูงสุดเพื่อกันการซ้อน */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s, transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none; /* กันการคลิกซ้ำ */
+}
+
+/* แสดง Toast */
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* cursor  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.cursor2 {
+    cursor: url("cursor2.png"), auto;
+    text-decoration: none;
+    padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+    color: #000000;
+}
+
+.cursor2:hover {
+    color: #f8f8f8; /* สีตัวอักษรปกติ */
+    font-weight: 400; /* ตัวหนาเล็กน้อย */
+    border-radius: 10px; /* ขอบมุมโค้งมน */
+    text-shadow: 0px 0px 0.9px cyan,
+                 0px 0px 0.9px cyan,
+                 0px 0px 0.4px cyan,
+                 0px 0px 0.9px cyan;
+    background-color: rgba(0, 0, 0, 0.931); /* พื้นหลังใส */
+}
+
+.cursor21 {
+    cursor: url("cursor2.png"), auto;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.preview {
+    position: absolute;
+    width: 25vw; /* 10% ของความกว้างหน้าจอ */
+    height: auto; /* ปรับอัตโนมัติตามอัตราส่วนของรูป */
+    display: none;
+    z-index: 100;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.5); /* ใช้ rem แทน px */
+    border-radius: 0.5em; /* ใช้ em แทน px */
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Code Container */
+.code-container {
+    position: relative;
+    background: #282c34;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header ที่แสดงประเภทของโค้ด */
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #191919;
+    padding: 5px 10px;
+    border-radius: 6px 6px 0 0;
+}
+
+/* ป้ายชื่อภาษา */
+.language-label {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Prism.js Line Number */
+pre[class*="language-"] {
+    position: relative;
+    overflow: auto;
+    background: #282c34;
+    padding: 1px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #ffffff;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+#toc-section a {
+    color: black; /* สีดำ */
+    text-decoration: none; /* เอาขีดเส้นใต้ลิงก์ออก */
+    /* font-weight: bold; ตัวหนา */
+    padding: 2px 5px;
+}
+
+#toc-section a:hover {
+    color: #000000; /* สีฟ้าตอน hover */
+    text-decoration: none;
+    text-shadow: #000000;
+    background-color: #7fc5ff;
+    border-radius: 20px;
+    cursor: url('cursor1.png'), auto ;
+}

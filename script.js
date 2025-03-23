@@ -207,10 +207,10 @@ navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         // Prevent default behavior of the anchor tag (page jumping)
         e.preventDefault();
-        
+
         // Get the target section's ID from the href attribute
         const targetSection = document.querySelector(link.getAttribute('href'));
-        
+
         // Scroll to the target section with smooth scrolling
         targetSection.scrollIntoView({
             behavior: 'smooth',
@@ -221,7 +221,7 @@ navLinks.forEach(link => {
 
 /*------------------------------------------------------------------------------------------------------------------------- */
 
-// คลิก Home tab แล้วไป home.html
+// คลิก Home tab แล้วไป index.html
 function navigateToIndex() {
     event.preventDefault();  // ป้องกันการโหลดซ้ำ
     window.location.href = "index.html";
@@ -238,6 +238,16 @@ function navigateToAbout() {
     window.location.href = "about.html";
 }
 
+// คลิก Project section แล้วไป experience.html
+function navigateToExperience() {
+    window.location.href = "experience.html";
+}
+
+// คลิก Project section แล้วไป project.html
+function navigateToProject() {
+    window.location.href = "project.html";
+}
+
 // คลิก Certificate แล้วไป certificate.html
 function navigateToCertificate() {
     window.location.href = "certificate.html";
@@ -247,28 +257,12 @@ function navigateToCertificate() {
 function navigateToContact() {
     window.location.href = "contact.html";
 }
+// สร้างฟังก์ชันคลิก tab ปัจจุบันแล้วเลื่อนไปด้านบน /*------------------------------------------------------------------------------------------------------------------------- */
 
-// คลิก Project_DB แล้วไป Project_DB.html
-function navigateToProject_DB() {
-    window.location.href = "project_DB.html";
-}
-
-// คลิก Project section แล้วไป project.html
-function navigateToProject() {
-    window.location.href = "project.html";
-}
-
-// สร้างฟังก์ชันคลิก tab ปัจจุบันแล้วเลื่อนไปด้านบน
 function scrollToTop(event) {
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
-// เลื่อนไปข้างบนสุดของ Tab นั้นๆ
-document.querySelector('nav ul li a[href="home.html"]').addEventListener('click', scrollToTop);
-document.querySelector('nav ul li a[href="about.html"]').addEventListener('click', scrollToTop);
-document.querySelector('nav ul li a[href="certificate.html"]').addEventListener('click', scrollToTop);
-document.querySelector('nav ul li a[href="contact.html"]').addEventListener('click', scrollToTop);
 
 /*------------------------------------------------------------------------------------------------------------------------- */
 
@@ -285,13 +279,15 @@ document.addEventListener("DOMContentLoaded", function () {
 /*------------------------------------------------------------------------------------------------------------------------- */
 
 // ป้องกัน dropdown menu หายไปเมื่อคลิก
-document.querySelectorAll('.dropdown').forEach(dropdown => {
+document.querySelectorAll('.dropdown, .dropdown1').forEach(dropdown => {
     dropdown.addEventListener('mouseenter', function () {
-        this.querySelector('.dropdown-menu').style.display = 'block';
+        let menu = this.querySelector('.dropdown-menu, .dropdown-menu1');
+        if (menu) menu.style.display = 'block';
     });
 
     dropdown.addEventListener('mouseleave', function () {
-        this.querySelector('.dropdown-menu').style.display = 'none';
+        let menu = this.querySelector('.dropdown-menu, .dropdown-menu1');
+        if (menu) menu.style.display = 'none';
     });
 });
 
@@ -299,12 +295,235 @@ function navigateToSection(event, sectionId) {
     event.preventDefault();
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
+
 /*------------------------------------------------------------------------------------------------------------------------- */
 
-function navigateToProject_DB1() {
+function navigateToProject_ggsheet_dsb10() {
     event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
-    window.location.href = "project_DB.html";
+    window.location.href = "project_ggsheet_dsb10.html";
 }
 
+function navigateToProject_cafe_r_sql_dsb10() {
+    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
+    window.location.href = "project_cafe_r_sql_dsb10.html";
+}
+
+function navigateToProject_rfm_py_dsb10() {
+    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
+    window.location.href = "project_rfm_py_dsb10.html";
+}
+
+function navigateToProject_pyc_r_py_dsb10() {
+    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
+    window.location.href = "project_pyc_r_py_dsb10.html";
+}
+
+function navigateToProject_nycflight13_23_dsb10() {
+    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
+    window.location.href = "project_nycflight13_23_dsb10.html";
+}
+
+function navigateToProject_vizdimond_dsb10() {
+    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
+    window.location.href = "project_vizdimond_dsb10.html";
+}
+
+function navigateToProject_titanic_glm_dsb10() {
+    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
+    window.location.href = "project_titanic_glm_dsb10.html";
+}
+
+function navigateToProject_looker_dsb10() {
+    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
+    window.location.href = "project_looker_dsb10.html";
+}
+
+function navigateToProject_pizza_chatbot_dsb10() {
+    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
+    window.location.href = "project_pizza_chatbot_dsb10.html";
+}
+
+function navigateToProject_atm_oop_py_dsb10() {
+    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
+    window.location.href = "project_atm_oop_py_dsb10.html";
+}
+
+function navigateToProject_mini_api_py() {
+    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
+    window.location.href = "project_mini_api_py.html";
+}
+
+function navigateToProject_mini_xml_cafe() {
+    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
+    window.location.href = "project_mini_xml_cafe.html";
+}
+
+function navigateToExperience() {
+    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
+    window.location.href = "experience.html";
+}
+
+function navigateToExperience_leowood() {
+    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
+    window.location.href = "experience_leowood.html";
+}
+
+function navigateToExperience_arrow() {
+    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
+    window.location.href = "experience_arrow.html";
+}
 
 /*------------------------------------------------------------------------------------------------------------------------- */
+// เพิ่ม script เล็กน้อยเพื่อให้แน่ใจว่า tooltip แสดงผลถูกต้อง
+document.addEventListener('DOMContentLoaded', function () {
+    const gpaHover = document.querySelector('.gpa-hover');
+    const tooltip = document.querySelector('.tooltip');
+
+    gpaHover.addEventListener('mousemove', function (event) {
+        // ดึงค่าตำแหน่งของเมาส์
+        let mouseX = event.pageX;
+        let mouseY = event.pageY;
+
+        // ปรับตำแหน่ง tooltip ให้ใกล้กับเมาส์
+        tooltip.style.left = mouseX - 250 + 'px';  // ขยับ tooltip ไปทางขวาของเมาส์ 10px
+        tooltip.style.top = mouseY - 850 + 'px';   // ขยับ tooltip ไปทางล่างของเมาส์ 10px
+    });
+
+    gpaHover.addEventListener('mouseenter', function () {
+        tooltip.style.opacity = '1';
+        tooltip.style.visibility = 'visible';
+    });
+
+    gpaHover.addEventListener('mouseleave', function () {
+        tooltip.style.opacity = '0';
+        tooltip.style.visibility = 'hidden';
+    });
+});
+
+//-------------------------------------------------------------------------------------------------------------------------------------------- 
+function copyEmail() {
+    let email = document.getElementById("email").innerText;
+    navigator.clipboard.writeText(email).then(() => {
+        showToast();
+    });
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+const previewImage = document.createElement("img");
+previewImage.classList.add("preview");
+document.body.appendChild(previewImage);
+
+function showPreview(event, src) {
+    previewImage.src = src;
+    previewImage.style.display = "block";
+
+    // ปรับตำแหน่งให้อยู่บนขวาของ cursor
+    previewImage.style.left = event.pageX + 15 + "px"; // ขยับไปทางขวาของ cursor
+    previewImage.style.top = event.pageY - 80 + "px";  // ขยับขึ้นไปด้านบน cursor
+}
+
+function hidePreview() {
+    previewImage.style.display = "none";
+}
+
+/*------------------------------------------------------------------------------*/
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".code-container").forEach(container => {
+        const copyBtn = container.querySelector(".copy-btn");
+        const codeBlock = container.querySelector("code");
+        const toast = document.getElementById("toast"); // ค้นหา Toast
+
+        if (copyBtn && codeBlock && toast) {
+            // ลบ white space ที่ไม่จำเป็น
+            codeBlock.textContent = codeBlock.textContent.trim();
+
+            copyBtn.addEventListener("click", function () {
+                // คัดลอกโค้ดไปยัง clipboard
+                navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+                    showToast(); // แสดง Toast
+                }).catch(err => {
+                    console.error("Failed to copy: ", err);
+                });
+            });
+
+            // Prism.js ทำ Highlight ใหม่
+            Prism.highlightElement(codeBlock);
+        }
+    });
+});
+
+// ฟังก์ชันแสดง Toast
+function showToast() {
+    let toast = document.getElementById("toast");
+    if (!toast) return;
+
+    // แสดง Toast
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 2000); // Toast หายไปหลัง 2 วินาที
+}
+
+/*------------------------------------------------------------------------------*/
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".detail1").forEach(detail => {
+        detail.setAttribute("open", "true");
+    });
+});
+
+/*-------------------------------------------------------------------------------- */
+document.addEventListener("DOMContentLoaded", function () {
+    const tocSection = document.getElementById("toc-section"); // ส่วนที่จะแสดง TOC
+    const headings = document.querySelectorAll("h2, h3, h4"); // ค้นหา h2, h3, h4 ทั้งหมด
+    const tocList = document.createElement("ul");
+
+    let lastH2 = null, lastH3 = null;
+
+    headings.forEach((heading, index) => {
+        const id = heading.id || `heading-${index}`; // ถ้าไม่มี id ให้สร้างอัตโนมัติ
+        heading.id = id; // กำหนด id ให้ heading
+
+        const listItem = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = `#${id}`;
+        link.textContent = heading.textContent; // ใช้ชื่อหัวข้อจริง
+
+        listItem.appendChild(link);
+
+        // จัดโครงสร้าง TOC ตามระดับของหัวข้อ
+        if (heading.tagName === "H2") {
+            tocList.appendChild(listItem);
+            lastH2 = listItem;
+            lastH3 = null;
+        } else if (heading.tagName === "H3" && lastH2) {
+            let subList = lastH2.querySelector("ul") || document.createElement("ul");
+            subList.appendChild(listItem);
+            lastH2.appendChild(subList);
+            lastH3 = listItem;
+        } else if (heading.tagName === "H4" && lastH3) {
+            let subList = lastH3.querySelector("ul") || document.createElement("ul");
+            subList.appendChild(listItem);
+            lastH3.appendChild(subList);
+        }
+    });
+
+    tocSection.appendChild(tocList);
+
+    // เพิ่ม Smooth Scroll และให้หัวข้อเลื่อนมาตรงกลางจอ
+    document.querySelectorAll("#toc-section a").forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.getBoundingClientRect().top + window.scrollY - (window.innerHeight / 2),
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});

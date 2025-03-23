@@ -1,12 +1,24 @@
 <!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MKCCGG3QF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0MKCCGG3QF');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phubordin's Portfolio</title>
+    <title>Home - Phubordin</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="certificate-style.css">
+    <link rel="icon" type="image/png" href="website.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 
 <div class="theme-switch-wrapper">
@@ -32,28 +44,31 @@
 <!-- Table of Contents -->
 <button id="toggle-toc-btn">≡</button>
 <aside id="table-of-contents" class="active">
-    <h3>Navigation Menu</h3>
+    <h3 class="link-cursor">Navigation Menu</h3>
     <ul id="toc-list"></ul>
 </aside>
 
 <body class="fade-slide-in home-page">
     <header>
-        <div class= "header-background"></div>
-        <h2>I am a Junior <span class= "strong1">Data Analyst.</span></h2>
+        <div class="header-background"></div>
+        <div class="link-cursor" style="font-size: 1.5em; font-weight: bold;">I am a Junior <span class="strong1">Data
+                Analyst.</span></div>
     </header>
-    
+
     <!-- Navigation Bar -->
     <nav>
         <ul>
             <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
-            <li><a href="home.html">🏠 Home</a></li> <!-- Home Tab with House Emoji -->
-            <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li> <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
+            <li><a href="home.html" class="active" onclick="scrollToTop(event)">🏠 Home</a></li>
+            <!-- Home Tab with House Emoji -->
+            <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li>
+            <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
             <!-- Work Experience Dropdown -->
-            <li class="dropdown">
+            <li class="dropdown1">
                 <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
-                <ul class="dropdown-menu">
-                    <li><a href="experience_leowood.html" onclick="navigateToExperience_Leowood()">Job 1</a></li>
-                    <li><a href="experience_arrow.html" onclick="navigateToExperience_Arrow()">Job 2</a></li>
+                <ul class="dropdown-menu1">
+                    <li><a onclick="navigateToExperience_leowood()">Leowood Intertrade Co Ltd. </a></li>
+                    <li><a onclick="navigateToExperience_arrow()">Arrow IT Systems Co Ltd.</a></li>
                 </ul>
             </li>
 
@@ -61,8 +76,39 @@
             <li class="dropdown">
                 <a href="projects.html" onclick="navigateToProject()">Project Overview</a>
                 <ul class="dropdown-menu">
-                    <li><a href="project_DB.html" onclick="navigateToProject_DB()" >Project 1</a></li>
-                    <li><a href="project_pyc.html" onclick="navigateToProject_PYC()">Project 2</a></li>
+                    <li><a onclick="navigateToProject_ggsheet_dsb10()">P1 : Data Exploration and Transformation with
+                            <img src="sheets.png" style="vertical-align:middle" width="25"> Google Sheets</a></li>
+                    <li><a onclick="navigateToProject_cafe_r_sql_dsb10()">P2 : Building a Café Restaurant Database
+                            Using  <img src="R.png" style="vertical-align:middle" width="25"> R and <img src="SQL.png"
+                                style="vertical-align:middle" width="25"> SQL</a></li>
+                    <li><a onclick="navigateToProject_rfm_py_dsb10()">P3 : Customer Segmentation and RFM Analysis Using
+                            <img src="python.png" style="vertical-align:middle" width="25">Python and <img src="R.png"
+                                style="vertical-align:middle" width="25"> R for Strategic Business Insight</a></li>
+                    <li><a onclick="navigateToProject_pyc_r_py_dsb10()">P4 : Creating a Multi-Round Rock-Paper-Scissors
+                            Game in <img src="R.png" style="vertical-align:middle" width="25"> R and <img src="python.png"
+                                style="vertical-align:middle" width="25"> Python</a></li>
+                    <li><a onclick="navigateToProject_nycflight13_23_dsb10()">P5 : EDA and Comparison of NYC Flights
+                            Data (2013 vs. 2023) with  <img src="R.png" style="vertical-align:middle" width="25"> R</a>
+                    </li>
+                    <li><a onclick="navigateToProject_vizdimond_dsb10()">P6 : EDA Visualization of the Diamond Dataset
+                            Using  <img src="R.png" style="vertical-align:middle" width="25"> R and R Markdown </a></li>
+                    <li><a onclick="navigateToProject_titanic_glm_dsb10()">P7 : Logistic Regression Analysis on the
+                            Titanic Dataset Using  <img src="R.png" style="vertical-align:middle" width="25"> R</a></li>
+                    <li><a onclick="navigateToProject_looker_dsb10()">P8 : Data-Driven Insights: Sales Performance &
+                            Profitability in <img src="looker.png" style="vertical-align:middle" width="25">Looker
+                            Studio</a></li>
+                    <li><a onclick="navigateToProject_pizza_chatbot_dsb10()">P9 : Chatbot Development for a Pizza
+                            Business Using  <img src="R.png" style="vertical-align:middle" width="25"> R Programming</a>
+                    </li>
+                    <li><a onclick="navigateToProject_atm_oop_py_dsb10()">P10 : Object-Oriented ATM System: Financial
+                            Transactions with <img src="python.png" style="vertical-align:middle" width="25"> Python
+                            OOP</a></li>
+                    <li><a onclick="navigateToProject_mini_api_py()">mini P11 : Extracting Public API Data with <img
+                                src="python.png" style="vertical-align:middle" width="25"> Python: Air Quality
+                            Analytics</a></li>
+                    <li><a onclick="navigateToProject_mini_xml_cafe()">mini P12 : Cafe Menu Data Structure with <img
+                                src="xml.png" style="vertical-align:middle" width="25"> XML</a></li>
+
                 </ul>
             </li>
             <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li>
@@ -70,62 +116,270 @@
         </ul>
     </nav>
 
-    <section id="about" class="hover-expand" onclick="navigateToAbout()">
-        
-        <h2>About Me</h2>
-        
-        <ul>
-            <li>Timeline (เส้นทางรถไฟฟ้า) เรียนจบที่ไหน - ทำงานอะไร (10 เดือน)</li>
-            <li>ชื่อ-นามสกุล เกิดปี (อายุ) ปัจจุบันอยู่จังหวัด</li>
-            <li>Skills Knowledge Tools</li>
-            <li>เป็นคนยังไง</li>
-            <li>เป้าหมายในการทำงาน ระยะสั้น, ระยะยาว</li>
+    <a style="text-decoration: none;" href="index.html">
+        <button class="back-button">⬅︎ <b>Welcome</b></button>
+    </a>
+
+    <section id="about">
+
+        <h2 class="link-cursor">About Me</h2>
+
+        <ul class="link-cursor">
+            <li><span class="text-bold">Personal Information
+                </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ชื่อ, อายุ,
+                จบการศึกษา, รูปแบบงานที่ต้องการ</li>
+            <li><span class="text-bold">
+                    Timeline</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                : เส้นทางการทำงาน</li>
+            <li><span class="text-bold">Skill & Tools</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Technical Skills, Soft
+                Skills</li>
+            <li><span class="text-bold">Work Style & Personality</span>&nbsp;: ผมเป็นคนแบบไหน ทัศนคติในการทำงาน</li>
+            <li><span
+                    class="text-bold">Goals</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ความท้าทาย และมีเป้าหมายอะไร</li>
+            <li><span
+                    class="text-bold">Files</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Resume,
+                Transcript, etc.</li>
+        </ul>
+        <div class="corner-text" onclick="navigateToAbout()">Read More</div>
+
+    </section>
+
+    <section id="experience" class="hover-expand1">
+        <h2 class="link-cursor">Work Experiences</h2>
+
+        <div class="experience cursor21" onclick="navigateToExperience_leowood()">
+            <h3>Data Analyst</h3>
+            <p>Leowood Intertrade Co Ltd. <span class="date-info" data-space="80"><i>Jul 2023 - Apr 2024 (10
+                        Months)</i></span></p>
+        </div>
+
+        <div class="experience cursor21" onclick="navigateToExperience_arrow()">
+            <h3>Project Internship</h3>
+            <p>Arrow IT Systems Co Ltd. <span class="date-info" data-space="50"><i>Jan 2022 - Jun 2022 (6
+                        Months)</i></span></p>
+        </div>
+
+        <div class="corner-text" onclick="navigateToExperience()">Read More</div>
+
+    </section>
+
+    <section id="project" class="hover-expand1">
+        <h2 class="link-cursor">Project Overview</h2>
+
+        <div class="project cursor21" onmouseover="showPreview(event, 'hcf-filter.gif')" onmouseout="hidePreview()"
+            onclick="navigateToProject_ggsheet_dsb10()">
+            <h3>P1 : Data Exploration and Transformation with <img src="sheets.png" style="vertical-align:middle"
+                    width="25"> Google Sheets</h3>
+            <p>สร้าง</p>
+        </div>
+
+        <div class="project cursor21" onmouseover="showPreview(event, 'sunset.webp')" onmouseout="hidePreview()"
+            onclick="navigateToProject_cafe_r_sql_dsb10()">
+            <h3>P2 : Building a Café Restaurant Database Using <img src="R.png" style="vertical-align:middle"
+                    width="25"> R and <img src="SQL.png" style="vertical-align:middle" width="25"> SQL</h3>
+            <p>สร้าง</p>
+        </div>
+
+        <div class="project cursor21" onmouseover="showPreview(event, 'monkeytype2.gif')" onmouseout="hidePreview()"
+            onclick="navigateToProject_rfm_py_dsb10()">
+            <h3>P3 : Customer Segmentation and RFM Analysis Using <img src="python.png" style="vertical-align:middle"
+                    width="25">Python and  <img src="R.png" style="vertical-align:middle" width="25"> R for Strategic
+                Business Insight</h3>
+            <p>สร้าง</p>
+        </div>
+
+        <div class="project cursor21" onmouseover="showPreview(event, 'monkeytype2.gif')" onmouseout="hidePreview()"
+            onclick="navigateToProject_pyc_r_py_dsb10()">
+            <h3>P4 : Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png" style="vertical-align:middle"
+                    width="25"> R and <img src="python.png" style="vertical-align:middle" width="25"> Python</h3>
+            <p>สร้าง</p>
+        </div>
+
+        <div class="project cursor21" onmouseover="showPreview(event, 'monkeytype2.gif')" onmouseout="hidePreview()"
+            onclick="navigateToProject_nycflight13_23_dsb10()">
+            <h3>P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png"
+                    style="vertical-align:middle" width="25"> R</h3>
+            <p>สร้าง</p>
+        </div>
+
+        <div class="project cursor21" onmouseover="showPreview(event, 'monkeytype2.gif')" onmouseout="hidePreview()"
+            onclick="navigateToProject_vizdimond_dsb10()">
+            <h3>P6 : EDA Visualization of the Diamond Dataset Using <img src="R.png" style="vertical-align:middle"
+                    width="25"> R and R Markdown</h3>
+            <p>สร้าง</p>
+        </div>
+
+        <div class="project cursor21" onmouseover="showPreview(event, 'monkeytype2.gif')" onmouseout="hidePreview()"
+            onclick="navigateToProject_titanic_glm_dsb10()">
+            <h3>P7 : Logistic Regression Analysis on the Titanic Dataset Using <img src="R.png"
+                    style="vertical-align:middle" width="25"> R</h3>
+            <p>สร้าง</p>
+        </div>
+
+        <div class="project cursor21" onmouseover="showPreview(event, 'monkeytype2.gif')" onmouseout="hidePreview()"
+            onclick="navigateToProject_looker_dsb10()">
+            <h3>P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"
+                    style="vertical-align:middle" width="25">Looker Studio</h3>
+            <p>สร้าง</p>
+        </div>
+
+        <div class="project cursor21" onmouseover="showPreview(event, 'monkeytype2.gif')" onmouseout="hidePreview()"
+            onclick="navigateToProject_pizza_chatbot_dsb10()">
+            <h3>P9 : Chatbot Development for a Pizza Business Using <img src="R.png" style="vertical-align:middle"
+                    width="25"> R Programming</h3>
+            <p>สร้าง</p>
+        </div>
+
+        <div class="project cursor21" onmouseover="showPreview(event, 'monkeytype2.gif')" onmouseout="hidePreview()"
+            onclick="navigateToProject_atm_oop_py_dsb10()">
+            <h3>P10 : Object-Oriented ATM System: Financial Transactions with <img src="python.png"
+                    style="vertical-align:middle" width="25">Python OOP</h3>
+            <p>สร้าง</p>
+        </div>
+
+        <div class="project cursor21" onmouseover="showPreview(event, 'monkeytype2.gif')" onmouseout="hidePreview()"
+            onclick="navigateToProject_mini_api_py()">
+            <h3>mini P11 : Extracting Public API Data with <img src="python.png" style="vertical-align:middle"
+                    width="25">Python: Air Quality Analytics</h3>
+            <p>สร้าง</p>
+        </div>
+
+        <div class="project cursor21" onmouseover="showPreview(event, 'monkeytype2.gif')" onmouseout="hidePreview()"
+            onclick="navigateToProject_mini_xml_cafe()">
+            <h3>mini P12 : Cafe Menu Data Structure with <img src="xml.png" style="vertical-align:middle"
+                    width="25"> XML</a></h3>
+            <p>สร้าง</p>
+        </div>
+
+        <div class="corner-text" onclick="navigateToProject()">Read More</div>
+    </section>
+
+    <section id="certificate">
+        <h2 class="link-cursor">Certificates</h2>
+        <span class="certificate-school1 link-cursor"><a href="https://bootcamp.datarockie.com/"><img
+                    src="logo-datarockie.png" style="vertical-align:middle; cursor: url('cursor2.png'), auto;"
+                    width="25"></a> DataRockie</span>
+        <ul class="link-cursor">
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">Data
+                    Science Bootcamp Batch 10</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">Data
+                    Science Bootcamp Batch 11</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'certificate-sql-crash-course.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('certificate-sql-crash-course.webp')">SQL Crash
+                    Course</span></li>
         </ul>
 
+        <span class="certificate-school1 link-cursor"><a href="https://www.skooldio.com/"><img src="logo-skooldio.png"
+                    style="vertical-align:middle; cursor: url('cursor2.png'), auto;" width="25"></a> Skooldio</span>
+        <ul class="link-cursor">
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'certificate-Intro-to-data-science-skoodio.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('certificate-Intro-to-data-science-skoodio.webp')">Intro to
+                    Data Science</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()"
+                    onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">Exploratory Data Analysis with
+                    Excel</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">Getting
+                    Started with AI and ChatGPT</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">SQL for
+                    Data Analytics</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">Advanced
+                    SQL for Data Analytics with BigQuery</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">Web
+                    Scraping with Minimal Coding</span></li>
+        </ul>
+
+        <span class="certificate-school1 link-cursor"><a href="https://www.w3schools.com/"><img src="logo-w3schools.png"
+                    style="vertical-align:middle; cursor: url('cursor2.png'), auto;" width="25"></a> W3School</span>
+        <ul class="link-cursor">
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'certificate-w3schools-excel.webp')"
+                    onmouseout="hidePreview()"
+                    onclick="openGalleryModal('certificate-w3schools-excel.webp')">Excel</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">SQL</span>
+            </li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">R</span>
+            </li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()"
+                    onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">Statistic</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()"
+                    onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">Pandas</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()"
+                    onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">NumPy</span></li>
+        </ul>
+
+        <span class="certificate-school1 link-cursor"><a href="https://futureskill.co/"><img src="logo-futureskill.png"
+                    style="vertical-align:middle" width="25"></a> <u>FutureSkill</u></span>
+        <ul class="link-cursor">
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">Conquer
+                    marketing and sales and find insights easily with Advance Report from Power BI</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">Data
+                    Analytics for Business</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">Present
+                    information engaging, concise, and efficiently with Data Storytelling</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">Deep Dive
+                    Excel for Professional Business</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">Create a
+                    Dashboard for Efficient Data Analysis with Tableau</span></li>
+            <li><span class="certificate-title2" onmouseover="showPreview(event, 'cetificate-dsb10-datarockie.webp')"
+                    onmouseout="hidePreview()" onclick="openGalleryModal('cetificate-dsb10-datarockie.webp')">Analyze
+                    your information easily with Power BI</span></li>
+        </ul>
+
+        <div class="corner-text" onclick="navigateToCertificate()">Read More</div>
     </section>
 
-    <section id="experience" class="hover-expand">
-        <h2>Work Experiences</h2>
-    
-        <div class="experience">
-            <h3>Data Analyst</h3>
-            <p>Leowood Intertrade Co Ltd. <span class="date-info" data-space="80"><i>Jul 2023 - Apr 2024 (10 Months)</i></span></p>
-        </div>
-    
-        <div class="experience">
-            <h3>Internship</h3>
-            <p>Arrow IT Systems Co Ltd. <span class="date-info" data-space="50"><i>Jan 2022 - Jun 2022 (6 Months)</i></span></p>
-        </div>
+    <section id="contact">
+        <h2 class="link-cursor">Contact</h2>
+        <p class="link-cursor"><b>Email หรือ 086-xxx-1940 (ภูบดินทร์ | Phubordin) Thailand</b></p>
+        <p class="link-cursor">Thank you for reviewing my portfolio. I look forward to the possibility of working with
+            you and contributing my skills to your team. 🙏😊</p>
 
+        <p>
+            <a href="https://www.instagram.com/phuyuu/" class="hover-expand"><img src="ig.png" width="30"
+                    class="notion-icon"></a>
+            <a href="https://phubordin.github.io/My-Portfolio-Website/index.html" class="hover-expand"><img
+                    src="website.png" width="30" class="notion-icon"></a>
+            <a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png" width="30"
+                    class="notion-icon"></a>
+            <a href="linkedin.com/in/phubordin-phanyosri-b26a2a27a" class="hover-expand"><img src="linkedin.png"
+                    width="30" class="notion-icon"></a>
+            <a href="https://mail.google.com/mail/">
+                <img src="gmail.png" width="30" class="notion-icon hover-expand"></a> :
+            <span class="link-cursor" id="email">phubordin.phanyosri@gmail.com
+                <button onclick="copyEmail()" class="copy-btn notion-icon">
+                    <img src="icon-copy.png" width="20" alt="Copy">
+                </button>
+            </span>
+        </p>
+
+        <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+
+        <div class="corner-text" onclick="navigateToContact()">Read More</div>
     </section>
 
-    <section id="projects" class="hover-expand" onclick="navigateToProject()">
-        <h2>Project Overview</h2>
-        <div class="project hover-expand" onclick="navigateToProject_DB1()">
-            <h3>Data Visualization of Store Dataset</h3>
-            <p>Built an interactive dashboard using Power BI...</p>
-        </div>
-        <div class="project">
-            <h3>Customer Segmentation</h3>
-            <p>Applied Machine Learning to analyze customer behavior...</p>
-        </div>
-    </section>
-
-    <section id="certificate" class="hover-expand" onclick="navigateToCertificate()">
-        <h2>Certificates</h2>
-        <p><a href="#">DataRockie School</a></p>
-        <p><a href="#">W3Schools</a></p>
-        <p><a href="#">Skooldio</a></p>
-        <p><a href="#">FutureSkill</a></p>
-    </section>
-
-    <section id="contact" class="hover-expand" onclick="navigateToContact()">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:phubordin@example.com">phubordin@example.com</a></p>
-        <p>LinkedIn: <a href="#">linkedin.com/in/phubordin</a></p>
-    </section>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>
 </body>
+
 </html>

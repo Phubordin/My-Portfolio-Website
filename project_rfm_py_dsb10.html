@@ -1,4 +1,4 @@
-<!-- certificate.html -->
+<!-- project.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +14,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificate - Phubordin</title>
+    <title>Project - RFM Analysis</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="certificate-style.css">
     <link rel="icon" type="image/png" href="website.png">
@@ -41,13 +41,21 @@
     </label>
 </div>
 
-<body class="fade-slide-in certificate-page">
+<!-- Table of Contents -->
+<button id="toggle-toc-btn">≡</button>
+<aside id="table-of-contents" class="active">
+    <h3 class= "link-cursor">Navigation Menu</h3>
+    <ul id="toc-list"></ul>
+</aside>
+
+<body class="fade-slide-in project_rfm-page">
     <header>
-        <div class= "header-background"></div>
-        <div style="font-size: 1.5em; font-weight: bold;" class= "link-cursor strong1">Certificates</div>
+        <div class="header-background"></div>
+        <div style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Project 3 : <span class= "strong1" >Customer Segmentation <br>and RFM Analysis Using <img src="python.png"  style="vertical-align:middle" width="25" >Python and <img src="R.png"  style="vertical-align:middle" width="25" > for Strategic Business Insight</span></div>
     </header>
 
     <!-- Navigation Bar -->
+    
     <nav>
         <ul>
             <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
@@ -64,11 +72,11 @@
 
             <!-- Projects Dropdown -->
             <li class="dropdown">
-                <a href="projects.html" onclick="navigateToProject()">Project Overview</a>
+                <a href="projects.html" class="active" onclick="scrollToTop(event)">Project Overview</a>
                 <ul class="dropdown-menu">
                     <li><a onclick="navigateToProject_ggsheet_dsb10()" >P1 : Data Exploration and Transformation with <img src="sheets.png"  style="vertical-align:middle" width="25" > Google Sheets</a></li>
                     <li><a onclick="navigateToProject_cafe_r_sql_dsb10()" >P2 : Building a Café Restaurant Database Using <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="SQL.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_rfm_py_dsb10()" >P3 : Customer Segmentation and RFM Analysis Using <img src="python.png"  style="vertical-align:middle" width="25" >Python and <img src="R.png"  style="vertical-align:middle" width="25" > for Strategic Business Insight</a></li>
+                    <li><a class="active1" onclick="scrollToTop(event)" onclick="navigateToProject_rfm_py_dsb10()" >P3 : Customer Segmentation and RFM Analysis Using <img src="python.png"  style="vertical-align:middle" width="25" >Python and <img src="R.png"  style="vertical-align:middle" width="25" > for Strategic Business Insight</a></li>
                     <li><a onclick="navigateToProject_pyc_r_py_dsb10()" >P4 : Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="python.png"  style="vertical-align:middle" width="25" ></a></li>
                     <li><a onclick="navigateToProject_nycflight13_23_dsb10()" >P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png"  style="vertical-align:middle" width="25" ></a></li>
                     <li><a onclick="navigateToProject_vizdimond_dsb10()" >P6 : EDA Visualization of the Diamond Dataset Using <img src="R.png"  style="vertical-align:middle" width="25" > and R Markdown </a></li>
@@ -80,27 +88,51 @@
                     <li><a onclick="navigateToProject_mini_xml_cafe()" >mini P12 : Cafe Menu Data Structure with <img src="xml.png"  style="vertical-align:middle" width="25" >XML</a></li>
                 </ul>
             </li>
-            <li><a href="certificate.html" class="active" onclick="scrollToTop(event)">Certificates</a></li>
+            <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li>
             <li><a href="contact.html" onclick="navigateToContact()">Contact</a></li>
         </ul>
     </nav>
 
-    <div id="certificate-container" class="max-w-7xl mx-auto p-6">
-        <div class="view-controls">
-            <select id="school-selector" class="school-select">
-                <option value="all">All Schools</option>
-            </select>
-            <button id="view-toggle" class="view-toggle-btn">
-                <span class="toggle-icon"></span>
-                <span id="toggleText">Switch to Slideshow View</span>
-            </button>
-        </div>
+    <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
+    <section id="toc-section">
+        <p style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Content of Tables</p>
+        <div id="toc-marker"></div>
+        <div id="toc-section"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
+    </section>
 
-        <div id="gallery-view" class="certificate-view active"></div>
-        <div id="slideshow-view" class="certificate-view"></div>
-        
-    </div>
-    
+    <a style= "text-decoration: none;" href="project.html">
+        <button class="back-button">⬅︎ <b>Project Overview</b></button>
+    </a>
+
+    <section>
+        <h2 class = "link-cursor">Dashboard</h2>
+        <p class = "link-cursor">Dashboard ที่แสดงอยู่ด้านล่างนี้ เป็นเครื่องมือที่ถูกสร้างขึ้นหลังจากจบ Project ตัวนี้เรียบร้อยเเล้ว
+            ซึ่งใช้ในการ monitor ผลประกอบการของร้านค้าแห่งหนึ่ง และตอบคำถามที่สงสัยมาตอนต้น <strong>ไปดูกันเลย!</strong>
+            สามาถลองกดเล่นที่ Dashboard ได้เลยนะครับ
+        </p>
+        <p class = "link-cursor">ขั้นตอนแรก ผมจะ Explore Dataset เพื่อดูว่าหน้าตาของ data ก้อนนี้เป็นยังไงบ้าง</p>
+    </section>
+
+    <section id="file">
+        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
+                    width="30" class="notion-icon"></a> Github & <a href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing" class="hover-expand"><img src="googledrive.png"
+                    width="30" class="notion-icon"></a> Google Drive</h2>
+        <p>
+            <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing"
+                class="download-btn" style="text-align: center; margin-top: 10px;">
+                Resume : 📥
+            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
+            <a href="https://drive.google.com/file/d/15nJgYPrUrUmD8pAVQZIr0tJVHaJVO8g4/view?usp=sharing"
+                class="download-btn" style="text-align: center; margin-top: 10px;">
+                Transcript : 📥
+            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
+            <a href="https://drive.google.com/file/d/15n_nmZaSY619ehogn_O0V75CKyuq7max/view?usp=sharing"
+                class="download-btn" style="text-align: center; margin-top: 10px;">
+                Graduation Certificate : 📥
+            </a> <span class="text-description link-cursor">Open with google drive</span>
+        </p>
+    </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>

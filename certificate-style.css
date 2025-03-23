@@ -128,7 +128,6 @@
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(5px);
-    cursor: url("cursor1.png"), auto;
 }
 
 .certificate-card:hover {
@@ -158,14 +157,14 @@
     gap: 0.8rem;
 }
 
-.certificate-school {
+.certificate-school, .certificate-school1 {
     display: inline-flex; /* ใช้ inline-flex เพื่อให้เหมือน tag */
     align-items: center;
     gap: 0.5rem;
-    color: #191a1c; /* สีตัวอักษรปกติ */
+    color: #242424; /* สีตัวอักษรปกติ */
     font-size: 15.5px; /* ขนาดฟอนต์พอดีกับข้อความ */
     font-weight: 500; /* ตัวหนาเล็กน้อย */
-    background-color: rgb(234, 255, 0); /* พื้นหลังใส */
+    background: linear-gradient(145deg, #fafafa 0%, #a2a4fe 50%, #ffa162 100%);
     padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
     border-radius: 20px; /* ขอบมุมโค้งมน */
     text-decoration: none; /* ไม่มีเส้นใต้ */
@@ -185,11 +184,40 @@
 }
 
 .certificate-title1 {
+    display: inline-flex; /* ใช้ inline-flex เพื่อให้เหมือน tag */
+    align-items: center;
+    gap: 0.5rem;    
     font-size: 1.15rem;
     font-weight: 600;
     color: #1a1a1a;
     line-height: 1.4;
     margin: 0;
+    border-radius: 20px; /* ขอบมุมโค้งมน */
+}
+
+.certificate-title1:hover {
+    color: hsl(0, 0%, 100%); /* สีตัวอักษรเป็นสีน้ำเงินฟ้าเมื่อ hover */
+    text-decoration: solid;
+    text-shadow: 0px 0px 1px cyan,
+                 0px 0px 2px cyan,
+                 0px 0px 4px cyan,
+                 0px 0px 8px cyan;
+    cursor: url("cursor1.png"), auto;
+}
+
+.certificate-title2 {
+    font-weight: 500;
+    display:inline-block;
+}
+
+.certificate-title2:hover {
+    color: hsl(0, 0%, 100%); /* สีตัวอักษรเป็นสีน้ำเงินฟ้าเมื่อ hover */
+    text-decoration: solid;
+    text-shadow: 0px 0px 1px cyan,
+                 0px 0px 2px cyan,
+                 0px 0px 4px cyan,
+                 0px 0px 8px cyan;
+    cursor: url("cursor1.png"), auto;
 }
 
 .certificate-description {
@@ -381,9 +409,13 @@ verify-icon:hover {
 }
 
 .dark-mode .certificate-school {
-    color: hsl(0, 0%, 0%);
-    background-color: #ddff03;
-    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    background: linear-gradient(145deg, #ffefef 0%, #7f81f9 50%, #ff8e42 100%);
+    font-weight: 500;
+    text-shadow: 0px 0px 0.9px rgb(0, 0, 0),
+                 0px 0px 0.9px rgb(0, 0, 0),
+                 0px 0px 0.4px rgb(0, 0, 0),
+                 0px 0px 0.9px rgb(0, 0, 0);
 }
 
 .dark-mode .certificate-school:hover {
@@ -415,11 +447,10 @@ verify-icon:hover {
 }
 
 .dark-mode details summary {
-    color: #ffffff;
+    color: #000000;
 }
 
 .dark-mode details summary:hover {
-    color: #2563eb;
     background-color: white;
 }
 
@@ -467,31 +498,35 @@ verify-icon:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    height: 101%;
+    background: rgba(0, 0, 0, 0.9); /* เพิ่มความเข้มของพื้นหลังให้เข้มขึ้น */
+    z-index: 10000;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
 }
 
 .modal-content {
-    position: relative;
-    max-width: 80%;
-    max-height: 80%;
+    position: absolute;
+    max-width: 95%; /* เพิ่มจาก 80% เป็น 95% */
+    max-height: 90%; /* เพิ่มจาก 80% เป็น 90% */
+    /* transform จะถูกกำหนดโดยตรงจาก JavaScript */
 }
 
 .full-image {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px cyan,
+                0px 0px 20px cyan,
+                0px 0px 40px cyan,
+                0px 0px 60px cyan;
 }
 
 .close-modal {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 1px;
+    right: 1px;
     font-size: 30px;
     color: white;
     cursor: url('cursor1.png'), auto;
@@ -606,7 +641,7 @@ verify-icon:hover {
 /* Table Body Rows */
 .list-table tbody tr {
     transition: background-color 0.2s ease;
-    text-align: center;
+    text-align: left;
 }
 
 .list-table tbody tr:hover {
@@ -638,7 +673,12 @@ verify-icon:hover {
 }
 
 .list-table td a:hover {
-    color: #ffffff;
+    display:inline-flex;
+    color: #ffffff; /* สีตัวอักษรปกติ */
+    background: rgb(0, 0, 0);
+    padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+    border-radius: 20px; /* ขอบมุมโค้งมน */
+    cursor: url("cursor2.png"), auto;
 }
 
 /* Responsive Adjustments */
@@ -689,9 +729,17 @@ verify-icon:hover {
 }
 
 .dark-mode .list-table td a {
-    color: #000000;
+    color: #ffffff;
 }
 
 .dark-mode .list-table td a:hover {
-    color: #ffffff;
+    color: #242424; /* สีตัวอักษรปกติ */
+    background: white;
+    padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+    border-radius: 20px; /* ขอบมุมโค้งมน */
+    cursor: url("cursor2.png"), auto;
+}
+
+.cursor-zoom-in {
+    cursor: url("zoom-in.png"), auto;
 }
