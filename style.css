@@ -555,8 +555,8 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
 #table-of-contents {
     position: fixed; /* เปลี่ยนเป็น fixed เพื่อให้เลื่อนตามหน้าจอ */
     right: 1vw;
-    top: 40vh; /* จัดกึ่งกลางหน้าจอในแนวตั้ง */
-    transform: translateY(-20%); /* จัดให้อยู่กึ่งกลางแนวตั้งพอดี */
+    top: 50vh; /* จัดกึ่งกลางหน้าจอในแนวตั้ง */
+    transform: translateY(-10%); /* จัดให้อยู่กึ่งกลางแนวตั้งพอดี */
     width: 15vw;
     max-height: calc(1000vh - 945vh); /* ปรับความสูงให้ไม่เกินขอบจอ */
     overflow-y: auto;
@@ -1069,14 +1069,14 @@ input:checked + .slider1:before {
     text-align: center;
     border-radius: 8px;
     padding: 10px;
-    position: absolute; /* เปลี่ยนจาก fixed เป็น absolute */
-    bottom: 20px;  /* ระยะห่างจากด้านล่างของ section */
-    right: 20px; /* ระยะห่างจากด้านขวาของ section */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
     z-index: 9999;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     transition: opacity 0.5s, transform 0.3s ease-in-out;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
     pointer-events: none;
 }
 
@@ -1172,6 +1172,22 @@ pre[class*="language-"] {
 }
 
 #toc-section a:hover {
+    color: #000000; /* สีฟ้าตอน hover */
+    text-decoration: none;
+    text-shadow: #000000;
+    background-color: #7fc5ff;
+    border-radius: 20px;
+    cursor: url('cursor1.png'), auto ;
+}
+
+#toc-section1 a {
+    color: black; /* สีดำ */
+    text-decoration: none; /* เอาขีดเส้นใต้ลิงก์ออก */
+    /* font-weight: bold; ตัวหนา */
+    padding: 2px 5px;
+}
+
+#toc-section1 a:hover {
     color: #000000; /* สีฟ้าตอน hover */
     text-decoration: none;
     text-shadow: #000000;

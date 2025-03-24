@@ -45,7 +45,7 @@
 <button id="toggle-toc-btn">≡</button>
 <aside id="table-of-contents" class="active">
     <h3 class="link-cursor">Navigation Menu</h3>
-    <ul id="toc-list"></ul>
+    <ul id="toc-list"><span class="text-description link-cursor">Click Tab Name to Scroll to the Top</span></ul>
 </aside>
 
 <body class="fade-slide-in project_ggsheet-page">
@@ -131,9 +131,8 @@
     <section>
         <h2 class="link-cursor">1. Filter & Sort Dynamic</h2>
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
-            สวัสดีครับ สำหรับตัวอย่างนี้เรามาสำรวจ และจัดการข้อมูลของพนักงานบริษัทแห่งหนึ่งโดยการใช้สูตร Google Sheets
-            แบบ Dynamic
-            เพื่อที่จะได้นำไปสรุปข้อมูลเบื้องต้นหรือติดตามงานบางอย่างฉบับฉับไว ตามรูปกันเลยค้าบ !
+            สวัสดีครับ สำหรับตัวอย่างนี้เรามา <mark>สำรวจ และจัดการข้อมูลของพนักงานบริษัทแห่งหนึ่ง
+            แบบ Dynamic</mark> เพื่อที่จะได้นำไปสรุปข้อมูลเบื้องต้นหรือติดตามงานบางอย่างฉบับฉับไว ตามรูปกันเลยค้าบ !
         </p>
 
         <div class="iframe-container cursor-zoom-in">
@@ -167,6 +166,10 @@
                     class="notion-icon">><b> 1. Filter & Sort Dynamic</b></a>
         </p>
 
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-1-6.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-1-6.png')">
+        </div>
+
         <p class = "link-cursor">📌 <b>อธิบายสูตร</b> : <a
                 href="https://github.com/Phubordin/portfolio-project/blob/c7a15b9a926cfd01ab2f94ee2000915758f9ba4e/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md"
                 class="hover-expand" style="text-decoration: none; color: black;"><img src="github.png" width="25"
@@ -211,28 +214,33 @@
         </p>
         <p>
         </p>
-                
+
     </section>
     </a>
 
     <section>
         <h2 class="link-cursor">2. Conditional Formatting: Highlight Row</h2>
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
-            สวัสดีครับ สำหรับตัวอย่างนี้เรามาสำรวจ และจัดการข้อมูลของพนักงานบริษัทแห่งหนึ่งโดยการใช้สูตร Google Sheets
-            แบบ Dynamic
-            เพื่อที่จะได้นำไปสรุปข้อมูลเบื้องต้นหรือติดตามงานบางอย่างฉบับฉับไว ตามรูปกันเลยค้าบ !
+            HCF คือการกำหนด Format cell ใน SpeadSheets ตามเงื่อนไขที่เรากำหนด <mark>ซึ่งมีประโยชน์มากต่อการทำงานเพื่อให้
+            Audience หรือ users สามารถเห็นข้อมูลที่สำคัญได้ง่ายขึ้น</mark> ผมมีตัวอย่างให้ลองดู 4 ตัวอย่าง ดังนี้ครับ
         </p>
 
+        <h3>2.1 Highlight Data Point เฉพาะ Perfomance ที่ Users กรองข้อมูล</h3>
+
+        <p class = "link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1932301649#gid=1932301649"
+                class="hover-expand" style="text-decoration: none; color: black;"><img src="sheets.png" width="25"
+                    class="notion-icon">><b> 2. Conditional Formatting: Highlight Row </b></a>> แถวที่ 1 - แถวที่ 26
+        </p>
+            
         <div class="iframe-container cursor-zoom-in">
-            <img src="p1-1-6.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-1-6.gif')">
+            <img src="hcf-filter.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('hcf-filter.gif')">
         </div>
 
         <p>
         <details class="detail1">
 
-            <summary>Formula</summary>
-
-            <div class="code-container">
+            <summary>Formula</summary><div class="code-container">
                 <div class="code-header">
                     <span class="language-label link-cursor">Excel</span>
                     <button class="copy-btn notion-icon">
@@ -240,20 +248,17 @@
                     </button>
                 </div>
                 <pre class="line-numbers link-cursor"><code class="language-none">
-                                    =IFERROR(SORT(FILTER(EMPLOYEE, (GENDER = B2) * (PERFORMANCE = B3)), 5, Not(D2)),"NO DATA")
-                            </code></pre>
+                    =$G2=$H$1
+                </code></pre>
+                <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
-
+        
         </details>
-        <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
-
         </p>
 
-        <p class = "link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
-                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1590154876#gid=1590154876"
-                class="hover-expand" style="text-decoration: none; color: black;"><img src="sheets.png" width="25"
-                    class="notion-icon">><b> 1. Filter & Sort Dynamic</b></a>
-        </p>
+        <div class="iframe-container cursor-zoom-in">
+            <img src="hcf-filter.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('hcf-filter.png')">
+        </div>
 
         <p class = "link-cursor">📌 <b>อธิบายสูตร</b> : <a
                 href="https://github.com/Phubordin/portfolio-project/blob/c7a15b9a926cfd01ab2f94ee2000915758f9ba4e/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md"
@@ -292,14 +297,34 @@
         <p class = "link-cursor">📌 <b>อธิบายผลลัพธ์:</b></p>
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             จากตัวอย่างข้างต้น ผมได้อธิบายถึงการกรองข้อมูลของพนักงานที่มีเพศตามกำหนด และมีผลการปฎิบัติงานตามกำหนด
-            โดยที่เรียงลำดับจากเงินเดือนตามเงื่อนไขที่ users ต้องการ ซึ่งผมใช้ Formula ต่างๆ เช่น Filter, Sort, IFERROR
+            โดยที่เรียงลำดับจากเงินเดือนตามเงื่อนไขที่ users ต้องการ ซึ่งผมใช้ Formula ต่างๆ เช่น <code class="language-none">Filter()</code>, <code class="language-none">SORT()</code>, <code class="language-none">IFERROR()</code>
             ในการจัดการข้อมูลให้มีความ Dynamic มากขึ้น
             สำหรับตัวอย่างต่อไปจะเป็นการใช้ HCF (Highlight Conditional Formatting)
             ไปดูกันเลยค้่าบ !
         </p>
         <p>
         </p>
+
+
+        <h3>2.2 Highlight Variable Gender Column แบ่งตามสี</h3>
+            
+        <div class="iframe-container cursor-zoom-in">
+            <img src="hcf-filter1.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('hcf-filter1.gif')">
+        </div>
+
+        <h3>2.3 Highlight Variable Salary Column ไล่สเกลสูงไปต่ำ</h3>
+            
+        <div class="iframe-container cursor-zoom-in">
+            <img src="hcf-filter2.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('hcf-filter2.gif')">
+        </div>
+
+        <h3>2.4 Highlight Variable 2 Column ชื่อพนักงานที่มีตัวเลข SNN นำหน้าตามเงื่อนไขที่กำหนด</h3>
+            
+        <div class="iframe-container cursor-zoom-in">
+            <img src="hcf-filter3.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('hcf-filter3.gif')">
+        </div>
     </section>
+
         
     <section id="file">
         <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"

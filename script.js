@@ -431,7 +431,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".code-container").forEach(container => {
         const copyBtn = container.querySelector(".copy-btn");
         const codeBlock = container.querySelector("code");
-        const toast = document.getElementById("toast"); // ค้นหา Toast
+        const toast = container.querySelector(".toast"); // แก้ไขให้หา Toast เฉพาะของ container นี้
 
         if (copyBtn && codeBlock && toast) {
             // ลบ white space ที่ไม่จำเป็น
@@ -440,24 +440,23 @@ document.addEventListener("DOMContentLoaded", function () {
             copyBtn.addEventListener("click", function () {
                 // คัดลอกโค้ดไปยัง clipboard
                 navigator.clipboard.writeText(codeBlock.textContent).then(() => {
-                    showToast(); // แสดง Toast
+                    showToast(toast); // ส่ง Toast ที่เกี่ยวข้องเข้าไป
                 }).catch(err => {
                     console.error("Failed to copy: ", err);
                 });
             });
 
-            // Prism.js ทำ Highlight ใหม่
+            // Prism.js ทำ Highlight ใหม่ (ถ้ามี Prism.js)
             Prism.highlightElement(codeBlock);
         }
     });
 });
 
-// ฟังก์ชันแสดง Toast
-function showToast() {
-    let toast = document.getElementById("toast");
+// ฟังก์ชันแสดง Toast สำหรับแต่ละ container
+function showToast(toast) {
     if (!toast) return;
 
-    // แสดง Toast
+    // แสดง Toast เฉพาะ container ที่เกี่ยวข้อง
     toast.classList.add("show");
 
     setTimeout(() => {
@@ -513,6 +512,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // เพิ่ม Smooth Scroll และให้หัวข้อเลื่อนมาตรงกลางจอ
     document.querySelectorAll("#toc-section a").forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.getBoundingClientRect().top + window.scrollY - (window.innerHeight / 2),
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
+
+/*รับ toc แค่ h2-------------------------------------------------------------------------------- */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tocSection1 = document.getElementById("toc-section1"); // ส่วนที่จะแสดง TOC ใหม่
+    const headings = document.querySelectorAll("h2"); // ค้นหาเฉพาะ h2
+    const tocList = document.createElement("ul");
+
+    headings.forEach((heading, index) => {
+        const id = heading.id || `heading-${index}`; // ถ้าไม่มี id ให้สร้างอัตโนมัติ
+        heading.id = id; // กำหนด id ให้ heading
+
+        const listItem = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = `#${id}`;
+        link.textContent = heading.textContent; // ใช้ชื่อหัวข้อจริง
+
+        listItem.appendChild(link);
+        tocList.appendChild(listItem);
+    });
+
+    if (tocSection1) {
+        tocSection1.appendChild(tocList);
+    }
+
+    // เพิ่ม Smooth Scroll และให้หัวข้อเลื่อนมาตรงกลางจอ
+    document.querySelectorAll("#toc-section1 a").forEach(link => {
         link.addEventListener("click", function(event) {
             event.preventDefault();
             const targetId = this.getAttribute("href").substring(1);
