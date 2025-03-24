@@ -7,7 +7,7 @@ const certificates = [
         school: "DataRockie",
         schoolLink: "https://bootcamp.datarockie.com/",
         description: "สอบผ่านหลักสูตร Data Science Bootcamp (หลักสูตร 6 เดือน 100 ชั่วโมง) โดย DataRockie สำเร็จ ! ข้อสอบประกอบด้วยคำถามแบบเลือกตอบ 240 ข้อ เพื่อจะผ่านการทดสอบ นักเรียนจะต้องได้คะแนนขั้นต่ำ 192/240 คะแนน(me 224/240 คะแนน) Solid foundations on these topics: Spreadsheets, SQL databases, R, Python, Data Transformation, Data Visualization, Statistics, Intro to Machine Learning, Dashboard with Looker Studio and Tableau Public. อ่านต่อเพื่มได้ที่ notion นะครับ",
-        notionLink: "https://foam-thyme-0d6.notion.site/Data-Science-Bootcamp-10-edit-1a82ea218a1580a68f47e000b12e9b0a?pvs=4",
+        notionLink: "https://second-brain-phubordin.notion.site/Data-Science-Bootcamp-10-1a82ea218a1580a68f47e000b12e9b0a?pvs=4",
         cost: "฿4,900 ($143.06)",
         costlink: "https://datarockie.com/data-science-bootcamp/",
         certificateLink: "https://api.badgr.io/public/assertions/99CX-fsTQ02SPkihaDTINQ?identity__email=poorider02%40gmail.com"
@@ -19,7 +19,7 @@ const certificates = [
         school: "Skooldio",
         schoolLink: "https://www.skooldio.com/",
         description: "โลกของ Data Science, ศึกษากรณีตัวอย่างเพื่อใช้ข้อมูลขับเคลื่อนธุรกิจ, ศึกษา metric framework tools ต่างๆเพื่อใช้วัดผลเชิงธุรกิจ (Click-through Rate, Conversion Rate, AARRR!, A/B Testing), กระบวนการทำงาน Data Science(7 steps), การทำ Data Product อ่านต่อเพื่มได้ที่ notion นะครับ",
-        notionLink: "https://foam-thyme-0d6.notion.site/Intro-to-Data-Science-edit-1aa2ea218a15805fa846c84d26145085?pvs=4",
+        notionLink: "https://second-brain-phubordin.notion.site/Intro-to-Data-Science-1aa2ea218a15805fa846c84d26145085?pvs=4",
         cost: "฿1,490 ($43.50)",
         costlink: "https://www.skooldio.com/courses/data-science-01",
         certificateLink: "https://www.skooldio.com/certificate/b2d8f435-7e96-46e9-a85f-6dc066d83f0e"
@@ -32,7 +32,7 @@ const certificates = [
         school: "W3School",
         schoolLink: "https://www.w3schools.com/",
         description: "Excel Data Analysis(Table Pivot, การใช้ Conditional Formating แต่ละรูปแบบ bar, icon, highlight, color scale), ฟังก์ชันการคำนวณต่างๆ=AND, =AVERAGEIFS, =CONCAT, =COUNT, =COUNTA, =COUNTBLANK, =COUNTIF, =COUNTIFS, =IFS, =LOWER, =MAX, =MEDIAN, =MIN, =MODE, =NPV, =OR, =RAND, =RIGHT, =STDEV.P, =STDEV.S, =SUM, =SUMIF, =SUMIFS, =TRIM, =VLOOKUP, =XOR อ่านต่อเพื่มได้ที่ notion นะครับ",
-        notionLink: "https://foam-thyme-0d6.notion.site/W3Schools-Data-Analytics-Bootcamp-1932ea218a1580fb8c0dfcc2bd1ad1fc?pvs=4",
+        notionLink: "https://second-brain-phubordin.notion.site/W3Schools-Data-Analytics-Bootcamp-1932ea218a1580fb8c0dfcc2bd1ad1fc?pvs=4",
         cost: "฿3,253.84 ($95)",
         costlink: "https://campus.w3schools.com/products/excel-certificate?_pos=1&_sid=5eea90fd2&_ss=r",
         certificateLink: "https://verify.w3schools.com/1PNV4D3H6E"
@@ -45,7 +45,7 @@ const certificates = [
         school: "DataRockie",
         schoolLink: "https://bootcamp.datarockie.com/",
         description: "Connect database (SQLite), Select Columns, Rename Columns, Filter Rows → WHERE, Aggregate Function → Sum, Avg, Min, Max, Count, Group By, ORDER, Limit, Create and Drop Table, Import and Export Data",
-        notionLink: "https://foam-thyme-0d6.notion.site/SQL-Crash-Course-edit-1aa2ea218a158005b346c1b0375cf93d?pvs=4",
+        notionLink: "https://second-brain-phubordin.notion.site/SQL-Crash-Course-1aa2ea218a158005b346c1b0375cf93d?pvs=4",
         cost: "Free! ($0)",
         costlink: "https://bootcamp.datarockie.com/p/sql-cc",
         certificateLink: "https://data-science-bootcamp1.teachable.com/courses/enrolled/1877587"
