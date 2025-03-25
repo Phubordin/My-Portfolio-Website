@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const tocList = document.getElementById("toc-list");
-    const sections = document.querySelectorAll("section h2");
+    const sections = document.querySelectorAll("section h2, section h3");
     const detailsElements = document.querySelectorAll("details");
 
     if (!tocList) {
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (sections.length === 0) {
-        console.error("❌ ไม่พบ <h2> ใน <section>");
+        console.error("❌ ไม่พบ <h2> หรือ <h3> ใน <section>");
         return;
     }
 
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
         tocLink.href = `#section-${index}`;
         tocLink.textContent = heading.textContent;
 
-        // กำหนด ID ให้ <h2> เพื่อให้สามารถเลื่อนหาได้
+        // กำหนด ID ให้ <h2> และ <h3> เพื่อให้สามารถเลื่อนหาได้
         heading.id = `section-${index}`;
 
         tocItem.appendChild(tocLink);
@@ -169,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ตรวจจับการเลื่อนหน้าจอ
     window.addEventListener("scroll", updateTOCHighlight);
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const toc = document.getElementById("table-of-contents");
