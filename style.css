@@ -198,7 +198,7 @@ nav ul li a {
 }
 
 /* Highlight Tab เมื่อโฟกัส ---------------------------------------------------------------------------------------------*/
-nav ul li a:hover, nav ul li a:focus {
+nav ul li a:hover {
     background: white;
     color: black;
     border-radius: 5px;
@@ -252,7 +252,7 @@ section {
     transition: transform 0.3s ease-in-out;
 }
 .project:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     background: #bbdefb;
 }
 
@@ -263,6 +263,7 @@ section {
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
 }
+
 .experience:hover {
     transform: scale(1.01);
     background: #bbdefb;
@@ -579,17 +580,17 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
     text-align: center;
 }
 
-#toc-list {
+#toc-list, #toc-list1 {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-#toc-list li {
+#toc-list li, #toc-list1 li {
     margin: 1.4vh 0; /* ลดระยะห่างระหว่าง items */
 }
 
-#toc-list a {
+#toc-list a, #toc-list1 a {
     color: #707070;
     font-size: 0.9em;
     display: block;
@@ -604,14 +605,14 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
 }
 
 /* เพิ่มการ highlight เมื่อ hover */
-#toc-list a:hover {
+#toc-list a:hover, #toc-list1 a:hover {
     color: #ffffff;
     background: rgb(0, 0, 0);
     padding-left: 1.4vw;
 }
 
 /* Highlight เมื่อเลือกหัวข้อ */
-#toc-list a.highlighted {
+#toc-list a.highlighted, #toc-list1 a.highlighted {
     background-color: #bbdefb; /* เมื่อเลือกให้สีพื้นหลังเป็นสีเหลือง */
     color: #000000; /* เปลี่ยนสีตัวอักษรเป็นสีดำ */
 }
@@ -1061,7 +1062,7 @@ input:checked + .slider1:before {
 }
 
 /* Toast Notification */
-.toast {
+.toast, .toast1 {
     visibility: hidden;
     min-width: 16%;
     background-color: #323232;
@@ -1081,7 +1082,7 @@ input:checked + .slider1:before {
 }
 
 /* เมื่อแสดง Toast */
-.toast.show {
+.toast.show, .toast1.show {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
@@ -1194,4 +1195,31 @@ pre[class*="language-"] {
     background-color: #7fc5ff;
     border-radius: 20px;
     cursor: url('cursor1.png'), auto ;
+}
+
+.inline-code {
+    background-color: #f6f6f6;
+    color: #eb5757;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+table.tableizer-table {
+    font-size: 12px;
+    border: 1px solid #CCC;
+    font-family: 'Prompt', sans-serif;
+}
+
+.tableizer-table td {
+    padding: 4px;
+    margin: 3px;
+    border: 1px solid #CCC;
+}
+
+.tableizer-table th {
+    background-color: #104E8B;
+    color: #FFF;
+    font-weight: bold;
 }

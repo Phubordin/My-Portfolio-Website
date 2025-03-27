@@ -78,11 +78,105 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const tocList = document.getElementById("toc-list");
-    const sections = document.querySelectorAll("section h2, section h3");
+    const sections = document.querySelectorAll("section h2");
     const detailsElements = document.querySelectorAll("details");
 
     if (!tocList) {
         console.error("❌ ไม่พบ <ul id='toc-list'> ใน HTML");
+        return;
+    }
+
+    if (sections.length === 0) {
+        console.error("❌ ไม่พบ <h2> หรือ <h3> ใน <section>");
+        return;
+    }
+
+    const tocLinks = [];
+    sections.forEach((heading, index) => {
+        const tocItem = document.createElement("li");
+        const tocLink = document.createElement("a");
+
+        // ตั้งค่าลิงก์ TOC
+        tocLink.href = `#section-${index}`;
+        tocLink.textContent = heading.textContent;
+
+        // กำหนด ID ให้ <h2> และ <h3> เพื่อให้สามารถเลื่อนหาได้
+        heading.id = `section-${index}`;
+
+        tocItem.appendChild(tocLink);
+        tocList.appendChild(tocItem);
+
+        tocLinks.push(tocLink); // เก็บลิงก์ทั้งหมด
+
+        // เพิ่ม Smooth Scroll
+        tocLink.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById(`section-${index}`).scrollIntoView({
+                behavior: "smooth",
+                block: "center" // จัดให้ section อยู่กลางหน้าจอ
+            });
+
+            // เปลี่ยนการ highlight สีพื้นหลังของ TOC เมื่อคลิก
+            tocLinks.forEach((link) => link.classList.remove("highlighted"));
+            tocLink.classList.add("highlighted");
+        });
+    });
+
+    // อัปเดตตำแหน่งของ TOC เมื่อเลื่อนหน้า
+    const toc = document.getElementById("table-of-contents");
+    const initialTop = 255; // ตำแหน่งเริ่มต้นของ TOC
+
+    function updateTOCHighlight() {
+        let scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        let newTop = initialTop + scrollPosition; // คำนวณตำแหน่งใหม่ของ TOC
+
+        // อัปเดตตำแหน่งของ TOC
+        toc.style.top = newTop + "px";
+
+        // เพิ่มการ highlight ให้กับ TOC ตามการเลื่อนหน้า
+        let currentSection = -1;
+
+        sections.forEach((section, index) => {
+            const parentSection = section.closest("section"); // ดึง parent <section>
+            if (!parentSection) return;
+
+            const sectionOffset = parentSection.offsetTop;
+            const sectionHeight = parentSection.offsetHeight;
+
+            // ตรวจสอบว่าอยู่ในตำแหน่งที่ควร highlight
+            if (scrollPosition >= sectionOffset - window.innerHeight * 0.55 && scrollPosition < sectionOffset + sectionHeight) {
+                currentSection = index;
+            }
+        });
+
+        tocLinks.forEach((link, index) => {
+            if (index === currentSection) {
+                link.classList.add("highlighted");
+            } else {
+                link.classList.remove("highlighted");
+            }
+        });
+    }
+
+    // ตรวจจับการเปิด/ปิด <details> แล้วอัปเดต highlight
+    detailsElements.forEach((details) => {
+        details.addEventListener("toggle", updateTOCHighlight);
+    });
+
+    // เรียกใช้ฟังก์ชัน highlight TOC เมื่อโหลดหน้าเว็บเสร็จ โดยหน่วงเวลาเล็กน้อย
+    setTimeout(updateTOCHighlight, 50);
+
+    // ตรวจจับการเลื่อนหน้าจอ
+    window.addEventListener("scroll", updateTOCHighlight);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tocList = document.getElementById("toc-list1");
+    const sections = document.querySelectorAll("section h2, section h3");
+    const detailsElements = document.querySelectorAll("details");
+
+    if (!tocList) {
+        console.error("❌ ไม่พบ <ul id='toc-list1'> ใน HTML");
         return;
     }
 
@@ -185,7 +279,6 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleBtn.style.top = window.scrollY + 200 + "px";
     });
 });
-
 
 /*------------------------------------------------------------------------------------------------------------------------- */
 // Get all the navigation links

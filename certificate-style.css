@@ -390,7 +390,8 @@ verify-icon:hover {
 
 /* Dark Mode Styles */
 .dark-mode .certificate-card,
-.dark-mode .slideshow-details {
+.dark-mode .slideshow-details,
+.dark-mode section{
     background: rgba(31, 41, 55, 0.8);
     color: white;
 }
@@ -426,6 +427,26 @@ verify-icon:hover {
 
 .dark-mode .certificate-card:hover {
     background: #1e3a8a;
+}
+
+.dark-mode .experience {
+    background: linear-gradient(145deg, #6366f1 0%, #3b82f6 50%, #2563eb 100%);
+}
+
+.dark-mode .project {
+    background: linear-gradient(145deg, #6366f1 0%, #3b82f6 50%, #2563eb 100%);
+}
+
+.dark-mode #toc-section a, .dark-mode #toc-section1 a {
+    color: white;
+}
+
+.dark-mode span {
+    color: #ffffff;
+}
+
+.dark-mode .corner-text {
+    color: white;
 }
 
 .dark-mode .certificate-links {
