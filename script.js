@@ -496,9 +496,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //-------------------------------------------------------------------------------------------------------------------------------------------- 
 function copyEmail() {
-    let email = document.getElementById("email").innerText;
+    let email = document.getElementById("email").textContent.trim(); // ดึงเฉพาะข้อความอีเมล
     navigator.clipboard.writeText(email).then(() => {
-        showToast();
+        let toast = document.getElementById("toast-copy"); // ดึง element Toast ที่เกี่ยวข้อง
+        showToast(toast); // เรียกใช้ฟังก์ชัน showToast() ที่คุณมีอยู่แล้ว
     });
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

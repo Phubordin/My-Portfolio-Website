@@ -1062,7 +1062,7 @@ input:checked + .slider1:before {
 }
 
 /* Toast Notification */
-.toast, .toast1 {
+.toast {
     visibility: hidden;
     min-width: 16%;
     background-color: #323232;
@@ -1082,7 +1082,7 @@ input:checked + .slider1:before {
 }
 
 /* เมื่อแสดง Toast */
-.toast.show, .toast1.show {
+.toast.show {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);

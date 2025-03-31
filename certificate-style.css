@@ -437,6 +437,14 @@ verify-icon:hover {
     background: linear-gradient(145deg, #6366f1 0%, #3b82f6 50%, #2563eb 100%);
 }
 
+.dark-mode .content p {
+    color: white;
+}
+
+.dark-mode .download-btn {
+    color: white;
+}
+
 .dark-mode #toc-section a, .dark-mode #toc-section1 a {
     color: white;
 }

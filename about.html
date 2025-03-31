@@ -451,37 +451,6 @@
         </iframe> -->
     </section>
 
-    <section>
-        <h2 class="link-cursor">Demo Coding</h2>
-        <details class="detail1">
-            <summary>Coding</summary>
-
-            <div class="code-container">
-                <div class="code-header">
-                    <span class="language-label link-cursor">JavaScript</span>
-                    <button class="copy-btn notion-icon">
-                        <img src="icon-copy1.png" alt="Copy" width="20">
-                    </button>
-                </div>
-                <pre class="line-numbers link-cursor"><code class="language-js">
-function showToast() {
-    let toast = document.getElementById("toast");
-    if (!toast) return;
-    toast.classList.add("show");
-    setTimeout(() => {
-        toast.classList.remove("show");
-    }, 2000);
-}
-                </code></pre>
-            </div>
-            
-        </details>
-
-        <!-- ย้าย Toast ออกมาไว้ใน <body> -->
-        <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
-
-    </section>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>
