@@ -404,6 +404,16 @@ verify-icon:hover {
     color: #d1d5db;
 }
 
+.dark-mode .inline-code {
+    background-color: #f6f6f6;
+    color: #eb5757;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+
 .dark-mode .certificate-description::after {
     background: white;
     z-index: -1000;

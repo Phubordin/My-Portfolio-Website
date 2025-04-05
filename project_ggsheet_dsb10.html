@@ -162,8 +162,8 @@
 
         <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
                 href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1590154876#gid=1590154876"
-                class="hover-expand" style="text-decoration: none; color: black; background-color: aliceblue; border-radius: 5px; padding: auto;"><img src="sheets.png" width="25"
-                    class="notion-icon"><b> 1. Filter & Sort Dynamic</b></a>
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 1. Filter & Sort Dynamic</b></a>
         </p>
 
         <div class="iframe-container cursor-zoom-in">
@@ -172,11 +172,11 @@
 
         <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
                 href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#1-filter-and-sort-dynamic"
-                class="hover-expand" style="text-decoration: none; color: black;"><img src="github.png" width="25"
-                    class="notion-icon"><b> Github</b></a>
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
         <ol>
             <li class="link-cursor"><code
-                    class="language-none">FILTER(EMPLOYEE, (GENDER = B2) * (PERFORMANCE = B3))</code>
+                    class="inline-code">FILTER(EMPLOYEE, (GENDER = B2) * (PERFORMANCE = B3))</code>
                 <ul>
                     <li class="link-cursor" style="text-align: justify;">ผมตั้งชื่อ range
                         ต่างๆที่มีชื่อว่า EMPLOYEE(Table), GENDER(Column), PERFORMANCE(Column) เพื่อง่ายต่อการเลือกช่วง
@@ -184,7 +184,7 @@
                         cell B3 ที่ Dynamic ผลลัพธืจึงถูก Filter ออกมา หลังจากนั้น..</li>
                 </ul>
             </li>
-            <li class="link-cursor"><code class="language-none">SORT(FILTER(..ข้อ 1), 5, Not(D2))</code>
+            <li class="link-cursor"><code class="inline-code">SORT(FILTER(..ข้อ 1), 5, Not(D2))</code>
                 <ul>
                     <li class="link-cursor" style="text-align: justify;">ผมตั้งชื่อ range
                         ผมเรียงลำดับ Salary จากมากไปน้อย โดยที่ Salary อยู่คอลัมน์ที่ 5 และ Default ของการ Sort
@@ -195,7 +195,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="link-cursor"><code class="language-none">IFERROR(..ข้อ 2,"NO DATA")</code>
+            <li class="link-cursor"><code class="inline-code">IFERROR(..ข้อ 2,"NO DATA")</code>
                 <ul>
                     <li class="link-cursor" style="text-align: justify;">ถ้าหาก Formula ข้อ 1 หรือ 2 ส่งผลลัพธ์ Error
                         จะให้แสดง NO DATA แต่แน่นอนว่าในตาราง EMPLOYEE จะต้องมีการ filter ที่ไม่ match กัน
@@ -229,8 +229,8 @@
 
         <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
                 href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1932301649#gid=1932301649"
-                class="hover-expand" style="text-decoration: none; color: black;"><img src="sheets.png" width="25"
-                    class="notion-icon">><b> 2. Conditional Formatting: Highlight Row </b></a>> แถวที่ 1 - แถวที่ 26
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 2. Conditional Formatting: Highlight Row </b></a>> แถวที่ 1 - แถวที่ 26
         </p>
 
         <div class="iframe-container cursor-zoom-in">
@@ -263,26 +263,25 @@
 
         <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
                 href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#2-conditional-formatting-highlight-row"
-                class="hover-expand" style="text-decoration: none; color: black;"><img src="github.png" width="25"
-                    class="notion-icon"><b> Github</b></a>
-
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
         </p>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             ก่อนอื่น Set Range ที่ต้องการ HCF ก่อนนะครับ นั่นคือ (A2:G26) ตามรูป <code
-                class="language-none">=$G2=$H$1</code> ใช้เพื่อตรวจสอบว่า
+                class="inline-code">=$G2=$H$1</code> ใช้เพื่อตรวจสอบว่า
             ค่าของแต่ละเซลล์ในคอลัมน์ G ตรงกับค่าที่อยู่ในเซลล์ H1 หรือไม่ (H1 คือ Dropdown List ของคอลัมน์ G)
             ถ้าตรงกัน HCF จะทำงานโดยการ Highlight ทั้ง data point(สีเขียว)
         </p>
 
         <p class="link-cursor">เพื่อให้เข้าใจชัดเจนมากยิ่งขึ้น ผมขอแบ่งเป็น 2 ส่วนเพื่อใช้อธิบายสูตร <code
-                class="language-none">=$G2=$H$1</code> ดังนี้
+                class="inline-code">=$G2=$H$1</code> ดังนี้
 
         <ol class="link-cursor" style="text-align: justify;">
-            <li><code class="language-none">$G2</code> ไล่เช็คคอลัมน์ G เท่านั้น โดยการไล่ไปที่ละแถวเป็น G1, G2, G3, ..,
+            <li><code class="inline-code">$G2</code> ไล่เช็คคอลัมน์ G เท่านั้น โดยการไล่ไปที่ละแถวเป็น G1, G2, G3, ..,
                 G26
                 ถ้าแต่ละค่าของ G1, G2, G3, .., G26 matching กับ $H$1 ตามข้อ 2..</li>
-            <li><code class="language-none">$H$1</code> ก็คือ Dropdown List ที่ค่าภายในคือค่ามาจากคอลัมน์ G ไล่เช็คทุก
+            <li><code class="inline-code">$H$1</code> ก็คือ Dropdown List ที่ค่าภายในคือค่ามาจากคอลัมน์ G ไล่เช็คทุก
                 cell ที่อยู่ในเฉพาะคอลัมน์ G
                 สำหรับแถวที่อยู่ในช่วงแถวที่ 1 - แถวที่ 26
                 ในคอลัมน์ถ้าหากเจอค่าที่ตรงกับค่าเฉพาะใน $H$1 ให้ Highlight เฉพาะ data point นั้นๆ</li>
@@ -299,8 +298,8 @@
 
         <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
                 href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1932301649#gid=1932301649"
-                class="hover-expand" style="text-decoration: none; color: black;"><img src="sheets.png" width="25"
-                    class="notion-icon">><b> 2. Conditional Formatting: Highlight Row </b></a>> แถวที่ 29 - แถวที่ 53
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 2. Conditional Formatting: Highlight Row </b></a>> แถวที่ 29 - แถวที่ 53
         </p>
 
         <div class="iframe-container cursor-zoom-in">
@@ -346,19 +345,18 @@
 
         <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
                 href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#22-highlight-variable-gender-column-%E0%B9%81%E0%B8%9A%E0%B9%88%E0%B8%87%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B5"
-                class="hover-expand" style="text-decoration: none; color: black;"><img src="github.png" width="25"
-                    class="notion-icon"><b> Github</b></a>
-
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
         </p>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
-            ก่อนอื่น Set Range ที่ต้องการ HCF เช่นเดิม <code class="language-none">F29:F53</code> ตามรูป ผมก็จะแบ่งเป็น
+            ก่อนอื่น Set Range ที่ต้องการ HCF เช่นเดิม <code class="inline-code">F29:F53</code> ตามรูป ผมก็จะแบ่งเป็น
             2 เงื่อนไข คือ
         </p>
 
         <ol class="link-cursor" style="text-align: justify;">
-            <li>ถ้าหาก <code class="language-none">F29:F53</code> มีค่า male ก็จะให้เป็นสีครีม</li>
-            <li>ถ้าหาก <code class="language-none">F29:F53</code> มีค่า female ก็เป็นสีแดง</li>
+            <li>ถ้าหาก <code class="inline-code">F29:F53</code> มีค่า male ก็จะให้เป็นสีครีม</li>
+            <li>ถ้าหาก <code class="inline-code">F29:F53</code> มีค่า female ก็เป็นสีแดง</li>
         </ol>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">ถ้าเข้าเงื่อนไขใด
@@ -371,8 +369,8 @@
 
         <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
                 href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1932301649#gid=1932301649"
-                class="hover-expand" style="text-decoration: none; color: black;"><img src="sheets.png" width="25"
-                    class="notion-icon">><b> 2. Conditional Formatting: Highlight Row </b></a>> แถวที่ 56 - แถวที่ 80
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 2. Conditional Formatting: Highlight Row </b></a>> แถวที่ 56 - แถวที่ 80
         </p>
 
         <div class="iframe-container cursor-zoom-in">
@@ -385,15 +383,16 @@
 
         <p class="link-cursor">📌 <b>อธิบายเงื่อนไขการใช้กฎ:</b> : <a
                 href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#23-highlight-variable-salary-column-%E0%B9%84%E0%B8%A5%E0%B9%88%E0%B8%AA%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B8%AA%E0%B8%B9%E0%B8%87%E0%B9%84%E0%B8%9B%E0%B8%95%E0%B9%88%E0%B8%B3"
-                class="hover-expand" style="text-decoration: none; color: black;"><img src="github.png" width="25"
-                    class="notion-icon"><b> Github</b></a>
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
         </p>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
-            ก่อนอื่น Set Range ที่ต้องการ HCF เช่นเดิม <code class="language-none">E56:E80</code> ตามรูป จากนั้นเลือก
+            ก่อนอื่น Set Range ที่ต้องการ HCF เช่นเดิม <code class="inline-code">E56:E80</code> ตามรูป จากนั้นเลือก
             color scale ระบบก็จะทำการ default setting ให้เลยอัตโนมัติ
             หรือเราก็อาจจะปรับตามสีที่เราต้องการ เพื่อให้เหมาะสมกับความเข้าใจของ users
         </p>
+
 
     </section>
 
@@ -404,8 +403,8 @@
 
         <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
                 href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1932301649#gid=1932301649"
-                class="hover-expand" style="text-decoration: none; color: black;"><img src="sheets.png" width="25"
-                    class="notion-icon">><b> 2. Conditional Formatting: Highlight Row </b></a>> แถวที่ 82 - แถวที่ 107
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 2. Conditional Formatting: Highlight Row </b></a>> แถวที่ 82 - แถวที่ 107
         </p>
 
         <div class="iframe-container cursor-zoom-in">
@@ -439,21 +438,21 @@
 
         <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
                 href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#24-highlight-variable-2-column-%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%9E%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A1%E0%B8%B5%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%A5%E0%B8%82-SNN-%E0%B8%99%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%87%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%82%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%81%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%94"
-                class="hover-expand" style="text-decoration: none; color: black;"><img src="github.png" width="25"
-                    class="notion-icon"><b> Github</b></a>
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
         </p>
-
+        <!-- style="text-decoration: none; color: black; background-color: aliceblue; border-radius: 5px; padding: auto;" -->
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
-            ก่อนอื่น Set Range ที่ต้องการ HCF ก่อนนะครับ นั่นคือ <code class="language-none">A83:B107</code> ตามรูป
+            ก่อนอื่น Set Range ที่ต้องการ HCF ก่อนนะครับ นั่นคือ <code class="inline-code">A83:B107</code> ตามรูป
             ผมขอแบ่งเป็น 2 ส่วนเพื่ออธิบาย ดังนี้
         </p>
 
         <p>
         <ol class="link-cursor" style="text-align: justify;">
-            <li>สูตร <code class="language-none">=LEFT("Phubordin", 1)</code> จะคืนค่าผลลัพธ์ตัวที่ 1 นับจากซ้ายไปขวา
+            <li>สูตร <code class="inline-code">=LEFT("Phubordin", 1)</code> จะคืนค่าผลลัพธ์ตัวที่ 1 นับจากซ้ายไปขวา
                 ผลลัพธ์ของสูตรนี้คือ P</li>
-            <li>ถ้าเรา apply กับ <code class="language-none">=LEFT($A83,1)="0"</code> จะเป็นการทดสอบเงื่อนไขว่า ค่าเซลล์
-                <code class="language-none">A83, A84, A85, .., A107</code> แต่ละค่านั้น นับจากทางซ้ายไปขวา
+            <li>ถ้าเรา apply กับ <code class="inline-code">=LEFT($A83,1)="0"</code> จะเป็นการทดสอบเงื่อนไขว่า ค่าเซลล์
+                <code class="inline-code">A83, A84, A85, .., A107</code> แต่ละค่านั้น นับจากทางซ้ายไปขวา
                 โดยเอาตัวอักษรตัวแรกมา แล้วนำไปทดสอบว่าเท่า 0 ไหม?
                 <ul>
                     <li>ถ้าเท่ากับ 0 ให้ดำเนินการให้ Highlight Color Scale ที่เรา setting</li>
@@ -491,7 +490,7 @@
             <li>2.4 Highlight Variable 2 Column ชื่อพนักงานที่มีตัวเลข SNN นำหน้าตามเงื่อนไขที่กำหนด
                 <ul>
                     <li>
-                        เราสามารถใช้สูตร <code class="language-none">=LEFT($A83,1)="0"</code> ลงในเงื่อนไข
+                        เราสามารถใช้สูตร <code class="inline-code">=LEFT($A83,1)="0"</code> ลงในเงื่อนไข
                         เพื่อ<mark>แสดงตัวหนาและ Hightlight ของชื่อพนักงานและเลข SNN</mark>
                         ทั้งนี้เราสามารถใช้สูตรอื่นเพื่อกำหนดเงือนไขที่เรา
                         สนใจได้เช่นเดียวกัน
@@ -544,8 +543,8 @@ IF(B2="All","1=1","N='" & B2 & "'") &
 
         <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
                 href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=92440600#gid=92440600"
-                class="hover-expand" style="text-decoration: none; color: black;"><img src="sheets.png" width="25"
-                    class="notion-icon">><b> 3. Dynamic Query</b></a>
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 3. Dynamic Query</b></a>
         </p>
 
         <div class="iframe-container cursor-zoom-in">
@@ -554,167 +553,1776 @@ IF(B2="All","1=1","N='" & B2 & "'") &
 
         <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
                 href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#3-dynamic-query"
-                class="hover-expand" style="text-decoration: none; color: black;">
-                <img src="github.png" width="25" class="notion-icon"><b> Github</b></a>
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
         </p>
 
         <ul class="link-cursor" style="text-align: justify;">
             <li><span class="inline-code">EMPLOYEE1</span> แทนด้วยช่วงข้อมูล ตามรูปครับ</li>
-            <li><span class="inline-code">B2</span> แทนด้วย Dropdown List Gender ที่อยู่ในช่วง <span class="inline-code">EMPLOYEE1</span></li>
-            <li><span class="inline-code">B3</span> แทนด้วย Dropdown List Performance ที่อยู่ในช่วง <span class="inline-code">EMPLOYEE1</span></li>
-            <li><span class="inline-code">B4</span> แทนด้วย Dropdown List Hiredate ที่อยู่ในช่วง <span class="inline-code">EMPLOYEE1</span></li>
+            <li><span class="inline-code">B2</span> แทนด้วย Dropdown List Gender ที่อยู่ในช่วง <span
+                    class="inline-code">EMPLOYEE1</span></li>
+            <li><span class="inline-code">B3</span> แทนด้วย Dropdown List Performance ที่อยู่ในช่วง <span
+                    class="inline-code">EMPLOYEE1</span></li>
+            <li><span class="inline-code">B4</span> แทนด้วย Dropdown List Hiredate ที่อยู่ในช่วง <span
+                    class="inline-code">EMPLOYEE1</span></li>
         </ul>
 
-    <!--ถึงตรงนี้-->
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            จากนั้นผมขออนุญาตอธิบายโดยแบ่งเป็น 7 ส่วน (โปรดอ่านตามลำดับ) โดยที่ส่วนที่ 2 - 7 คือ text สังเกตได้จาก "
+            ดังนั้นตอนท้ายจะถูกนำมาเชื่อมกันด้วย & เพื่อให้ชัดเจนยิ่งขึ้นผมขออธิบาย ดังต่อไปนี้
+        </p>
 
-        <div class="certificate-list fade-in">
-            <table class="tableizer-table link-cursor">
-                <thead>
-                    <tr class="tableizer-firstrow">
-                        <th>SSN</th>
-                        <th>LASTNAME</th>
-                        <th>FIRST NAME</th>
-                        <th>HIREDATE</th>
-                        <th>SALARY</th>
-                        <th>GENDER</th>
-                        <th>PERFORMANCE</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>109-87-6544</td>
-                        <td>Foster</td>
-                        <td>Harold</td>
-                        <td>2005-08-14</td>
-                        <td>$55,000</td>
-                        <td>Male</td>
-                        <td>Good</td>
-                    </tr>
-                    <tr>
-                        <td>222-23-2222</td>
-                        <td>Marlin</td>
-                        <td>Bill</td>
-                        <td>1977-03-28</td>
-                        <td>$125,000</td>
-                        <td>Male</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>333-43-4444</td>
-                        <td>Smith</td>
-                        <td>Frank</td>
-                        <td>1991-01-29</td>
-                        <td>$65,000</td>
-                        <td>Male</td>
-                        <td>Good</td>
-                    </tr>
-                    <tr>
-                        <td>432-19-8765</td>
-                        <td>Bronson</td>
-                        <td>Paul</td>
-                        <td>2003-11-20</td>
-                        <td>$58,000</td>
-                        <td>Male</td>
-                        <td>Good</td>
-                    </tr>
-                    <tr>
-                        <td>444-45-4444</td>
-                        <td>Frank</td>
-                        <td>Vernon</td>
-                        <td>1985-04-10</td>
-                        <td>$75,000</td>
-                        <td>Male</td>
-                        <td>Good</td>
-                    </tr>
-                    <tr>
-                        <td>464-64-4466</td>
-                        <td>Webster</td>
-                        <td>David</td>
-                        <td>1991-01-29</td>
-                        <td>$58,500</td>
-                        <td>Male</td>
-                        <td>Excellent</td>
-                    </tr>
-                    <tr>
-                        <td>500-50-0505</td>
-                        <td>Rodriguez</td>
-                        <td>Jose</td>
-                        <td>1998-07-16</td>
-                        <td>$150,000</td>
-                        <td>Male</td>
-                        <td>Good</td>
-                    </tr>
-                    <tr>
-                        <td>555-56-5555</td>
-                        <td>Charles</td>
-                        <td>Kenneth</td>
-                        <td>1998-06-18</td>
-                        <td>$40,000</td>
-                        <td>Male</td>
-                        <td>Excellent</td>
-                    </tr>
-                    <tr>
-                        <td>767-74-7373</td>
-                        <td>Martin</td>
-                        <td>William</td>
-                        <td>2006-08-26</td>
-                        <td>$23,000</td>
-                        <td>Male</td>
-                        <td>Good</td>
-                    </tr>
-                    <tr>
-                        <td>776-67-6666</td>
-                        <td>Adamson</td>
-                        <td>David</td>
-                        <td>2002-10-04</td>
-                        <td>$52,000</td>
-                        <td>Male</td>
-                        <td>Excellent</td>
-                    </tr>
-                    <tr>
-                        <td>925-45-7116</td>
-                        <td>Whitehead</td>
-                        <td>David</td>
-                        <td>1980-07-25</td>
-                        <td>$175,000</td>
-                        <td>Male</td>
-                        <td>Good</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <ol>
+            <li>
+                <code class="inline-code link-cursor">QUERY(EMPLOYEE1, "your query text")</code>
+                <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+                    <code class="inline-code">QUERY()</code> ใช้คล้ายๆกับภาษา SQL ซึ่งมันไว้ใช้กับการจัดการฐานข้อมูล
+                    เช่น select, where, order by, groupby etc.
+                    โดยที่จะรับค่าพารามิเตอร์อยู่ 2 ตัวหลักๆ ตามตัวอย่างผมจะใช้สูตร <code
+                        class="inline-code">QUERY(EMPLOYEE1, "your query text")</code> ที่ซึ่งค่าแต่ละค่าแทนด้วย
+                    <code class="inline-code">EMPLOYEE1</code> ช่วงของข้อมูลตามรูป และ your query text การเขียน query
+                    ของเราเพื่อดึงข้อมูล ซึ่งจะเริ่มเขียนอธิบายตั้งแต่ (ข้อ 2 - ข้อ 7)
+                </p>
+            </li>
 
+            <li>
+                <code class="inline-code link-cursor">"select * where " &</code>
+                <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+                    เลือกทุกคอลัมน์ในช่วง <code class="inline-code">EMPLOYEE1</code> โดยที่จะเขียนเงื่อนไขต่อจาก where
+                    ตั้งแต่ข้อ 3 ถึง 7 เลย
+                </p>
+            </li>
 
+            <li>
+                <code class="inline-code link-cursor">IF(B2="All","1=1","N='" & B2 & "'") &</code>
+                <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+                    สูตร <code class="inline-code link-cursor">IF(เงื่อนไข,1,0)</code> คือ
+                    ถ้าเงื่อนไขเป็นจริงจะแสดงผลลัพธ์ 1 ถ้าไม่จริงจะแสดงผลลัพธ์ 0 ดังนั้น
+                </p>
+                <ul class="link-cursor">
+                    <li>ถ้า users เลือก Dropdown List เป็น All จะแสดงผล 1=1 ซึ่ง 1=1 จะคืนค่าความจริงจะทำให้ คำสั่ง
+                        "select * where 1=1" แสดงอัติโนมัติ</li>
+                    <li>ถ้า users เลือก Dropdown List ไม่เป็น All จะแสดงผล "N='" & B2 & "'"
+                        <p>
+                        <ul>
+                            <li>ถ้าหาก B2 ถูกเลือกเป็น male จะแสดงเป็น <code
+                                    class="inline-code">select * where N = 'male'</code></li>
+                            <p>
+                                <style type="text/css">
+                                    table.tableizer-table {
+                                        font-size: 12px;
+                                        border: 1px solid #CCC;
+                                        font-family: Arial, Helvetica, sans-serif;
+                                    }
+
+                                    .tableizer-table td {
+                                        padding: 4px;
+                                        margin: 3px;
+                                        border: 1px solid #CCC;
+                                    }
+
+                                    .tableizer-table th {
+                                        background-color: #104E8B;
+                                        color: #FFF;
+                                        font-weight: bold;
+                                    }
+                                </style>
+                            <table class="tableizer-table link-cursor">
+                                <thead>
+                                    <tr class="tableizer-firstrow">
+                                        <th>SSN</th>
+                                        <th>LASTNAME</th>
+                                        <th>FIRST NAME</th>
+                                        <th>HIREDATE</th>
+                                        <th>SALARY</th>
+                                        <th>GENDER</th>
+                                        <th>PERFORMANCE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>109-87-6544</td>
+                                        <td>Foster</td>
+                                        <td>Harold</td>
+                                        <td>2005-08-14</td>
+                                        <td>$55,000</td>
+                                        <td>Male</td>
+                                        <td>Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td>222-23-2222</td>
+                                        <td>Marlin</td>
+                                        <td>Bill</td>
+                                        <td>1977-03-28</td>
+                                        <td>$125,000</td>
+                                        <td>Male</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>333-43-4444</td>
+                                        <td>Smith</td>
+                                        <td>Frank</td>
+                                        <td>1991-01-29</td>
+                                        <td>$65,000</td>
+                                        <td>Male</td>
+                                        <td>Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td>432-19-8765</td>
+                                        <td>Bronson</td>
+                                        <td>Paul</td>
+                                        <td>2003-11-20</td>
+                                        <td>$58,000</td>
+                                        <td>Male</td>
+                                        <td>Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td>444-45-4444</td>
+                                        <td>Frank</td>
+                                        <td>Vernon</td>
+                                        <td>1985-04-10</td>
+                                        <td>$75,000</td>
+                                        <td>Male</td>
+                                        <td>Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td>464-64-4466</td>
+                                        <td>Webster</td>
+                                        <td>David</td>
+                                        <td>1991-01-29</td>
+                                        <td>$58,500</td>
+                                        <td>Male</td>
+                                        <td>Excellent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>500-50-0505</td>
+                                        <td>Rodriguez</td>
+                                        <td>Jose</td>
+                                        <td>1998-07-16</td>
+                                        <td>$150,000</td>
+                                        <td>Male</td>
+                                        <td>Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td>555-56-5555</td>
+                                        <td>Charles</td>
+                                        <td>Kenneth</td>
+                                        <td>1998-06-18</td>
+                                        <td>$40,000</td>
+                                        <td>Male</td>
+                                        <td>Excellent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>767-74-7373</td>
+                                        <td>Martin</td>
+                                        <td>William</td>
+                                        <td>2006-08-26</td>
+                                        <td>$23,000</td>
+                                        <td>Male</td>
+                                        <td>Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td>776-67-6666</td>
+                                        <td>Adamson</td>
+                                        <td>David</td>
+                                        <td>2002-10-04</td>
+                                        <td>$52,000</td>
+                                        <td>Male</td>
+                                        <td>Excellent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>925-45-7116</td>
+                                        <td>Whitehead</td>
+                                        <td>David</td>
+                                        <td>1980-07-25</td>
+                                        <td>$175,000</td>
+                                        <td>Male</td>
+                                        <td>Good</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </p>
+                            <li>ถ้าหาก B2 ถูกเลือกเป็น female จะแสดงเป็น <code
+                                    class="inline-code">select * where N = 'female'</code> ตามตารางด้านล่าง
+                            </li>
+                            <p>
+                                <style type="text/css">
+                                    table.tableizer-table {
+                                        font-size: 12px;
+                                        border: 1px solid #CCC;
+                                        font-family: Arial, Helvetica, sans-serif;
+                                    }
+
+                                    .tableizer-table td {
+                                        padding: 4px;
+                                        margin: 3px;
+                                        border: 1px solid #CCC;
+                                    }
+
+                                    .tableizer-table th {
+                                        background-color: #104E8B;
+                                        color: #FFF;
+                                        font-weight: bold;
+                                    }
+                                </style>
+                            <table class="tableizer-table link-cursor">
+                                <thead>
+                                    <tr class="tableizer-firstrow">
+                                        <th>SSN</th>
+                                        <th>LASTNAME</th>
+                                        <th>FIRST NAME</th>
+                                        <th>HIREDATE</th>
+                                        <th>SALARY</th>
+                                        <th>GENDER</th>
+                                        <th>PERFORMANCE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>000-01-0000</td>
+                                        <td>Milgrom</td>
+                                        <td>Patricia</td>
+                                        <td>2004-10-01</td>
+                                        <td>$57,500</td>
+                                        <td>Female</td>
+                                        <td>Average</td>
+                                    </tr>
+                                    <tr>
+                                        <td>000-02-2222</td>
+                                        <td>Adams</td>
+                                        <td>Sandy</td>
+                                        <td>2001-01-15</td>
+                                        <td>$19,500</td>
+                                        <td>Female</td>
+                                        <td>Excellent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>109-87-6543</td>
+                                        <td>Wood</td>
+                                        <td>Emily</td>
+                                        <td>1997-03-12</td>
+                                        <td>$69,000</td>
+                                        <td>Female</td>
+                                        <td>Excellent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>111-12-1111</td>
+                                        <td>Johnson</td>
+                                        <td>James</td>
+                                        <td>1996-05-03</td>
+                                        <td>$47,500</td>
+                                        <td>Female</td>
+                                        <td>Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td>222-52-5555</td>
+                                        <td>Smith</td>
+                                        <td>Mary</td>
+                                        <td>2006-01-01</td>
+                                        <td>$42,500</td>
+                                        <td>Female</td>
+                                        <td>Average</td>
+                                    </tr>
+                                    <tr>
+                                        <td>245-67-8910</td>
+                                        <td>Johanson</td>
+                                        <td>Sandy</td>
+                                        <td>2005-06-02</td>
+                                        <td>$69,000</td>
+                                        <td>Female</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>333-34-3333</td>
+                                        <td>Manin</td>
+                                        <td>Emily</td>
+                                        <td>2000-12-01</td>
+                                        <td>$49,500</td>
+                                        <td>Female</td>
+                                        <td>Average</td>
+                                    </tr>
+                                    <tr>
+                                        <td>333-66-1234</td>
+                                        <td>Brown</td>
+                                        <td>Marietta</td>
+                                        <td>2001-03-07</td>
+                                        <td>$18,500</td>
+                                        <td>Female</td>
+                                        <td>Excellent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>335-55-5533</td>
+                                        <td>Jones</td>
+                                        <td>Holly</td>
+                                        <td>1986-04-08</td>
+                                        <td>$65,000</td>
+                                        <td>Female</td>
+                                        <td>Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td>555-22-3333</td>
+                                        <td>Rubin</td>
+                                        <td>Patricia</td>
+                                        <td>2003-07-25</td>
+                                        <td>$45,000</td>
+                                        <td>Female</td>
+                                        <td>Average</td>
+                                    </tr>
+                                    <tr>
+                                        <td>612-99-1111</td>
+                                        <td>Roberts</td>
+                                        <td>Melissa</td>
+                                        <td>1984-05-14</td>
+                                        <td>$79,000</td>
+                                        <td>Female</td>
+                                        <td>Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td>625-62-6262</td>
+                                        <td>Holmes</td>
+                                        <td>Holly</td>
+                                        <td>1992-06-15</td>
+                                        <td>$55,000</td>
+                                        <td>Female</td>
+                                        <td>Average</td>
+                                    </tr>
+                                    <tr>
+                                        <td>777-78-7777</td>
+                                        <td>Marder</td>
+                                        <td>Kelly</td>
+                                        <td>1997-09-25</td>
+                                        <td>$38,500</td>
+                                        <td>Female</td>
+                                        <td>Average</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </p>
+                        </ul>
+                        </p>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li>
+                <code class="inline-code link-cursor">"And " &</code>
+                <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+                    เพื่อให้ชัดเจนผมขอยกตัวอย่าง ถ้าหาก users เลือก B2 เป็น female จะเป็น select * where N = 'female'
+                    ถ้าเพิ่ม ข้อ 4 "And " & ลงไปจะให้ภาพรวมเป็นแบบนี้
+                    <code class="inline-code">select * where N = 'female' And</code> ส่วนที่จะเขียนต่อไป จะแสดงข้อถัดไป
+                </p>
+            </li>
+
+            <li>
+                <code class="inline-code link-cursor">IF(B3="all","1=1","O = '" & B3 & "'")  &</code>
+                <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+                    ในส่วนนี้จะคล้ายข้อ 2 ที่ผ่านมาแค่เปลี่ยนจาก B2 เป็น B3 นั่นคือเลือก Performance
+                    ผมขอข้ามประเด็นเรื่อง IF() และ 1=1 ไปสามารถทบทวนข้อ 2 ใหม่ได้
+                    แต่ถ้า users เลือกอันอื่นที่ไม่ใช่ All ซึ่งเป็นไปได้ 3 แบบคือ Good, Average, Excellent
+                </p>
+                <ul>
+                    <li><code class="inline-code link-cursor">select * where N = 'female' And O = 'Good'</code></li>
+                    <p>
+                        <style type="text/css">
+                            table.tableizer-table {
+                                font-size: 12px;
+                                border: 1px solid #CCC;
+                                font-family: Arial, Helvetica, sans-serif;
+                            }
+
+                            .tableizer-table td {
+                                padding: 4px;
+                                margin: 3px;
+                                border: 1px solid #CCC;
+                            }
+
+                            .tableizer-table th {
+                                background-color: #104E8B;
+                                color: #FFF;
+                                font-weight: bold;
+                            }
+                        </style>
+                    <table class="tableizer-table link-cursor">
+                        <thead>
+                            <tr class="tableizer-firstrow">
+                                <th>SSN</th>
+                                <th>LASTNAME</th>
+                                <th>FIRST NAME</th>
+                                <th>HIREDATE</th>
+                                <th>SALARY</th>
+                                <th>GENDER</th>
+                                <th>PERFORMANCE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>111-12-1111</td>
+                                <td>Johnson</td>
+                                <td>James</td>
+                                <td>1996-05-03</td>
+                                <td>$47,500</td>
+                                <td>Female</td>
+                                <td>Good</td>
+                            </tr>
+                            <tr>
+                                <td>335-55-5533</td>
+                                <td>Jones</td>
+                                <td>Holly</td>
+                                <td>1986-04-08</td>
+                                <td>$65,000</td>
+                                <td>Female</td>
+                                <td>Good</td>
+                            </tr>
+                            <tr>
+                                <td>612-99-1111</td>
+                                <td>Roberts</td>
+                                <td>Melissa</td>
+                                <td>1984-05-14</td>
+                                <td>$79,000</td>
+                                <td>Female</td>
+                                <td>Good</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </p>
+                    <li><code class="inline-code link-cursor">select * where N = 'female' And O = 'Average'</code></li>
+                    <p>
+                        <style type="text/css">
+                            table.tableizer-table {
+                                font-size: 12px;
+                                border: 1px solid #CCC;
+                                font-family: Arial, Helvetica, sans-serif;
+                            }
+
+                            .tableizer-table td {
+                                padding: 4px;
+                                margin: 3px;
+                                border: 1px solid #CCC;
+                            }
+
+                            .tableizer-table th {
+                                background-color: #104E8B;
+                                color: #FFF;
+                                font-weight: bold;
+                            }
+                        </style>
+                    <table class="tableizer-table link-cursor">
+                        <thead>
+                            <tr class="tableizer-firstrow">
+                                <th>SSN</th>
+                                <th>LASTNAME</th>
+                                <th>FIRST NAME</th>
+                                <th>HIREDATE</th>
+                                <th>SALARY</th>
+                                <th>GENDER</th>
+                                <th>PERFORMANCE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>000-01-0000</td>
+                                <td>Milgrom</td>
+                                <td>Patricia</td>
+                                <td>2004-10-01</td>
+                                <td>$57,500</td>
+                                <td>Female</td>
+                                <td>Average</td>
+                            </tr>
+                            <tr>
+                                <td>222-52-5555</td>
+                                <td>Smith</td>
+                                <td>Mary</td>
+                                <td>2006-01-01</td>
+                                <td>$42,500</td>
+                                <td>Female</td>
+                                <td>Average</td>
+                            </tr>
+                            <tr>
+                                <td>333-34-3333</td>
+                                <td>Manin</td>
+                                <td>Emily</td>
+                                <td>2000-12-01</td>
+                                <td>$49,500</td>
+                                <td>Female</td>
+                                <td>Average</td>
+                            </tr>
+                            <tr>
+                                <td>555-22-3333</td>
+                                <td>Rubin</td>
+                                <td>Patricia</td>
+                                <td>2003-07-25</td>
+                                <td>$45,000</td>
+                                <td>Female</td>
+                                <td>Average</td>
+                            </tr>
+                            <tr>
+                                <td>625-62-6262</td>
+                                <td>Holmes</td>
+                                <td>Holly</td>
+                                <td>1992-06-15</td>
+                                <td>$55,000</td>
+                                <td>Female</td>
+                                <td>Average</td>
+                            </tr>
+                            <tr>
+                                <td>777-78-7777</td>
+                                <td>Marder</td>
+                                <td>Kelly</td>
+                                <td>1997-09-25</td>
+                                <td>$38,500</td>
+                                <td>Female</td>
+                                <td>Average</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </p>
+                    <li><code class="inline-code link-cursor">select * where N = 'female' And O = 'Excellent'</code>
+                    </li>
+                    <p>
+                        <style type="text/css">
+                            table.tableizer-table {
+                                font-size: 12px;
+                                border: 1px solid #CCC;
+                                font-family: Arial, Helvetica, sans-serif;
+                            }
+
+                            .tableizer-table td {
+                                padding: 4px;
+                                margin: 3px;
+                                border: 1px solid #CCC;
+                            }
+
+                            .tableizer-table th {
+                                background-color: #104E8B;
+                                color: #FFF;
+                                font-weight: bold;
+                            }
+                        </style>
+                    <table class="tableizer-table link-cursor">
+                        <thead>
+                            <tr class="tableizer-firstrow">
+                                <th>SSN</th>
+                                <th>LASTNAME</th>
+                                <th>FIRST NAME</th>
+                                <th>HIREDATE</th>
+                                <th>SALARY</th>
+                                <th>GENDER</th>
+                                <th>PERFORMANCE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>000-02-2222</td>
+                                <td>Adams</td>
+                                <td>Sandy</td>
+                                <td>2001-01-15</td>
+                                <td>$19,500</td>
+                                <td>Female</td>
+                                <td>Excellent</td>
+                            </tr>
+                            <tr>
+                                <td>109-87-6543</td>
+                                <td>Wood</td>
+                                <td>Emily</td>
+                                <td>1997-03-12</td>
+                                <td>$69,000</td>
+                                <td>Female</td>
+                                <td>Excellent</td>
+                            </tr>
+                            <tr>
+                                <td>333-66-1234</td>
+                                <td>Brown</td>
+                                <td>Marietta</td>
+                                <td>2001-03-07</td>
+                                <td>$18,500</td>
+                                <td>Female</td>
+                                <td>Excellent</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </p>
+                </ul>
+
+            </li>
+
+            <li>
+                <code class="inline-code link-cursor">"And " &</code>
+                <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+                    เหมือนข้อ 4 เลย ถ้ารวมคำสั่งข้อ 6 ลงไปด้วยจะทำให้สูตรทั้งหมดเป็น <br><code
+                        class="inline-code">select * where N = 'female' And O = 'Excellent' And</code>
+                </p>
+            </li>
+
+            <li>
+                <code class="inline-code link-cursor">IF(B4="All","1=1","L <= date'"& Text(B4,"yyyy-mm-dd") & "'"</code>
+                <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+                    เหมือนข้อ 5 และ ข้อ 3 แต่ผลลัพธ์จะสื่อถึงพนักงานคนไหนที่เริ่มทำงานก่อนวันไหน
+                    หรือเริ่มทำงานวันที่เท่าไร ซึ่งขึ้นอยู่กับ users กด Dropdown List เลือก
+                </p>
+                <p class="link-cursor">กล่าวคือให้โฟกัสที่ <code
+                        class="inline-code">L <= date'"& Text(B4,"yyyy-mm-dd")</code>
+                <ul class="link-cursor">
+                    <li>เราปรับ format วันที่เป็นมาตรฐาน ISO โดยคำสั่ง <code
+                            class="inline-code">Text(B4,"yyyy-mm-dd")</code></li>
+                    <li>เมื่อปรับ date format ได้แล้ว จะได้ภาพรวมของสูตรดังนี้ <code
+                            class="inline-code">L <= date'yyyy-mm-dd")'</code></li>
+                </ul>
+                </p>
+                <p class="link-cursor" style="text-align: justify; text-indent: 1em;">กล่าวคือ <code
+                        class="inline-code">L <= date'yyyy-mm-dd")'</code>
+                    จะเลือกข้อมูล วันที่พนักงานเริ่มทำงานหรือก่อนวันนั้นที่ users เลือกใน Dropdown List (B4)
+                    ถ้า users เลือก B4 เท่ากับ 2004-10-01 และเอาสูตรจากข้อ 6 มาต่อก็จะเป็น
+                    <code
+                        class="inline-code">select * where N = 'female' And O = 'Excellent' And L <= date'2004-10-01</code>
+                </p>
+            </li>
+        </ol>
 
         <p class="link-cursor">📌 <b>สรุปผลลัพธ์: Dynamic Query</b></p>
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
-            จากตัวอย่างข้างต้น ผมได้อธิบายถึงการกรองข้อมูลของพนักงานที่มีเพศตามกำหนด และมีผลการปฎิบัติงานตามกำหนด
-            โดยที่เรียงลำดับจากเงินเดือนตามเงื่อนไขที่ users ต้องการ ซึ่งผมใช้ Formula ต่างๆ เช่น Filter, Sort, IFERROR
-            ในการจัดการข้อมูลให้มีความ Dynamic มากขึ้น
-            สำหรับตัวอย่างต่อไปจะเป็นการใช้ HCF (Highlight Conditional Formatting)
-            ไปดูกันเลยค้่าบ !
+            เพื่อง่ายต่อการเข้าใจ ขออนุญาตยกตัวอย่างการใช้งาน
         </p>
 
+        <ul class="link-cursor">
+            <li>B2 เท่ากับ female</li>
+            <li>B3 เท่ากับ Excellent</li>
+            <li>B4 เท่ากับ 2004-10-01</li>
+        </ul>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ทำให้ your query text เท่ากับ <code
+                class="inline-code">select * where N = 'female' And O = 'Excellent' And L <= date'2004-10-01</code>
+            ดังนั้น นี่คือสูตรเต็มของ QUERY()
+        </p>
+
+        <div class="code-container" style="position: relative;">
+            <div class="code-header">
+                <span class="language-label link-cursor">Excel</span>
+                <button class="copy-btn notion-icon">
+                    <img src="icon-copy1.png" alt="Copy" width="20">
+                </button>
+            </div>
+            <pre class="line-numbers link-cursor"><code class="language-none">
+                =QUERY(EMPLOYEE1,"select * where N = 'female' And O = 'Excellent' And L <= date'2004-10-01")
+                </code></pre>
+            <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+        </div>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ถ้าหากอยากได้เป็นสูตรทั่วไปโดยไม่กำหนดค่า B2, B3, B4 เพื่อรอ users ป้อน
+        </p>
+
+        <div class="code-container" style="position: relative;">
+            <div class="code-header">
+                <span class="language-label link-cursor">Excel</span>
+                <button class="copy-btn notion-icon">
+                    <img src="icon-copy1.png" alt="Copy" width="20">
+                </button>
+            </div>
+            <pre class="line-numbers link-cursor"><code class="language-none">
+=QUERY(EMPLOYEE1, 
+"select * where " &
+IF(B2="All","1=1","N='" & B2 & "'") &
+"And " & IF(B3="all","1=1","O = '" & B3 & "'")  &
+"And " & IF(B4="All","1=1","L <= date'"& Text(B4,"yyyy-mm-dd") & "'"))
+                </code></pre>
+            <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+        </div>
     </section>
+
+    <section>
+        <h2 class="link-cursor">4. Vlookup</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            Vlookup เป็นฟังก์ชันที่ใช้ในการค้นหาข้อมูลในตาราง โดยจะค้นหาค่าที่ต้องการในคอลัมน์แรกของตาราง
+            และคืนค่าจากคอลัมน์อื่นๆ ในแถวเดียวกัน โดยมีรูปแบบการใช้งานดังนี้
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-4-6.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-4-6.gif')">
+        </div>
+
+        <p>
+        <details class="detail1">
+
+            <summary>Formula</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+=ArrayFormula(VLOOKUP(I4:I28,A32:F39,{2 ,3 ,4 ,5 ,6},FALSE))
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+=ArrayFormula(VLOOKUP(H4:H28,A43:E46, {2, 3 ,4, 5},FALSE))                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        </p>
+
+        <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1910676290#gid=1910676290"
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 4. Vlookup</b></a>
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-4-6.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-4-6.png')">
+        </div>
+
+        <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#4-vlookup"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สูตร <code class="inline-code">Vlookup</code> และการทำเป็น ArrayFormula คืออะไร?
+        </p>
+        <ul class="link-cursor">
+            <li><code class="inline-code">Vlookup</code> จะคืนค่าผลลัพธ์จาก cell ที่เรามี ที่เราอ้างอิงจากอีก table
+                (ภายใน table เดียวกันได้)</li>
+            <li>ArrayFormula จะคืนค่าหลายๆ cell แทนที่จะเป็น cell เดียว</li>
+        </ul>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ดังนั้น ผมขออนุญาตแบ่งเป็น 2 สูตรมี สูตรบนกับสูตรล่าง
+        </p>
+        <ul class="link-cursor">
+            <li>สูตรบน จะแทนด้วย สูตรซ้ายมือ ตามภาพ</li>
+            <li>สูตรล่าง จะแทนด้วย สูตรขวามือ ตามภาพ</li>
+        </ul>
+        <ol>
+            <li class="link-cursor">สูตรบน <code
+                    class="inline-code">=ArrayFormula(VLOOKUP(I4:I28,A32:F39,{2 ,3 ,4 ,5 ,6},FALSE))</code></li>
+            <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+                ผมขออธิบายส่วนที่ไม่มี Arrayformula ก่อน <code
+                    class="inline-code">VLOOKUP(I4:I28,A32:F39,{2 ,3 ,4 ,5 ,6},FALSE)</code>
+                สูตรนี้จะทำงานโดย ค่าในช่วง I4:I28 มีค่าไหนที่สอดคล้องกับ A32:A39 ถ้า match
+                กันเจอให้คืนค่าที่จับคู่กันได้จากช่วง B32:F39 ออกมา
+                เพราะว่าเราเลือกที่คอลัมน์ที่ 2, 3, 4, 5, 6 เราเลยใช้ {2 ,3 ,4 ,5 ,6} ซึ่งก็คือช่วง B32:F39 นั่นเอง
+                ซึ่งทำให้ผลลัพธ์ที่ได้จะคืนค่าเเค่ cell เดียวที่เขียนสูตร Vlookup ลงไป เพื่อให้คืนค่าหลายๆ cell
+                เราจึงเลือกใช้ ArrayFormula ซึ่งจะสูตรเต็มคือ <code
+                    class="inline-code">=ArrayFormula(VLOOKUP(I4:I28,A32:F39,{2 ,3 ,4 ,5 ,6},FALSE))</code>
+                ผลลัพธ์จะได้รูปตัวอย่าง
+            </p>
+
+            <li class="link-cursor">สูตรล่าง <code
+                    class="inline-code">=ArrayFormula(VLOOKUP(H4:H28,A43:E46, {2, 3 ,4, 5},FALSE))</code></li>
+            <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+                คล้ายกับข้อ 1 แค่เปลี่ยน parameter 1 กับ 2 และช่วงที่อยากได้ค่านั้นว่าอยู่ที่คอลัมน์ 2, 3, 4, 5
+                การทำให้เป็น FALSE หรือ 0
+                บ่งบอกถึงคืนค่านั้นตรงๆ ไม่ต้องไปเอา ค่าที่รองลงมาจากแถว หรือค่าที่ถัดไปจากแถว return กลับมา
+                ต่อไปเราจะลองใช้ Vlookup
+                กับการแปลงวันที่ (Convert Date) ในตัวอย่างถัดไป
+            </p>
+        </ol>
+    </section>
+
+    <section>
+        <h2 class="link-cursor">5. Convert Date</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            Convert Date เป็นการแปลงวันที่จากรูปแบบที่ไม่เป็นมาตรฐานให้เป็นมาตรฐาน ISO (yyyy-mm-dd)
+            โดยใช้ฟังก์ชัน <code class="inline-code">TEXT()</code> ใน Google Sheets
+            ซึ่งจะช่วยให้การจัดการข้อมูลวันที่ใน Google Sheets ง่ายขึ้น
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-5-6.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-5-6.gif')">
+        </div>
+
+        <p>
+        <details class="detail1">
+
+            <summary>Formula</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+=ArrayFormula(SPLIT(A4:A9," "))
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+=ArrayFormula(DATE(D4:D9-543,VLOOKUP(C4:C9,$A$13:$B$24,2,0),B4:B9))                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        </p>
+
+        <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=134502718#gid=134502718"
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 5. Convert Date</b></a>
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-5-6.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-5-6.png')">
+        </div>
+
+        <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#5-convert-date"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            จากภาพ จะเป็นการแปลงจากวันที่ภาษาไทย ให้กลายเป็นวันที่มาตฐาณ ISO โดยใช้ 2 สูตรหลักคือ
+            <code class="inline-code">SPLIT()</code>, <code class="inline-code">DATE</code>
+            และ <code class="inline-code">VLOOKUP</code> ก่อนอื่นผมขออธิบายช่วงต่างๆที่มีในสูตร
+        </p>
+        <ul class="link-cursor" style="text-align: justify;">
+            <li>
+                <code class="inline-code">A4:A9</code> แทนด้วย ช่วงของวันที่เดิม(วันที่เต็มภาษาไทย วันที่ เดือน ปี พ.ศ.)
+                ซึ่งเราจะเปลี่ยนภายหลัง
+            </li>
+            <li>
+                <code class="inline-code">D4:D9</code> แทนด้วย ปี พ.ศ. ซึ่งเราจะเปลี่ยนภายหลัง
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                <code class="inline-code">C4:C9</code> แทนด้วย เดือน ภาษาไทย ซึ่งเราจะใช้ VLOOKUP เข้ามา transform
+                โดยอิงจากตารางที่อยู่ในส่วนที่ 1 ของวงกลมสีแดง
+            </li>
+            <li>
+                <code class="inline-code">$A$13:$B$24</code> แทนด้วย ช่วงของวันที่เดิม(วันที่เต็มภาษาไทย วันที่ เดือน ปี
+                พ.ศ.)
+                ซึ่งเราจะเปลี่ยนภายหลัง
+            </li>
+            <li>
+                <code class="inline-code">B4:B9</code> แทนด้วย เฉพาะวันที่เท่านั้น
+            </li>
+        </ul>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เมื่อเรามองดูภาพรวมของช่วงข้อมูลเบื้องต้นแล้ว ผมขออธิบายขั้นตอนต่อไป ซึ่งจะแบ่งออกเป็น 3 ส่วน ดังต่อไปนี้
+            ตามรูป
+        </p>
+        <ol>
+            <li class="link-cursor" style="text-align: justify;">
+                เราต้องการสร้างตารางเดือน months format ให้สอดคล้องกับที่มีในตารางข้อมูลของเรา
+                โดยเราต้องเรียงลำดับของเดือนดังกล่าวไว้เพื่ออ้างอิงด้วย
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                <code class="inline-code">=ArrayFormula(SPLIT(A4:A9," "))</code>
+                <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+                    <code class="inline-code">ArrayFormula</code> ผมได้อธิบายไว้หัวข้อ Vlookup แล้ว
+                    พูดง่ายๆมันจะคืนค่าหลายๆ cell ออกมาตามช่วงที่เราอ้างอิง
+                    ส่วน <code
+                        class="inline-code">SPLIT(A4:A9," ")</code>จะทำการแบ่งข้อความในเซลล์ออกมาเป็นส่วนๆแบ่งจากค่า
+                    white space 1 ช่องซึ่งผลลัพธ์ที่ได้จะแสดงแค่ 1 แถว ดังนั้นเราจะได้ว่า
+                    <code class="inline-code">=ArrayFormula(SPLIT(A4:A9," "))</code> สามารถดูได้จากรูปตัวอย่าง
+                </p>
+            </li>
+            <li class="link-cursor">
+                <code class="inline-code">=ArrayFormula(DATE(D4:D9-543,VLOOKUP(C4:C9,$A$13:$B$24,2,0),B4:B9))</code>
+                <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+                    ข้อนี้จะทำได้ก็ต่อเมื่อทำข้อ 1-2 สำเร็จ ผมขออนุญาตแบ่งออกเป็น 2 ส่วนเพื่ออธิบายดังนี้
+                </p>
+                <ul>
+                    <li>
+                        <code class="inline-code">VLOOKUP(C4:C9,$A$13:$B$24,2,0)</code>
+                    </li>
+                    <p class="link-cursor" style="text-align: justify;">
+                        จะเป็นการคืนค่าอ้างอิงจากตารางที่สร้างในข้อ 1 ซึ่งก็คือเดือนที่เป็นตัวเลขที่ตั้งค่าไว้
+                    </p>
+                    <li>
+                        <code
+                            class="inline-code">DATE(D4:D9-543,VLOOKUP(C4:C9,$A$13:$B$24,2,0),B4:B9) DATE(ปี, เดือน, วัน)</code>
+                    </li>
+                    <p>
+                    <ul>
+                        <li>D4:D9-543 ทำให้เป็นปี ค.ศ. โดย(พ.ศ. - 543)</li>
+                        <li>ได้จาก Vlookp ที่บอกไปเมื่อสักครู่</li>
+                        <li>B4:B9 วันที่ก็เหมือนเดิม (เพราะเป็นเลขที่ถูกแล้วถ้าเป็นเลขไทย
+                            อาจจะต้องสร้างตารางอ้างอิงเพิ่ม)</li>
+                    </ul>
+                    </p>
+                </ul>
+            </li>
+        </ol>
+
+        <p class="link-cursor">📌 <b>สรุปผลลัพธ์: Convert Date</b></p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เราสามารถแปลงค่าวันที่เต็มภาษาไทย เป็นวันที่มาตรฐานสากล ISO ได้ โดยถ้าอิงจากชุดข้อมูลที่เรามี และ Explore
+            เบื้องต้น จะเห็นได้ว่าสิ่งที่ต้องแก้มีแค่ เดือน, ปี หลังจากที่เราใช้ SPLIT() เสร็จ โดยที่
+        </p>
+        <ul class="link-cursor">
+            <li>เดือน เราจะใช้ Vlookup จากตารางอ้างอิงที่สร้างขึ้นในข้อ 1</li>
+            <li>ปี พ.ศ. เราแค่ลบ 543 ให้เป็นมี ค.ศ.</li>
+        </ul>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            จากนั้นเราจะรวม ปี-เดือน-วัน เข้าด้วยกันด้วยคำสั่ง DATE(ปี, เดือน, วัน) ก็จะได้วันที่มาตรฐานสากล ISO
+        </p>
+    </section>
+
+    <section>
+        <h2 class="link-cursor">6. Regular Expression</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            Regular Expression (Regex) เป็นเครื่องมือที่ใช้ในการค้นหาและจัดการกับข้อความ
+            โดยสามารถใช้ในการตรวจสอบรูปแบบของข้อความ
+            เช่น การตรวจสอบอีเมล หมายเลขโทรศัพท์ หรือรูปแบบอื่นๆ ที่ต้องการ โดยมีรูปแบบการใช้งานดังนี้
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-6-6.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-6-6.png')">
+        </div>
+
+        <p><a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#6-regular-expression"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สำหรับตัวอย่างนี้คือการใช้งานสูตรตระกูล Regular Expression ซึ่งในตัวอย่างนี้ผมจะใช้อยู่ 2 สูตร คือ
+        </p>
+        <ul>
+            <li>
+                <code class="inline-code">REGEXEXTRACT()</code> คืนค่าที่ดึงข้อมูลตามต้องการออกมาจาก pattern บางอย่าง
+                หลักๆจะรับอยู่ 2 parameter (cell ที่อยากดึง และ pattern การดึง)
+            </li>
+            <li>
+                <code class="inline-code">REGEXMATCH()</code> คืนค่า TRUE หรือ FALSE ตามเงื่อนไขที่กำหนดว่ามีหรือไม่มี 2
+                parameter (cell ที่อยากตรวจหา และ ค้นหาอะไร)
+            </li>
+        </ul>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            จากรูปตัวอย่างคอลัมน์ B (วงกลมสีแดงเลข 1 ช่วง B3:B7) คุณจะเห็นข้อมูลของลูกค้า
+            ซึ่งเป็นข้อมูลบัตรประชาชนที่ demo ขึ้นมาที่มี pattern การเขียนเหมือนกันทุกแถว คือ
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            <code class="inline-code">ID เพศ ชื่อ นามสกุล วันเกิด อายุ ที่อยู่ เลขไปรษณีย์ วันหมดอายุ</code>
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ซึ่งผมจะสกัดหรือดึง ออกมาเป็นแต่ละคอลัมน์ตั้งแต่ C ถึง L ตามรูป โดยใช้สูตร <code
+                class="inline-code">REGEXEXTRACT()</code> และ <code class="inline-code">REGEXMATCH()</code>
+            จากนั้นผมจะใช้สูตรจากภาพวงกลมเลข 2 ไปใส่แต่ละคอลัมน์ ที่แสดงในวงกลส่วนของเลข 3 เป็นการทดสอบว่ามีไหม โดยใช้
+            <code class="inline-code">REGEXMATCH()</code>
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">ดังนั้นผมขอแบ่งเป็น 10 ส่วน ดังต่อไปนี้
+            (ผมขอข้ามส่วน ArrayFomula ไปเลยนะครับ เพราะตัวอย่างที่ผ่านมาๆอธิบายไปแล้ว)</p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">โดยที่ข้อ 6.2-6.4 และ 6.5-6.6 และ 6.9-6.10
+            ต้องอ่านต่อจากกัน ห้ามข้าม เช่นถ้าใช้สูตรข้อ 6.3 ต้องทำข้อ 6.2 ก่อน,</p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">ถ้าใช้สูตรข้อ 6.6 ต้องทำข้้อ 6.5
+            ก่อนและข้อ 6.6 จะใช้ DATEDIF()</p>
+
+        <h3 class="link-cursor">6.1 <code class="inline-code">ID</code> ใช้สูตร</h3>
+
+        <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1892926046#gid=1892926046"
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 6. Regular Expression </b></a> C3 - C7
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-6-6-s61.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-6-6-s61.png')">
+        </div>
+
+        <p>
+        <details class="detail1">
+
+            <summary>Formula</summary>
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+=ArrayFormula(REGEXEXTRACT(B3:B7, "\d-\d{4}-\d{5}-\d{2}-\d"))                </code></pre>
+                <div class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        </p>
+
+        <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#61-id-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            รับอยู่ 2 parameter คือ B3:B7 และ <code class="inline-code">"\d-\d{4}-\d{5}-\d{2}-\d"</code>
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ผมขออธิบายส่วน <code class="inline-code">"\d-\d{4}-\d{5}-\d{2}-\d"</code> โดยใช้ข้อมูลลูกค้า B5
+            เป็นผลลัพธ์ตัวอย่าง
+        </p>
+        <ul>
+            <li class="link-cursor"><code class="inline-code">\d</code> ตัวเลข 0-9 1 ตัว (ผลลัพธ์ <code
+                    class="inline-code">1</code>)</li>
+            <li class="link-cursor">ตามด้วย <code class="inline-code">-\d{4}</code> ตัวเลข 0-9 4 ตัว (ผลลัพธ์คือ <code
+                    class="inline-code">1-2222</code>)</li>
+            <li class="link-cursor">ตามด้วย <code class="inline-code">-\d{5}</code> ตัวเลข 0-9 5 ตัว (ผลลัพธ์คือ <code
+                    class="inline-code">1-2222-03874</code>)</li>
+            <li class="link-cursor">ตามด้วย <code class="inline-code">-\d{2}</code> ตัวเลข 0-9 2 ตัว (ผลลัพธ์คือ <code
+                    class="inline-code">1-2222-03874-23</code>)</li>
+            <li class="link-cursor">หตามด้วย <code class="inline-code">-\d</code> ตัวเลข 0-9 1 ตัว (ผลลัพธ์คือ <code
+                    class="inline-code">1-2222-03874-23-6</code>) เป็นต้น</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3 class="link-cursor">6.2 <code class="inline-code">Gender</code> ใช้สูตร</h3>
+
+        <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1892926046#gid=1892926046"
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 6. Regular Expression </b></a> D3 - D7
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-6-6-s62.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-6-6-s62.png')">
+        </div>
+
+        <p>
+        <details class="detail1">
+
+            <summary>Formula</summary>
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+=ArrayFormula(REGEXEXTRACT(B3:B7,"M[a-z]+."))`                </code></pre>
+                <div class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        </p>
+
+        <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#62-gender-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ผมขออธิบายส่วน "M[a-z]+." โดยใช้ข้อมูลลูกค้า B5 เป็นผลลัพธ์ตัวอย่าง
+        </p>
+        <ul>
+            <li class="link-cursor">เริ่มต้นพิมพ์ <code class="inline-code">M</code> ขึ้นต้นด้วย M ตัวใหญ่ (ผลลัพธ์คือ
+                <code class="inline-code">M</code>)</li>
+            <li class="link-cursor">ตามด้วย <code class="inline-code">[a-z]+</code> ตัวอักษรภาษอังกฤษตัวพิพม์เล็ก a-z
+                กี่ตัวก็ได้ (ผลลัพธ์คือ <code class="inline-code">Mr</code>)</li>
+            <li class="link-cursor">ตามด้วย <code class="inline-code">.</code> ตัวอะไรก็ได้ทั้งหมดเลย (ตัวอักษร, ตัวเลข,
+                ตัวอักขระพิเศษ, white space ยกเว้นการขึ้นบรรทัดใหม่ภายใน cell) เอามาแค่ 1 ตัว (ผลลัพธ์คือ <code
+                    class="inline-code">Mr.</code>) เป็นต้น
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3 class="link-cursor">6.3 <code class="inline-code">FirstName</code> ใช้สูตร</h3>
+
+        <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1892926046#gid=1892926046"
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 6. Regular Expression </b></a> E3 - E7
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-6-6-s63.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-6-6-s63.png')">
+        </div>
+
+        <p>
+        <details class="detail1">
+
+            <summary>Formula</summary>
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+=ArrayFormula(REGEXEXTRACT(B3:B7,".+" & D3:D7 & ".([A-Z][a-z]+)"))`                
+</code></pre>
+                <div class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        </p>
+
+        <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#63-firstname-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ข้อนี้จะได้ก็ต่อเมื่อทำข้อ 6.2 มาก่อน เพราะเราจะอ้างอิงถึงผลลัพธ์ที่อยู่ใน <code
+                class="inline-code">D3:D7</code>
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            <code class="inline-code">".+" & D3:D7 & ".([A-Z][a-z]+)"</code>
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            จากสูตรเช่นเดิมจะต้องการรับค่า parameter 2 ตัวตัวแรกจะเป็น cell ที่เราต้องการดึง
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ตัวที่ 2 ผมขอแบ่งเป็น 3 ส่วน
+        </p>
+        <ul>
+            <li class="link-cursor">เริ่มต้นพิมพ์ <code class="inline-code">".+"</code></li>
+            <p class="link-cursor" style="text-align: justify;">
+                ดึงตัวอะไรก็ได้ทั้งหมดเลย (ตัวอักษร, ตัวเลข, ตัวอักขระพิเศษ, white space ยกเว้นการขึ้นบรรทัดใหม่ภายใน
+                cell)
+                เอามากี่ตัวก็ได้ที่ .. (ผลลัพธ์คือ <code class="inline-code">ID 1-2222-03874-23-6 Mr. Kevin Demio</code>
+                )
+            </p>
+            <li class="link-cursor">ตามด้วย <code class="inline-code">D3:D7</code></li>
+            <p class="link-cursor" style="text-align: justify;">
+                อยู่ข้างหน้าของช่วง cell <code class="inline-code">D3:D7</code> (ที่เราดึงมาจากข้อ 6.2 โดยที่ ผลลัพธ์คือ
+                <code class="inline-code">ID 1-2222-03874-23-6 Mr.</code>)
+            </p>
+            <li class="link-cursor">ตามด้วย <code class="inline-code">".([A-Z][a-z]+)"</code>
+                <ul>
+                    <br>
+                    <li>
+                        <code class="inline-code">"."</code> ดึงตัวอะไรก็ได้ทั้งหมดเลย (ตัวอักษร, ตัวเลข,
+                        ตัวอักขระพิเศษ, white space ยกเว้นการขึ้นบรรทัดใหม่ภายใน cell) เอามา 1 ตัว (ผลลัพธ์คือ <code
+                            class="inline-code">ID 1-2222-03874-23-6 Mr.</code> )
+                    </li>
+                    <br>
+
+                    <li>
+                        ตามด้วย <code class="inline-code">(</code> จัดกลุ่มโดยใช้วงเล็บเปิดเพื่อบ่งบอกว่าเราจะเอาเฉพาะ
+                        ภายในวงเล็บเท่่านั้น โดยสังเกต pattern
+                    </li>
+                    <br>
+
+                    <li>
+                        ตามด้วย <code class="inline-code">[A-Z]</code> ดึงตัวอักษรภาษาอังกฤษขึ่้นต้นด้วยตัวพิมพ์ใหญ่ 1
+                        ตัว (ผลลัพธ์คือ <code class="inline-code">K</code> ต้องใส่วงเล็บปิดด้วยนะถ้าอยากให้โชว์ตัว K)
+                    </li>
+                    <br>
+
+                    <li>
+                        ตามด้วย <code class="inline-code">[a-z]+</code> ดึงตัวอักษรภาษาอังกฤษตัวพิมพ์เล็ก กี่ตัวก็ได้
+                        (ผลลัพธ์คือ Kevin ต้องใส่วงเล็บปิดด้วยนะถ้าอยากให้โชว์ตัว Kevin)
+                    </li>
+                    <br>
+
+                    <li>
+                        ตามด้วย <code class="inline-code">)</code> ใช้วงเล็บปิดเพื่อบ่งบอกว่าเราปิดการจัดกลุ่ม โดยสังเกต
+                        pattern ภายในวงเล็บเท่านั้น
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p class="link-cursor" style="text-align: justify;text-indent: 1em;">เป็นต้น</p>
+        <p class="link-cursor" style="text-align: justify;text-indent: 1em;">
+            สรุปภาพรวมของ parameter ที่ 2 ของ REGEXEXTRACT() คือ <code
+                class="inline-code">".+" & D3:D7 & ".(" & "[A-Z][a-z]+" & ")"</code>
+        </p>
+        <p class="link-cursor" style="text-align: justify;text-indent: 1em;">
+            หมายถึง เอาทุกตัวเลข ทุกตัวอักษร รวมถึงอักขระพิเศษ(white space เป็นต้น) ตามด้วยคำนำหน้าที่ดึงมาจากข้อ 2
+            จากนั้นใช้ . เพื่อ
+            แทน white space 1 อัน จากนั้นจัดกลุ่ม โดยการใช้วงเล็บเปิดและดึงตัวอักษรตัวใหญ่ A-Z 1
+            ตัวและตามด้วยตัวอักษรเล็ก 1 ตัวกี่ตัวก็ได้ จากนั้นปิดการจัดกลุ่มด้วยวงเล็บปิด
+        </p>
+        <p class="link-cursor" style="text-align: justify;text-indent: 1em;">
+            ผลลัพธ์ที่เป็นไปได้คือ <code class="inline-code">John, Carry, Kevin, Stuart, Anya</code>
+            ทั้งหมดนี้จะถูกดึงออกมาจาก คอลัมน์ B (วงกลมสีแดงเลข 1 ช่วง <code class="inline-code">B3:B7</code>)
+        </p>
+    </section>
+
+    <section>
+        <h3 class="link-cursor">6.4 <code class="inline-code">LastName</code> ใช้สูตร</h3>
+
+        <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1892926046#gid=1892926046"
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 6. Regular Expression </b></a> F3 - F7
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-6-6-s64.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-6-6-s64.png')">
+        </div>
+
+        <p>
+        <details class="detail1">
+
+            <summary>Formula</summary>
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+=ArrayFormula(REGEXEXTRACT(B3:B7,".+" & E3:E7 & ".([A-Z][a-z]+)"))`</code></pre>
+                <div class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        </p>
+
+        <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#64-lastname-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ข้อนี้จะทำได้ก็ต่อเมื่อทำข้อ 6.3 มาก่อน ซึ่งวิธีการทำจะคล้ายกับข้อ 6.3 เช่นเดียวกัน แค่เปลี่ยนช่วงอ้างอิงจาก
+            <code class="inline-code">D3:D7</code> เป็น <code class="inline-code">E3:E7</code>
+            กล่าวคือ จงดึงนามสกุล โดยเข้าไปหา pattern ซึ่งในที่นี้เราจะใช้ FirstName ที่ดึงมาข้อก่อนหน้ามาจับ pattern
+            ก็จะได้ นามสกุลออกมา <code class="inline-code">David, Anna, Demio. Lonely, Tayloy</code>
+        </p>
+    </section>
+
+    <section>
+        <h3 class="link-cursor">6.5 <code class="inline-code">Date of Birth</code> ใช้สูตร</h3>
+
+        <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1892926046#gid=1892926046"
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 6. Regular Expression </b></a> G3 - G7
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-6-6-s65.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-6-6-s65.png')">
+        </div>
+
+        <p>
+        <details class="detail1">
+
+            <summary>Formula</summary>
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+=ArrayFormula(REGEXEXTRACT(B3:B7,"Date of Birth (\d{2}.[A-z]+.\d{4})"))                
+</code></pre>
+                <div class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        </p>
+
+        <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#65-date-of-birth-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ดึงคืนค่าวันเกิดของลูกค้า โดยการใช้ <code class="inline-code">"Date of Birth (\d{2}.[A-z]+.\d{4})"</code>
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สูตรนี้ คือเราจับ pattern ทุกๆแถวในข้อมูลของลูกค้าได้คือ มีคำว่า Date of Birth ทุกแถว
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            จากนั้นมี white space ตามด้วยการจัดกลุ่ม(สังเกตการใส่วงเล็บเปิดปิด) <code
+                class="inline-code">(\d{2}.[A-z]+.\d{4})</code>
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ซึ่งผมขอเอาข้อมูลลูกค้า <code class="inline-code">B5</code> ออกมาเป็นผลลัพธ์ ซึ่งหมายถึง..
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ดึงตัวเลข 0-9 มา 2 ตัว (ผลลัพธ์ <code class="inline-code">14</code>)
+        </p>
+        <ul style="text-align: justify;">
+            <li class="link-cursor">ตามด้วย <code class="inline-code">.</code> ตัวอะไรก็ได้ทั้งหมดเลย (ตัวอักษร, ตัวเลข,
+                ตัวอักขระพิเศษ, white space ยกเว้นการขึ้นบรรทัดใหม่ภายใน cell) (ผลลัพธ์คือ 14 ) และ<code
+                    class="inline-code">".+"</code></li><br>
+            <li class="link-cursor">ตามด้วย <code class="inline-code">[A-z]+</code>
+                ตัวอักษรภาษาอังกฤษตัวเล็กหรือตัวใหญ่กี่ตัวก็ได้ (ผลลัพธ์คือ <code class="inline-code">14 Feb</code>)
+            </li><br>
+            <li class="link-cursor">ตามด้วย <code class="inline-code">.</code> ที่จะแทนถึง white space
+                แต่จริงมันแทนด้วยอะไรก็ได้เช่นเดียวกัน (ผลลัพธ์คือ <code class="inline-code">14 Feb </code>)</li><br>
+            <li class="link-cursor">ตามด้วย <code class="inline-code">\d{4}</code> แทนด้วยตัวเลข 0-9 4 ตัวเลข
+                (ผลลัพธ์คือ <code class="inline-code">14 Feb 1992</code>)</li><br>
+        </ul>
+        <p class="link-cursor" style="text-align: justify;text-indent: 1em;">ผลลัพธ์ที่ได้ก็จะเป็น <code
+                class="inline-code">20 Sep 1988, 18 Jan 1995, 14 Feb 1992, 20 Sep 1982, 05 May 1985</code></p>
+    </section>
+
+    <section>
+        <h3 class="link-cursor">6.6 <code class="inline-code">Age</code> ใช้สูตร</h3>
+
+        <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1892926046#gid=1892926046"
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 6. Regular Expression </b></a> H3 - H7
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-6-6-s66.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-6-6-s66.png')">
+        </div>
+
+        <p>
+        <details class="detail1">
+
+            <summary>Formula</summary>
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+=ArrayFormula(DATEDIF(G3:G7,TODAY(),"Y"))</code></pre>
+                <div class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        </p>
+
+        <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#66-age-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ในส่วนนี้ต้องมีผลลัพธ์จากข้อ 5 ก่อนนะครับ และจากสูตรข้อนี้จะเห็นได้ว่าเราเอา <code
+                class="inline-code">DATEDIF()</code> กับ <code class="inline-code">TODAY()</code> มาใช้
+        </p>
+
+        <ol>
+            <li><code class="inline-code">TODAY()</code></li>
+            <p class="link-cursor" style="text-align: justify;">จะคืนค่าว่าวันนี้วันที่เท่าไร เช่น 2026-01-01 เป็นต้น
+            </p>
+            <li><code class="inline-code">DATEDIF()</code></li>
+            <p class="link-cursor" style="text-align: justify;">จะคืนค่าผลต่างของวันเป็น ปี เดือน หรือวัน หรือาจจะเป็น
+                กี่ปี-กี่เดือน-กี่วัน ก็ได้ ซึ่งจะรับค่า parameter อยู่ 3 ตัวหลักๆ ยกตัวอย่าง 3 แบบ</p>
+            <ul>
+                <li><code class="inline-code">=DATEDIF("2025-01-01", "2026-01-01", "Y")</code></li>
+                <p class="link-cursor" style="text-align: justify; ">ตัวเเรกที่รับค่า คือตัวที่เราจะนำไปลบ
+                    ตัวที่สองคือตัวตั้ง <code class="inline-code">"Y"</code> นับจำนวนปี
+                <p class="link-cursor" style="text-align: justify; ">ซึ่งผลลัพธ์ที่ได้คือ <code
+                        class="inline-code">1</code> (เพราะห่างกัน 1 ปี)</p>
+                <li><code class="inline-code">=DATEDIF("2025-01-01", "2026-01-01", "M")</code></li>
+                <p class="link-cursor" style="text-align: justify; ">ตัวเเรกที่รับค่า คือตัวที่เราจะนำไปลบ
+                    ตัวที่สองคือตัวตั้ง <code class="inline-code">"Y"</code> นับจำนวนเดือน
+                <p class="link-cursor" style="text-align: justify; ">ซึ่งผลลัพธ์ที่ได้คือ <code
+                        class="inline-code">12</code> (เพราะห่างกัน 12 เดือน)</p>
+                <li><code class="inline-code">=DATEDIF("2025-01-01", "2026-01-01", "D")</code></li>
+                <p class="link-cursor" style="text-align: justify; ">ตัวเเรกที่รับค่า คือตัวที่เราจะนำไปลบ
+                    ตัวที่สองคือตัวตั้ง <code class="inline-code">"D"</code> นับจำนวนวัน
+                <p class="link-cursor" style="text-align: justify; ">ซึ่งผลลัพธ์ที่ได้คือ <code
+                        class="inline-code">365</code> (เพราะห่างกัน 365 วัน)</p>
+            </ul>
+            <p>ซึ่งมันจะมีให้เปลี่ยนเป็น <code class="inline-code">"YM"</code>, หรือ <code
+                    class="inline-code">"MD"</code> อีก จะใช้ก้ต่อเมื่อเราอยากรู้ว่าอีกกี่เดือน กี่วัน เช่น</p>
+            <li>พนักงานคนนี้มีอายุกี่ปี กี่เดือน กี่วัน ถ้าหากหนักงานเกิด <code class="inline-code">"2000-04-19"</code>
+                และวันนี้วันที่ <code class="inline-code">"2030-07-03"</code></li>
+            <p class="link-cursor" style="text-align: justify;">เราแบ่งเป็น 3 คำถามแล้วนำมารวมกัน</p>
+            <ul>
+                <li>กี่ปี? <code class="inline-code">=DATEDIF("2000-04-19","2030-07-03","Y")</code> ผลลัพธ์ที่ได้คือ
+                    <code class="inline-code">30</code></li><br>
+                <li>กี่เดือน? <code class="inline-code">=DATEDIF("2000-04-19","2030-07-03","YM")</code> ผลลัพธ์ที่ได้คือ
+                    <code class="inline-code">2</code></li><br>
+                <li>กี่วัน? <code class="inline-code">=DATEDIF("2000-04-19","2030-07-03","Y")</code> ผลลัพธ์ที่ได้คือ
+                    <code class="inline-code">14</code></li>
+                <p class="link-cursor" style="text-align: justify;">พนักงานคนนี้อายุ <code
+                        class="inline-code">30 ปี 2 เดือน 14 วัน</code> เป็นต้น</p>
+                <p class="link-cursor" style="text-align: justify;">จริงๆมี <code class="inline-code">"YD"</code> อีก
+                    คือเราไม่สนใจเดือนเราสนใจแค่ว่า กี่ปี? กี่วัน?</p>
+                <p class="link-cursor" style="text-align: justify;">ถ้าเราเอาไปใส่ในสูตรก็จะได้ 72 วัน ตามตัวอย่าง</p>
+                <p class="link-cursor" style="text-align: justify;">เพราะ 19 เม.ย ห่างจาก 03 ก.ค. อยู่ 72 วันนั่นเอง</p>
+            </ul>
+        </ol>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">ทั้งหมดนี้คือ DATEDIF() และ TODAY
+            กลับมาเรื่องของเรากันต่อจากสูตร</p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;"><code
+                class="inline-code">=ArrayFormula(DATEDIF(G3:G7,TODAY(),"Y"))</code></p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">ช่วง <code
+                class="inline-code">G3:G7</code> คือวันเกิดของลูกค้า เทียบกับวันนี้ เค้ามีอายุอยู่ที่กี่ปีเพราะเราใช้ตัว
+            <code class="inline-code">"Y"</code> ซึ่งอธิบายตามตัวอย่างที่ผ่านมา</p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">ถ้าใช้ข้อมูลของลูกค้า B5 (ผลลัพธ์คืออายุ
+            33 ปี ตามรูป)</p>
+    </section>
+
+    <section>
+        <h3 class="link-cursor">6.7 <code class="inline-code">Address</code> ใช้สูตร</h3>
+
+        <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1892926046#gid=1892926046"
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 6. Regular Expression </b></a> I3 - I7
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-6-6-s67.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-6-6-s67.png')">
+        </div>
+
+        <p>
+        <details class="detail1">
+
+            <summary>Formula</summary>
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+=ArrayFormula(REGEXEXTRACT(B3:B7,"Address (\d+ [A-z]+ [A-z]+..+ )"))</code></pre>
+                <div class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        </p>
+
+        <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#67-address-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เราสังเกตได้ว่าทุกแถว มี <code class="inline-code">Address</code> อยู่ดังนั้น เราสามารถที่จะพิมพ์ลงไปใน
+            pattern ได้เลย
+            จากนั้นจัดกลุ่ม โดยใช้วงเล็บเพื่อบ่งบอกว่าเราจะเอาเฉพาะ การสังเกต pattern ที่เกิดต่อจากคำว่า <code
+                class="inline-code">Address</code> เท่านั้น
+            โดยใช้วงเล็บเปิดปิด เมื่อเขียน pattern ตามที่เราต้องการแล้วจึงใช้วงเล็บปิดเพื่อบ่งบอกว่าเราจะเอา pattern
+            นี้ภายในกลุ่มนี้เท่านั้น
+            จากสูตรข้างต้น การจัดกลุ่มคือ <code class="inline-code">(\d+ [A-z]+ [A-z]+..+ )</code>
+            ผมขอใช้กับข้อมูลลูกค้า B5 เพื่อดึงที่อยู่ออกมาเป็นผลลัพธ์
+            อย่าลืมจัดกลุ่มโดยใช้วงเล็บ ต่อจากนี้ ถ้าอยากให้โชว์ผลลัพธ์แต่ละขั้นตอน ต้องใส่วงเล็บปิดด้วย
+            เพราะตอนต้นเราใส่วงเล็บเปิด เพื่อจัดกลุ่มหา pattern ภายในวงเล็บเท่านั้น
+        </p>
+        <ul>
+            <li class="link-cursor"><code class="inline-code">\d+</code> หา pattern และดึง ค่าตัวเลข 0-9 มากี่ตัวก็ได้
+            </li>
+            <p class="link-cursor" style="text-align: justify;">(ผลลัพธ์คือ <code class="inline-code">7878</code>)
+                อยากให้โชว์ผลลัพธ์ต้องใส่วงเล็บปิดในสูตรเช่น <code class="inline-code">(\d+)</code></p>
+
+            <li class="link-cursor">ตามด้วย white space 1 เคาะ space bar</li>
+            <p class="link-cursor" style="text-align: justify;">(ผลลัพธ์คือ <code class="inline-code">7878 </code>)
+                อยากให้โชว์ผลลัพธ์ต้องใส่วงเล็บปิดในสูตรเช่น <code class="inline-code">(\d+ )</code></p>
+
+            <li class="link-cursor">ตามด้วย <code class="inline-code">[A-z]+ </code>
+                เอาตัวอักษรภาษาอังกฤษตัวใหญ่หรือตัวเล็ก และ white space 1 เคาะเอามากี่ตัวก็ได้</li>
+            <p class="link-cursor" style="text-align: justify;">(ผลลัพธ์คือ <code
+                    class="inline-code">7878 Washington </code>) อยากให้โชว์ผลลัพธ์ต้องใส่วงเล็บปิดในสูตรเช่น <code
+                    class="inline-code">(\d+ [A-z]+ )</code></p>
+
+            <li class="link-cursor">ตามด้วย <code class="inline-code">[A-z]+</code>
+                เอาตัวอักษรภาษาอังกฤษตัวใหญ่หรือตัวเล็ก เอามากี่ตัวก็ได้ อยากให้โชว์ต้องใส่วงเล็บปิดในสูตรเช่น</li>
+            <p class="link-cursor" style="text-align: justify;">(ผลลัพธ์คือ <code
+                    class="inline-code">7878 Washington United</code> ) อยากให้โชว์ผลลัพธ์ต้องใส่วงเล็บปิดในสูตรเช่น
+                <br><code class="inline-code">(\d+ [A-z]+ [A-z]+)</code></p>
+
+            <li class="link-cursor">ตามด้วย <code class="inline-code">.</code> ตัวอะไรก็ได้ทั้งหมดเลย (ตัวอักษร, ตัวเลข,
+                ตัวอักขระพิเศษ, white space ยกเว้นการขึ้นบรรทัดใหม่ภายใน cell) เอามาแค่ 1 ตัว</li>
+            <p class="link-cursor" style="text-align: justify;">(ผลลัพธ์คือ <code
+                    class="inline-code">7878 Washington United </code> ) อยากให้โชว์ผลลัพธ์ต้องใส่วงเล็บปิดในสูตรเช่น
+                <br><code class="inline-code">(\d+ [A-z]+ [A-z]+.)</code></p>
+
+            <p class="link-cursor" style="text-align: justify;">ถามว่าทำไมถึงไม่ใช้ white space เพราะว่าสุดท้ายมันจะหา
+                pattern ที่อยู่ของลูกค้า <code class="inline-code">B3, B4, B6</code> ไม่ได้เพราะมันไม่มี pattern แล้ว
+                ต่อให้
+                เขียน pattern <code class="inline-code">[A-z]+</code> เพื่อให้มีคำว่า States ต่อท้าย <code
+                    class="inline-code">Washington United</code> Pattern นี้จะใช้ไม่ได้กับลูกค้า <code
+                    class="inline-code">B3, B4, B6</code> เพราะ
+                ต่อท้ายที่อยู่ของลูกค้าเหล่านั้นเป็น Zipcode แล้ว ดังนั้น make sense สุดที่ควรใช้ควรเป็น <code
+                    class="inline-code">.</code> ที่แทนอะไรก็ได้ เพราะตัวอย่างนี้เราเลือกเขียน pattern แบบนี้</p>
+
+            <li class="link-cursor">ตามด้วย <code class="inline-code">.+</code> ตัวอะไรก็ได้ทั้งหมดเลย (ตัวอักษร,
+                ตัวเลข, ตัวอักขระพิเศษ, white space ยกเว้นการขึ้นบรรทัดใหม่ภายใน cell) โดยที่</li>
+            <p class="link-cursor" style="text-align: justify;">เอามากี่ตัวก็ได้และเว้น white space 1 ตัว
+                อยากให้โชว์ต้องใส่วงเล็บปิดในสูตรเช่น อยากให้โชว์ผลลัพธ์ต้องใส่วงเล็บปิดในสูตรเช่น <code
+                    class="inline-code">(\d+)</code>
+                (ผลลัพธ์คือ <code class="inline-code">7878 Washington United States </code>)
+                อยากให้โชว์ผลลัพธ์ต้องใส่วงเล็บปิดในสูตรเช่น <code class="inline-code">(\d+ [A-z]+ [A-z]+.)</code>
+                เป็นต้น
+            </p>
+        </ul>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ก็จะจบสำหรับการดึง <code class="inline-code">Address</code> โดยใช้ pattern ของลูกค้าสำหรับ 5 คน<br> 📍
+            มีข้อสังเกตใหญ่มากๆ คือ ทุกครั้งใช้ Regular Expression เสร็จให้ใช้ <code class="inline-code">TRIM()</code>
+            เพื่อกำจัด White Space ที่ไม่จำเป็นเช่น
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            <code class="inline-code">  Hello  World    </code>-> <code
+                class="inline-code">=TRIM("   Hello  World     ")</code> -> <code class="inline-code">Hello World</code>
+            เว้นระยะจากการเคาะหลายๆครั้งให้เหลือครั้งเดียว
+        </p>
+    </section>
+
+    <section>
+        <h3 class="link-cursor">6.8 <code class="inline-code">Zipcode</code> ใช้สูตร</h3>
+
+        <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1892926046#gid=1892926046"
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 6. Regular Expression </b></a> J3 - J7
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-6-6-s68.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-6-6-s68.png')">
+        </div>
+
+        <p>
+        <details class="detail1">
+
+            <summary>Formula</summary>
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+=ArrayFormula(REGEXEXTRACT(B3:B7," \d{5}"))</code></pre>
+                <div class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        </p>
+
+        <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#68-zipcode-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ดูจากข้อมูลลูกค้า 5 คนจะเห็นได้ว่ามีการเคาะ white space 1 ครั้งตามด้วย 5 ตัวเลข 0-9
+            ดังนั้นนำตัวอย่างผลลัพธ์ลูกค้า <code class="inline-code">B5</code> มา โดยที่
+        <ul>
+            <li>เคาะ white space 1 ครั้ง และ <code class="inline-code"> \d{5}</code> จะได้ผลลัพธ์คือ <code
+                    class="inline-code">&nbsp;11155</code></li>
+        </ul>
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">จริงเราสามารถเขียนแค่ <code
+                class="inline-code">\d{5}</code> โดยไม่เคาะ white space จะได้ผลลัพธ์ออกมาเลย <code
+                class="inline-code">11155</code></p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">📍 สุดท้ายทุกครั้งที่่ผมใช้ Regular
+            Expression เสร็จแนะนำให้ ใช้ <code class="inline-code">TRIM()</code> เสมอ เหมือนตัวอย่างก่อนหน้า</p>
+    </section>
+
+    <section>
+        <h3 class="link-cursor">6.9 <code class="inline-code">Expired Date</code> ใช้สูตร</h3>
+
+        <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1892926046#gid=1892926046"
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 6. Regular Expression </b></a> K3 - K7
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-6-6-s69.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-6-6-s69.png')">
+        </div>
+
+        <p>
+        <details class="detail1">
+
+            <summary>Formula</summary>
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+=ArrayFormula(REGEXEXTRACT(B3:B7,"Expired Date (\d{2}.[A-z]+.\d{4})"))</code></pre>
+                <div class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        </p>
+
+        <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#69-expired-date-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ลูกค้าทั้ง 5 คนมีการเขียน Expired Date เสมอทุกคน หลังจากจากนั้นก็จะเป็นวันหมดอายุของบัตรประชาชน
+            ผมขออนุญาตจัดกลุ่มวันหมดอายุเหล่านั้น
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            โดยสังเกตการจัดกลุ่ม <code class="inline-code">(\d{2}.[A-z]+.\d{4})</code> (ขอยกตัวอย่างผลลัพธ์ของลูกค้า B5)
+        </p>
+
+        <ul>
+            <li class="link-cursor">เริ่มต้น <code class="inline-code">\d{2}.</code> ดึงตัวเลข 0-9 มา 2 ตัว
+                ตามด้วยตัวอะไรก็ได้ทั้งหมดเลย (ตัวอักษร, ตัวเลข, ตัวอักขระพิเศษ, white space
+                ยกเว้นการขึ้นบรรทัดใหม่ภายใน cell) 1 ตัว</li>
+            <p class="link-cursor" style="text-align: justify; text-indent: 1em;">(ผลลัพธ์คือ <code
+                    class="inline-code">31 </code> ) อยากให้โชว์ผลลัพธ์ต้องใส่วงเล็บปิดในสูตรเช่น <code
+                    class="inline-code">(\d{2}.)</code></p>
+
+            <li class="link-cursor">ตามด้วย <code class="inline-code">[A-z]+.</code>
+                ดึงค่าตัวอักษรภาษาอังกฤษตัวพิมพ์ใหญ่หรือเล็ก <code class="inline-code">A-z</code> มากี่ตัวก็ได้
+                ตามด้วยตัวอะไรก็ได้ทั้งหมดเลย (ตัวอักษร, ตัวเลข, ตัวอักขระพิเศษ, white space
+                ยกเว้นการขึ้นบรรทัดใหม่ภายใน cell) 1 ตัว</li>
+            <p class="link-cursor" style="text-align: justify; text-indent: 1em;">(ผลลัพธ์คือ <code
+                    class="inline-code">31 Oct </code> ) อยากให้โชว์ผลลัพธ์ต้องใส่วงเล็บปิดในสูตรเช่น <code
+                    class="inline-code">(\d{2}.[A-z]+.)</code></p>
+
+            <li class="link-cursor">ตามด้วย <code class="inline-code">\d{4}</code> ดึงตัวเลข 0-9 มา 4 ตัว</li>
+            <p class="link-cursor" style="text-align: justify; text-indent: 1em;">(ผลลัพธ์คือ <code
+                    class="inline-code">31 Oct 2020</code> ) อยากให้โชว์ผลลัพธ์ต้องใส่วงเล็บปิดในสูตรเช่น <code
+                    class="inline-code">(\d{2}.[A-z]+.\d{4})</code></p>
+
+        </ul>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">เป็นต้น สำหรับตัวอย่างนี้ไม่มี white space
+            เกิน แต่ก็ควรใส่ <code class="inline-code">TRIM()</code> เพื่อความแน่ใจ ตอนจัดการกับข้อมูล</p>
+
+    </section>
+
+    <section>
+        <h3 class="link-cursor">6.10 <code class="inline-code">Expired 2024</code> ใช้สูตร</h3>
+
+        <p class="link-cursor">📌 <b>ที่อยู่ Google Sheets</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?gid=1892926046#gid=1892926046"
+                class="hover-expand certificate-school notion-icon"><img src="sheets.png" width="25">
+                <b> 6. Regular Expression </b></a> L3 - L7
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p1-6-6-s610.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-6-6-s610.png')">
+        </div>
+
+        <p>
+        <details class="detail1">
+
+            <summary>Formula</summary>
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Excel</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-none">
+=ArrayFormula(REGEXMATCH(K3:K7,"2024"))</code></pre>
+                <div class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        </p>
+
+        <p class="link-cursor">📌 <b>อธิบายสูตร</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md#610-expired-2024-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สำหรับสูตรนี้จะเป็นการ Search หาเพื่อคืนค่าผลลัพธ์ว่า มี หรือ ไม่มี
+        </p>
+        <ul>
+            <li class="link-cursor">มี = <code class="inline-code">TRUE</code></li>
+            <li class="link-cursor">ไม่มี = <code class="inline-code">FAlSE</code></li>
+        </ul>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            โดยใช้ฟังก์ชัน <code class="inline-cod">REGEXMATCH()</code> ในการหา pattern เพื่อดูว่าตรงกับเงื่อนไขไหม
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            <code class="inline-code">REGEXMATCH(K3:K7,"2024")</code> ช่วง K3:K7 คือผลลัพธ์ที่ได้มาจากข้อ 6.9
+            แต่เราจะตรวจสอบดูว่า
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            บัตรประชาชนของลูกค้าหมดอายุ ภายในปี 2024 เท่านั้น (กล่าวคือ ถ้าไม่ใช่ปี 2024 คืนค่า FALSE ให้หมด
+            ตามภาพตัวอย่าง)
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ถ้าหากต้องการอยากรู้ว่าบัตรประชาชนใบไหนหมดอายุแล้วบ้าง
+        </p>
+        <ul>
+            <li class="link-cursor">หมดแล้ว -> <code class="inline-code">TRUE</code></li>
+            <li class="link-cursor">ยังไม่หมด -> <code class="inline-code">FALSE</code> ให้ใช้สูตรนี้ (ข้อมูลลูกค้า B5)
+            </li>
+            <p class="link-cursor" style="text-align: justify;"><code
+                    class="inline-code">=ArrayFormula(IF((REGEXEXTRACT(K3:K7, "\d{4}") * 1) <= 2024, TRUE, FALSE))</code>
+            </p>
+            <li class="link-cursor"><code class="inline-code">REGEXEXTRACT(K3:K7, "\d{4}")</code> ดึงปีออกมาจากช่วง
+                <code class="inline-code">K3:K7</code> ได้ผลลัพธ์ 2020 เป็น text (ชิดซ้ายภายใน cell)</li>
+            <li class="link-cursor">ปรับให้เป็นตัวเลข <code class="inline-code">*1</code> เข้าไป ดังนี้ <code
+                    class="inline-code">REGEXEXTRACT(K3:K7, "\d{4}") * 1</code> ได้ผลลัพธ์ 2020 เป็น numeric
+                (ชิดขวาภายใน cell)</li>
+            <li class="link-cursor">ใช้ <code class="inline-code">IF()</code> ตรวจสอบเงื่อนไขปกติเลย ถ้าน้อยกว่าหรือเท่า
+                2024 ให้ขึ้น <code class="inline-code">TRUE</code> แต่ถ้ามากว่า 2024 ให้ขึ้น <code
+                    class="inline-code">FALSE</code></li>
+            <p class="link-cursor" style="text-align: justify;">สำหรับลูกค้า B5 ขึ้น <code
+                    class="inline-code">TRUE</code> แสดงว่าหมดอายุแล้ว สามารถ copy สูตรไปวางทับเซลล์ L3 ได้เลย</p>
+        </ul>
+
+    </section>
+
+    <section>
+        <h2 class="link-cursor">Project Summary</h2>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">ก็จบไปแล้วสำหรับ Project 1 : Data Exploration and Transformation with Google Sheets
+            โดยมี 6 ตัวอย่าง ไว้ใช้สำหรับ Explore และ Transform ข้อมูล
+        </p>
+
+        <ol>
+            <li class="link-cursor">ใช้สูตร <code class="inline-code">filter</code> ข้อมูล และสามารถ Dropdown List เพื่อเลือกเพศและผลการปฎิบัติงานของพนักงาน</li>
+            <li class="link-cursor">ใช้ <mark>Highlight Conditional Formatting</mark> ในการ Hightlight ข้อมูลของพนักงานที่เราต้องการ</li>
+            <li class="link-cursor">ใช้สูตร <code class="inline-code">Query()</code> ในการ Dropdown List ข้อมูลลูกค้า เพศ, ผลการปฎิบัติงาน, วันเริ่มงานให้มีความ Dynamic</li>
+            <li class="link-cursor"><code class="inline-code">Vlookup()</code> เครื่องมือยอดฮิตหนึ่งในตระกูล lookup ไว้ใช้หาค่าต่างๆที่มีความสัมพันธ์เชิงข้อมูล</li>
+            <li class="link-cursor">แปลงรูปแบบวันที่ไทย เป็นวันที่มาตรฐานสากล ISO ด้วย <code class="inline-code">SPLIT()</code>, <code class="inline-code">DATE()</code> และ <code class="inline-code">VLOOKUP()</code></li>
+            <li class="link-cursor">การ Transform Data ด้วย Regular Expression สูตรที่ใช้หลักๆ <code class="inline-cod">REGEXEXTRACT()</code> และ <code class="inline-code">REGEXMATCH()</code></li>
+        </ol>
+
+        <p>เป็นต้น ขอบคุณมากๆครับที่อ่านมาถึงตรงนี้ ฝากผลงาน project อื่นๆด้วยนะครับ ขอบคุณครับ</p>    
+    </section>
+
 
     <section id="file">
         <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
                     width="30" class="notion-icon"></a> Github & <a
-                href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing"
+                href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?usp=sharing"
                 class="hover-expand"><img src="sheets.png" width="30" class="notion-icon"></a> Google Sheets</h2>
         <p>
-            <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing"
+            <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md"
                 class="download-btn" style="text-align: center; margin-top: 10px;">
-                Resume : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15nJgYPrUrUmD8pAVQZIr0tJVHaJVO8g4/view?usp=sharing"
+                Github : 📥
+            </a><br>
+            <a href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?usp=sharing"
                 class="download-btn" style="text-align: center; margin-top: 10px;">
-                Transcript : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15n_nmZaSY619ehogn_O0V75CKyuq7max/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Graduation Certificate : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span>
+                Google Sheets : 📥
+            </a> 
         </p>
     </section>
 
