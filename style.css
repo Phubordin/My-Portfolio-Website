@@ -557,9 +557,9 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
     position: fixed; /* เปลี่ยนเป็น fixed เพื่อให้เลื่อนตามหน้าจอ */
     right: 1vw;
     top: 50vh; /* จัดกึ่งกลางหน้าจอในแนวตั้ง */
-    transform: translateY(-10%); /* จัดให้อยู่กึ่งกลางแนวตั้งพอดี */
+    transform: translateY(-10%); /* จัดให้อยู่กึ่งกลางแนวตั้งพอดี -10% */
     width: 15vw;
-    max-height: calc(1000vh - 945vh); /* ปรับความสูงให้ไม่เกินขอบจอ */
+    max-height: calc(1000vh - 930vh); /* ปรับความสูงให้ไม่เกินขอบจอ ตอนแรก 945 vh  */
     overflow-y: auto;
     background: rgba(255, 255, 255, 0.8);
     padding: 1.2vh 1.2vw;
@@ -568,6 +568,11 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
     transition: all 0.3s ease;
     z-index: 10; /* เพิ่ม z-index เพื่อให้ TOC อยู่ข้างบน */
     font-family: 'Prompt', sans-serif; /* ใช้ฟอนต์ Prompt */
+}
+
+/* เมื่อ scroll เกิน 200px แล้วเพิ่ม class .scrolled จาก JS */
+#table-of-contents.scrolled {
+    transform: translateY(-23%);
 }
 
 #table-of-contents h3 {
@@ -1282,3 +1287,25 @@ table.tableizer-table {
 .link-website:hover {
     background-size: 100% 2px; /* ค่อย ๆ แสดงเส้นใต้ */
 }
+
+#scrollToTopBtn {
+    position: absolute;
+    right: 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, top 0.3s ease;
+    z-index: 1000;
+    cursor: url('cursor1.png'), auto;
+}
+
+#scrollToTopBtn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+

@@ -42,10 +42,12 @@
 </div>
 
 <!-- Table of Contents -->
+<!-- ปุ่มเลื่อนไปด้านบน -->
+<button id="scrollToTopBtn" title="Go to top">⇧</button>
 <button id="toggle-toc-btn">≡</button>
 <aside id="table-of-contents" class="active">
     <h3 class="link-cursor">Navigation Menu</h3>
-    <ul id="toc-list1"><span class="text-description1 link-cursor">Click Tab Name to Scroll to the Top</span></ul>
+    <ul id="toc-list1"></ul>
 </aside>
 
 <body class="fade-slide-in project_cafe-page">
@@ -211,14 +213,13 @@ CREATE TABLE Feedback (
         </details>
         </p>
 
-        <!-- ถึงตรงนี้ -->
-
+        
         
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             ขอขอบคุณโปรแกรม <a class="link-website" target="_blank"
-                href="https://www.beekeeperstudio.io/">🐝 BeeKeeper Studio</a> ในการรันโค้ด ซึ่งเป็นหนึ่งใน (Database IDE)
+            href="https://www.beekeeperstudio.io/">🐝 BeeKeeper Studio</a> ในการรันโค้ด ซึ่งเป็นหนึ่งใน (Database IDE)
         </p>
-
+        
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             IDE ย่อมาจาก Integrated Development Environment
             คือโปรแกรมหรือเครื่องมือที่รวมทุกอย่างที่นักพัฒนาหรือผู้เขียนโค้ดต้องใช้ไว้ในที่เดียว
@@ -226,63 +227,68 @@ CREATE TABLE Feedback (
             แต่เน้นไปที่การเชื่อมต่อและจัดการฐานข้อมูลโดยเฉพาะ
             สามารถดาวน์โหลดมาใช้งาน Verion ฟรีได้ อย่างไรก็ตาม จากภาพที่แสดงให้เห็น อธิบายได้ดังต่อไปนี้
         </p>
-
+        
         <ol class="link-cursor">
             <li>Expand <span class="detail0">🔍 Code</span> คัดลอกแล้วนำไปวางไว้ที่ Script แล้วกด Run</li><br>
             <li>เมื่อ Run เสร็จจะแสดงข้อความ <code class="inline-code">Query 5/5: No Results..</code> หมายถึง Code
                 รันผ่าน</li><br>
-            <li>Table ถูกสร้างขึ้นทั้งหมด 5 ตาราง
-                <code class="inline-code">Transactions</code>,
-                <code class="inline-code">Menus</code>,
-                <code class="inline-code">Branch</code>,
-                <code class="inline-code">Customers</code> และ
-                <code class="inline-code">Feedback</code>
-            </li>
-        </ol>
-
-        <p class="link-cursor">📌 <b>อธิบาย Code</b> : <a
-            href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P02-Building-a-Cafe-Restaurant-Database-Using-R-and-SQL.md#1-create-tables-and-perform-sql-insert-with-basic-queries-and-aggregation"
-            class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
-            <b> Github</b></a>
-        </p>
-        
-<p class="link-cursor" style="text-align: justify; text-indent: 1em;">
-    จากภาพตัวอย่าง ผมใช้คำสั่ง <code class="inline-code">CREATE TABLE</code> ในการสร้าง Table ซึ่งมีตัวอย่าง ต่อไปนี้
-</p>
-
-        <div class="code-container" style="position: relative;">
-            <div class="code-header">
-                <span class="language-label link-cursor">SQL</span>
-                <button class="copy-btn notion-icon">
-                    <img src="icon-copy1.png" alt="Copy" width="20">
-                </button>
-            </div>
-            <pre class="line-numbers link-cursor"><code class="language-sql">
-
-CREATE TABLE table_name ( -- สร้าง Table
-    column1 datatype PRIMARY KEY, -- กำหนด Primary Key
-    column2 datatype, -- กำหนด Column2
-    column3 datatype, -- กำหนด Column3
-    ....
-)
+                <li>Table ถูกสร้างขึ้นทั้งหมด 5 ตาราง
+                    <code class="inline-code">Transactions</code>,
+                    <code class="inline-code">Menus</code>,
+                    <code class="inline-code">Branch</code>,
+                    <code class="inline-code">Customers</code> และ
+                    <code class="inline-code">Feedback</code>
+                </li>
+            </ol>
+            
+            <p class="link-cursor">📌 <b>อธิบาย Code</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P02-Building-a-Cafe-Restaurant-Database-Using-R-and-SQL.md#1-create-tables-and-perform-sql-insert-with-basic-queries-and-aggregation"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+            </p>
+            
+            <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+                จากภาพตัวอย่าง ผมใช้คำสั่ง <code class="inline-code">CREATE TABLE</code> ในการสร้าง Table ซึ่งมีตัวอย่าง ต่อไปนี้
+            </p>
+            
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">SQL</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-sql">
+                    
+                    CREATE TABLE table_name ( -- สร้าง Table
+                    column1 datatype PRIMARY KEY, -- กำหนด Primary Key
+                    column2 datatype, -- กำหนด Column2
+                    column3 datatype, -- กำหนด Column3
+                    ....
+                    )
                 </code></pre>
-            <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
-        </div>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+            
+            <p class="link-cursor">📌 สามารถเข้าไปดูคำอธิบายโค้ดเพิ่มเติมได้ที่ : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P02-Building-a-Cafe-Restaurant-Database-Using-R-and-SQL.md#1-create-tables-and-perform-sql-insert-with-basic-queries-and-aggregation"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+            </p>
+            
+            <p class="link-cursor"> ผมขออนุญาต ละการอธิบายโค้ดไว้ใน Github นะครับ</p>
+        </section>
+        
+        <!-- ถึงตรงนี้ -->
 
-        <p class="link-cursor">📌 สามารถเข้าไปดูคำอธิบายโค้ดเพิ่มเติมได้ที่ : <a
-            href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P02-Building-a-Cafe-Restaurant-Database-Using-R-and-SQL.md#1-create-tables-and-perform-sql-insert-with-basic-queries-and-aggregation"
-            class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
-            <b> Github</b></a>
-        </p>
 
-        <p class="link-cursor"> ผมขออนุญาต ละการอธิบายโค้ดไว้ใน Github นะครับ</p>
-    </section>
-    
+
+        
     <section id="file">
-        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
-            width="30" class="notion-icon"></a> Github & <a href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing" class="hover-expand"><img src="googledrive.png"
-            width="30" class="notion-icon"></a> Google Drive</h2>
-
+            <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
+                width="30" class="notion-icon"></a> Github & <a href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing" class="hover-expand"><img src="googledrive.png"
+                    width="30" class="notion-icon"></a> Google Drive</h2>
+                    
         <p>
             <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing"
                 class="download-btn" style="text-align: center; margin-top: 10px;">

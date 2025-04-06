@@ -662,3 +662,41 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+/*to top-------------------------------------------------------------------------------- */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.addEventListener("scroll", function () {
+        const scrollY = window.scrollY;
+        const viewportHeight = window.innerHeight;
+
+        // ปรับตำแหน่งปุ่มให้อยู่ล่างสุดของหน้าจอแบบลอยตาม scroll
+        scrollToTopBtn.style.top = `${scrollY + viewportHeight - 80}px`;
+
+        // แสดงปุ่มเมื่อ scroll ลงมาเกิน 200px
+        if (scrollY > 200) {
+            scrollToTopBtn.classList.add("show");
+        } else {
+            scrollToTopBtn.classList.remove("show");
+        }
+    });
+
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});
+
+/*-------------------------------------------------------------------------------- */
+window.addEventListener('scroll', () => {
+    const toc = document.getElementById('table-of-contents');
+    if (window.scrollY > 200) {
+        toc.classList.add('scrolled');
+    } else {
+        toc.classList.remove('scrolled');
+    }
+});
