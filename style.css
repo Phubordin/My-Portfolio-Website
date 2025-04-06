@@ -764,6 +764,21 @@ details summary {
     transition: color 0.3s, transform 0.3s; /* ให้การเปลี่ยปลงเป็นไปอย่างนุ่มนวล */
     cursor: url('cursor1.png'), auto;
 }
+
+.detail0 {
+    display: inline-flex; /* ใช้ inline-flex เพื่อให้เหมือน tag */
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(0, 0, 0); /* สีตัวอักษรปกติ */
+    font-size: 15.5px; /* ขนาดฟอนต์พอดีกับข้อความ */
+    font-weight: 500; /* ตัวหนาเล็กน้อย */
+    background-color: #bbdefb; /* สีพื้นหลังเป็นสีน้ำเงินฟ้าเมื่อ hover */
+    padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+    border-radius: 20px; /* ขอบมุมโค้งมน */
+    text-decoration: none; /* ไม่มีเส้นใต้ */
+    transition: color 0.3s, transform 0.3s; /* ให้การเปลี่ยปลงเป็นไปอย่างนุ่มนวล */
+}
+
 /* เพิ่ม toggle อ่านต่อ ----------------------------------------------------------------------------------------------------------------------------*/
 
 details summary::before {
@@ -783,6 +798,14 @@ details summary:hover {
 }
 
 .text-description {
+    font-style: italic; /* ตัวเอียง */
+    color: gray; /* สีเทา */
+    font-size: 0.7em; /* ขนาดเล็กลง */
+    opacity: 0.8; /* ทำให้ดูจางลงเล็กน้อย */
+    display: inline; /* ทำให้ข้อความอยู่ในบรรทัดเดียวกัน */
+}
+
+.text-description1 {
     font-style: italic; /* ตัวเอียง */
     color: gray; /* สีเทา */
     font-size: 0.7em; /* ขนาดเล็กลง */
@@ -1047,12 +1070,30 @@ input:checked + .slider1:before {
     cursor: url("cursor2.png"), auto;
 }
 
+
 .copy-btn img {
     opacity: 0.6;
     transition: opacity 0.3s;
 }
 
 .copy-btn:hover img {
+    opacity: 1 ;
+}
+
+.copy-btn1 {
+    cursor: url("cursor2.png"), auto;
+    border-radius: 5px;
+    background: none;
+    border: none;
+    
+}
+
+.copy-btn1 img {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.copy-btn1:hover img {
     opacity: 1 ;
 }
 
@@ -1222,4 +1263,22 @@ table.tableizer-table {
     background-color: #104E8B;
     color: #FFF;
     font-weight: bold;
+}
+/* ------- */
+
+.link-website {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: url('cursor2.png'), auto;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-size: 0% 2px; /* เริ่มจากไม่มีเส้น */
+    background-position: 0 100%; /* ตำแหน่งเส้นใต้ */
+    transition: background-size 0.4s ease;
+}
+
+.link-website:hover {
+    background-size: 100% 2px; /* ค่อย ๆ แสดงเส้นใต้ */
 }

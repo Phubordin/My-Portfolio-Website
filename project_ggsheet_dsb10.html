@@ -45,7 +45,7 @@
 <button id="toggle-toc-btn">≡</button>
 <aside id="table-of-contents" class="active">
     <h3 class="link-cursor">Navigation Menu</h3>
-    <ul id="toc-list1"><span class="text-description link-cursor">Click Tab Name to Scroll to the Top</span></ul>
+    <ul id="toc-list1"><span class="text-description1 link-cursor">Click Tab Name to Scroll to the Top</span></ul>
 </aside>
 
 <body class="fade-slide-in project_ggsheet-page">
@@ -151,7 +151,7 @@
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
                                     =IFERROR(SORT(FILTER(EMPLOYEE, (GENDER = B2) * (PERFORMANCE = B3)), 5, Not(D2)),"NO DATA")
                     </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -248,7 +248,7 @@
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
                     =$G2=$H$1
                 </code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -317,7 +317,7 @@
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
                     male
                 </code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -330,7 +330,7 @@
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
                     female
                 </code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -423,7 +423,7 @@
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
                     =LEFT($A83,1)="0"
                     </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -528,7 +528,7 @@
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =QUERY( EMPLOYEE1, 
 "select * where " & 
 IF(B2="All","1=1","N='" & B2 & "'") & 
@@ -1203,7 +1203,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                     <img src="icon-copy1.png" alt="Copy" width="20">
                 </button>
             </div>
-            <pre class="line-numbers link-cursor"><code class="language-none">
+            <pre class="line-numbers link-cursor"><code class="language-excel-formula">
                 =QUERY(EMPLOYEE1,"select * where N = 'female' And O = 'Excellent' And L <= date'2004-10-01")
                 </code></pre>
             <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -1220,7 +1220,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                     <img src="icon-copy1.png" alt="Copy" width="20">
                 </button>
             </div>
-            <pre class="line-numbers link-cursor"><code class="language-none">
+            <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =QUERY(EMPLOYEE1, 
 "select * where " &
 IF(B2="All","1=1","N='" & B2 & "'") &
@@ -1254,7 +1254,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =ArrayFormula(VLOOKUP(I4:I28,A32:F39,{2 ,3 ,4 ,5 ,6},FALSE))
                     </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -1266,7 +1266,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =ArrayFormula(VLOOKUP(H4:H28,A43:E46, {2, 3 ,4, 5},FALSE))                    </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -1356,7 +1356,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =ArrayFormula(SPLIT(A4:A9," "))
                     </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -1368,7 +1368,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =ArrayFormula(DATE(D4:D9-543,VLOOKUP(C4:C9,$A$13:$B$24,2,0),B4:B9))                    </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -1553,7 +1553,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7, "\d-\d{4}-\d{5}-\d{2}-\d"))                </code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -1612,7 +1612,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7,"M[a-z]+."))`                </code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -1665,7 +1665,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7,".+" & D3:D7 & ".([A-Z][a-z]+)"))`                
 </code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -1782,7 +1782,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7,".+" & E3:E7 & ".([A-Z][a-z]+)"))`</code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -1828,7 +1828,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7,"Date of Birth (\d{2}.[A-z]+.\d{4})"))                
 </code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -1899,7 +1899,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =ArrayFormula(DATEDIF(G3:G7,TODAY(),"Y"))</code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -1998,7 +1998,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7,"Address (\d+ [A-z]+ [A-z]+..+ )"))</code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -2107,7 +2107,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7," \d{5}"))</code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -2160,7 +2160,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7,"Expired Date (\d{2}.[A-z]+.\d{4})"))</code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -2233,7 +2233,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-none">
+                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
 =ArrayFormula(REGEXMATCH(K3:K7,"2024"))</code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -2326,7 +2326,12 @@ IF(B2="All","1=1","N='" & B2 & "'") &
         </p>
     </section>
 
+    <!-- Prism Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- Prism Language Components -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-r.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-excel-formula.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>
 </body>

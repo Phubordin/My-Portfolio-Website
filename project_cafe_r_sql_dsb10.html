@@ -44,23 +44,26 @@
 <!-- Table of Contents -->
 <button id="toggle-toc-btn">≡</button>
 <aside id="table-of-contents" class="active">
-    <h3 class= "link-cursor">Navigation Menu</h3>
-    <ul id="toc-list"><span class="text-description link-cursor">Click Tab Name to Scroll to the Top</span></ul>
+    <h3 class="link-cursor">Navigation Menu</h3>
+    <ul id="toc-list1"><span class="text-description1 link-cursor">Click Tab Name to Scroll to the Top</span></ul>
 </aside>
 
 <body class="fade-slide-in project_cafe-page">
     <header>
         <div class="header-background"></div>
-        <div style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Project 2 : <span class= "strong1">Building a Café Restaurant Database Using <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="SQL.png"  style="vertical-align:middle" width="25" ></span></div>
+        <div style="font-size: 1.5em; font-weight: bold;" class="link-cursor">Project 2 : <span class="strong1">Building
+                a Café Restaurant Database Using <img src="R.png" style="vertical-align:middle" width="25"> and <img
+                    src="SQL.png" style="vertical-align:middle" width="25"></span></div>
     </header>
 
     <!-- Navigation Bar -->
-    
+
     <nav>
         <ul>
             <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
             <li><a href="home.html" onclick="navigateToHome()">🏠 Home </a></li> <!-- Home Tab with House Emoji -->
-            <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li> <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
+            <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li>
+            <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
             <!-- Work Experience Dropdown -->
             <li class="dropdown1">
                 <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
@@ -74,18 +77,39 @@
             <li class="dropdown">
                 <a href="project.html" class="active" onclick="scrollToTop(event)">Project Overview</a>
                 <ul class="dropdown-menu">
-                    <li><a onclick="navigateToProject_ggsheet_dsb10()" >P1 : Data Exploration and Transformation with <img src="sheets.png"  style="vertical-align:middle" width="25" > Google Sheets</a></li>
-                    <li><a class="active1" onclick="scrollToTop(event)" onclick="navigateToProject_cafe_r_sql_dsb10()" >P2 : Building a Café Restaurant Database Using <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="SQL.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_rfm_py_dsb10()" >P3 : Customer Segmentation and RFM Analysis Using <img src="python.png"  style="vertical-align:middle" width="25" >Python and <img src="R.png"  style="vertical-align:middle" width="25" > for Strategic Business Insight</a></li>
-                    <li><a onclick="navigateToProject_pyc_r_py_dsb10()" >P4 : Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="python.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_nycflight13_23_dsb10()" >P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_vizdimond_dsb10()" >P6 : EDA Visualization of the Diamond Dataset Using <img src="R.png"  style="vertical-align:middle" width="25" > and R Markdown </a></li>
-                    <li><a onclick="navigateToProject_titanic_glm_dsb10()" >P7 : Logistic Regression Analysis on the Titanic Dataset Using <img src="R.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_looker_dsb10()" >P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"  style="vertical-align:middle" width="25" >Looker Studio</a></li>
-                    <li><a onclick="navigateToProject_pizza_chatbot_dsb10()" >P9 : Chatbot Development for a Pizza Business Using <img src="R.png"  style="vertical-align:middle" width="25" > Programming</a></li>
-                    <li><a onclick="navigateToProject_atm_oop_py_dsb10()" >P10 : Object-Oriented ATM System: Financial Transactions with <img src="python.png"  style="vertical-align:middle" width="25" >Python OOP</a></li>
-                    <li><a onclick="navigateToProject_mini_api_py()" >mini P11 : Extracting Public API Data with <img src="python.png"  style="vertical-align:middle" width="25" >Python: Air Quality Analytics</a></li>
-                    <li><a onclick="navigateToProject_mini_xml_cafe()" >mini P12 : Cafe Menu Data Structure with <img src="xml.png"  style="vertical-align:middle" width="25" >XML</a></li>
+                    <li><a onclick="navigateToProject_ggsheet_dsb10()">P1 : Data Exploration and Transformation with
+                            <img src="sheets.png" style="vertical-align:middle" width="25"> Google Sheets</a></li>
+                    <li><a class="active1" onclick="scrollToTop(event)"
+                            onclick="navigateToProject_cafe_r_sql_dsb10()">P2 : Building a Café Restaurant Database
+                            Using <img src="R.png" style="vertical-align:middle" width="25"> and <img src="SQL.png"
+                                style="vertical-align:middle" width="25"></a></li>
+                    <li><a onclick="navigateToProject_rfm_py_dsb10()">P3 : Customer Segmentation and RFM Analysis Using
+                            <img src="python.png" style="vertical-align:middle" width="25">Python and <img src="R.png"
+                                style="vertical-align:middle" width="25"> for Strategic Business Insight</a></li>
+                    <li><a onclick="navigateToProject_pyc_r_py_dsb10()">P4 : Creating a Multi-Round Rock-Paper-Scissors
+                            Game in <img src="R.png" style="vertical-align:middle" width="25"> and <img src="python.png"
+                                style="vertical-align:middle" width="25"></a></li>
+                    <li><a onclick="navigateToProject_nycflight13_23_dsb10()">P5 : EDA and Comparison of NYC Flights
+                            Data (2013 vs. 2023) with <img src="R.png" style="vertical-align:middle" width="25"></a>
+                    </li>
+                    <li><a onclick="navigateToProject_vizdimond_dsb10()">P6 : EDA Visualization of the Diamond Dataset
+                            Using <img src="R.png" style="vertical-align:middle" width="25"> and R Markdown </a></li>
+                    <li><a onclick="navigateToProject_titanic_glm_dsb10()">P7 : Logistic Regression Analysis on the
+                            Titanic Dataset Using <img src="R.png" style="vertical-align:middle" width="25"></a></li>
+                    <li><a onclick="navigateToProject_looker_dsb10()">P8 : Data-Driven Insights: Sales Performance &
+                            Profitability in <img src="looker.png" style="vertical-align:middle" width="25">Looker
+                            Studio</a></li>
+                    <li><a onclick="navigateToProject_pizza_chatbot_dsb10()">P9 : Chatbot Development for a Pizza
+                            Business Using <img src="R.png" style="vertical-align:middle" width="25"> Programming</a>
+                    </li>
+                    <li><a onclick="navigateToProject_atm_oop_py_dsb10()">P10 : Object-Oriented ATM System: Financial
+                            Transactions with <img src="python.png" style="vertical-align:middle" width="25">Python
+                            OOP</a></li>
+                    <li><a onclick="navigateToProject_mini_api_py()">mini P11 : Extracting Public API Data with <img
+                                src="python.png" style="vertical-align:middle" width="25">Python: Air Quality
+                            Analytics</a></li>
+                    <li><a onclick="navigateToProject_mini_xml_cafe()">mini P12 : Cafe Menu Data Structure with <img
+                                src="xml.png" style="vertical-align:middle" width="25">XML</a></li>
                 </ul>
             </li>
             <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li>
@@ -95,46 +119,197 @@
 
     <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
     <section id="toc-section">
-        <p style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Content of Tables</p>
+        <p style="font-size: 1.5em; font-weight: bold;" class="link-cursor">Content of Tables</p>
         <div id="toc-marker"></div>
         <div id="toc-section"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
     </section>
 
-    <a style= "text-decoration: none;" href="project.html">
+    <a style="text-decoration: none;" href="project.html">
         <button class="back-button">⬅︎ <b>Project Overview</b></button>
     </a>
 
     <section>
-        <h2 class = "link-cursor">Dashboard</h2>
-        <p class = "link-cursor">Dashboard ที่แสดงอยู่ด้านล่างนี้ เป็นเครื่องมือที่ถูกสร้างขึ้นหลังจากจบ Project ตัวนี้เรียบร้อยเเล้ว
-            ซึ่งใช้ในการ monitor ผลประกอบการของร้านค้าแห่งหนึ่ง และตอบคำถามที่สงสัยมาตอนต้น <strong>ไปดูกันเลย!</strong>
-            สามาถลองกดเล่นที่ Dashboard ได้เลยนะครับ
+        <h2 class="link-cursor">1. Create Tables and Perform SQL INSERT with Basic Queries and Aggregation</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สวัสดีครับ สำหรับหัวข้อต่อไปนี้จะเป็นการสร้าง Database ด้วยภาษา SQL พร้อมดึง Feedback
+            ของลูกค้ามาสำรวจ พร้อมอธิบายถึงการนำไป Action เพื่อเพิ่มโอกาสสร้างรายได้ให้กับธุรกิจ
         </p>
-        <p class = "link-cursor">ขั้นตอนแรก ผมจะ Explore Dataset เพื่อดูว่าหน้าตาของ data ก้อนนี้เป็นยังไงบ้าง</p>
-    </section>
 
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            โดยผมขอแบ่งเป็น 3 ส่วนในการอธิบายดังนี้ครับ
+
+        <ol>
+            <li class="link-cursor">สร้าง Table ด้วย <code class="inline-code">CREATE TABLE</code> ทั้งหมด 5 Table</li><br>
+            <li class="link-cursor">เพิ่มข้อมูลแต่ละเเถวเข้าไปใน TABLE ที่สร้างเมื่อสักครู่ ทั้งหมด 5 Table ด้วย <code
+                    class="inline-code">INSERT INTO</code></li><br>
+            <li class="link-cursor">เขียน Query ดึงข้อมูลลูกค้าที่เป็น member มีความคิดเห็นอย่างไรกับร้านอาหารของเรา</li>
+        </ol>
+
+        </p>
+
+        <h3 class="link-cursor">1.1 สร้าง Table ด้วย <code class="inline-code">CREATE TABLE</code> ทั้งหมด 5 Table</h3>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p2-cafe-sql1.png" width="800" class="cursor-zoom-in"
+                onclick="openGalleryModal('p2-cafe-sql1.png')">
+        </div>
+
+        <p>
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">SQL</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre class="line-numbers link-cursor"><code class="language-sql">
+
+CREATE TABLE Transactions (
+    InvoiceId INT PRIMARY KEY,
+    BranchId INT,
+    CustomerId INT,
+    MenuId INT,
+    CommentId INT,
+    InvoiceDate DATETIME,
+    Quantity INT,
+    Total_Sales REAL
+);
+
+CREATE TABLE Menus (
+    MenuId INT PRIMARY KEY,
+    Name TEXT,
+    Categories TEXT CHECK (Categories IN ('Rice', 'Pasta', 'Drinks', 'Dessert'))
+);
+
+CREATE TABLE Branch (
+    BranchId INT PRIMARY KEY,
+    Name TEXT,
+    Address TEXT
+);
+
+CREATE TABLE Customers (
+    CustomerId INT PRIMARY KEY,
+    Name TEXT,
+    Gender TEXT CHECK (Gender IN ('Male', 'Female', 'LGBTQ+')),
+    Status TEXT CHECK (Status IN ('Member', 'Guest'))
+);
+
+CREATE TABLE Feedback (
+    CommentId INT PRIMARY KEY,
+    Comment TEXT CHECK (Comment IN ('รสจัดเกิน', 'คุ้มราคา', 'เเพง', 'กลมกล่อม', 'บอกต่อ', 'เค็มเกิน')),
+    Emotional TEXT CHECK (Emotional IN ('Positive', 'Negative'))
+);
+                    
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        </p>
+
+        <!-- ถึงตรงนี้ -->
+
+        
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ขอขอบคุณโปรแกรม <a class="link-website" target="_blank"
+                href="https://www.beekeeperstudio.io/">🐝 BeeKeeper Studio</a> ในการรันโค้ด ซึ่งเป็นหนึ่งใน (Database IDE)
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            IDE ย่อมาจาก Integrated Development Environment
+            คือโปรแกรมหรือเครื่องมือที่รวมทุกอย่างที่นักพัฒนาหรือผู้เขียนโค้ดต้องใช้ไว้ในที่เดียว
+            ซึ่ง 🐝 BeeKeeper Studio ไม่ใช่ IDE สำหรับเขียนโค้ดโปรแกรมทั่วไปแบบ VS Code
+            แต่เน้นไปที่การเชื่อมต่อและจัดการฐานข้อมูลโดยเฉพาะ
+            สามารถดาวน์โหลดมาใช้งาน Verion ฟรีได้ อย่างไรก็ตาม จากภาพที่แสดงให้เห็น อธิบายได้ดังต่อไปนี้
+        </p>
+
+        <ol class="link-cursor">
+            <li>Expand <span class="detail0">🔍 Code</span> คัดลอกแล้วนำไปวางไว้ที่ Script แล้วกด Run</li><br>
+            <li>เมื่อ Run เสร็จจะแสดงข้อความ <code class="inline-code">Query 5/5: No Results..</code> หมายถึง Code
+                รันผ่าน</li><br>
+            <li>Table ถูกสร้างขึ้นทั้งหมด 5 ตาราง
+                <code class="inline-code">Transactions</code>,
+                <code class="inline-code">Menus</code>,
+                <code class="inline-code">Branch</code>,
+                <code class="inline-code">Customers</code> และ
+                <code class="inline-code">Feedback</code>
+            </li>
+        </ol>
+
+        <p class="link-cursor">📌 <b>อธิบาย Code</b> : <a
+            href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P02-Building-a-Cafe-Restaurant-Database-Using-R-and-SQL.md#1-create-tables-and-perform-sql-insert-with-basic-queries-and-aggregation"
+            class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+            <b> Github</b></a>
+        </p>
+        
+<p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+    จากภาพตัวอย่าง ผมใช้คำสั่ง <code class="inline-code">CREATE TABLE</code> ในการสร้าง Table ซึ่งมีตัวอย่าง ต่อไปนี้
+</p>
+
+        <div class="code-container" style="position: relative;">
+            <div class="code-header">
+                <span class="language-label link-cursor">SQL</span>
+                <button class="copy-btn notion-icon">
+                    <img src="icon-copy1.png" alt="Copy" width="20">
+                </button>
+            </div>
+            <pre class="line-numbers link-cursor"><code class="language-sql">
+
+CREATE TABLE table_name ( -- สร้าง Table
+    column1 datatype PRIMARY KEY, -- กำหนด Primary Key
+    column2 datatype, -- กำหนด Column2
+    column3 datatype, -- กำหนด Column3
+    ....
+)
+                </code></pre>
+            <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+        </div>
+
+        <p class="link-cursor">📌 สามารถเข้าไปดูคำอธิบายโค้ดเพิ่มเติมได้ที่ : <a
+            href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P02-Building-a-Cafe-Restaurant-Database-Using-R-and-SQL.md#1-create-tables-and-perform-sql-insert-with-basic-queries-and-aggregation"
+            class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+            <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor"> ผมขออนุญาต ละการอธิบายโค้ดไว้ใน Github นะครับ</p>
+    </section>
+    
     <section id="file">
         <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
-                    width="30" class="notion-icon"></a> Github & <a href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing" class="hover-expand"><img src="googledrive.png"
-                    width="30" class="notion-icon"></a> Google Drive</h2>
+            width="30" class="notion-icon"></a> Github & <a href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing" class="hover-expand"><img src="googledrive.png"
+            width="30" class="notion-icon"></a> Google Drive</h2>
+
         <p>
             <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing"
                 class="download-btn" style="text-align: center; margin-top: 10px;">
                 Resume : 📥
             </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15nJgYPrUrUmD8pAVQZIr0tJVHaJVO8g4/view?usp=sharing"
+            <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P01-Data-Exploration-and-Transformation-with-Google-Sheets.md"
                 class="download-btn" style="text-align: center; margin-top: 10px;">
-                Transcript : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15n_nmZaSY619ehogn_O0V75CKyuq7max/view?usp=sharing"
+                Github : 📥
+            </a><br>
+            <a href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?usp=sharing"
                 class="download-btn" style="text-align: center; margin-top: 10px;">
-                Graduation Certificate : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span>
+                Google Sheets : 📥
+            </a>
         </p>
+
+        มี github ไฟล์ .db และ .r รวมถึงที่อยู่ของ code ในการ ER diagram (ทุกอันต้องเปิดด้วย Google Drive)
     </section>
+
+    <!-- Prism Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- Prism Language Components -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-r.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-excel-formula.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>
 
 </body>
+
 </html>
