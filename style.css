@@ -9,7 +9,8 @@ body {
     min-height: 100vh;
     background-repeat: no-repeat;
     background-position: center 25%;
-    background-size: 100% 100%; /* ทำให้พื้นหลังขยายตามความกว้าง แต่ความสูงไม่เสียสัดส่วน */
+    background-size: 100% 100%;
+    /* ทำให้พื้นหลังขยายตามความกว้าง แต่ความสูงไม่เสียสัดส่วน */
     background-attachment: fixed;
     color: #333;
     position: relative;
@@ -33,11 +34,11 @@ body.no-transition {
 
 /* ปรับความสูงเฉพาะหน้า */
 .home-page {
-    min-height: 560vh;
+    min-height: 570vh;
 }
 
 .about-page {
-    min-height: 618vh;
+    min-height: 1000vh;
 }
 
 .experience-page {
@@ -61,7 +62,7 @@ body.no-transition {
 }
 
 .project_ggsheet-page {
-    min-height: 4500vh;
+    min-height: 4600vh;
 }
 
 .project_looker-page {
@@ -124,14 +125,17 @@ body.no-transition {
 header {
     position: relative;
     color: white;
-    padding: 0;  /* เอา padding ที่ไม่จำเป็นออก */
+    padding: 0;
+    /* เอา padding ที่ไม่จำเป็นออก */
     text-align: center;
     font-size: 1.2em;
-    height: 15vh; /* ความสูงคงที่เพื่อให้ nav อยู่ต่อกัน */
+    height: 15vh;
+    /* ความสูงคงที่เพื่อให้ nav อยู่ต่อกัน */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0; /* เอา margin ที่อาจทำให้เกิดช่องว่างออก */
+    margin: 0;
+    /* เอา margin ที่อาจทำให้เกิดช่องว่างออก */
     cursor: url('cursor.png'), auto;
 }
 
@@ -141,7 +145,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* ป้องกันช่องว่าง */
+    height: 100%;
+    /* ป้องกันช่องว่าง */
     background-size: cover;
     background-position: center 43.5%;
     opacity: 1;
@@ -170,11 +175,12 @@ nav {
     background: rgba(0, 0, 0, 0.8);
     text-align: center;
     padding: 10px 0;
-    position: sticky; /* เปลี่ยนจาก sticky เป็น relative เพื่อติดกับ header */
+    position: sticky;
+    /* เปลี่ยนจาก sticky เป็น relative เพื่อติดกับ header */
     top: 0;
     width: 100%;
     z-index: 1000;
-    margin-top: -2px; 
+    margin-top: -2px;
 }
 
 nav ul {
@@ -229,16 +235,18 @@ section {
     background-color: #000000;
     color: white;
     text-shadow: 0px 0px 10px cyan,
-                 0px 0px 20px cyan,
-                 0px 0px 30px cyan,
-                 0px 0px 60px cyan;
+        0px 0px 20px cyan,
+        0px 0px 30px cyan,
+        0px 0px 60px cyan;
     border-radius: 10px;
     padding: 0.1rem 0.4rem;
-    
+
 }
 
 /* ทำให้เฉพาะ About Me, Certificate, Contact ขยาย ---------------------------------------------------------------------------------------------*/
-#about:hover, #certificate:hover, #contact:hover {
+#about:hover,
+#certificate:hover,
+#contact:hover {
     transform: scale(1.01);
     background: #bbdefb;
 }
@@ -251,6 +259,7 @@ section {
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
 }
+
 .project:hover {
     transform: scale(1.02);
     background: #bbdefb;
@@ -294,6 +303,7 @@ section {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -304,13 +314,15 @@ section {
 nav {
     background-color: #333;
     padding: 15px 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงา */
 }
 
 nav ul li a {
     font-size: 18px;
     padding: 10px 15px;
-    border-radius: 5px; /* มุมโค้ง */
+    border-radius: 5px;
+    /* มุมโค้ง */
     transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -369,9 +381,9 @@ nav ul li a.active1 {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-shadow: 0px 0px 10px cyan,
-                 0px 0px 20px cyan,
-                 0px 0px 30px cyan,
-                 0px 0px 60px cyan;
+        0px 0px 20px cyan,
+        0px 0px 30px cyan,
+        0px 0px 60px cyan;
 }
 
 /* เพิ่มสไตล์สำหรับ dropdown menu---------------------------------------------------------------------------------------------------------------------------- */
@@ -397,7 +409,8 @@ nav ul li a {
     cursor: url('cursor1.png'), auto;
 }
 
-nav ul li.dropdown a, nav ul li.dropdown1 a {
+nav ul li.dropdown a,
+nav ul li.dropdown1 a {
     cursor: url('cursor1.png'), auto;
 }
 
@@ -409,13 +422,17 @@ nav ul li .dropdown-menu {
     top: 130%;
     background: rgba(0, 0, 0, 0.9);
     min-width: 80vh;
-    max-height: calc(1000vh - 965vh); /* ปรับความสูงให้ไม่เกินขอบจอ */
+    max-height: calc(1000vh - 965vh);
+    /* ปรับความสูงให้ไม่เกินขอบจอ */
     padding: 10px 0;
     border-radius: 10px;
     z-index: 1000;
-    overflow-y: auto; /* ทำให้เลื่อนขึ้น-ลงได้ */
-    scrollbar-width: thin; /* ทำให้ scrollbar บางลง */
-    scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* กำหนดสี scrollbar */
+    overflow-y: auto;
+    /* ทำให้เลื่อนขึ้น-ลงได้ */
+    scrollbar-width: thin;
+    /* ทำให้ scrollbar บางลง */
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+    /* กำหนดสี scrollbar */
 }
 
 nav ul li .dropdown-menu1 {
@@ -425,22 +442,28 @@ nav ul li .dropdown-menu1 {
     top: 130%;
     background: rgba(0, 0, 0, 0.9);
     min-width: 30vh;
-    max-height: calc(1000vh - 945vh); /* ปรับความสูงให้ไม่เกินขอบจอ */
+    max-height: calc(1000vh - 945vh);
+    /* ปรับความสูงให้ไม่เกินขอบจอ */
     padding: 10px 0;
     border-radius: 10px;
     z-index: 1000;
-    overflow-y: auto; /* ทำให้เลื่อนขึ้น-ลงได้ */
-    scrollbar-width: thin; /* ทำให้ scrollbar บางลง */
-    scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* กำหนดสี scrollbar */
+    overflow-y: auto;
+    /* ทำให้เลื่อนขึ้น-ลงได้ */
+    scrollbar-width: thin;
+    /* ทำให้ scrollbar บางลง */
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+    /* กำหนดสี scrollbar */
 }
 
 
-nav ul li .dropdown-menu li, nav ul li .dropdown-menu1 li {
+nav ul li .dropdown-menu li,
+nav ul li .dropdown-menu1 li {
     display: block;
     margin: 0;
 }
 
-nav ul li .dropdown-menu li a, nav ul li .dropdown-menu1 li a {
+nav ul li .dropdown-menu li a,
+nav ul li .dropdown-menu1 li a {
     display: block;
     padding: 10px;
     color: rgb(255, 255, 255);
@@ -449,19 +472,23 @@ nav ul li .dropdown-menu li a, nav ul li .dropdown-menu1 li a {
     text-decoration: none;
 }
 
-nav ul li .dropdown-menu li a:hover, nav ul li .dropdown-menu1 li a:hover {
+nav ul li .dropdown-menu li a:hover,
+nav ul li .dropdown-menu1 li a:hover {
     background: linear-gradient(145deg, #aeaff5 0%, #8587ff 50%, #ff6600 100%);
 }
 
 /* แสดง dropdown menu เมื่อ hover */
-nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-menu {
+nav ul li.dropdown:hover .dropdown-menu,
+nav ul li.dropdown1:hover .dropdown-menu {
     display: block;
 }
 
 /* ปุ่มกลับหน้า ที่ต้องการ-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .back-button {
-    top: 14rem; /* ปรับตำแหน่งจากขอบบน */
-    left: 2vw; /* ปรับตำแหน่งจากขอบซ้าย */
+    top: 14rem;
+    /* ปรับตำแหน่งจากขอบบน */
+    left: 2vw;
+    /* ปรับตำแหน่งจากขอบซ้าย */
     display: flex;
     align-items: center;
     text-align: center;
@@ -480,7 +507,7 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
     position: fixed;
     overflow: hidden;
     transform: translateZ(0);
-    box-shadow: 
+    box-shadow:
         0 4px 6px rgba(59, 130, 246, 0.2),
         0 10px 15px rgba(59, 130, 246, 0.1);
     text-decoration: none;
@@ -493,18 +520,16 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255, 255, 255, 0.2),
-        transparent
-    );
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
     transition: all 0.6s ease;
 }
 
 .back-button:hover {
     transform: translateY(-2px);
-    box-shadow: 
+    box-shadow:
         0 8px 12px rgba(59, 130, 246, 0.3),
         0 15px 25px rgba(59, 130, 246, 0.2);
 }
@@ -515,7 +540,7 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
 
 .back-button:active {
     transform: translateY(1px);
-    box-shadow: 
+    box-shadow:
         0 2px 4px rgba(59, 130, 246, 0.2),
         inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -525,7 +550,8 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
     outline-offset: 2px;
 }
 
-.back-button svg { /* สำหรับไอคอนถ้ามี */
+.back-button svg {
+    /* สำหรับไอคอนถ้ามี */
     transition: transform 0.3s ease;
     width: 1.25rem;
     height: 1.25rem;
@@ -554,28 +580,39 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
 
 /* Table of Contents Styles -----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 #table-of-contents {
-    position: fixed; /* เปลี่ยนเป็น fixed เพื่อให้เลื่อนตามหน้าจอ */
+    position: fixed;
+    /* เปลี่ยนเป็น fixed เพื่อให้เลื่อนตามหน้าจอ */
     right: 1vw;
-    top: 50vh; /* จัดกึ่งกลางหน้าจอในแนวตั้ง */
-    transform: translateY(-10%); /* จัดให้อยู่กึ่งกลางแนวตั้งพอดี -10% */
-    
+    top: 50vh;
+    /* จัดกึ่งกลางหน้าจอในแนวตั้ง */
+    transform: translateY(-10%);
+    /* จัดให้อยู่กึ่งกลางแนวตั้งพอดี -10% */
+
     /* ✅ ปรับความกว้างให้ยืดหยุ่นแต่ไม่เกิน section */
-    width: 16vw; /* ยืดหยุ่นตามขนาดหน้าจอ */
-    max-width: 300px; /* จำกัดไม่ให้เกิน section (800px) */
-    min-width: 180px; /* ป้องกันเล็กเกินไป */
-    max-height: 70vh; /* ปรับความสูงให้เหมาะสม */
-    overflow-y:hidden; /* scroll  */
+    width: 16vw;
+    /* ยืดหยุ่นตามขนาดหน้าจอ */
+    max-width: 300px;
+    /* จำกัดไม่ให้เกิน section (800px) */
+    min-width: 180px;
+    /* ป้องกันเล็กเกินไป */
+    max-height: 70vh;
+    /* ปรับความสูงให้เหมาะสม */
+    overflow-y: hidden;
+    /* scroll  */
     background: rgba(255, 255, 255, 0.8);
     padding: 1.2vh 1.2vw;
     border-radius: 5vh;
     box-shadow: 0 0.4vh 1.2vh rgba(0, 0, 0, 0.549);
     transition: all 0.3s ease;
-    z-index: 10; /* เพิ่ม z-index เพื่อให้ TOC อยู่ข้างบน */
-    font-family: 'Prompt', sans-serif; /* ใช้ฟอนต์ Prompt */
+    z-index: 10;
+    /* เพิ่ม z-index เพื่อให้ TOC อยู่ข้างบน */
+    font-family: 'Prompt', sans-serif;
+    /* ใช้ฟอนต์ Prompt */
 }
 
 #table-of-contents:hover {
-    overflow-y: auto;    /* โชว์ scrollbar ตอน mouse hover */
+    overflow-y: auto;
+    /* โชว์ scrollbar ตอน mouse hover */
 }
 
 /* เมื่อ scroll เกิน 200px แล้วเพิ่ม class .scrolled จาก JS */
@@ -593,60 +630,77 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
     text-align: center;
 }
 
-#toc-list, #toc-list1 {
+#toc-list,
+#toc-list1 {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-#toc-list li, #toc-list1 li {
-    margin: 1.4vh 0; /* ลดระยะห่างระหว่าง items */
+#toc-list li,
+#toc-list1 li {
+    margin: 1.4vh 0;
+    /* ลดระยะห่างระหว่าง items */
 }
 
-#toc-list a, #toc-list1 a {
+#toc-list a,
+#toc-list1 a {
     color: #707070;
     font-size: 0.9em;
     display: block;
-    padding: 0.2rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
-    border-radius: 5px; /* ขอบมุมโค้งมน */
+    padding: 0.2rem 0.8rem;
+    /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+    border-radius: 5px;
+    /* ขอบมุมโค้งมน */
     transition: all 0.2s ease;
-    font-weight: 500; /* ปรับให้บางลงตามสไตล์ Prompt */
+    font-weight: 500;
+    /* ปรับให้บางลงตามสไตล์ Prompt */
     line-height: 1.2;
     text-decoration: none;
     cursor: url('cursor1.png'), auto;
-    display: inline-flex; /* ใช้ inline-flex เพื่อให้เหมือน tag */
+    display: inline-flex;
+    /* ใช้ inline-flex เพื่อให้เหมือน tag */
 }
 
 /* เพิ่มการ highlight เมื่อ hover */
-#toc-list a:hover, #toc-list1 a:hover {
+#toc-list a:hover,
+#toc-list1 a:hover {
     color: #ffffff;
     background: rgb(0, 0, 0);
     padding-left: 1.4vw;
 }
 
 /* Highlight เมื่อเลือกหัวข้อ */
-#toc-list a.highlighted, #toc-list1 a.highlighted {
-    background-color: #bbdefb; /* เมื่อเลือกให้สีพื้นหลังเป็นสีเหลือง */
-    color: #000000; /* เปลี่ยนสีตัวอักษรเป็นสีดำ */
+#toc-list a.highlighted,
+#toc-list1 a.highlighted {
+    background-color: #bbdefb;
+    /* เมื่อเลือกให้สีพื้นหลังเป็นสีเหลือง */
+    color: #000000;
+    /* เปลี่ยนสีตัวอักษรเป็นสีดำ */
 }
 
 /* ปุ่ม Toggle Table of Contents ------------------------------------------------------------------------------------*/
 #toggle-toc-btn {
-    position: fixed; /* เปลี่ยนเป็น fixed เพื่อให้เลื่อนตามหน้าจอ */
+    position: fixed;
+    /* เปลี่ยนเป็น fixed เพื่อให้เลื่อนตามหน้าจอ */
     right: 1vw;
-    top: 23vh; /* จัดกึ่งกลางหน้าจอในแนวตั้ง */
-    transform: translateY(-50%); /* ปรับให้อยู่กึ่งกลางของตำแหน่ง top */
+    top: 23vh;
+    /* จัดกึ่งกลางหน้าจอในแนวตั้ง */
+    transform: translateY(-50%);
+    /* ปรับให้อยู่กึ่งกลางของตำแหน่ง top */
     background: rgba(0, 0, 0, 0.7);
     color: white;
     border: none;
     border-radius: 50%;
-    width: 4vh;  /* ขนาดปุ่มปรับตามความสูงของหน้าจอ */
+    width: 4vh;
+    /* ขนาดปุ่มปรับตามความสูงของหน้าจอ */
     height: 4vh;
     cursor: url("cursor1.png"), auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5vh;  /* ขนาดฟอนต์สัมพันธ์กับความสูงของจอ */
+    font-size: 2.5vh;
+    /* ขนาดฟอนต์สัมพันธ์กับความสูงของจอ */
     transition: all 0.3s ease;
     z-index: 5000;
 }
@@ -657,8 +711,10 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
 
 /* เมื่อลดขนาดจอหรือ TOC ถูกซ่อน ให้ปุ่มอยู่ติดขอบ TOC */
 #table-of-contents.hidden #toggle-toc-btn {
-    right: 1vw;  /* ปรับให้ใกล้ขอบซ้ายของ TOC */
-    top: 50vh;  /* คงไว้ตรงกลางของจอ */
+    right: 1vw;
+    /* ปรับให้ใกล้ขอบซ้ายของ TOC */
+    top: 50vh;
+    /* คงไว้ตรงกลางของจอ */
     transform: translateY(-50%);
 }
 
@@ -723,11 +779,11 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
     border-radius: 50%;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background: linear-gradient(135deg, #809cf7, #00f0b8);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(30px);
     content: "🌙";
 }
@@ -742,13 +798,13 @@ input:checked + .slider:before {
 }
 
 /* สำหรับ Light Mode */
-.switch input:not(:checked) + .slider + .switch-label {
+.switch input:not(:checked)+.slider+.switch-label {
     color: #000000;
     /* background-color: #ffffff92; */
 }
 
 /* สำหรับ Dark Mode */
-.switch input:checked + .slider + .switch-label {
+.switch input:checked+.slider+.switch-label {
     color: #ffffff;
     /* background-color: #2c3e504a; */
 }
@@ -756,78 +812,112 @@ input:checked + .slider:before {
 /* จากได้ text ที่ต้องการ ----------------------------------------------------------------------------------------------------------------------------*/
 
 .tidy1-text {
-    font-weight: bold; /* ปรับขนาดตัวอักษรให้เล็กลง */
-    color: #ddff00; /* สีเทา */
+    font-weight: bold;
+    /* ปรับขนาดตัวอักษรให้เล็กลง */
+    color: #ddff00;
+    /* สีเทา */
 }
 
 .strong1 {
     text-shadow: 0px 0px 10px cyan,
-                 0px 0px 20px cyan,
-                 0px 0px 30px cyan,
-                 0px 0px 60px cyan;
+        0px 0px 20px cyan,
+        0px 0px 30px cyan,
+        0px 0px 60px cyan;
 }
 
 details summary {
-    display: inline-flex; /* ใช้ inline-flex เพื่อให้เหมือน tag */
+    display: inline-flex;
+    /* ใช้ inline-flex เพื่อให้เหมือน tag */
     align-items: center;
     gap: 0.5rem;
-    color: rgb(0, 0, 0); /* สีตัวอักษรปกติ */
-    font-size: 15.5px; /* ขนาดฟอนต์พอดีกับข้อความ */
-    font-weight: 500; /* ตัวหนาเล็กน้อย */
-    background-color: #bbdefb; /* สีพื้นหลังเป็นสีน้ำเงินฟ้าเมื่อ hover */
-    padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
-    border-radius: 20px; /* ขอบมุมโค้งมน */
-    text-decoration: none; /* ไม่มีเส้นใต้ */
-    transition: color 0.3s, transform 0.3s; /* ให้การเปลี่ยปลงเป็นไปอย่างนุ่มนวล */
+    color: rgb(0, 0, 0);
+    /* สีตัวอักษรปกติ */
+    font-size: 15.5px;
+    /* ขนาดฟอนต์พอดีกับข้อความ */
+    font-weight: 500;
+    /* ตัวหนาเล็กน้อย */
+    background-color: #bbdefb;
+    /* สีพื้นหลังเป็นสีน้ำเงินฟ้าเมื่อ hover */
+    padding: 0.3rem 0.8rem;
+    /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+    border-radius: 20px;
+    /* ขอบมุมโค้งมน */
+    text-decoration: none;
+    /* ไม่มีเส้นใต้ */
+    transition: color 0.3s, transform 0.3s;
+    /* ให้การเปลี่ยปลงเป็นไปอย่างนุ่มนวล */
     cursor: url('cursor1.png'), auto;
 }
 
 .detail0 {
-    display: inline-flex; /* ใช้ inline-flex เพื่อให้เหมือน tag */
+    display: inline-flex;
+    /* ใช้ inline-flex เพื่อให้เหมือน tag */
     align-items: center;
     gap: 0.5rem;
-    color: rgb(0, 0, 0); /* สีตัวอักษรปกติ */
-    font-size: 15.5px; /* ขนาดฟอนต์พอดีกับข้อความ */
-    font-weight: 500; /* ตัวหนาเล็กน้อย */
-    background-color: #bbdefb; /* สีพื้นหลังเป็นสีน้ำเงินฟ้าเมื่อ hover */
-    padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
-    border-radius: 20px; /* ขอบมุมโค้งมน */
-    text-decoration: none; /* ไม่มีเส้นใต้ */
-    transition: color 0.3s, transform 0.3s; /* ให้การเปลี่ยปลงเป็นไปอย่างนุ่มนวล */
+    color: rgb(0, 0, 0);
+    /* สีตัวอักษรปกติ */
+    font-size: 15.5px;
+    /* ขนาดฟอนต์พอดีกับข้อความ */
+    font-weight: 500;
+    /* ตัวหนาเล็กน้อย */
+    background-color: #bbdefb;
+    /* สีพื้นหลังเป็นสีน้ำเงินฟ้าเมื่อ hover */
+    padding: 0.3rem 0.8rem;
+    /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+    border-radius: 20px;
+    /* ขอบมุมโค้งมน */
+    text-decoration: none;
+    /* ไม่มีเส้นใต้ */
+    transition: color 0.3s, transform 0.3s;
+    /* ให้การเปลี่ยปลงเป็นไปอย่างนุ่มนวล */
 }
 
 /* เพิ่ม toggle อ่านต่อ ----------------------------------------------------------------------------------------------------------------------------*/
 
 details summary::before {
-    content: "🔍"; /* เพิ่มไอคอนให้ดูน่าคลิก */
+    content: "🔍";
+    /* เพิ่มไอคอนให้ดูน่าคลิก */
     font-size: 14px;
 }
 
 details summary:hover {
-    color: hsl(0, 0%, 100%); /* สีตัวอักษรเป็นสีน้ำเงินฟ้าเมื่อ hover */
-    background-color: #000000; /* สีพื้นหลังเป็นสีน้ำเงินฟ้าเมื่อ hover */
-    transform: scale(1.05); /* ขยายขนาดเล็กน้อยเมื่อ hover */
+    color: hsl(0, 0%, 100%);
+    /* สีตัวอักษรเป็นสีน้ำเงินฟ้าเมื่อ hover */
+    background-color: #000000;
+    /* สีพื้นหลังเป็นสีน้ำเงินฟ้าเมื่อ hover */
+    transform: scale(1.05);
+    /* ขยายขนาดเล็กน้อยเมื่อ hover */
     cursor: url('cursor1.png'), auto;
     text-shadow: 0px 0px 0.9px cyan,
-                 0px 0px 0.9px cyan,
-                 0px 0px 0.4px cyan,
-                 0px 0px 0.9px cyan;
+        0px 0px 0.9px cyan,
+        0px 0px 0.4px cyan,
+        0px 0px 0.9px cyan;
 }
 
 .text-description {
-    font-style: italic; /* ตัวเอียง */
-    color: gray; /* สีเทา */
-    font-size: 0.7em; /* ขนาดเล็กลง */
-    opacity: 0.8; /* ทำให้ดูจางลงเล็กน้อย */
-    display: inline; /* ทำให้ข้อความอยู่ในบรรทัดเดียวกัน */
+    font-style: italic;
+    /* ตัวเอียง */
+    color: gray;
+    /* สีเทา */
+    font-size: 0.7em;
+    /* ขนาดเล็กลง */
+    opacity: 0.8;
+    /* ทำให้ดูจางลงเล็กน้อย */
+    display: inline;
+    /* ทำให้ข้อความอยู่ในบรรทัดเดียวกัน */
 }
 
 .text-description1 {
-    font-style: italic; /* ตัวเอียง */
-    color: gray; /* สีเทา */
-    font-size: 0.7em; /* ขนาดเล็กลง */
-    opacity: 0.8; /* ทำให้ดูจางลงเล็กน้อย */
-    display: inline; /* ทำให้ข้อความอยู่ในบรรทัดเดียวกัน */
+    font-style: italic;
+    /* ตัวเอียง */
+    color: gray;
+    /* สีเทา */
+    font-size: 0.7em;
+    /* ขนาดเล็กลง */
+    opacity: 0.8;
+    /* ทำให้ดูจางลงเล็กน้อย */
+    display: inline;
+    /* ทำให้ข้อความอยู่ในบรรทัดเดียวกัน */
 }
 
 /* จากได้ ใช้ปรับ timeline ----------------------------------------------------------------------------------------------------------------------------*/
@@ -844,20 +934,18 @@ details summary:hover {
     position: absolute;
     width: 5px;
     height: 100%;
-    background: linear-gradient(180deg, 
-        rgb(126, 244, 255),    
-        rgba(252, 252, 252, 0.8)
-        
-
-    );
+    background: linear-gradient(180deg,
+            rgb(126, 244, 255),
+            rgba(252, 252, 252, 0.8));
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 1px;
     box-shadow: 0px 0px 0.9px cyan,
-                0px 0px 0.9px cyan,
-                0px 0px 0.4px cyan,
-                0px 0px 0.9px cyan;}
+        0px 0px 0.9px cyan,
+        0px 0px 0.4px cyan,
+        0px 0px 0.9px cyan;
+}
 
 /* Timeline Items */
 .timeline-item {
@@ -922,16 +1010,14 @@ details summary:hover {
     color: rgba(0, 0, 0, 0.9);
 }
 
-/* สำหรับหน้าจอปกติ (คอมพิวเตอร์) */
-.menu-toggle {
-    display: none; /* ซ่อนปุ่มแฮมเบอร์เกอร์บนคอมพิวเตอร์ */
-}
-  
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
 
-     /* ปรับความกว้างของเนื้อหาหลักให้เต็มหน้าจอ */
-    .container, .content, main, section {
+    /* ปรับความกว้างของเนื้อหาหลักให้เต็มหน้าจอ */
+    .container,
+    .content,
+    main,
+    section {
         width: 100% !important;
         max-width: 100% !important;
         padding-left: 10px;
@@ -939,37 +1025,42 @@ details summary:hover {
         box-sizing: border-box;
         overflow-x: hidden;
     }
-    
+
     /* ปรับรูปพื้นหลังให้ไม่เลื่อนออกนอกหน้าจอ */
     body {
         background-size: cover;
         overflow-x: hidden;
     }
-    
+
     /* ปรับเมนูนำทางให้แสดงผลดีขึ้น */
-    .navigation-menu, nav {
+    .navigation-menu,
+    nav {
         width: 100% !important;
         position: relative;
     }
-    
+
     /* ซ่อนรูปภาพที่อาจจะล้นออกมา */
     img {
         max-width: 100%;
         height: auto;
     }
-    
+
     /* ปรับขนาดตัวอักษรให้อ่านง่ายบนมือถือ */
-    body, p, li, td {
+    body,
+    p,
+    li,
+    td {
         font-size: 16px !important;
     }
-    
+
     h1 {
         font-size: 24px !important;
     }
-    
+
     h2 {
         font-size: 20px !important;
     }
+
     .timeline::after {
         left: 31px;
     }
@@ -987,45 +1078,41 @@ details summary:hover {
         top: 20px;
     }
 
-    /* แสดงปุ่มแฮมเบอร์เกอร์ */
-    .menu-toggle {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        z-index: 1001;
+    /* ปรับ container ของ navigation ให้สามารถเลื่อนได้ */
+    .navigation-container {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        /* ให้เลื่อนลื่นบน iOS */
+        padding: 10px 0;
+        width: 100%;
+        justify-content: flex-start;
+        /* จัดให้เริ่มจากซ้าย */
     }
-    
-    /* จัดการ navigation บนมือถือ */
-    .nav-links {
-    display: none; /* ซ่อนเมนูปกติ */
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(50, 50, 50, 0.95);
-    flex-direction: column;
-    z-index: 1000;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    
-    /* เมื่อเมนูถูกเปิด */
-    .nav-links.show {
-    display: flex;
-    }
-    
-    /* ปรับแต่ละรายการเมนู */
+
+    /* จัดการกับลิงก์ในเมนู */
     .nav-link {
-    padding: 12px 20px;
-    text-align: left;
-    width: 100%;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+        display: inline-block;
+        flex-shrink: 0;
+        /* ป้องกันการหดตัวของลิงก์ */
+        padding: 8px 15px;
+        margin-right: 5px;
+    }
+
+    /* ซ่อน scrollbar แต่ยังเลื่อนได้ (สำหรับ Chrome) */
+    .navigation-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* ซ่อน scrollbar สำหรับ Firefox */
+    .navigation-container {
+        scrollbar-width: none;
+    }
+
+    /* ซ่อนปุ่ม hamburger ถ้ามี */
+    .menu-toggle {
+        display: none;
     }
 }
 
@@ -1079,11 +1166,11 @@ details summary:hover {
     border-radius: 50%;
 }
 
-input:checked + .slider1 {
+input:checked+.slider1 {
     background: linear-gradient(135deg, #809cf7, #00f0b8);
 }
 
-input:checked + .slider1:before {
+input:checked+.slider1:before {
     transform: translateX(30px);
     content: "📷";
 }
@@ -1098,23 +1185,25 @@ input:checked + .slider1:before {
 }
 
 /* สำหรับ Light Mode */
-.switch1 input:not(:checked) + .slider1 + .switch-label1 {
+.switch1 input:not(:checked)+.slider1+.switch-label1 {
     color: #000000;
     /* background-color: #ffffff92; */
 }
 
 /* สำหรับ Dark Mode */
-.switch1 input:checked + .slider1 + .switch-label1 {
+.switch1 input:checked+.slider1+.switch-label1 {
     color: #ffffff;
     /* background-color: #2c3e504a; */
 }
 
 .switch input[type="checkbox"] {
-    margin-left: -10px; /* เพิ่มระยะห่างด้านซ้ายของปุ่ม */
+    margin-left: -10px;
+    /* เพิ่มระยะห่างด้านซ้ายของปุ่ม */
 }
 
 .switch1 input[type="checkbox"] {
-    margin-left: -10px; /* เพิ่มระยะห่างด้านซ้ายของปุ่ม */
+    margin-left: -10px;
+    /* เพิ่มระยะห่างด้านซ้ายของปุ่ม */
 }
 
 /* Grade ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -1135,10 +1224,11 @@ input:checked + .slider1:before {
     background: white;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     padding: 15px;
     z-index: 1000;
-    opacity: 0;  /* ซ่อน tooltip */
+    opacity: 0;
+    /* ซ่อน tooltip */
     visibility: hidden;
     transition: opacity 0.2s ease-in-out;
 }
@@ -1181,7 +1271,7 @@ input:checked + .slider1:before {
 }
 
 .copy-btn:hover img {
-    opacity: 1 ;
+    opacity: 1;
 }
 
 .copy-btn1 {
@@ -1189,7 +1279,7 @@ input:checked + .slider1:before {
     border-radius: 5px;
     background: none;
     border: none;
-    
+
 }
 
 .copy-btn1 img {
@@ -1198,12 +1288,13 @@ input:checked + .slider1:before {
 }
 
 .copy-btn1:hover img {
-    opacity: 1 ;
+    opacity: 1;
 }
 
 /* Toast Notification */
 .content-section {
-    position: relative; /* ใช้เป็น anchor ให้ toast */
+    position: relative;
+    /* ใช้เป็น anchor ให้ toast */
 }
 
 /* Toast Notification */
@@ -1238,19 +1329,24 @@ input:checked + .slider1:before {
 .cursor2 {
     cursor: url("cursor2.png"), auto;
     text-decoration: none;
-    padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+    padding: 0.3rem 0.8rem;
+    /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
     color: #000000;
 }
 
 .cursor2:hover {
-    color: #f8f8f8; /* สีตัวอักษรปกติ */
-    font-weight: 400; /* ตัวหนาเล็กน้อย */
-    border-radius: 10px; /* ขอบมุมโค้งมน */
+    color: #f8f8f8;
+    /* สีตัวอักษรปกติ */
+    font-weight: 400;
+    /* ตัวหนาเล็กน้อย */
+    border-radius: 10px;
+    /* ขอบมุมโค้งมน */
     text-shadow: 0px 0px 0.9px cyan,
-                 0px 0px 0.9px cyan,
-                 0px 0px 0.4px cyan,
-                 0px 0px 0.9px cyan;
-    background-color: rgba(0, 0, 0, 0.931); /* พื้นหลังใส */
+        0px 0px 0.9px cyan,
+        0px 0px 0.4px cyan,
+        0px 0px 0.9px cyan;
+    background-color: rgba(0, 0, 0, 0.931);
+    /* พื้นหลังใส */
 }
 
 .cursor21 {
@@ -1260,12 +1356,16 @@ input:checked + .slider1:before {
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 .preview {
     position: absolute;
-    width: 25vw; /* 10% ของความกว้างหน้าจอ */
-    height: auto; /* ปรับอัตโนมัติตามอัตราส่วนของรูป */
+    width: 25vw;
+    /* 10% ของความกว้างหน้าจอ */
+    height: auto;
+    /* ปรับอัตโนมัติตามอัตราส่วนของรูป */
     display: none;
     z-index: 100;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.5); /* ใช้ rem แทน px */
-    border-radius: 0.5em; /* ใช้ em แทน px */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    /* ใช้ rem แทน px */
+    border-radius: 0.5em;
+    /* ใช้ em แทน px */
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
@@ -1312,35 +1412,41 @@ pre[class*="language-"] {
 /* ------------------------------------------------------------------------------------------------------------ */
 
 #toc-section a {
-    color: black; /* สีดำ */
-    text-decoration: none; /* เอาขีดเส้นใต้ลิงก์ออก */
+    color: black;
+    /* สีดำ */
+    text-decoration: none;
+    /* เอาขีดเส้นใต้ลิงก์ออก */
     /* font-weight: bold; ตัวหนา */
     padding: 2px 5px;
 }
 
 #toc-section a:hover {
-    color: #000000; /* สีฟ้าตอน hover */
+    color: #000000;
+    /* สีฟ้าตอน hover */
     text-decoration: none;
     text-shadow: #000000;
     background-color: #7fc5ff;
     border-radius: 20px;
-    cursor: url('cursor1.png'), auto ;
+    cursor: url('cursor1.png'), auto;
 }
 
 #toc-section1 a {
-    color: black; /* สีดำ */
-    text-decoration: none; /* เอาขีดเส้นใต้ลิงก์ออก */
+    color: black;
+    /* สีดำ */
+    text-decoration: none;
+    /* เอาขีดเส้นใต้ลิงก์ออก */
     /* font-weight: bold; ตัวหนา */
     padding: 2px 5px;
 }
 
 #toc-section1 a:hover {
-    color: #000000; /* สีฟ้าตอน hover */
+    color: #000000;
+    /* สีฟ้าตอน hover */
     text-decoration: none;
     text-shadow: #000000;
     background-color: #7fc5ff;
     border-radius: 20px;
-    cursor: url('cursor1.png'), auto ;
+    cursor: url('cursor1.png'), auto;
 }
 
 .inline-code {
@@ -1351,6 +1457,7 @@ pre[class*="language-"] {
     border-radius: 4px;
     font-size: 0.9em;
 }
+
 /* ------- */
 
 .link-website {
@@ -1361,13 +1468,16 @@ pre[class*="language-"] {
     cursor: url('cursor2.png'), auto;
     background-image: linear-gradient(currentColor, currentColor);
     background-repeat: no-repeat;
-    background-size: 0% 2px; /* เริ่มจากไม่มีเส้น */
-    background-position: 0 100%; /* ตำแหน่งเส้นใต้ */
+    background-size: 0% 2px;
+    /* เริ่มจากไม่มีเส้น */
+    background-position: 0 100%;
+    /* ตำแหน่งเส้นใต้ */
     transition: background-size 0.4s ease;
 }
 
 .link-website:hover {
-    background-size: 100% 2px; /* ค่อย ๆ แสดงเส้นใต้ */
+    background-size: 100% 2px;
+    /* ค่อย ๆ แสดงเส้นใต้ */
 }
 
 #scrollToTopBtn {

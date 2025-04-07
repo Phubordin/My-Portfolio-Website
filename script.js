@@ -705,23 +705,3 @@ window.addEventListener('scroll', () => {
     }
 });
 /*-------------------------------------------------------------------------------- */
-
-document.addEventListener('DOMContentLoaded', function() {
-    // สร้างปุ่มแฮมเบอร์เกอร์และเพิ่มเข้าไปใน DOM
-    const navigationContainer = document.querySelector('.navigation-container');
-    if (navigationContainer) {
-        const menuToggle = document.createElement('button');
-        menuToggle.className = 'menu-toggle';
-        menuToggle.innerHTML = '☰';
-        navigationContainer.prepend(menuToggle);
-        
-        // เพิ่ม class nav-links ให้กับเมนู
-        const navMenu = document.querySelector('nav') || navigationContainer.querySelector('div');
-        navMenu.classList.add('nav-links');
-        
-        // เพิ่ม event listener เพื่อเปิด/ปิดเมนู
-        menuToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('show');
-        });
-    }
-});
