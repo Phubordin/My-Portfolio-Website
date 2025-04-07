@@ -981,6 +981,31 @@ details summary:hover {
         left: 23px !important;
         top: 20px;
     }
+
+    .navigation-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        background-color: rgba(50, 50, 50, 0.8);
+        border-radius: 8px;
+      }
+      
+      .nav-link {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        padding: 8px 15px;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-link.active {
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+      }
 }
 
 /* ปุ่มเบลอ ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
