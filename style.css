@@ -563,9 +563,7 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
     width: 16vw; /* ยืดหยุ่นตามขนาดหน้าจอ */
     max-width: 300px; /* จำกัดไม่ให้เกิน section (800px) */
     min-width: 180px; /* ป้องกันเล็กเกินไป */
-
     max-height: 70vh; /* ปรับความสูงให้เหมาะสม */
-
     overflow-y:hidden; /* scroll  */
     background: rgba(255, 255, 255, 0.8);
     padding: 1.2vh 1.2vw;
@@ -926,6 +924,47 @@ details summary:hover {
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
+
+     /* ปรับความกว้างของเนื้อหาหลักให้เต็มหน้าจอ */
+    .container, .content, main, section {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    
+    /* ปรับรูปพื้นหลังให้ไม่เลื่อนออกนอกหน้าจอ */
+    body {
+        background-size: cover;
+        overflow-x: hidden;
+    }
+    
+    /* ปรับเมนูนำทางให้แสดงผลดีขึ้น */
+    .navigation-menu, nav {
+        width: 100% !important;
+        position: relative;
+    }
+    
+    /* ซ่อนรูปภาพที่อาจจะล้นออกมา */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* ปรับขนาดตัวอักษรให้อ่านง่ายบนมือถือ */
+    body, p, li, td {
+        font-size: 16px !important;
+    }
+    
+    h1 {
+        font-size: 24px !important;
+    }
+    
+    h2 {
+        font-size: 20px !important;
+    }
     .timeline::after {
         left: 31px;
     }
@@ -1221,6 +1260,7 @@ pre[class*="language-"] {
     color: #ffffff;
     white-space: pre-wrap;
     word-wrap: break-word;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 /* ------------------------------------------------------------------------------------------------------------ */
@@ -1260,28 +1300,10 @@ pre[class*="language-"] {
 .inline-code {
     background-color: #f6f6f6;
     color: #eb5757;
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-family: 'IBM Plex Mono', monospace;
     padding: 2px 5px;
     border-radius: 4px;
     font-size: 0.9em;
-}
-
-table.tableizer-table {
-    font-size: 12px;
-    border: 1px solid #CCC;
-    font-family: 'Prompt', sans-serif;
-}
-
-.tableizer-table td {
-    padding: 4px;
-    margin: 3px;
-    border: 1px solid #CCC;
-}
-
-.tableizer-table th {
-    background-color: #104E8B;
-    color: #FFF;
-    font-weight: bold;
 }
 /* ------- */
 
@@ -1323,3 +1345,28 @@ table.tableizer-table {
     pointer-events: auto;
 }
 
+/* ------------------------------------------------------------------------------------------------------------ */
+
+table.tableizer-table {
+    font-size: 12px;
+    border: 1px solid #CCC;
+    font-family: 'Prompt', sans-serif;
+    margin: 20px auto;
+    /* ทำให้ table อยู่กึ่งกลางแนวนอน */
+    display: block;
+    /* กำหนดให้เป็น block element */
+    width: fit-content;
+}
+
+.tableizer-table td {
+    padding: 4px;
+    margin: 3px;
+    border: 1px solid #CCC;
+}
+
+.tableizer-table th {
+    background-color: #104E8B;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+}

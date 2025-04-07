@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="certificate-style.css">
     <link rel="icon" type="image/png" href="website.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
 </head>
 
 <div class="theme-switch-wrapper">
@@ -141,10 +143,12 @@
             โดยผมขอแบ่งเป็น 3 ส่วนในการอธิบายดังนี้ครับ
 
         <ol>
-            <li class="link-cursor">สร้าง Table ด้วย <code class="inline-code">CREATE TABLE</code> ทั้งหมด 5 Table</li><br>
+            <li class="link-cursor">สร้าง Table ด้วย <code class="inline-code">CREATE TABLE</code> ทั้งหมด 5 Table</li>
+            <br>
             <li class="link-cursor">เพิ่มข้อมูลแต่ละเเถวเข้าไปใน TABLE ที่สร้างเมื่อสักครู่ ทั้งหมด 5 Table ด้วย <code
                     class="inline-code">INSERT INTO</code></li><br>
-            <li class="link-cursor">เขียน Query ดึงข้อมูลลูกค้าที่เป็น member มีความคิดเห็นอย่างไรกับร้านอาหารของเรา</li>
+            <li class="link-cursor">เขียน Query ดึงข้อมูลลูกค้าที่เป็น member มีความคิดเห็นอย่างไรกับร้านอาหารของเรา
+            </li>
         </ol>
 
         </p>
@@ -168,7 +172,7 @@
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-sql">
+                <pre><code class="link-cursor language-sql">
 
 CREATE TABLE Transactions (
     InvoiceId INT PRIMARY KEY,
@@ -213,13 +217,11 @@ CREATE TABLE Feedback (
         </details>
         </p>
 
-        
-        
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
-            ขอขอบคุณโปรแกรม <a class="link-website" target="_blank"
-            href="https://www.beekeeperstudio.io/">🐝 BeeKeeper Studio</a> ในการรันโค้ด ซึ่งเป็นหนึ่งใน (Database IDE)
+            ขอขอบคุณโปรแกรม <a class="link-website" target="_blank" href="https://www.beekeeperstudio.io/">🐝 BeeKeeper
+                Studio</a> ในการรันโค้ด ซึ่งเป็นหนึ่งใน (Database IDE)
         </p>
-        
+
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             IDE ย่อมาจาก Integrated Development Environment
             คือโปรแกรมหรือเครื่องมือที่รวมทุกอย่างที่นักพัฒนาหรือผู้เขียนโค้ดต้องใช้ไว้ในที่เดียว
@@ -227,30 +229,74 @@ CREATE TABLE Feedback (
             แต่เน้นไปที่การเชื่อมต่อและจัดการฐานข้อมูลโดยเฉพาะ
             สามารถดาวน์โหลดมาใช้งาน Verion ฟรีได้ อย่างไรก็ตาม จากภาพที่แสดงให้เห็น อธิบายได้ดังต่อไปนี้
         </p>
-        
+
         <ol class="link-cursor">
             <li>Expand <span class="detail0">🔍 Code</span> คัดลอกแล้วนำไปวางไว้ที่ Script แล้วกด Run</li><br>
             <li>เมื่อ Run เสร็จจะแสดงข้อความ <code class="inline-code">Query 5/5: No Results..</code> หมายถึง Code
                 รันผ่าน</li><br>
-                <li>Table ถูกสร้างขึ้นทั้งหมด 5 ตาราง
-                    <code class="inline-code">Transactions</code>,
-                    <code class="inline-code">Menus</code>,
-                    <code class="inline-code">Branch</code>,
-                    <code class="inline-code">Customers</code> และ
-                    <code class="inline-code">Feedback</code>
-                </li>
-            </ol>
-            
-            <p class="link-cursor">📌 <b>อธิบาย Code</b> : <a
+            <li>Table ถูกสร้างขึ้นทั้งหมด 5 ตาราง
+                <code class="inline-code">Transactions</code>,
+                <code class="inline-code">Menus</code>,
+                <code class="inline-code">Branch</code>,
+                <code class="inline-code">Customers</code> และ
+                <code class="inline-code">Feedback</code>
+            </li>
+        </ol>
+
+        <p class="link-cursor">📌 <b>อธิบาย Code</b> : <a
                 href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P02-Building-a-Cafe-Restaurant-Database-Using-R-and-SQL.md#1-create-tables-and-perform-sql-insert-with-basic-queries-and-aggregation"
                 class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
                 <b> Github</b></a>
-            </p>
-            
-            <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
-                จากภาพตัวอย่าง ผมใช้คำสั่ง <code class="inline-code">CREATE TABLE</code> ในการสร้าง Table ซึ่งมีตัวอย่าง ต่อไปนี้
-            </p>
-            
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            จากภาพตัวอย่าง ผมใช้คำสั่ง <code class="inline-code">CREATE TABLE</code> ในการสร้าง Table ซึ่งมีตัวอย่าง
+            ต่อไปนี้
+        </p>
+
+        <div class="code-container" style="position: relative;">
+            <div class="code-header">
+                <span class="language-label link-cursor">SQL</span>
+                <button class="copy-btn notion-icon">
+                    <img src="icon-copy1.png" alt="Copy" width="20">
+                </button>
+            </div>
+            <pre><code class="link-cursor language-sql">
+
+CREATE TABLE table_name ( -- สร้าง Table
+column1 datatype PRIMARY KEY, -- กำหนด Primary Key
+column2 datatype, -- กำหนด Column2
+column3 datatype, -- กำหนด Column3
+....
+)
+                </code></pre>
+            <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+        </div>
+
+        <p class="link-cursor">📌 สามารถเข้าไปดูคำอธิบายโค้ดเพิ่มเติมได้ที่ : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P02-Building-a-Cafe-Restaurant-Database-Using-R-and-SQL.md#1-create-tables-and-perform-sql-insert-with-basic-queries-and-aggregation"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <p class="link-cursor"> ผมขออนุญาต ละการอธิบายโค้ดไว้ใน Github นะครับ</p>
+    </section>
+
+    <section>
+
+        <h3 class="link-cursor">1.2 เพิ่มข้อมูลแต่ละเเถวเข้าไปใน TABLE ที่สร้างเมื่อสักครู่ ทั้งหมด 5 Table ด้วย <code
+                class="inline-code">INSERT INTO</code></h3>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p2-cafe-sql2.png" width="800" class="cursor-zoom-in"
+                onclick="openGalleryModal('p2-cafe-sql2.png')">
+        </div>
+
+        <p>
+        <details class="detail">
+
+            <summary>Code</summary>
+
             <div class="code-container" style="position: relative;">
                 <div class="code-header">
                     <span class="language-label link-cursor">SQL</span>
@@ -258,37 +304,424 @@ CREATE TABLE Feedback (
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-sql">
-                    
-                    CREATE TABLE table_name ( -- สร้าง Table
-                    column1 datatype PRIMARY KEY, -- กำหนด Primary Key
-                    column2 datatype, -- กำหนด Column2
-                    column3 datatype, -- กำหนด Column3
-                    ....
-                    )
+                <pre><code class="link-cursor language-sql">
+
+INSERT INTO Transactions (InvoiceId, BranchId, CustomerId, MenuId, CommentId, InvoiceDate, Quantity, Total_Sales) VALUES
+(1,  1, 1, 1, 1, '2023-05-01', 4, 100.00),
+(2,  2, 2, 2, 4, '2023-06-02', 3, 200.00),
+(3,  3, 3, 3, 5, '2023-08-03', 4, 300.00),
+(4,  1, 3, 4, 2, '2023-12-04', 2, 400.00),
+(5,  2, 2, 5, 4, '2023-11-05', 1, 500.00),
+(6,  3, 5, 6, 6, '2023-03-06', 3, 600.00),
+(7,  1, 1, 7, 5, '2023-02-07', 3, 700.00),
+(8,  2, 2, 8, 5, '2023-09-08', 2, 800.00),
+(9,  3, 4, 1, 3, '2023-05-09', 3, 900.00),
+(10, 1, 4, 2, 3, '2023-08-10', 5, 1000.00);
+
+INSERT INTO Branch (BranchId, Name, Address) VALUES
+(1, 'Ratchayothin', 'Chatuchak'),
+(2, 'Rama 7'      , 'BangSue'),
+(3, 'ChokChai 4'  , 'Latphrao');
+
+INSERT INTO Customers (CustomerId, Name, Gender, Status) VALUES
+(1, 'John', 'Male'  , 'Member'),
+(2, 'Jane', 'Female', 'Guest'),
+(3, 'Alex', 'LGBTQ+', 'Member'),
+(4, 'Sara', 'Female', 'Guest'),
+(5, 'Tom' , 'Male'  , 'Member');
+
+INSERT INTO Feedback (CommentId, Comment, Emotional) VALUES
+(1, 'รสจัดเกิน' , 'Negative'),
+(2, 'คุ้มราคา'  , 'Positive'),
+(3, 'เเพง'    , 'Negative'),
+(4, 'กลมกล่อม' , 'Positive'),
+(5, 'บอกต่อ'  , 'Positive'),
+(6, 'เค็มเกิน'  , 'Negative');
+
+INSERT INTO Menus (MenuId, Name, Categories) VALUES
+(1, 'Pad Thai'  , 'Rice'),
+(2, 'Spaghetti' , 'Pasta'),
+(3, 'Coke'      , 'Drinks'),
+(4, 'Cake'      , 'Dessert'),
+(5, 'Fried Rice', 'Rice'),
+(6, 'Lasagna'   , 'Pasta'),
+(7, 'Water'     , 'Drinks'),
+(8, 'Ice Cream' , 'Dessert');                    
+                
                 </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
-            
-            <p class="link-cursor">📌 สามารถเข้าไปดูคำอธิบายโค้ดเพิ่มเติมได้ที่ : <a
-                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P02-Building-a-Cafe-Restaurant-Database-Using-R-and-SQL.md#1-create-tables-and-perform-sql-insert-with-basic-queries-and-aggregation"
+
+        </details>
+        </p>
+        <!-- ถึงตรงนี้ -->
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            จากภาพตัวอย่าง ผมใช้คำสั่ง <code class="inline-code">INSERT INTO</code> ในการแทรกข้อมูลแต่ละแถวลงไปใน Table
+        </p>
+
+        <ol style="text-align: justify;">
+            <li class="link-cursor">แทรกข้อมูลลงไปในตารางด้วย <code class="inline-code">INSERT INTO</code> ลงไปทั้งหมด 5
+                ตาราง</li>
+            <br>
+            <li class="link-cursor">📌 เมื่อรันโค้ดภายใน <span class="detail0">🔍 Code</span> แล้ว Table
+                จะถูกสร้างขึ้นทั้งหมด 5 Table และมีข้อความแจ้งเตือนว่า <code
+                    class="inline-code">Query 5/5: No Results..</code> (Code รันผ่าน!)</li>
+        </ol>
+
+        <ul class="link-cursor">
+            <li>
+                Transactions Table <code class="inline-code">SELECT * FROM Transactions;</code>
+            </li>
+
+            <p>
+            <table class="link-cursor tableizer-table">
+                <thead>
+                    <tr class="tableizer-firstrow">
+                        <th>InvoiceId(PK)</th>
+                        <th>BranchId</th>
+                        <th>CustomerId</th>
+                        <th>MenuId</th>
+                        <th>CommentId</th>
+                        <th>InvoiceDate</th>
+                        <th>Quantity</th>
+                        <th>Total_Sales</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>2023-05-01</td>
+                        <td>4</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>2023-06-02</td>
+                        <td>3</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td>2023-08-03</td>
+                        <td>4</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>2023-12-04</td>
+                        <td>2</td>
+                        <td>400</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>2023-11-05</td>
+                        <td>1</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>2023-03-06</td>
+                        <td>3</td>
+                        <td>600</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>7</td>
+                        <td>5</td>
+                        <td>2023-02-07</td>
+                        <td>3</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>2023-09-08</td>
+                        <td>2</td>
+                        <td>800</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>2023-05-09</td>
+                        <td>3</td>
+                        <td>900</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>2023-08-10</td>
+                        <td>5</td>
+                        <td>1000</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+
+            <li>
+                Branch Table <code class="inline-code">SELECT * FROM Branch;</code>
+            </li>
+
+            <p>
+            <table class="link-cursor tableizer-table">
+                <thead>
+                    <tr class="tableizer-firstrow">
+                        <th>BranchId(PK)</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ratchayothin</td>
+                        <td>Chatuchak</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Rama 7</td>
+                        <td>BangSue</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>ChokChai 4</td>
+                        <td>Latphrao</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+
+            <li>
+                Customers Table <code class="inline-code">SELECT * FROM Customers;</code>
+            </li>
+
+            <p>
+            <table class="link-cursor tableizer-table">
+                <thead>
+                    <tr class="tableizer-firstrow">
+                        <th>CustomerId(PK)</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John</td>
+                        <td>Male</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane</td>
+                        <td>Female</td>
+                        <td>Guest</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Alex</td>
+                        <td>LGBTQ+</td>
+                        <td>Member</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Sara</td>
+                        <td>Female</td>
+                        <td>Guest</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Tom</td>
+                        <td>Male</td>
+                        <td>Member</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+
+            <li>
+                Feedback Table <code class="inline-code">SELECT * FROM Feedback;</code>
+            </li>
+
+            <p>
+            <table class="link-cursor tableizer-table">
+                <thead>
+                    <tr class="tableizer-firstrow">
+                        <th>CommentId(PK)</th>
+                        <th>Comment</th>
+                        <th>Emotional</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>รสจัดเกิน</td>
+                        <td>Negative</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>คุ้มราคา</td>
+                        <td>Positive</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>เเพง</td>
+                        <td>Negative</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>กลมกล่อม</td>
+                        <td>Positive</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>บอกต่อ</td>
+                        <td>Positive</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>เค็มเกิน</td>
+                        <td>Negative</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+
+            <li>
+                Menus Table <code class="inline-code">SELECT * FROM Menus;</code>
+            </li>
+
+            <p>
+            <table class="link-cursor tableizer-table">
+                <thead>
+                    <tr class="tableizer-firstrow">
+                        <th>MenuId(PK)</th>
+                        <th>Name</th>
+                        <th>Categories</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Pad Thai</td>
+                        <td>Rice</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Spaghetti</td>
+                        <td>Pasta</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Coke</td>
+                        <td>Drinks</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Cake</td>
+                        <td>Dessert</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Fried Rice</td>
+                        <td>Rice</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Lasagna</td>
+                        <td>Pasta</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Water</td>
+                        <td>Drinks</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Ice Cream</td>
+                        <td>Dessert</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+
+        </ul>
+
+        <p class="link-cursor">📌 <b>สามารถเข้าไปดูคำอธิบายโค้ดเพิ่มเติมได้ที่</b> : <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P02-Building-a-Cafe-Restaurant-Database-Using-R-and-SQL.md#12-%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B9%80%E0%B8%96%E0%B8%A7%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B9%84%E0%B8%9B%E0%B9%83%E0%B8%99-table-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AA%E0%B8%B1%E0%B8%81%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B9%88-%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%94-5-table-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-insert-into"
                 class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
                 <b> Github</b></a>
-            </p>
-            
-            <p class="link-cursor"> ผมขออนุญาต ละการอธิบายโค้ดไว้ใน Github นะครับ</p>
-        </section>
-        
-        <!-- ถึงตรงนี้ -->
+        </p>
+
+        <div class="code-container" style="position: relative;">
+            <div class="code-header">
+                <span class="language-label link-cursor">SQL</span>
+                <button class="copy-btn notion-icon">
+                    <img src="icon-copy1.png" alt="Copy" width="20">
+                </button>
+            </div>
+            <pre><code class="link-cursor language-sql">
+
+CREATE TABLE table_name ( -- สร้าง Table
+column1 datatype PRIMARY KEY, -- กำหนด Primary Key
+column2 datatype, -- กำหนด Column2
+column3 datatype, -- กำหนด Column3
+....
+)
+            </code></pre>
+            <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+        </div>
+
+    </section>
 
 
 
-        
+
+
+
+
+
     <section id="file">
-            <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
-                width="30" class="notion-icon"></a> Github & <a href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing" class="hover-expand"><img src="googledrive.png"
-                    width="30" class="notion-icon"></a> Google Drive</h2>
-                    
+        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
+                    width="30" class="notion-icon"></a> Github & <a
+                href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing"
+                class="hover-expand"><img src="googledrive.png" width="30" class="notion-icon"></a> Google Drive</h2>
+
         <p>
             <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing"
                 class="download-btn" style="text-align: center; margin-top: 10px;">

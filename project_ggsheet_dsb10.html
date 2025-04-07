@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="certificate-style.css">
     <link rel="icon" type="image/png" href="website.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 </head>
 
 <div class="theme-switch-wrapper">
@@ -153,7 +154,7 @@
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
                                     =IFERROR(SORT(FILTER(EMPLOYEE, (GENDER = B2) * (PERFORMANCE = B3)), 5, Not(D2)),"NO DATA")
                     </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -250,7 +251,7 @@
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
                     =$G2=$H$1
                 </code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -319,7 +320,7 @@
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
                     male
                 </code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -332,7 +333,7 @@
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
                     female
                 </code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -425,7 +426,7 @@
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
                     =LEFT($A83,1)="0"
                     </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -530,7 +531,7 @@
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =QUERY( EMPLOYEE1, 
 "select * where " & 
 IF(B2="All","1=1","N='" & B2 & "'") & 
@@ -610,25 +611,6 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                             <li>ถ้าหาก B2 ถูกเลือกเป็น male จะแสดงเป็น <code
                                     class="inline-code">select * where N = 'male'</code></li>
                             <p>
-                                <style type="text/css">
-                                    table.tableizer-table {
-                                        font-size: 12px;
-                                        border: 1px solid #CCC;
-                                        font-family: Arial, Helvetica, sans-serif;
-                                    }
-
-                                    .tableizer-table td {
-                                        padding: 4px;
-                                        margin: 3px;
-                                        border: 1px solid #CCC;
-                                    }
-
-                                    .tableizer-table th {
-                                        background-color: #104E8B;
-                                        color: #FFF;
-                                        font-weight: bold;
-                                    }
-                                </style>
                             <table class="tableizer-table link-cursor">
                                 <thead>
                                     <tr class="tableizer-firstrow">
@@ -748,25 +730,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                                     class="inline-code">select * where N = 'female'</code> ตามตารางด้านล่าง
                             </li>
                             <p>
-                                <style type="text/css">
-                                    table.tableizer-table {
-                                        font-size: 12px;
-                                        border: 1px solid #CCC;
-                                        font-family: Arial, Helvetica, sans-serif;
-                                    }
-
-                                    .tableizer-table td {
-                                        padding: 4px;
-                                        margin: 3px;
-                                        border: 1px solid #CCC;
-                                    }
-
-                                    .tableizer-table th {
-                                        background-color: #104E8B;
-                                        color: #FFF;
-                                        font-weight: bold;
-                                    }
-                                </style>
+                                
                             <table class="tableizer-table link-cursor">
                                 <thead>
                                     <tr class="tableizer-firstrow">
@@ -926,25 +890,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                 <ul>
                     <li><code class="inline-code link-cursor">select * where N = 'female' And O = 'Good'</code></li>
                     <p>
-                        <style type="text/css">
-                            table.tableizer-table {
-                                font-size: 12px;
-                                border: 1px solid #CCC;
-                                font-family: Arial, Helvetica, sans-serif;
-                            }
-
-                            .tableizer-table td {
-                                padding: 4px;
-                                margin: 3px;
-                                border: 1px solid #CCC;
-                            }
-
-                            .tableizer-table th {
-                                background-color: #104E8B;
-                                color: #FFF;
-                                font-weight: bold;
-                            }
-                        </style>
+                        
                     <table class="tableizer-table link-cursor">
                         <thead>
                             <tr class="tableizer-firstrow">
@@ -990,25 +936,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                     </p>
                     <li><code class="inline-code link-cursor">select * where N = 'female' And O = 'Average'</code></li>
                     <p>
-                        <style type="text/css">
-                            table.tableizer-table {
-                                font-size: 12px;
-                                border: 1px solid #CCC;
-                                font-family: Arial, Helvetica, sans-serif;
-                            }
-
-                            .tableizer-table td {
-                                padding: 4px;
-                                margin: 3px;
-                                border: 1px solid #CCC;
-                            }
-
-                            .tableizer-table th {
-                                background-color: #104E8B;
-                                color: #FFF;
-                                font-weight: bold;
-                            }
-                        </style>
+                        
                     <table class="tableizer-table link-cursor">
                         <thead>
                             <tr class="tableizer-firstrow">
@@ -1082,25 +1010,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                     <li><code class="inline-code link-cursor">select * where N = 'female' And O = 'Excellent'</code>
                     </li>
                     <p>
-                        <style type="text/css">
-                            table.tableizer-table {
-                                font-size: 12px;
-                                border: 1px solid #CCC;
-                                font-family: Arial, Helvetica, sans-serif;
-                            }
-
-                            .tableizer-table td {
-                                padding: 4px;
-                                margin: 3px;
-                                border: 1px solid #CCC;
-                            }
-
-                            .tableizer-table th {
-                                background-color: #104E8B;
-                                color: #FFF;
-                                font-weight: bold;
-                            }
-                        </style>
+                        
                     <table class="tableizer-table link-cursor">
                         <thead>
                             <tr class="tableizer-firstrow">
@@ -1205,7 +1115,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                     <img src="icon-copy1.png" alt="Copy" width="20">
                 </button>
             </div>
-            <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+            <pre><code class="link-cursor language-excel-formula">
                 =QUERY(EMPLOYEE1,"select * where N = 'female' And O = 'Excellent' And L <= date'2004-10-01")
                 </code></pre>
             <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -1222,7 +1132,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                     <img src="icon-copy1.png" alt="Copy" width="20">
                 </button>
             </div>
-            <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+            <pre><code class="link-cursor language-excel-formula">
 =QUERY(EMPLOYEE1, 
 "select * where " &
 IF(B2="All","1=1","N='" & B2 & "'") &
@@ -1256,7 +1166,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =ArrayFormula(VLOOKUP(I4:I28,A32:F39,{2 ,3 ,4 ,5 ,6},FALSE))
                     </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -1268,7 +1178,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =ArrayFormula(VLOOKUP(H4:H28,A43:E46, {2, 3 ,4, 5},FALSE))                    </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -1358,7 +1268,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =ArrayFormula(SPLIT(A4:A9," "))
                     </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -1370,7 +1280,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =ArrayFormula(DATE(D4:D9-543,VLOOKUP(C4:C9,$A$13:$B$24,2,0),B4:B9))                    </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -1555,7 +1465,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7, "\d-\d{4}-\d{5}-\d{2}-\d"))                </code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -1614,7 +1524,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7,"M[a-z]+."))`                </code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -1633,7 +1543,8 @@ IF(B2="All","1=1","N='" & B2 & "'") &
         </p>
         <ul>
             <li class="link-cursor">เริ่มต้นพิมพ์ <code class="inline-code">M</code> ขึ้นต้นด้วย M ตัวใหญ่ (ผลลัพธ์คือ
-                <code class="inline-code">M</code>)</li>
+                <code class="inline-code">M</code>)
+            </li>
             <li class="link-cursor">ตามด้วย <code class="inline-code">[a-z]+</code> ตัวอักษรภาษอังกฤษตัวพิพม์เล็ก a-z
                 กี่ตัวก็ได้ (ผลลัพธ์คือ <code class="inline-code">Mr</code>)</li>
             <li class="link-cursor">ตามด้วย <code class="inline-code">.</code> ตัวอะไรก็ได้ทั้งหมดเลย (ตัวอักษร, ตัวเลข,
@@ -1667,7 +1578,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7,".+" & D3:D7 & ".([A-Z][a-z]+)"))`                
 </code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -1745,7 +1656,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
         </ul>
         <p class="link-cursor" style="text-align: justify;text-indent: 1em;">เป็นต้น</p>
         <p class="link-cursor" style="text-align: justify;text-indent: 1em;">
-            สรุปภาพรวมของ parameter ที่ 2 ของ REGEXEXTRACT() คือ <code
+            สรุปภาพรวมของสูตร REGEXEXTRACT() คือ <code
                 class="inline-code">".+" & D3:D7 & ".(" & "[A-Z][a-z]+" & ")"</code>
         </p>
         <p class="link-cursor" style="text-align: justify;text-indent: 1em;">
@@ -1784,7 +1695,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7,".+" & E3:E7 & ".([A-Z][a-z]+)"))`</code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -1830,7 +1741,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7,"Date of Birth (\d{2}.[A-z]+.\d{4})"))                
 </code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
@@ -1901,7 +1812,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =ArrayFormula(DATEDIF(G3:G7,TODAY(),"Y"))</code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -1951,11 +1862,14 @@ IF(B2="All","1=1","N='" & B2 & "'") &
             <p class="link-cursor" style="text-align: justify;">เราแบ่งเป็น 3 คำถามแล้วนำมารวมกัน</p>
             <ul>
                 <li>กี่ปี? <code class="inline-code">=DATEDIF("2000-04-19","2030-07-03","Y")</code> ผลลัพธ์ที่ได้คือ
-                    <code class="inline-code">30</code></li><br>
+                    <code class="inline-code">30</code>
+                </li><br>
                 <li>กี่เดือน? <code class="inline-code">=DATEDIF("2000-04-19","2030-07-03","YM")</code> ผลลัพธ์ที่ได้คือ
-                    <code class="inline-code">2</code></li><br>
+                    <code class="inline-code">2</code>
+                </li><br>
                 <li>กี่วัน? <code class="inline-code">=DATEDIF("2000-04-19","2030-07-03","Y")</code> ผลลัพธ์ที่ได้คือ
-                    <code class="inline-code">14</code></li>
+                    <code class="inline-code">14</code>
+                </li>
                 <p class="link-cursor" style="text-align: justify;">พนักงานคนนี้อายุ <code
                         class="inline-code">30 ปี 2 เดือน 14 วัน</code> เป็นต้น</p>
                 <p class="link-cursor" style="text-align: justify;">จริงๆมี <code class="inline-code">"YD"</code> อีก
@@ -1971,7 +1885,8 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                 class="inline-code">=ArrayFormula(DATEDIF(G3:G7,TODAY(),"Y"))</code></p>
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">ช่วง <code
                 class="inline-code">G3:G7</code> คือวันเกิดของลูกค้า เทียบกับวันนี้ เค้ามีอายุอยู่ที่กี่ปีเพราะเราใช้ตัว
-            <code class="inline-code">"Y"</code> ซึ่งอธิบายตามตัวอย่างที่ผ่านมา</p>
+            <code class="inline-code">"Y"</code> ซึ่งอธิบายตามตัวอย่างที่ผ่านมา
+        </p>
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">ถ้าใช้ข้อมูลของลูกค้า B5 (ผลลัพธ์คืออายุ
             33 ปี ตามรูป)</p>
     </section>
@@ -2000,7 +1915,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7,"Address (\d+ [A-z]+ [A-z]+..+ )"))</code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -2046,13 +1961,15 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                 เอาตัวอักษรภาษาอังกฤษตัวใหญ่หรือตัวเล็ก เอามากี่ตัวก็ได้ อยากให้โชว์ต้องใส่วงเล็บปิดในสูตรเช่น</li>
             <p class="link-cursor" style="text-align: justify;">(ผลลัพธ์คือ <code
                     class="inline-code">7878 Washington United</code> ) อยากให้โชว์ผลลัพธ์ต้องใส่วงเล็บปิดในสูตรเช่น
-                <br><code class="inline-code">(\d+ [A-z]+ [A-z]+)</code></p>
+                <br><code class="inline-code">(\d+ [A-z]+ [A-z]+)</code>
+            </p>
 
             <li class="link-cursor">ตามด้วย <code class="inline-code">.</code> ตัวอะไรก็ได้ทั้งหมดเลย (ตัวอักษร, ตัวเลข,
                 ตัวอักขระพิเศษ, white space ยกเว้นการขึ้นบรรทัดใหม่ภายใน cell) เอามาแค่ 1 ตัว</li>
             <p class="link-cursor" style="text-align: justify;">(ผลลัพธ์คือ <code
                     class="inline-code">7878 Washington United </code> ) อยากให้โชว์ผลลัพธ์ต้องใส่วงเล็บปิดในสูตรเช่น
-                <br><code class="inline-code">(\d+ [A-z]+ [A-z]+.)</code></p>
+                <br><code class="inline-code">(\d+ [A-z]+ [A-z]+.)</code>
+            </p>
 
             <p class="link-cursor" style="text-align: justify;">ถามว่าทำไมถึงไม่ใช้ white space เพราะว่าสุดท้ายมันจะหา
                 pattern ที่อยู่ของลูกค้า <code class="inline-code">B3, B4, B6</code> ไม่ได้เพราะมันไม่มี pattern แล้ว
@@ -2109,7 +2026,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7," \d{5}"))</code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -2162,7 +2079,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =ArrayFormula(REGEXEXTRACT(B3:B7,"Expired Date (\d{2}.[A-z]+.\d{4})"))</code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -2235,7 +2152,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                         <img src="icon-copy1.png" alt="Copy" width="20">
                     </button>
                 </div>
-                <pre class="line-numbers link-cursor"><code class="language-excel-formula">
+                <pre><code class="link-cursor language-excel-formula">
 =ArrayFormula(REGEXMATCH(K3:K7,"2024"))</code></pre>
                 <div class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -2278,7 +2195,8 @@ IF(B2="All","1=1","N='" & B2 & "'") &
                     class="inline-code">=ArrayFormula(IF((REGEXEXTRACT(K3:K7, "\d{4}") * 1) <= 2024, TRUE, FALSE))</code>
             </p>
             <li class="link-cursor"><code class="inline-code">REGEXEXTRACT(K3:K7, "\d{4}")</code> ดึงปีออกมาจากช่วง
-                <code class="inline-code">K3:K7</code> ได้ผลลัพธ์ 2020 เป็น text (ชิดซ้ายภายใน cell)</li>
+                <code class="inline-code">K3:K7</code> ได้ผลลัพธ์ 2020 เป็น text (ชิดซ้ายภายใน cell)
+            </li>
             <li class="link-cursor">ปรับให้เป็นตัวเลข <code class="inline-code">*1</code> เข้าไป ดังนี้ <code
                     class="inline-code">REGEXEXTRACT(K3:K7, "\d{4}") * 1</code> ได้ผลลัพธ์ 2020 เป็น numeric
                 (ชิดขวาภายใน cell)</li>
@@ -2294,20 +2212,28 @@ IF(B2="All","1=1","N='" & B2 & "'") &
     <section>
         <h2 class="link-cursor">Project Summary</h2>
 
-        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">ก็จบไปแล้วสำหรับ Project 1 : Data Exploration and Transformation with Google Sheets
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">ก็จบไปแล้วสำหรับ Project 1 : Data
+            Exploration and Transformation with Google Sheets
             โดยมี 6 ตัวอย่าง ไว้ใช้สำหรับ Explore และ Transform ข้อมูล
         </p>
 
         <ol>
-            <li class="link-cursor">ใช้สูตร <code class="inline-code">filter</code> ข้อมูล และสามารถ Dropdown List เพื่อเลือกเพศและผลการปฎิบัติงานของพนักงาน</li>
-            <li class="link-cursor">ใช้ <mark>Highlight Conditional Formatting</mark> ในการ Hightlight ข้อมูลของพนักงานที่เราต้องการ</li>
-            <li class="link-cursor">ใช้สูตร <code class="inline-code">Query()</code> ในการ Dropdown List ข้อมูลลูกค้า เพศ, ผลการปฎิบัติงาน, วันเริ่มงานให้มีความ Dynamic</li>
-            <li class="link-cursor"><code class="inline-code">Vlookup()</code> เครื่องมือยอดฮิตหนึ่งในตระกูล lookup ไว้ใช้หาค่าต่างๆที่มีความสัมพันธ์เชิงข้อมูล</li>
-            <li class="link-cursor">แปลงรูปแบบวันที่ไทย เป็นวันที่มาตรฐานสากล ISO ด้วย <code class="inline-code">SPLIT()</code>, <code class="inline-code">DATE()</code> และ <code class="inline-code">VLOOKUP()</code></li>
-            <li class="link-cursor">การ Transform Data ด้วย Regular Expression สูตรที่ใช้หลักๆ <code class="inline-cod">REGEXEXTRACT()</code> และ <code class="inline-code">REGEXMATCH()</code></li>
+            <li class="link-cursor">ใช้สูตร <code class="inline-code">filter</code> ข้อมูล และสามารถ Dropdown List
+                เพื่อเลือกเพศและผลการปฎิบัติงานของพนักงาน</li>
+            <li class="link-cursor">ใช้ <mark>Highlight Conditional Formatting</mark> ในการ Hightlight
+                ข้อมูลของพนักงานที่เราต้องการ</li>
+            <li class="link-cursor">ใช้สูตร <code class="inline-code">Query()</code> ในการ Dropdown List ข้อมูลลูกค้า
+                เพศ, ผลการปฎิบัติงาน, วันเริ่มงานให้มีความ Dynamic</li>
+            <li class="link-cursor"><code class="inline-code">Vlookup()</code> เครื่องมือยอดฮิตหนึ่งในตระกูล lookup
+                ไว้ใช้หาค่าต่างๆที่มีความสัมพันธ์เชิงข้อมูล</li>
+            <li class="link-cursor">แปลงรูปแบบวันที่ไทย เป็นวันที่มาตรฐานสากล ISO ด้วย <code
+                    class="inline-code">SPLIT()</code>, <code class="inline-code">DATE()</code> และ <code
+                    class="inline-code">VLOOKUP()</code></li>
+            <li class="link-cursor">การ Transform Data ด้วย Regular Expression สูตรที่ใช้หลักๆ <code
+                    class="inline-cod">REGEXEXTRACT()</code> และ <code class="inline-code">REGEXMATCH()</code></li>
         </ol>
 
-        <p>เป็นต้น ขอบคุณมากๆครับที่อ่านมาถึงตรงนี้ ฝากผลงาน project อื่นๆด้วยนะครับ ขอบคุณครับ</p>    
+        <p>เป็นต้น ขอบคุณมากๆครับที่อ่านมาถึงตรงนี้ ฝากผลงาน project อื่นๆด้วยนะครับ ขอบคุณครับ</p>
     </section>
 
 
@@ -2324,7 +2250,7 @@ IF(B2="All","1=1","N='" & B2 & "'") &
             <a href="https://docs.google.com/spreadsheets/d/1a3l_9Lgr_G6m5DkfvEdUg4a3fpwKmLog1oEyewA8Zg4/edit?usp=sharing"
                 class="download-btn" style="text-align: center; margin-top: 10px;">
                 Google Sheets : 📥
-            </a> 
+            </a>
         </p>
     </section>
 
