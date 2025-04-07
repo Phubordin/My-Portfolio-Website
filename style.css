@@ -922,6 +922,11 @@ details summary:hover {
     color: rgba(0, 0, 0, 0.9);
 }
 
+/* สำหรับหน้าจอปกติ (คอมพิวเตอร์) */
+.menu-toggle {
+    display: none; /* ซ่อนปุ่มแฮมเบอร์เกอร์บนคอมพิวเตอร์ */
+}
+  
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
 
@@ -998,29 +1003,29 @@ details summary:hover {
     
     /* จัดการ navigation บนมือถือ */
     .nav-links {
-        display: none; /* ซ่อนเมนูปกติ */
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(50, 50, 50, 0.95);
-        flex-direction: column;
-        z-index: 1000;
-        border-radius: 0 0 8px 8px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: none; /* ซ่อนเมนูปกติ */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.95);
+    flex-direction: column;
+    z-index: 1000;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
     
     /* เมื่อเมนูถูกเปิด */
     .nav-links.show {
-        display: flex;
+    display: flex;
     }
     
     /* ปรับแต่ละรายการเมนู */
     .nav-link {
-        padding: 12px 20px;
-        text-align: left;
-        width: 100%;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 12px 20px;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 }
 
