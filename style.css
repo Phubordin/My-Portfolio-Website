@@ -558,9 +558,16 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
     right: 1vw;
     top: 50vh; /* จัดกึ่งกลางหน้าจอในแนวตั้ง */
     transform: translateY(-10%); /* จัดให้อยู่กึ่งกลางแนวตั้งพอดี -10% */
-    width: calc(1000vw - 985vw);
-    max-height: calc(1000vh - 930vh); /* ปรับความสูงให้ไม่เกินขอบจอ ตอนแรก 945 vh  */
+    
+    /* ✅ ปรับความกว้างให้ยืดหยุ่นแต่ไม่เกิน section */
+    width: 16vw; /* ยืดหยุ่นตามขนาดหน้าจอ */
+    max-width: 300px; /* จำกัดไม่ให้เกิน section (800px) */
+    min-width: 180px; /* ป้องกันเล็กเกินไป */
+
+    max-height: 70vh; /* ปรับความสูงให้เหมาะสม */
     overflow-y: auto;
+
+    overflow-y:inherit; /* scroll  */
     background: rgba(255, 255, 255, 0.8);
     padding: 1.2vh 1.2vw;
     border-radius: 5vh;
