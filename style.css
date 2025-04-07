@@ -558,7 +558,7 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
     right: 1vw;
     top: 50vh; /* จัดกึ่งกลางหน้าจอในแนวตั้ง */
     transform: translateY(-10%); /* จัดให้อยู่กึ่งกลางแนวตั้งพอดี -10% */
-    width: 15vw;
+    width: calc(1000vw - 985vw);
     max-height: calc(1000vh - 930vh); /* ปรับความสูงให้ไม่เกินขอบจอ ตอนแรก 945 vh  */
     overflow-y: auto;
     background: rgba(255, 255, 255, 0.8);
@@ -641,6 +641,10 @@ nav ul li.dropdown:hover .dropdown-menu, nav ul li.dropdown1:hover .dropdown-men
     font-size: 2.5vh;  /* ขนาดฟอนต์สัมพันธ์กับความสูงของจอ */
     transition: all 0.3s ease;
     z-index: 5000;
+}
+
+#toggle-toc-btn.scrolled {
+    transform: translateY(-300%);
 }
 
 /* เมื่อลดขนาดจอหรือ TOC ถูกซ่อน ให้ปุ่มอยู่ติดขอบ TOC */
