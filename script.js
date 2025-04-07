@@ -692,16 +692,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*-------------------------------------------------------------------------------- */
-window.addEventListener('scroll', () => {
-    const toc = document.getElementById('table-of-contents');
-    const toggleBtn = document.getElementById('toggle-toc-btn');
-
-    if (window.scrollY > 200) {
-        toc.classList.add('scrolled');
-        toggleBtn.classList.add('scrolled');
-    } else {
-        toc.classList.remove('scrolled');
-        toggleBtn.classList.remove('scrolled');
-    }
-});
-/*-------------------------------------------------------------------------------- */
