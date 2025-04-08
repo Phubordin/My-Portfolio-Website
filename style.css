@@ -101,6 +101,10 @@ body.no-transition {
     min-height: 500vh;
 }
 
+.project-page {
+    min-height: 575vh;
+}
+
 .certificate-page {
     min-height: 100vh;
 }
@@ -1398,7 +1402,7 @@ pre[class*="language-"] {
 /* ------------------------------------------------------------------------------------------------------------ */
 
 table.tableizer-table {
-    font-size: 12px;
+    font-size: 14px;
     border: 1px solid #CCC;
     font-family: 'Prompt', sans-serif;
     margin: 20px auto;
