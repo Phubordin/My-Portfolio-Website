@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const tocList = document.getElementById("toc-list1");
-    const sections = document.querySelectorAll("section h2, section h3");
+    const sections = document.querySelectorAll("section h2, section h3, section h4");
     const detailsElements = document.querySelectorAll("details");
 
     if (!tocList) {
