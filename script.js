@@ -575,18 +575,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let lastH2 = null, lastH3 = null;
 
+    let h2Count = 0;
+
     headings.forEach((heading, index) => {
-        const id = heading.id || `heading-${index}`; // ถ้าไม่มี id ให้สร้างอัตโนมัติ
-        heading.id = id; // กำหนด id ให้ heading
+        if (heading.tagName === "H2") {
+            h2Count++;
+            if (h2Count === 1) return; // ❌ ข้าม h2 ตัวแรก
+        }
+
+        const id = heading.id || `heading-${index}`;
+        heading.id = id;
 
         const listItem = document.createElement("li");
         const link = document.createElement("a");
         link.href = `#${id}`;
-        link.textContent = heading.textContent; // ใช้ชื่อหัวข้อจริง
+        link.textContent = heading.textContent;
 
         listItem.appendChild(link);
 
-        // จัดโครงสร้าง TOC ตามระดับของหัวข้อ
+        // โครงสร้าง TOC
         if (heading.tagName === "H2") {
             tocList.appendChild(listItem);
             lastH2 = listItem;
@@ -602,6 +609,7 @@ document.addEventListener("DOMContentLoaded", function () {
             lastH3.appendChild(subList);
         }
     });
+
 
     tocSection.appendChild(tocList);
 
@@ -630,17 +638,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const tocList = document.createElement("ul");
 
     headings.forEach((heading, index) => {
-        const id = heading.id || `heading-${index}`; // ถ้าไม่มี id ให้สร้างอัตโนมัติ
-        heading.id = id; // กำหนด id ให้ heading
-
+        if (index === 0) return; // ข้ามตัวแรก
+    
+        const id = heading.id || `heading-${index}`;
+        heading.id = id;
+    
         const listItem = document.createElement("li");
         const link = document.createElement("a");
         link.href = `#${id}`;
-        link.textContent = heading.textContent; // ใช้ชื่อหัวข้อจริง
-
+        link.textContent = heading.textContent;
+    
         listItem.appendChild(link);
         tocList.appendChild(listItem);
     });
+    
 
     if (tocSection1) {
         tocSection1.appendChild(tocList);
