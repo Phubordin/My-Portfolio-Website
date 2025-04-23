@@ -234,32 +234,129 @@
         <h2 class= "link-cursor">⭐️ P3 : Customer Segmentation and RFM Analysis Using <img src="python.png" style="vertical-align:middle"
                 width="25">Python and  <img src="R.png" style="vertical-align:middle" width="25"> R for Strategic Business
             Insight</h2>
-        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
+        <p class= "link-cursor">วิเคราะห์พฤติกรรมการใช้จ่ายของลูกค้า โดยแบ่งเป็น 11 กลุ่มแสดงเป็น Table และ Heat Map Chart ตามจำนวนลูกค้าในแต่ละ Segment</p>
+       
         <details class= "detail">
             <summary>คำอธิบาย</summary>
-            <h3 class= "link-cursor">Project Questions</h3>
-            <ul class= "link-cursor">
-                <li>คำถาม 1</li>
-                <li>คำถาม 2</li>
-                <li>คำถาม .</li>
-                <li>คำถาม .</li>
-                <li>คำถาม N</li>
-            </ul>
 
-            <h3 class= "link-cursor">Skills & Tools</h3>
-            <ul class= "link-cursor">
-                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
-                <li>📈 Data Visualization (chart ต่างๆ)</li>
-                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
-                <li>🗄️ Dashboard (Looker Studio)</li>
-            </ul>
+        <ul>
+        
+            <li class="link-cursor"><b>RFM Analysis Using Python - Heat Map Level Business Impact : ⬇︎</b></li>
 
-            <h3 class= "link-cursor">Project Summary </h3>
-            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
-                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
-            </p>
-        </details>
+            <div class="iframe-container cursor-zoom-in">
+                <img src="p3-viz-level-rfm.png" width="800" class="cursor-zoom-in"
+                    onclick="openGalleryModal('p3-viz-level-rfm.png')">
+            </div>
+            
+            <li class="link-cursor"><b>RFM No. Customers Table: ⬇︎</b></li>
+
+            <div class="iframe-container cursor-zoom-in">
+                <img src="p3-count-rfm.png" width="800" class="cursor-zoom-in"
+                    onclick="openGalleryModal('p3-count-rfm.png')">
+            </div>
+            
+            <li class="link-cursor"><b>RFM Analysis Using Python - Heat Map No. Customers : ⬇︎</b></li>
+
+            <div class="iframe-container cursor-zoom-in">
+                <img src="p3-viz-count-rfm.png" width="800" class="cursor-zoom-in"
+                    onclick="openGalleryModal('p3-viz-count-rfm.png')">
+            </div>
+            
+            <li class="link-cursor"><b>RFM Analysis Using R - Heat Map No. Customers : ⬇︎</b></li>
+
+            <div class="iframe-container cursor-zoom-in">
+                <img src="p3-viz-count-rfm-r.png" width="800" class="cursor-zoom-in"
+                    onclick="openGalleryModal('p3-viz-count-rfm-r.png')">
+            </div>
+
+        </ul>
+
+        <p class="link-cursor" style="text-align: justify;">
+            <b>ส่วนที่ 1 : โหลดข้อมูล ➤ สำรวจข้อมูล ➤ ทำความสะอาดข้อมูล :</b>
         </p>
+
+        <ul>
+            <li class="link-cursor" style="text-align: justify;">
+                จัดการ NaN ลบคอลัมน์ทิ้ง (วิธีที่ดีที่สุดในการจัดการ NaN ควรไปแก้ไขตอนเก็บข้อมูลต้นทาง)
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                ปรับคอลัมน์ Order Date และ Ship Date ให้เป็นมาตรฐาน ISO
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                กำจัดช่องว่างส่วนเกินโดยใช้ TRIM
+            </li>
+
+        </ul>
+
+        <p class="link-cursor" style="text-align: justify;">
+            <b>ส่วนที่ 2 : วิเคราะห์ข้อมูลด้วย RFM Model ด้วย R และ Python</b><br>
+            ➤ 📍 เน้นแสดง Insight ของลูกค้า
+        </p>
+
+        <ul>
+            <li class="link-cursor" style="text-align: justify;">
+                RFM Analysis Using Python : 
+                <ul>
+                    <li>
+                        Aggregate ยอดขายเฉลี่ยต่อเดือน, จำนวนครั้งที่ลุกค้าใช้จ่าย และวันล่าสุดที่ลูกค้าซื้อ
+                    </li>
+                    <li>
+                        สำรวจการกระจายตัวด้วย Boxplot และใช้การวัดตำแหน่ง quartile และ Percentile ในการหา
+                        R Scode, F Score และ M Score
+                    </li>
+                    <li>
+                        แบ่งกลุ่มลูกค้าออกเป็นทั้งหมด 11 กลุ่ม พร้อม Level Business Impact จากตัว RFM Score
+                    </li>
+                    <li>
+                        คำนวณหาจำนวนลูกค้าแต่ละกลุ่ม
+                    </li>
+
+                    <li>
+                        ทำการ Plot Tree Map RFM Analysis เพื่อดูการกระจายตัวของกลุ่มลูกค้าแต่ละกลุ่ม
+                    </li>
+                </ul>
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                RFM Analysis Using Python R : คล้ายกับการวิเคราะห์ด้วย Python เลยแต่ใช้เป็นภาษา R
+                แต่ตัดตัวตอนสำรวจข้อมูลด้วย Boxplot ออกไป จะเน้นเป็นการเขียน R เพื่อวิเคราะห์ RFM เลย 
+            </li>
+        </ul>
+
+        <p class="link-cursor" style="text-align: justify;">
+            <b>ส่วนที่ 3 (ส่วนเสริม) : วิเคราะห์ข้อมูลยอดขายลูกค้าปี 2017-2020 มีทั้งหมด 9 ตัวอย่าง โดยใช้
+                Python</b><br>
+            ➤ 📍 เน้นตั้งคำถาม
+        </p>
+
+        <ol class="link-cursor" style="text-align: justify;">
+            <li>Export Customer Data in California (CSV Format)<br>➤ ส่งออกข้อมูลลุฏค้าที่อยู่ในรัฐ Califonia</li><br>
+            <li>Export Order Data (CSV): Customers in California and Texas, 2017<br>➤ ส่งออกข้อมูลลุฏค้าที่อยู่ในรัฐ Califonia และ Texas ในปี 2017
+            </li><br>
+            <li>Sales Analysis 2017: Total, Average, and Standard Deviation by Month, Day, and Order
+                <br>➤ คำนวณยอดขายโดยเฉลี่ยต่อวัน ต่อเดือน ต่อออเดอร์ ในปี 2017
+            </li><br>
+            <li>Highest Profit Segment in 2018
+                <br>➤ กลุ่มลูกค้าที่สร้างกำไรให้เราสูงสุดใน 2018
+            </li><br>
+            <li>Top 5 States with the Lowest Total Sales (15 April – 31 December 2019)
+                <br>➤ รัฐที่มียอดขายต่ำสุด 5 อันดับแรกช่วงวันที่ตั้งแต่ 151 เมษายน ถึึง 31 ธันวาคม 2019
+            </li><br>
+            <li>Sales Proportion (%) in West and Central Regions, 2019
+                <br>➤ สัดส่วนยอดขายของภูมิภาคตะวันตกรวมกับภูมิภาคตอนกลาง เทียบกับ ยอดขายรวมทั้งหมด ในปี 2019
+            </li><br>
+            <li>Top 10 Products by Order Volume vs. Total Sales (2019–2020)
+                <br>➤ ยอดขายสินค้าโดยเฉลี่ยต่อออเดอร์ 10 อันดับแรกในปี 2019 ถึง 2020
+            </li><br>
+            <li>Visual Insights: At Two Plots
+                <br>➤ ดูการกระจายตัวของยอดขาย เทียบกำไร ด้วย Scatter Plot
+                และ ดูการกระจายตัวของจำนวนออเดอร์ เทียบกับยอดขายด้วย Histogram
+            </li><br>
+            <li>Summary Exploratory Sales & Customer Analysis (2017-2020)
+                <br>➤ สรุปผลลัพธ์ส่วนที่ 3
+            </li>
+        </ol>
+
+        </details>
 
         <div class="corner-text" onclick="navigateToProject_rfm_py_dsb10()">Read More</div>
 
