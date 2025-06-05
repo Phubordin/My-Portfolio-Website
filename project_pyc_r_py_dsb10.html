@@ -9,12 +9,11 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-0MKCCGG3QF');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1024, initial-scale=1">
-    <title>Project - Pao Ying Chub</title>
+    <title>Project 4 - Pao Ying Chub</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="certificate-style.css">
     <link rel="icon" type="image/png" href="website.png">
@@ -23,7 +22,7 @@
 </head>
 
 <div class="theme-switch-wrapper">
-    <!-- ปุ่ม Blur Background -->
+    <!-- ปุ่ม Dark Mode -->
     <label class="switch">
         <span><img src="darkmode4.png" width="30" class="notion-icon"></span>
         <input type="checkbox" id="theme-toggle">
@@ -47,14 +46,16 @@
 <button id="scrollToTopBtn" title="Go to top">⇧</button>
 <button id="toggle-toc-btn">≡</button>
 <aside id="table-of-contents" class="active">
-    <h3 class= "link-cursor">Navigation Menu</h3>
-    <ul id="toc-list"></ul>
+    <h3 class="link-cursor">Navigation Menu</h3>
+    <ul id="toc-list1"></ul>
 </aside>
 
 <body class="fade-slide-in project_pyc-page">
     <header>
         <div class="header-background"></div>
-        <h2 style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Project 4 : <span class= "strong1" >Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="python.png"  style="vertical-align:middle" width="25" ></span></h2>
+        <h2 style="font-size: 1.5em; font-weight: bold;" class="link-cursor">Project 4 : <span class="strong1">Creating
+                a Multi-Round Rock-Paper-Scissors Game in <img src="R.png" style="vertical-align:middle" width="25"> and
+                <img src="python.png" style="vertical-align:middle" width="25"></span></h2>
     </header>
 
     <!-- Navigation Bar -->
@@ -62,7 +63,8 @@
         <ul>
             <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
             <li><a href="home.html" onclick="navigateToHome()">🏠 Home </a></li> <!-- Home Tab with House Emoji -->
-            <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li> <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
+            <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li>
+            <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
             <!-- Work Experience Dropdown -->
             <li class="dropdown1">
                 <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
@@ -76,18 +78,39 @@
             <li class="dropdown">
                 <a href="project.html" class="active" onclick="scrollToTop(event)">Project Overview</a>
                 <ul class="dropdown-menu">
-                    <li><a onclick="navigateToProject_ggsheet_dsb10()" >P1 : Data Exploration and Transformation with <img src="sheets.png"  style="vertical-align:middle" width="25" > Google Sheets</a></li>
-                    <li><a onclick="navigateToProject_cafe_r_sql_dsb10()" >P2 : Building a Café Restaurant Database Using <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="SQL.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_rfm_py_dsb10()" >P3 : Customer Segmentation and RFM Analysis Using <img src="python.png"  style="vertical-align:middle" width="25" >Python and <img src="R.png"  style="vertical-align:middle" width="25" > for Strategic Business Insight</a></li>
-                    <li><a class="active1" onclick="scrollToTop(event)" onclick="navigateToProject_pyc_r_py_dsb10()" >P4 : Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="python.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_nycflight13_23_dsb10()" >P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_vizdimond_dsb10()" >P6 : EDA Visualization of the Diamond Dataset Using <img src="R.png"  style="vertical-align:middle" width="25" > and R Markdown </a></li>
-                    <li><a onclick="navigateToProject_titanic_glm_dsb10()" >P7 : Logistic Regression Analysis on the Titanic Dataset Using <img src="R.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_looker_dsb10()" >P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"  style="vertical-align:middle" width="25" >Looker Studio</a></li>
-                    <li><a onclick="navigateToProject_pizza_chatbot_dsb10()" >P9 : Chatbot Development for a Pizza Business Using <img src="R.png"  style="vertical-align:middle" width="25" > Programming</a></li>
-                    <li><a onclick="navigateToProject_atm_oop_py_dsb10()" >P10 : Object-Oriented ATM System: Financial Transactions with <img src="python.png"  style="vertical-align:middle" width="25" >Python OOP</a></li>
-                    <li><a onclick="navigateToProject_mini_api_py()" >mini P11 : Extracting Public API Data with <img src="python.png"  style="vertical-align:middle" width="25" >Python: Air Quality Analytics</a></li>
-                    <li><a onclick="navigateToProject_mini_xml_cafe()" >mini P12 : Cafe Menu Data Structure with <img src="xml.png"  style="vertical-align:middle" width="25" >XML</a></li>
+                    <li><a onclick="navigateToProject_ggsheet_dsb10()">P1 : Data Exploration and Transformation with
+                            <img src="sheets.png" style="vertical-align:middle" width="25"> Google Sheets</a></li>
+                    <li><a onclick="navigateToProject_cafe_r_sql_dsb10()">P2 : Building a Café Restaurant Database Using
+                            <img src="R.png" style="vertical-align:middle" width="25"> and <img src="SQL.png"
+                                style="vertical-align:middle" width="25"></a></li>
+                    <li><a onclick="navigateToProject_rfm_py_dsb10()">P3 : Customer Segmentation and RFM Analysis Using
+                            <img src="python.png" style="vertical-align:middle" width="25">Python and <img src="R.png"
+                                style="vertical-align:middle" width="25"> for Strategic Business Insight</a></li>
+                    <li><a class="active1" onclick="scrollToTop(event)" onclick="navigateToProject_pyc_r_py_dsb10()">P4
+                            : Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png"
+                                style="vertical-align:middle" width="25"> and <img src="python.png"
+                                style="vertical-align:middle" width="25"></a></li>
+                    <li><a onclick="navigateToProject_nycflight13_23_dsb10()">P5 : EDA and Comparison of NYC Flights
+                            Data (2013 vs. 2023) with <img src="R.png" style="vertical-align:middle" width="25"></a>
+                    </li>
+                    <li><a onclick="navigateToProject_vizdimond_dsb10()">P6 : EDA Visualization of the Diamond Dataset
+                            Using <img src="R.png" style="vertical-align:middle" width="25"> and R Markdown </a></li>
+                    <li><a onclick="navigateToProject_titanic_glm_dsb10()">P7 : Logistic Regression Analysis on the
+                            Titanic Dataset Using <img src="R.png" style="vertical-align:middle" width="25"></a></li>
+                    <li><a onclick="navigateToProject_looker_dsb10()">P8 : Data-Driven Insights: Sales Performance &
+                            Profitability in <img src="looker.png" style="vertical-align:middle" width="25">Looker
+                            Studio</a></li>
+                    <li><a onclick="navigateToProject_pizza_chatbot_dsb10()">P9 : Chatbot Development for a Pizza
+                            Business Using <img src="R.png" style="vertical-align:middle" width="25"> Programming</a>
+                    </li>
+                    <li><a onclick="navigateToProject_atm_oop_py_dsb10()">P10 : Object-Oriented ATM System: Financial
+                            Transactions with <img src="python.png" style="vertical-align:middle" width="25">Python
+                            OOP</a></li>
+                    <li><a onclick="navigateToProject_mini_api_py()">mini P11 : Extracting Public API Data with <img
+                                src="python.png" style="vertical-align:middle" width="25">Python: Air Quality
+                            Analytics</a></li>
+                    <li><a onclick="navigateToProject_mini_xml_cafe()">mini P12 : Cafe Menu Data Structure with <img
+                                src="xml.png" style="vertical-align:middle" width="25">XML</a></li>
                 </ul>
             </li>
             <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li>
@@ -97,46 +120,745 @@
 
     <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
     <section id="toc-section">
-        <p style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Content of Tables</p>
+        <p style="font-size: 1.5em; font-weight: bold;" class="link-cursor">Content of Tables</p>
         <div id="toc-marker"></div>
         <div id="toc-section"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
     </section>
 
-    <a style= "text-decoration: none;" href="project.html">
+    <a style="text-decoration: none;" href="project.html">
         <button class="back-button">⬅︎ <b>Project Overview</b></button>
     </a>
 
     <section>
-        <h2 class = "link-cursor">Dashboard</h2>
-        <p class = "link-cursor">Dashboard ที่แสดงอยู่ด้านล่างนี้ เป็นเครื่องมือที่ถูกสร้างขึ้นหลังจากจบ Project ตัวนี้เรียบร้อยเเล้ว
-            ซึ่งใช้ในการ monitor ผลประกอบการของร้านค้าแห่งหนึ่ง และตอบคำถามที่สงสัยมาตอนต้น <strong>ไปดูกันเลย!</strong>
-            สามาถลองกดเล่นที่ Dashboard ได้เลยนะครับ
+        <h2 class="link-cursor">1. Project Introduction</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สวัสดีครับ ยินดีต้อนรับเข้าสู่<mark>เกม เป่า ยิ้ง ฉุบ ~~~</mark> ที่เขียนด้วย<mark> R และ Python</mark>
+            เกมนี้ถูกออกแบบมาให้เล่นได้ 10 รอบ โดยจะแบ่งเป็น 2 ฝ่าย ได้แก่ ผู้เล่น (User) และคอมพิวเตอร์ (Computer)
+            แต่ละฝ่ายจะมีตัวเลือก 3 อย่าง ได้แก่ ค้อน (Hammer), กรรไกร (Scissor) และ กระดาษ (Paper)
+            กฎของเกมคือ ค้อนชนะกรรไกร, กรรไกรชนะกระดาษ และกระดาษชนะค้อน แบบที่ทุกคนรู้จักเลยครับ
+            <mark>เป้าหมายยของโปรเจกต์นี้ คือฝึกและทบทวนการเขียนโปรแกรมในภาษา R และ Python ที่เป็น Control Flow</mark>
+            ด้วยเกมสนุกๆ ที่ทุกคนคุ้นเคยดี เวลาตัดสินใจอะไรกับเพื่อนไม่ได้ ด้วยการ เป่า ยิ้ง ฉุบ
+            ก่อนจะเริ่มเขียนโค้ด อยากให้เข้าใจ Flowchart ของเกมนี้ก่อนนะครับ
         </p>
-        <p class = "link-cursor">ขั้นตอนแรก ผมจะ Explore Dataset เพื่อดูว่าหน้าตาของ data ก้อนนี้เป็นยังไงบ้าง</p>
+    </section>
+
+    <section>
+        <h2 class="link-cursor">2. Rock-Paper-Scissors Game WorkFlow</h2>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            <mark>ผังงาน (WorkFlow)</mark>
+            จะนำเสนอ if, for while ที่เป็น Control Flow หลัก ๆ ของโปรเจกต์นี้
+            ข้อดีของ WorkFlow จะ<mark>ช่วยให้มองเห็นภาพรวมการทำงานของ Code ได้ชัดเจนยิ่งขึ้น</mark>
+            ซึ่งสร้างมาจาก Mermaid Code ทำงานเหมือนกับ Marmaid ใน Notion
+            ถ้าอยากทราบว่า Mermaid Code หน้าตาเป็นยังไง สามารถคลิกได้ที่ <span class="line-code"> Code</span> ด้านล่าง
+            (Code ยาวนิดนึงนะครับ) ⬇︎
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Mermaid</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-mermaid">  
+    graph TD
+        A[Start Function: hammer_scissor_paper] --> B[Initialize Variables and Rules Displayed]
+        B --> C[Loop Round 1 to 10]
+        C --> D[Computer chooses randomly]
+        D --> E[Input loop: Ask for user input]
+
+        E --> F{Input is 'check'?}
+        F -- Yes --> G[Show scores and results table]
+        G --> E
+
+        F -- No --> H{Input is valid?}
+        H -- No --> I[Show invalid input message]
+        I --> E
+
+        H -- Yes --> J[Show both choices]
+        J --> K{Compare choices}
+
+        K -- Draw --> L[Set winner = Draw]
+        K -- User wins --> M[Set winner = User<br>+1 to user_score]
+        K -- Computer wins --> N[Set winner = Computer<br>+1 to computer_score]
+
+        L --> O[Record result to data.frame]
+        M --> O
+        N --> O
+
+        O --> P{All 10 rounds done?}
+        P -- No --> C
+        P -- Yes --> Q[Show all round results]
+
+        Q --> R{Who has more points?}
+        R -- User --> S[Announce: User Wins]
+        R -- Computer --> T[Announce: Computer Wins]
+        R -- Draw --> U[Announce: It's a Draw]
+
+        S --> V[End]
+        T --> V
+        U --> V
+                </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <pre class="mermaid link-cursor">
+        graph TD
+            A[Start Function: hammer_scissor_paper] --> B[Initialize Variables and Rules Displayed]
+            B --> C[Loop Round 1 to 10]
+            C --> D[Computer chooses randomly]
+            D --> E[Input loop: Ask for user input]
+
+            E --> F{Input is 'check'?}
+            F -- Yes --> G[Show scores and results table]
+            G --> E
+
+            F -- No --> H{Input is valid?}
+            H -- No --> I[Show invalid input message]
+            I --> E
+
+            H -- Yes --> J[Show both choices]
+            J --> K{Compare choices}
+
+            K -- Draw --> L[Set winner = Draw]
+            K -- User wins --> M[Set winner = User<br>+1 to user_score]
+            K -- Computer wins --> N[Set winner = Computer<br>+1 to computer_score]
+
+            L --> O[Record result to data.frame]
+            M --> O
+            N --> O
+
+            O --> P{All 10 rounds done?}
+            P -- No --> C
+            P -- Yes --> Q[Show all round results]
+
+            Q --> R{Who has more points?}
+            R -- User --> S[Announce: User Wins]
+            R -- Computer --> T[Announce: Computer Wins]
+            R -- Draw --> U[Announce: It's a Draw]
+
+            S --> V[End]
+            T --> V
+            U --> V
+        </pre>
+
+        <p class="link-cursor">กติกาของเกมก็ง่ายๆเลยครับ 3 ข้อ</p>
+
+        <ol>
+            <li class="link-cursor">ต้องเล่นให้ครบ 10 รอบเกมจะจบสมบูรณ์ และมีตารางสรุปผลคะแนนให้ตอนสุดท้าย
+                (หยุดเล่นระหว่างรอบไม่ได้)</li>
+            <li class="link-cursor">สามารถพิมพ์ <code class="inline-code">check</code>
+                เพื่อเช็คตารางคะแนนปัจจุบันว่าใครนำใครอยู่</li>
+            <li class="link-cursor">ต้องพิมพ์
+                <code class="inline-code">hammer</code>
+                <code class="inline-code">scissor</code>
+                <code class="inline-code">paper</code>
+                <mark>เป็น (case-insensitive)</mark> สามารถพิมพ์ตัวพิมพ์เล็กหรือใหญ่ก็ได้
+
+                <ul><br>
+                    <li class="link-cursor">✅<code class="inline-code">HAMMER</code> ➡︎ <code
+                            class="inline-code">hammer</code>แปลงให้อัตโนมัติ</li>
+                    <li class="link-cursor">✅<code class="inline-code">S c I SSor</code> ➡︎ <code
+                            class="inline-code">scissor</code>แปลงให้อัตโนมัติ</li>
+                    <li class="link-cursor">✅<code class="inline-code">    P a PER</code> ➡︎ <code
+                            class="inline-code">paper</code>แปลงให้อัตโนมัติ</li>
+                    <li class="link-cursor">✅<code class="inline-code">paper</code> ➡︎ <code
+                            class="inline-code">paper</code>แปลงให้อัตโนมัติ</li>
+                    <li class="link-cursor">❌<code class="inline-code">hammmer</code> ➡︎ ไม่มีให้อยู่ใน choices</li>
+                    <li class="link-cursor">❌<code class="inline-code">scissot</code> ➡︎ ไม่มีให้อยู่ใน choices</li>
+                    <li class="link-cursor">❌<code class="inline-code">pepar</code> ➡ ไม่มีให้อยู่ใน choices</li>
+                </ul><br>
+
+                ถ้าหากพิมพ์ผิด ระบบจะแจ้งว่า<code class="inline-code">Invalid Input</code> ให้เราพิมพ์รอบปัจจุบันใหม่
+            </li>
+        </ol>
+
+        <p class="link-cursor">เมื่อพร้อมแล้ว.. มาเริ่มกันครับ ✌️</p>
+
+    </section>
+
+    <section>
+        <h2 class="link-cursor">3. Creating a Rock–Paper–Scissors Game with <mark>R</mark></h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เริ่มต้นการสร้างเกมด้วยภาษา <mark>R</mark> จะใช้พวก Control Flow หลัก ๆ ได้แก่
+            <code class="inline-code">if</code>, <code class="inline-code">for</code>, <code
+                class="inline-code">while</code>
+            โดยผมจะแบ่งเป็น 2 ส่วนหลัก ๆ คือ
+        </p>
+        <ul>
+            <li class="link-cursor" style="text-align: justify;">3.1 Code R ที่ใช้สร้างเกม (เน้นอธิบาย Code บางส่วน)</li>
+            <li class="link-cursor" style="text-align: justify;">3.2 วิดิโอจำลองการเล่น บน <a
+                    href="https://colab.research.google.com/drive/1ITMHVGs7FL05r5lJSdYmBqhDgtva2sbr?authuser=1#scrollTo=_R"
+                    class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
+                    <b> Google Colab</b></a></li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h3 class="link-cursor">3.1 Coding the Rock–Paper–Scissors Game in <mark>R</mark></h3>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ด้านล่างจะเป็น R Code ทั้งหมด ซึ่ง<mark>ผมจะอธิบายการทำงานของ Code บางส่วน</mark>
+            ถ้าอยากทราบว่าโค้ดแต่ละบรรทัดทำงานยังไง สามารถเข้าไปดูได้ที่
+        </p>
+
+        <p class="link-cursor">
+            <a href="https://colab.research.google.com/drive/1ITMHVGs7FL05r5lJSdYmBqhDgtva2sbr?authuser=1#scrollTo=_R"
+                class="link-website" target="_datblank">Google Colab</a> หรือ
+            <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P04-Creating-a-Multi-Round-Rock-Paper-Scissors-Game-in-R-and-Python.ipynb"
+                class="link-website" target="_datblank">GitHub</a> ⭐️ ได้เลยครับ
+            สามารถคลิกได้ที่ <span class="line-code"> Code</span> ด้านล่าง (Code ยาวนิดนึงนะครับ) ⬇︎
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+
+hammer_scissor_paper <- function() {
+  
+  choices <- c("hammer", "scissor", "paper")
+  
+  user_score <- 0
+  computer_score <- 0
+
+  results <- data.frame(
+    Round = integer(),
+    Winner = character(),
+    User_Choice = character(),
+    Computer_Choice = character(),
+    stringsAsFactors = FALSE
+  )
+
+  cat("** Welcome to Hammer, Scissor, Paper Game! **\n")
+  cat("Rules:\n")
+  cat("- You must play 10 rounds to complete the game.\n")
+  cat("- Type 'check' at any time to see the current scores and game status.\n")
+  cat("- Only valid inputs are: 'hammer', 'scissor', 'paper' (case-insensitive).\n")
+  cat("Let's begin!\n")
+
+  for (round in 1:10) {
+    cat("\n** Round", round, "**\n")
+
+    computer_choice <- sample(choices, 1)
+
+    valid_input <- FALSE
+
+    while (!valid_input) {
+
+      user_input <- tolower(gsub(" ", "",readline(paste0(
+        "Your choice (hammer, scissor, paper): "
+      ))))
+
+      if (user_input == "check") {
+        cat("\n** Current Game Status **\n")
+        print(results)
+        cat("\nUser Score:", user_score, "| Computer Score:", computer_score, "\n")
+        cat("Returning to Round", round, "\n")
+        next
+      }
+
+      if (!(user_input %in% choices)) {
+        cat("Invalid input. Please type only 'hammer', 'scissor', or 'paper'. Try again.\n")
+        next
+      }
+
+      valid_input <- TRUE
+    }
+
+    cat("You chose:", user_input, "| Computer chose:", computer_choice, "\n")
+
+    if (user_input == computer_choice) {
+      winner <- "Draw"
+      cat("Result: It's a draw!\n")
+    } else if (
+      (user_input == "hammer" && computer_choice == "scissor") ||
+      (user_input == "scissor" && computer_choice == "paper") ||
+      (user_input == "paper" && computer_choice == "hammer")
+    ) {
+      winner <- "User"
+      user_score <- user_score + 1
+      cat("Result: You win this round!\n")
+    } else {
+      winner <- "Computer"
+      computer_score <- computer_score + 1
+      cat("Result: Computer wins this round!\n")
+    }
+
+    results <- rbind(
+      results,
+      data.frame(
+        Round = round,
+        Winner = winner,
+        User_Choice = user_input,
+        Computer_Choice = computer_choice,
+        stringsAsFactors = FALSE
+      )
+    )
+  }
+
+  cat("\n** Final Results **\n")
+  print(results)
+
+  if (user_score > computer_score) {
+    cat("\nOverall Winner: User with", user_score, "points!\n")
+    cat("Computer scored", computer_score, "points.\n")
+    cat("User won", user_score - computer_score, "more rounds than Computer.\n")
+  } else if (computer_score > user_score) {
+    cat("\nOverall Winner: Computer with", computer_score, "points!\n")
+    cat("User scored", user_score, "points.\n")
+    cat("Computer won", computer_score - user_score, "more rounds than User.\n")
+  } else {
+    cat("\nOverall Result: It's a draw with both scoring", user_score, "points!\n")
+  }
+}
+
+hammer_scissor_paper()
+
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <p class="link-cursor">
+            📌 <b>อธิบาย Code</b>
+        </p>
+
+        <ul>
+            <li class="link-cursor" style="text-align: justify;"><code class="inline-code">if</code>
+                <div class="code-container" style="position: relative;">
+                    <div class="code-header">
+                        <span class="language-label link-cursor">R</span>
+                        <button class="copy-btn notion-icon">
+                            <img src="icon-copy1.png" alt="Copy" width="20">
+                        </button>
+                    </div>
+                    <pre><code class="link-cursor language-r">
+if (user_input == computer_choice) {
+    winner <- "Draw"
+    cat("Result: It's a draw!\n")
+} else if (
+    (user_input == "hammer" && computer_choice == "scissor") ||
+    (user_input == "scissor" && computer_choice == "paper") ||
+    (user_input == "paper" && computer_choice == "hammer")
+) {
+    winner <- "User"
+    user_score <- user_score + 1
+    cat("Result: You win this round!\n")
+} else {
+    winner <- "Computer"
+    computer_score <- computer_score + 1
+    cat("Result: Computer wins this round!\n")
+}
+                    </code></pre>
+                    <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+                </div>
+            </li>
+
+            <p class="link-cursor" style="text-align: justify;">
+                <mark><b>อธิบาย : </b></mark>ถ้า <code class="inline-code">user_input</code> ออกตัวเลือกมาเหมือนกับ
+                <code class="inline-code">computer_choice</code>
+                ผลลัพธ์ในรอบนั้นจะเสมอ แต่ถ้า <code class="inline-code">user_input</code> ออก hammer, scissor, paper และ
+                <code class="inline-code">computer_choice</code> ออกมาเป็น scissor, paper, hammer ตามลำดับ
+                ผู้เล่น (User) จะชนะในรอบนั้น และจะเพิ่มคะแนนให้กับผู้เล่น (User) 1 คะแนน
+                ถ้าไม่ตรงกับเงื่อนไขใดๆ ผู้เล่น (User) จะเป็นฝ่ายแพ้ในรอบนั้น และจะเพิ่มคะแนนให้กับคอมพิวเตอร์
+                (Computer) 1 คะแนน
+            </p>
+            <br>
+
+            <li class="link-cursor" style="text-align: justify;"><code class="inline-code">for</code>
+                <div class="code-container" style="position: relative;">
+                    <div class="code-header">
+                        <span class="language-label link-cursor">R</span>
+                        <button class="copy-btn notion-icon">
+                            <img src="icon-copy1.png" alt="Copy" width="20">
+                        </button>
+                    </div>
+                    <pre><code class="link-cursor language-r">
+for (round in 1:10) {
+    cat("\n** Round", round, "**\n")
+}
+                    </code></pre>
+                    <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+                </div>
+            </li>
+            <p class="link-cursor" style="text-align: justify;">
+                <mark><b>อธิบาย : </b></mark> สำหรับทุกๆ <code class="inline-code">round</code> ที่อยู่ใน 1 ถึง 10
+                จะทำการแสดงผลข้อความว่า <code class="inline-code">Round</code> ตามลำดับที่กำหนดไว้ ผลลัพธ์ได้
+                ตามรูปด้านล่าง : ⬇︎
+            <div class="iframe-container cursor-zoom-in">
+                <img src="p4-for-loop.png" width="400" class="cursor-zoom-in"
+                    onclick="openGalleryModal('p4-for-loop.png')">
+            </div>
+            </p>
+            <br>
+
+            <li class="link-cursor" style="text-align: justify;"><code class="inline-code">while</code>
+                <div class="code-container" style="position: relative;">
+                    <div class="code-header">
+                        <span class="language-label link-cursor">R</span>
+                        <button class="copy-btn notion-icon">
+                            <img src="icon-copy1.png" alt="Copy" width="20">
+                        </button>
+                    </div>
+                    <pre><code class="link-cursor language-r">
+valid_input <- FALSE
+
+while (!valid_input) {
+
+    user_input <- tolower(gsub(" ", "",readline(paste0(
+    "Your choice (hammer, scissor, paper): "
+    ))))
+
+    if (user_input == "check") {
+    cat("\n** Current Game Status **\n")
+    print(results)
+    cat("\nUser Score:", user_score, "| Computer Score:", computer_score, "\n")
+    cat("Returning to Round", round, "\n")
+    next
+    }
+
+    if (!(user_input %in% choices)) {
+    cat("Invalid input. Please type only 'hammer', 'scissor', or 'paper'. Try again.\n")
+    next
+    }
+
+    valid_input <- TRUE
+}
+                    </code></pre>
+                    <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+                </div>
+            </li>
+            <p class="link-cursor" style="text-align: justify;">
+                <mark><b>อธิบาย : </b></mark>สร้าง <code class="inline-code">while</code> loop
+                เพื่อให้ผู้เล่น (User) สามารถเลือกตัวเลือกได้จนกว่าจะกรอกข้อมูลที่ถูกต้อง
+                โดยจะใช้ตัวแปร <code class="inline-code">valid_input</code> เป็นตัวควบคุมการทำงานของ loop
+                ถ้าผู้เล่น (User) กรอกข้อมูลที่ไม่ถูกต้อง จะมีข้อความแจ้งเตือนให้กรอกใหม่
+                ถ้าผู้เล่น (User) กรอกข้อมูลเป็น <code class="inline-code">check</code> จะมีการแสดงผลคะแนนปัจจุบัน
+                และจะวนกลับไปยังรอบปัจจุบัน
+                ถ้าผู้เล่น (User) <mark>กรอกข้อมูลที่ถูกต้อง จะออกจาก loop และดำเนินการต่อไป</mark>
+            </p>
+        </ul>
+
+        <p class="link-cursor">
+            ก็จบไปแล้วนะครับสำหรับการเขียนเกม เป่า ยิ้ง ฉุบ ด้วย <mark>R</mark> ต่อไปจะเป็นวิดีโอจำลองการเล่นเกมนี้
+            บน <mark>Google Colab</mark> ที่ผมได้ทำไว้ให้ทุกคนได้ลองเล่นกันครับ เชิญรับชมได้ในหัวข้อถัดไปเลยครับ
+        </p>
+    </section>
+
+    <section>
+        <h3 class="link-cursor">3.2 A Video Simulation of Rock–Paper–Scissors Game Using <mark>R</mark></h3>
+        <p>
+            <a href="https://youtu.be/mvmKynvYfko" class="hover-expand"><img src="youtube.png" width="30"
+                    class="notion-icon"></a> ⬅︎ Full Video<br>
+            <a href="https://colab.research.google.com/drive/1ITMHVGs7FL05r5lJSdYmBqhDgtva2sbr?authuser=1#scrollTo=_R"
+                class="hover-expand"><img src="colab.png" width="30" class="notion-icon"></a> ⬅︎ Google Colab Link<br>
+            <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P04-Creating-a-Multi-Round-Rock-Paper-Scissors-Game-in-R-and-Python.ipynb"
+                class="hover-expand"><img src="github.png" width="30" class="notion-icon"></a> ⬅︎ GitHub Link
+        </p>
+        <div style="text-align: center;">
+            <iframe width="800" height="500" src="https://www.youtube.com/embed/mvmKynvYfko" frameborder="0"
+                style="border:0" allowfullscreen loading="lazy"
+                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+            </iframe>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="link-cursor">4. Creating a Rock–Paper–Scissors Game with <mark>Python</mark></h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ต่อมาจะสร้างเกมด้วยภาษา <mark>Python</mark> จะใช้พวก Control Flow 2 ตัว
+            <code class="inline-code">if</code>, <code class="inline-code">while</code>
+            โดยผมจะแบ่งเป็น 2 ส่วนหลัก ๆ เช่นเดิม คือ
+        </p>
+        <ul>
+            <li class="link-cursor" style="text-align: justify;">4.1 Code Python ที่ใช้สร้างเกม (เน้นอธิบาย Code
+                บางส่วนเช่นเดิม)</li>
+            <li class="link-cursor" style="text-align: justify;">4.2 วิดิโอจำลองการเล่น บน <a
+                    href="https://colab.research.google.com/drive/1ITMHVGs7FL05r5lJSdYmBqhDgtva2sbr?authuser=1#scrollTo=_Python"
+                    class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
+                    <b> Google Colab</b></a></li>
+        </ul>
+    </section>
+
+    <section>
+
+        <h3 class="link-cursor">4.1 Coding the Rock–Paper–Scissors Game in <mark>Python</mark></h3>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ด้านล่างจะเป็น Python Code ทั้งหมด ซึ่ง<mark>ผมจะอธิบายการทำงานของ Code บางส่วน</mark> เช่นเดิม
+            ถ้าอยากทราบว่าโค้ดแต่ละบรรทัดทำงานยังไง สามารถเข้าไปดูได้ที่
+        </p>
+
+        <p class="link-cursor">
+            <a href="https://colab.research.google.com/drive/1ITMHVGs7FL05r5lJSdYmBqhDgtva2sbr?authuser=1#scrollTo=_Python"
+                class="link-website" target="_datblank">Google Colab</a> หรือ
+            <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P04-Creating-a-Multi-Round-Rock-Paper-Scissors-Game-in-R-and-Python.ipynb"
+                class="link-website" target="_datblank">GitHub</a> ⭐️ ได้เลยครับ
+            สามารถคลิกได้ที่ <span class="line-code"> Code</span> ด้านล่าง (Code ยาวนิดนึงนะครับ) ⬇︎
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Python</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-python">
+from random import choice
+
+choices = ["hammer", "scissor", "paper"]
+
+def pao_ying_chub_game():
+  print("Hello, Welcome to Pao Ying Chub Game!")
+
+  points_user = []
+  points_computer = [] 
+  total_round = len(points_computer + points_user) / 2 
+
+  while (len(points_computer + points_user) / 2) < 10: 
+    user_choices = input("Your Turn (hammer, scissor, paper): ").lower().replace(" ","") 
+    computer_choice = choice(choices) 
+
+    if user_choices == computer_choice: 
+      points_user.append(0) 
+      points_computer.append(0) 
+      print("Draw! get 0 point both") 
+      continue 
+    else:
+      if user_choices == "hammer": 
+        if computer_choice == "scissor": 
+          points_user.append(1) 
+          points_computer.append(0) 
+          print("You win! get 1 point") 
+          continue 
+        else: 
+          points_user.append(0) 
+          points_computer.append(1) 
+          print("Computer win! get 1 point") 
+          continue 
+      elif user_choices == "scissor": 
+        if computer_choice == "paper": 
+          points_user.append(1) 
+          points_computer.append(0) 
+          print("You win! get 1 point") 
+          continue 
+        else:
+          points_user.append(0) 
+          points_computer.append(1) 
+          print("Computer win! get 1 point") 
+          continue 
+      elif user_choices == "paper": 
+        if computer_choice == "hammer": 
+          points_user.append(1) 
+          points_computer.append(0) 
+          print("You win! get 1 point") 
+          continue 
+        else:
+          points_user.append(0) 
+          points_computer.append(1) 
+          print("Computer win! get 1 point") 
+          continue 
+      elif user_choices == "check":
+        print(f"Point of User: {sum(points_user)} \nPoint of Computer:{sum(points_computer)}") 
+        continue
+      else:
+        print("Try Again! Wrong Your Type!") 
+        continue 
+
+  total_point_user = sum(points_user) 
+  total_point_computer = sum(points_computer) 
+  print(f"Point of User: {total_point_user} \nPoint of Computer:{total_point_computer}") 
+
+pao_ying_chub_game()
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <p class="link-cursor">
+            📌 <b>อธิบาย Code</b>
+        </p>
+
+        <ul>
+            <li class="link-cursor" style="text-align: justify;"><code class="inline-code">if</code>
+                <div class="code-container" style="position: relative;">
+                    <div class="code-header">
+                        <span class="language-label link-cursor">Python</span>
+                        <button class="copy-btn notion-icon">
+                            <img src="icon-copy1.png" alt="Copy" width="20">
+                        </button>
+                    </div>
+                    <pre><code class="link-cursor language-python">
+if user_choices == "hammer": 
+        if computer_choice == "scissor": 
+          points_user.append(1) 
+          points_computer.append(0) 
+          print("You win! get 1 point") 
+          continue 
+        else: 
+          points_user.append(0) 
+          points_computer.append(1) 
+          print("Computer win! get 1 point") 
+          continue 
+                    </code></pre>
+                    <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+                </div>
+            </li>
+
+            <p class="link-cursor" style="text-align: justify;">
+                <mark><b>อธิบาย : </b></mark>
+            </p>
+
+            
+            <ul>
+                <li class="link-cursor" style="text-align: justify;">ถ้า <code class="inline-code">user_choices</code>
+                    ออกตัวเลือกมาเป็น hammer
+                    และ <code class="inline-code">computer_choice</code> ออกมาเป็น scissor ผู้เล่น (User) จะชนะในรอบนั้น
+                    และจะเพิ่มคะแนนให้กับผู้เล่น (User) 1 คะแนน</li>
+                <li class="link-cursor" style="text-align: justify;">ถ้า <code class="inline-code">user_choices</code>
+                    ออกตัวเลือกอื่น ๆ (ยกเว้นออกเหมือน <code class="inline-code">computer_choice</code>)</li>
+                <li class="link-cursor" style="text-align: justify;">แล้ว <code
+                        class="inline-code">computer_choice</code> ออกมาเป็น paper ผู้เล่น (User) จะเป็นฝ่ายแพ้ในรอบนั้น
+                    และจะเพิ่มคะแนนให้กับคอมพิวเตอร์ (Computer) 1 คะแนน
+                    มันก็จะวนลูปไปเรื่อย ๆ จนกว่าจะครบ 10 รอบ ตาม while loop ที่เรากำหนดไว้ในส่วนถัดไป</li>
+            </ul>
+            
+
+            <br>
+
+            <li class="link-cursor" style="text-align: justify;"><code class="inline-code">while</code>
+                <div class="code-container" style="position: relative;">
+                    <div class="code-header">
+                        <span class="language-label link-cursor">Python</span>
+                        <button class="copy-btn notion-icon">
+                            <img src="icon-copy1.png" alt="Copy" width="20">
+                        </button>
+                    </div>
+                    <pre><code class="link-cursor language-python">
+points_user = []
+points_computer = [] 
+total_round = len(points_computer + points_user) / 2 
+
+while (len(points_computer + points_user) / 2) < 10:
+    user_choices = input("Your Turn (hammer, scissor, paper): ").lower().replace(" ","") 
+    computer_choice = choice(choices) 
+                </code></pre>
+                    <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+                </div>
+            </li>
+            <p class="link-cursor" style="text-align: justify;">
+                <mark><b>อธิบาย : </b></mark>สร้าง list <code class="inline-code">points_user</code> และ <code
+                    class="inline-code">points_computer</code>
+                เพื่อเก็บคะแนนของผู้เล่น (User) และคอมพิวเตอร์ (Computer) ตามลำดับ
+                และใช้ <code class="inline-code">while</code> loop เพื่อให้ผู้เล่น (User) สามารถเล่นได้จนกว่าจะครบ 10
+                รอบ
+                โดยจะใช้เงื่อนไข <code class="inline-code">len(points_computer + points_user) / 2</code>
+                เพื่อเช็คจำนวนรอบที่เล่น
+
+            </p>
+            <p class="link-cursor" style="text-align: justify;">
+                ถ้าจำนวนรอบน้อยกว่า 10 จะให้ผู้เล่น (User)
+            <ul>
+                <li class="link-cursor" style="text-align: justify;"><code
+                        class="inline-code">input()</code>กรอกตัวเลือก</li>
+                <li class="link-cursor" style="text-align: justify;"><code
+                        class="inline-code">lower()</code>แปลงเป็นตัวพิมพ์เล็ก</li>
+                <li class="link-cursor" style="text-align: justify;"><code
+                        class="inline-code">replace(" ","")</code>ลบช่องว่าง</li>
+            </ul>
+            </p>
+            <p class="link-cursor" style="text-align: justify;"></p>
+            โดยเงื่อนไขการจบรอบคือ จังหวะที่ผู้เล่น (User) กรอกตัวเลือกเพื่อแข่งกับคอมพิวเตอร์ (Computer) รอบที่ 10
+            มันส่งผลให้
+            <code class="inline-code">len(points_computer + points_user) / 2</code> มีค่าเท่ากับ 10 ซึ่งจะทำให้
+            <code class="inline-code">while</code> loop จบการทำงาน
+            </p>
+        </ul>
+
+        <p class="link-cursor">
+            ก็จบไปแล้วนะครับสำหรับการเขียนเกม เป่า ยิ้ง ฉุบ ด้วย <mark>Python</mark>
+            ต่อไปจะเป็นวิดีโอจำลองการเล่นเช่นเดิมครับ
+        </p>
+    </section>
+
+    <section>
+        <h3 class="link-cursor">4.2 A Video Simulation of Rock–Paper–Scissors Game Using <mark>Python</mark></h3>
+        <p>
+            <a href="https://youtu.be/K-SbNrfKcxk" class="hover-expand"><img src="youtube.png" width="30"
+                    class="notion-icon"></a> ⬅︎ Full Video<br>
+            <a href="https://colab.research.google.com/drive/1ITMHVGs7FL05r5lJSdYmBqhDgtva2sbr?authuser=1#scrollTo=_Python"
+                class="hover-expand"><img src="colab.png" width="30" class="notion-icon"></a> ⬅︎ Google Colab Link<br>
+            <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P04-Creating-a-Multi-Round-Rock-Paper-Scissors-Game-in-R-and-Python.ipynb"
+                class="hover-expand"><img src="github.png" width="30" class="notion-icon"></a> ⬅︎ GitHub Link
+        </p>
+        <div style="text-align: center;">
+            <iframe width="800" height="500" src="https://www.youtube.com/embed/K-SbNrfKcxk" frameborder="0"
+                style="border:0" allowfullscreen loading="lazy"
+                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+            </iframe>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="link-cursor">5. Conclusion</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สุดท้ายนี้ สำหรับการสร้างเกม เป่า ยิ้ง ฉุบ ด้วยภาษา <mark>R</mark> และ <mark>Python</mark>
+            หวังว่าทุกคนจะได้ความรู้และสนุกกับการเขียนโปรแกรมนะครับ
+            ถ้าชอบอย่าลืมโปรเจกต์อื่นๆด้วยนะครับ <mark>โดยเฉพาะตัวติด ⭐️ ที่ผมชอบเป็นพิเศษครับ</mark> ขอบคุณครับ 🙏
+        </p>
     </section>
 
     <section id="file">
         <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
-                    width="30" class="notion-icon"></a> Github & <a href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing" class="hover-expand"><img src="googledrive.png"
-                    width="30" class="notion-icon"></a> Google Drive</h2>
-        <p>
-            <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing"
+                    width="30" class="notion-icon"></a> Github &
+            <a href="https://colab.research.google.com/drive/1ITMHVGs7FL05r5lJSdYmBqhDgtva2sbr?usp=sharing"
+                class="hover-expand"><img src="colab.png" width="30" class="notion-icon"></a> Google Colab
+        </h2>
+            <a href="https://colab.research.google.com/drive/1ITMHVGs7FL05r5lJSdYmBqhDgtva2sbr?usp=sharing"
                 class="download-btn" style="text-align: center; margin-top: 10px;">
-                Resume : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15nJgYPrUrUmD8pAVQZIr0tJVHaJVO8g4/view?usp=sharing"
+                <img src="colab.png" width="25">&nbsp;Google Colab
+            </a> <br>
+            <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P04-Creating-a-Multi-Round-Rock-Paper-Scissors-Game-in-R-and-Python.ipynb"
                 class="download-btn" style="text-align: center; margin-top: 10px;">
-                Transcript : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15n_nmZaSY619ehogn_O0V75CKyuq7max/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Graduation Certificate : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span>
+                <img src="github.png" width="25">&nbsp;Github
+            </a>
         </p>
+
     </section>
 
+    <!-- Prism Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- Prism Language Components -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-r.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>
 </body>
+
 </html>

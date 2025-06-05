@@ -9,12 +9,11 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-0MKCCGG3QF');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1024, initial-scale=1">
-    <title>Project - NYCFLIGHT</title>
+    <title>Project - nycflights13, 23</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="certificate-style.css">
     <link rel="icon" type="image/png" href="website.png">
@@ -47,14 +46,16 @@
 <button id="scrollToTopBtn" title="Go to top">⇧</button>
 <button id="toggle-toc-btn">≡</button>
 <aside id="table-of-contents" class="active">
-    <h3 class ="link-cursor">Navigation Menu</h3>
-    <ul id="toc-list"></ul>
+    <h3 class="link-cursor">Navigation Menu</h3>
+    <ul id="toc-list1"></ul>
 </aside>
 
 <body class="fade-slide-in project_nycflight-page">
     <header>
         <div class="header-background"></div>
-        <h2 style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Project 5 : <span class= "strong1" >EDA and Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png"  style="vertical-align:middle" width="25" ></span></h2>
+        <h2 style="font-size: 1.5em; font-weight: bold;" class="link-cursor">Project 5 : <span class="strong1">EDA and
+                Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png" style="vertical-align:middle"
+                    width="25"></span></h2>
     </header>
 
     <!-- Navigation Bar -->
@@ -62,7 +63,8 @@
         <ul>
             <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
             <li><a href="home.html" onclick="navigateToHome()">🏠 Home </a></li> <!-- Home Tab with House Emoji -->
-            <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li> <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
+            <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li>
+            <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
             <!-- Work Experience Dropdown -->
             <li class="dropdown1">
                 <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
@@ -76,18 +78,39 @@
             <li class="dropdown">
                 <a href="project.html" class="active" onclick="scrollToTop(event)">Project Overview</a>
                 <ul class="dropdown-menu">
-                    <li><a onclick="navigateToProject_ggsheet_dsb10()" >P1 : Data Exploration and Transformation with <img src="sheets.png"  style="vertical-align:middle" width="25" > Google Sheets</a></li>
-                    <li><a onclick="navigateToProject_cafe_r_sql_dsb10()" >P2 : Building a Café Restaurant Database Using <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="SQL.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_rfm_py_dsb10()" >P3 : Customer Segmentation and RFM Analysis Using <img src="python.png"  style="vertical-align:middle" width="25" >Python and <img src="R.png"  style="vertical-align:middle" width="25" > for Strategic Business Insight</a></li>
-                    <li><a onclick="navigateToProject_pyc_r_py_dsb10()" >P4 : Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="python.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a class="active1" onclick="scrollToTop(event)" onclick="navigateToProject_nycflight13_23_dsb10()" >P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_vizdimond_dsb10()" >P6 : EDA Visualization of the Diamond Dataset Using <img src="R.png"  style="vertical-align:middle" width="25" > and R Markdown </a></li>
-                    <li><a onclick="navigateToProject_titanic_glm_dsb10()" >P7 : Logistic Regression Analysis on the Titanic Dataset Using <img src="R.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_looker_dsb10()" >P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"  style="vertical-align:middle" width="25" >Looker Studio</a></li>
-                    <li><a onclick="navigateToProject_pizza_chatbot_dsb10()" >P9 : Chatbot Development for a Pizza Business Using <img src="R.png"  style="vertical-align:middle" width="25" > Programming</a></li>
-                    <li><a onclick="navigateToProject_atm_oop_py_dsb10()" >P10 : Object-Oriented ATM System: Financial Transactions with <img src="python.png"  style="vertical-align:middle" width="25" >Python OOP</a></li>
-                    <li><a onclick="navigateToProject_mini_api_py()" >mini P11 : Extracting Public API Data with <img src="python.png"  style="vertical-align:middle" width="25" >Python: Air Quality Analytics</a></li>
-                    <li><a onclick="navigateToProject_mini_xml_cafe()" >mini P12 : Cafe Menu Data Structure with <img src="xml.png"  style="vertical-align:middle" width="25" >XML</a></li>
+                    <li><a onclick="navigateToProject_ggsheet_dsb10()">P1 : Data Exploration and Transformation with
+                            <img src="sheets.png" style="vertical-align:middle" width="25"> Google Sheets</a></li>
+                    <li><a onclick="navigateToProject_cafe_r_sql_dsb10()">P2 : Building a Café Restaurant Database Using
+                            <img src="R.png" style="vertical-align:middle" width="25"> and <img src="SQL.png"
+                                style="vertical-align:middle" width="25"></a></li>
+                    <li><a onclick="navigateToProject_rfm_py_dsb10()">P3 : Customer Segmentation and RFM Analysis Using
+                            <img src="python.png" style="vertical-align:middle" width="25">Python and <img src="R.png"
+                                style="vertical-align:middle" width="25"> for Strategic Business Insight</a></li>
+                    <li><a onclick="navigateToProject_pyc_r_py_dsb10()">P4 : Creating a Multi-Round Rock-Paper-Scissors
+                            Game in <img src="R.png" style="vertical-align:middle" width="25"> and <img src="python.png"
+                                style="vertical-align:middle" width="25"></a></li>
+                    <li><a class="active1" onclick="scrollToTop(event)"
+                            onclick="navigateToProject_nycflight13_23_dsb10()">P5 : EDA and Comparison of NYC Flights
+                            Data (2013 vs. 2023) with <img src="R.png" style="vertical-align:middle" width="25"></a>
+                    </li>
+                    <li><a onclick="navigateToProject_vizdimond_dsb10()">P6 : EDA Visualization of the Diamond Dataset
+                            Using <img src="R.png" style="vertical-align:middle" width="25"> and R Markdown </a></li>
+                    <li><a onclick="navigateToProject_titanic_glm_dsb10()">P7 : Logistic Regression Analysis on the
+                            Titanic Dataset Using <img src="R.png" style="vertical-align:middle" width="25"></a></li>
+                    <li><a onclick="navigateToProject_looker_dsb10()">P8 : Data-Driven Insights: Sales Performance &
+                            Profitability in <img src="looker.png" style="vertical-align:middle" width="25">Looker
+                            Studio</a></li>
+                    <li><a onclick="navigateToProject_pizza_chatbot_dsb10()">P9 : Chatbot Development for a Pizza
+                            Business Using <img src="R.png" style="vertical-align:middle" width="25"> Programming</a>
+                    </li>
+                    <li><a onclick="navigateToProject_atm_oop_py_dsb10()">P10 : Object-Oriented ATM System: Financial
+                            Transactions with <img src="python.png" style="vertical-align:middle" width="25">Python
+                            OOP</a></li>
+                    <li><a onclick="navigateToProject_mini_api_py()">mini P11 : Extracting Public API Data with <img
+                                src="python.png" style="vertical-align:middle" width="25">Python: Air Quality
+                            Analytics</a></li>
+                    <li><a onclick="navigateToProject_mini_xml_cafe()">mini P12 : Cafe Menu Data Structure with <img
+                                src="xml.png" style="vertical-align:middle" width="25">XML</a></li>
                 </ul>
             </li>
             <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li>
@@ -97,46 +120,1264 @@
 
     <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
     <section id="toc-section">
-        <p style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Content of Tables</p>
+        <p style="font-size: 1.5em; font-weight: bold;" class="link-cursor">Content of Tables</p>
         <div id="toc-marker"></div>
         <div id="toc-section"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
     </section>
 
-    <a style= "text-decoration: none;" href="project.html">
+    <a style="text-decoration: none;" href="project.html">
         <button class="back-button">⬅︎ <b>Project Overview</b></button>
     </a>
 
     <section>
-        <h2 class = "link-cursor">Dashboard</h2>
-        <p class = "link-cursor">Dashboard ที่แสดงอยู่ด้านล่างนี้ เป็นเครื่องมือที่ถูกสร้างขึ้นหลังจากจบ Project ตัวนี้เรียบร้อยเเล้ว
-            ซึ่งใช้ในการ monitor ผลประกอบการของร้านค้าแห่งหนึ่ง และตอบคำถามที่สงสัยมาตอนต้น <strong>ไปดูกันเลย!</strong>
-            สามาถลองกดเล่นที่ Dashboard ได้เลยนะครับ
+        <h2 class="link-cursor">1. Project Introduction</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สวัสดีครับ สำหรับโปรเจกต์นี้ ผมได้ทำการ <mark>EDA nycflights13 และ nycflights23 ด้วย R</mark>
+            ถ้าหากคุณได้มีโอกาสอยู่ที่
+            NewYork หรือ Newjersey
+            ใกล้ๆกับสนามบิน EWR(NJ), JFK(NY), LGA(NY) แล้วเผอิญว่า คุณมีวันลาพักร้อนอยู่พอดี
+            แต่คุณไม่รู้ว่าจะบินไปเที่ยวรัฐไหนดี
         </p>
-        <p class = "link-cursor">ขั้นตอนแรก ผมจะ Explore Dataset เพื่อดูว่าหน้าตาของ data ก้อนนี้เป็นยังไงบ้าง</p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            โปรเจกต์นี้จะ<mark>ช่วยให้คุณ make decision better</mark> เกี่ยวกับเที่ยวบินใน New York City ปี 2013 และ
+            2023<br>โดยมี 4
+            ข้อ ดังต่อไปนี้
+        </p>
+
+        <ol>
+            <li class="link-cursor" style="text-align: justify;">จำนวนเที่ยวบินที่บินไปในแต่ละรัฐ (States)</li>
+            <li class="link-cursor" style="text-align: justify;">ช่วงเดือนไหนที่คนนิยมไปบ่อยสุด</li>
+            <li class="link-cursor" style="text-align: justify;">เลือกสายการบินไหนดี พิจารณาจากเวลาการบิน
+                และเวลาล่าช้าขาออก-ขาเข้า</li>
+            <li class="link-cursor" style="text-align: justify;">เลือกไปสนามบินไหนดีระหว่าง EWR(NJ), JFK(NY), LGA(NY)
+                และควรจองเวลากี่โมง </li>
+        </ol>
+
+        <p class="link-cursor" style="text-align: justify;">
+            <b>ส่วนเสริม (Optional)</b>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สำหรับโปรเจกต์นี้ ผมได้ข้ามขั้นตอนการจัดการข้อมูลเพื่อเน้น EDA ในการ make decision better
+            ประกอบไปด้วยหัวข้อต่างๆ ต่อไปนี้
+        </p>
+
+        <ol>
+            <li class="link-cursor" style="text-align: justify;">
+                Install Packages (ติดตั้งแพคเกจที่ใช้ EDA)
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                Create a Marker Result Function Using HTML (ใช้ HTML อธิบายผลลัพธ์)
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                Load Data/Library (โหลดไลบรารีและข้อมูลที่ใช้ EDA)
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                Explore Data (Data Glimpse, Preview Data, Duplicate Rows, Explore NA)
+            </li>
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                Cleasing Data (Remove NA เพื่อนำไป ใช้ EDA สำหรับการวิเคราะห์หัวข้อถัดไป)
+            </li>
+        </ol>
+
+        <p class="link-cursor" style="text-align: justify;">
+            ถ้าหากสนใจหัวข้อด้านบนสามารถเข้ามาดูได้ที่ <a
+                href="https://colab.research.google.com/drive/1SwBmA0Z2Zeta6G13PouYCCIQTVD2sO4K?usp=sharing"
+                class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> หรือ <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P05-EDA-and-Comparison-of-NYC-Flights-Data-2013-vs-2023-with-R.ipynb"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-skip.png" width="600" class="cursor-zoom-in" onclick="openGalleryModal('p5-skip.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify;">
+            ผมจะเริ่ม <mark>Analyze & Transform Data 📍</mark> ในหัวข้อถัดไป ในโปรเจกต์
+        </p>
     </section>
 
-    <section id="file">
-        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
-                    width="30" class="notion-icon"></a> Github & <a href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing" class="hover-expand"><img src="googledrive.png"
-                    width="30" class="notion-icon"></a> Google Drive</h2>
+    <section>
+        <h2 class="link-cursor">2. Analyze & Transform Data 📍</h2>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เริ่มต้นด้วย การสำรวจเพื่อการวิเคราะห์ข้อมูล หรือ <mark>EDA</mark>
+            โดยผมมีข้อมูลเที่ยวบิน New York City ในปี 2013 และ 2023
+            สิ่งที่เราต้องการคือ
+        </p>
+
+        <ol>
+            <li class="link-cursor" style="text-align: justify;">
+                ผมต้องการทราบว่า <mark>คนบินไปรัฐไหนบ้าง จำนวนเท่าไร</mark> เพื่อที่จะประกอบการตัดสินใจจะไปเที่ยว
+                หรือทำกิจกรรมต่างๆกับครอบครัว (ไม่มีชื่อรัฐในฐานข้อมูล บอกว่าสนามบินปลายทางตั้งอยู่รัฐไหน)
+            </li>
+
+            <li class="link-cursor" style="text-align: justify;">
+                เมื่อได้รัฐที่อยากไปแล้ว ต่อมาต้อง<mark>ไปช่วงเดือนไหนดี</mark> จะได้ลาพักร้อนล่วงหน้าได้
+                จัดวางแผนเรื่องเวลาการเดินทาง
+            </li>
+
+            <li class="link-cursor" style="text-align: justify;">
+                เมื่อได้รัฐที่จะไป + ไปช่วงเดือนไหน ต่อมา <mark>สายการบินไหนล่ะดีสุด</mark>
+                (สมมติว่าสายการบินที่ดีที่สุดสำหรับเราคือ เงื่อนไขต่อไปนี้)
+                <ul>
+                    <li class="link-cursor" style="text-align: justify;">ขาออกไฟต์ดีเลย์น้อย + ถึงก่อนเวลา ต่อเที่ยวบิน
+                    </li>
+                    <li class="link-cursor" style="text-align: justify;">เวลาบินน้อยสุด ต่อเที่ยวบิน</li>
+                    <li class="link-cursor" style="text-align: justify;">เราต้องมาถึงสนามบินอย่างน้อย 3 ชม.
+                        <br>(เผื่อเวลา check in, ทานข้าว, ฉุกเฉิน) ซึ่งบางเที่ยวบินออกก่อนเวลา 2 ชม.
+                    </li>
+                </ul>
+            </li>
+
+            <li class="link-cursor" style="text-align: justify;">
+                เลือกไฟต์บิน <mark>กี่โมงดีที่ช่วยลดโอกาสเจอฝนตก</mark> และ<mark>สนามบินที่ดีที่สุด</mark>ระหว่าง
+                EWR(NJ), JFK(NY), LGA(NY)
+            </li>
+
+        </ol>
+
+    </section>
+    
+    <section>
+        <h3 class="link-cursor">2.1 People flying to which states and how many?</h3>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            หัวข้อนี้ <mark>⭐️ จะเป็นหัวข้อที่ผมท้าทายมากที่สุด</mark>
+            เพราะว่า <mark>ข้อมูลเที่ยวบินในปี 2013, 2023 ไม่มีชื่อรัฐ</mark> (มีแค่ชื่อสนามบินปลายทาง)
+            ดังนั้นผมจึงต้องใช้ <code class="inline-code">library(rnaturalearth)</code>
+            เพื่อเชื่อม laditude, longitude ของสนามบินปลายทางกับชื่อรัฐ ท้าทายทีเดียวล่ะ❗️
+            มาเริ่มดูที่หัวข้อแรกกันเลยดีกว่า
+        </p>
+
+    </section>
+
+    <section>
+        <h4 class="link-cursor">2.1.1 Alert NA (Join)</h4>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ในหัวข้อนี้ คอลัมน์ ad1name (รัฐ) ถูกสร้างขึ้นมาจาก laditude, longitude ของสนามบินปลายทาง
+            ที่อยู่ในตาราง aiports และเราจะนำ flights มารวมกับ airports โดยการ<mark>ใช้ left_join
+                กำหนดให้ flights เป็นตารางหลัก และ airports</mark> เป็นตารางรอง ปรากฏว่า
+            <mark>มี NA เกิดขึ้น</mark> หลังจากการ Join
+        </p>
+
+        <p class="link-cursor" style="text-align: justify;">
+            สามารถดูรายละเอียด <span class="line-code"> Code</span> ได้ที่ด้านล่าง
+            (Code ยาวนิดนึงนะครับ) ⬇︎ และภาพตารางผลลัพธ์ได้ครับ
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+cities <- ne_download(scale = "large", type = "populated_places", returnclass = "sf")
+
+list_of_airports_dfs <- list(
+  airports13 = airports13,
+  airports23 = airports23
+)
+
+process_airport_data <- function(df) {
+  df |>
+    select(faa, name, lat, lon) |>
+    st_as_sf(coords = c("lon", "lat"), crs = 4326, remove = FALSE)
+}
+
+airport_coords_list <- map(list_of_airports_dfs, process_airport_data)
+
+process_matched_cities <- function(df) {
+  df |>
+    st_join(cities, join = st_nearest_feature)
+}
+
+matched_cities_list <- map(airport_coords_list, process_matched_cities)
+
+colnames(matched_cities_list$airports13) <- tolower(colnames(matched_cities_list$airports13))
+colnames(matched_cities_list$airports13)[2] <- "airport_name"
+
+colnames(matched_cities_list$airports23) <- tolower(colnames(matched_cities_list$airports23))
+colnames(matched_cities_list$airports23)[2] <- "airport_name"
+
+state13 <- matched_cities_list$airports13 |>
+  select(faa, adm1name, airport_name)
+
+state23 <- matched_cities_list$airports23 |>
+  select(faa, adm1name, airport_name)
+
+n_flight_des13 <- flights13 |>
+  select(dest) |>
+  group_by(dest) |>
+  summarise(n_flights = n()) |>
+  arrange(- n_flights)
+
+n_flight_des23 <- flights23 |>
+  select(dest) |>
+  group_by(dest) |>
+  summarise(n_flights = n()) |>
+  arrange(- n_flights)
+
+prep_n_flights13 <- n_flight_des13 |>
+  left_join(state13, by = c("dest" = "faa")) |>
+  select(airport_name, dest, adm1name, n_flights)
+
+styled_note("พบ NA ตามตารางด้านล่าง : ⬇︎")
+prep_n_flights13 |> filter(!complete.cases(prep_n_flights13))
+
+prep_n_flights23 <- n_flight_des23 |>
+  left_join(state23, by = c("dest" = "faa")) |>
+  select(airport_name, dest, adm1name, n_flights)
+
+styled_note("พบ NA ตามตารางด้านล่าง : ⬇︎ (สังเกตุได้ว่าปี 2023 มีการอัพเดทชื่อสนามบินเข้ามาให้แล้ว)")
+prep_n_flights23 |> filter(!complete.cases(prep_n_flights23))
+
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-1.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-1.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify;">
+            📌 ผมขอละการอธิบายโค้ดแต่ละบรรทัดไว้ที่
+            <a href="https://colab.research.google.com/drive/1SwBmA0Z2Zeta6G13PouYCCIQTVD2sO4K?authuser=1#scrollTo=1_1_Alert_NA_Join_"
+                class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> และ <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P05-EDA-and-Comparison-of-NYC-Flights-Data-2013-vs-2023-with-R.ipynb"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+            นะครับ
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ใน<mark>ปี 2013</mark> มี NA เกิดขึ้นในคอลัมน์ adm1name (รัฐ) และ airport_name
+            แต่
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ใน<mark>ปี 2023</mark> มีการอัพเดท airport_name เข้ามาให้แล้ว ทำให้ไม่มี NA เกิดขึ้น
+            แต่ยังมี NA เกิดขึ้นในคอลัมน์ adm1name (รัฐ) เหมือนเดิม
+        </p>
+        <p class="link-cursor" style="text-align: justify;">
+            ดังนั้นเราจึงต้อง
+            <mark>จัดการกับ NA ในคอลัมน์ adm1name (รัฐ) และ airport_name</mark> ก่อนที่จะทำการ EDA ต่อไป
+        </p>
+    </section>
+
+    <section>
+        <h4 class="link-cursor">2.1.2 Cleaning Data</h4>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+        สำหรับตัวย่อสนามบิน 4 ที่ ที่มี NA ผมได้ทำการค้นหามาแล้วว่า
+        <mark>ชื่อสนามบินแต่ละที่คืออะไร และตั้งอยู่รัฐไหน</mark> โดย<mark>อ้างอิงจากลิงก์่ต่อไปนี้</mark>
+        </p>
+        
+        <p class="link-cursor">
+            <b>ตั้งอยู่ Puerto Rico</b>
+        </p>
+
+        <ul>
+            <li class="link-cursor" style="text-align: justify;">
+                SJU ➤ <a
+                    href="https://www.discoverpuertorico.com/profile/luis-munoz-marin-international-airport-sju/7710"
+                    class="link-website" target="_datblank">Luis Muñoz Marín International Airport</a>
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                BQN ➤ <a
+                    href="https://aguadilla.airport-authority.com/"
+                    class="link-website" target="_datblank">Rafael Hernández Airport</a>
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                PSE ➤ <a
+                    href="https://en.wikipedia.org/wiki/Mercedita_International_Airport"
+                    class="link-website" target="_datblank">Mercedita Airport</a>
+            </li>
+        </ul>
+
+        <p class="link-cursor">
+            <b>ตั้งอยู่ U.S. Virgin Islands</b>
+        </p>
+
+        <ul>
+            <li class="link-cursor" style="text-align: justify;">
+                STT ➤ <a
+                    href="https://www.viport.com/cekastt#:~:text=King%20Airport-,The%20Cyril%20E.,the%20capital%20city%2C%20Charlotte%20Amalie"
+                    class="link-website" target="_datblank">Cyril E. King Airport</a>
+            </li>
+        </ul>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+prep_n_flights13 <- n_flight_des13 |>
+  left_join(state13, by = c("dest" = "faa")) |> 
+  select(airport_name, dest, adm1name, n_flights) |> 
+  mutate( 
+    adm1name = case_when(
+      is.na(adm1name) & dest == "STT" ~ "U.S. Virgin Islands", Virgin Islands เข้าไปแทน NA ในคอลัมน์ adm1name
+      is.na(adm1name) & dest == "BQN" ~ "Puerto Rico", เข้าไปแทน NA ในคอลัมน์ adm1name
+      is.na(adm1name) & dest == "SJU" ~ "Puerto Rico", เข้าไปแทน NA ในคอลัมน์ adm1name
+      is.na(adm1name) & dest == "PSE" ~ "Puerto Rico", เข้าไปแทน NA ในคอลัมน์ adm1name
+      TRUE ~ adm1name 
+    ),
+    airport_name = case_when(
+      is.na(airport_name) & dest == "STT" ~ "Cyril E. King Airport", ให้ใส่ชื่อสนามบิน Cyril E. King Airport เข้าไปแทน NA ในคอลัมน์ airport_name
+      is.na(airport_name) & dest == "BQN" ~ "Rafael Hernández Airport", ให้ใส่ชื่อสนามบิน Rafael Hernández Airport เข้าไปแทน NA ในคอลัมน์ airport_name
+      is.na(airport_name) & dest == "SJU" ~ "Luis Muñoz Marín International Airport", คือ SJU ให้ใส่ชื่อสนามบิน Luis Muñoz Marín International Airport เข้าไปแทน NA ในคอลัมน์ airport_name
+      is.na(airport_name) & dest == "PSE" ~ "Mercedita Airport", ให้ใส่ชื่อสนามบิน Mercedita Airport เข้าไปแทน NA ในคอลัมน์ airport_name
+      TRUE ~ airport_name 
+    )
+  )
+
+styled_note("จำนวนเที่ยวบินที่บินไปถึง ในแต่ละสนามบิน แต่ละรัฐปี 2013 : ⬇︎")
+prep_n_flights13
+
+prep_n_flights23 <- n_flight_des23 |>
+  left_join(state23, by = c("dest" = "faa")) |> 
+  select(airport_name, dest, adm1name, n_flights) |> 
+  mutate( 
+    adm1name = case_when(
+      is.na(adm1name) & dest == "STT" ~ "U.S. Virgin Islands", Virgin Islands เข้าไปแทน NA ในคอลัมน์ adm1name
+      is.na(adm1name) & dest == "BQN" ~ "Puerto Rico", เข้าไปแทน NA ในคอลัมน์ adm1name
+      is.na(adm1name) & dest == "SJU" ~ "Puerto Rico", เข้าไปแทน NA ในคอลัมน์ adm1name
+      is.na(adm1name) & dest == "PSE" ~ "Puerto Rico", เข้าไปแทน NA ในคอลัมน์ adm1name
+      TRUE ~ adm1name 
+    ),
+    airport_name = case_when(
+      is.na(airport_name) & dest == "STT" ~ "Cyril E. King Airport", ให้ใส่ชื่อสนามบิน Cyril E. King Airport เข้าไปแทน NA ในคอลัมน์ airport_name
+      is.na(airport_name) & dest == "BQN" ~ "Rafael Hernández Airport", ให้ใส่ชื่อสนามบิน Rafael Hernández Airport เข้าไปแทน NA ในคอลัมน์ airport_name
+      is.na(airport_name) & dest == "SJU" ~ "Luis Muñoz Marín International Airport", คือ SJU ให้ใส่ชื่อสนามบิน Luis Muñoz Marín International Airport เข้าไปแทน NA ในคอลัมน์ airport_name
+      is.na(airport_name) & dest == "PSE" ~ "Mercedita Airport", ให้ใส่ชื่อสนามบิน Mercedita Airport เข้าไปแทน NA ในคอลัมน์ airport_name
+      TRUE ~ airport_name 
+    )
+  )
+
+styled_note("จำนวนเที่ยวบินที่บินไปถึง ในแต่ละสนามบิน แต่ละรัฐปี 2023 : ⬇︎")
+prep_n_flights23
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-2-1.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-2-1.png')">
+        </div>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-2-2.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-2-2.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify;">
+            📌 ผมขอละการอธิบายโค้ดแต่ละบรรทัดไว้ที่
+            <a href="https://colab.research.google.com/drive/1SwBmA0Z2Zeta6G13PouYCCIQTVD2sO4K?authuser=1#scrollTo=1_2_Cleaning_Data"
+                class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> และ <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P05-EDA-and-Comparison-of-NYC-Flights-Data-2013-vs-2023-with-R.ipynb"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+            นะครับ
+        </p>
+        
+        <p class="link-cursor" style="text-align: justify;">
+            จากตารางด้านบนเราได้จัดการแทนค่า NA ไปแล้ว และเราจะพบข้อสังเกตุอีกอย่างว่า
+            เราต้องการให้<mark>หาจำนวนเที่ยวบินไปในแต่ละรัฐ แต่กับพบว่ามันจะไม่ถูก Aggregate</mark>
+            ใน 2 หัวข้อถัดไป เราจะทำการ <mark>Check NA</mark> และ <mark>Summaries / Visualize Data</mark>
+            ตามลำดับ เชิญรับชมครับ
+        </p>
+
+    </section>
+
+    <section>
+        <h4 class="link-cursor">2.1.3 Check NA</h4>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+        ทดสอบ NA ดูว่าจัดการไปแล้วหรือยัง เพื่อที่จะได้นำไป 
+        Summaries / Visualize Data ต่อไป
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+styled_note("ไม่พบ NA แล้ว")
+prep_n_flights13 |>
+  filter(if_any(everything(), is.na))
+
+styled_note("ไม่พบ NA แล้ว")
+prep_n_flights23 |>
+  filter(if_any(everything(), is.na))
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-3.png" width="400" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-3.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify;">
+            📌 ผมขอละการอธิบายโค้ดแต่ละบรรทัดไว้ที่
+            <a href="https://colab.research.google.com/drive/1SwBmA0Z2Zeta6G13PouYCCIQTVD2sO4K?authuser=1#scrollTo=1_3_Check_NA"
+                class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> และ <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P05-EDA-and-Comparison-of-NYC-Flights-Data-2013-vs-2023-with-R.ipynb"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+            นะครับ
+        </p>
+        
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เราเลือกแถวที่มี NA อย่างน้อย 1 คอลัมน์ <mark>พบว่าไม่มีค่า NA ใดๆ</mark> เหลืออยู่แล้ว
+            ดังนั้นเราสามารถทำการ <mark>Summaries / Visualize Data</mark> ได้เลย
+            โดย<mark>หาจำนวนเที่ยวบินที่บินไปในแต่ละรัฐ และสร้าง bar chart แสดงผลลัพธ์</mark>
+        </p>
+
+    </section>
+
+    <section>
+        <h4 class="link-cursor">2.1.4 Sumaaries / Visualize Data</h4>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+        เมื่อ<mark>ข้อมูลไม่มี NA แล้ว</mark>เราสามารถคำนวณ<mark>หาจำนวนเที่ยวบินที่บินไปแต่ละรัฐ</mark>ได้ ได้ด้วยการ
+        summarise และจัดกลุ่มตรามแต่ละรัฐ โดยเลือก Top 5 ของแต่ละปี ดังต่อไปนี้
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+summaries_data13 <- prep_n_flights13 |>
+  select(adm1name, n_flights) |>
+  group_by(adm1name) |>
+  summarise(n_flights = sum(n_flights)) |>
+  arrange(- n_flights) |>
+  slice_head(n = 5)
+
+styled_note("Top 5 รัฐที่มีจำนวนเที่ยวบินไปมากที่สุดในที่ 2013")
+summaries_data13
+
+summaries_data23 <- prep_n_flights23 |>
+  select(adm1name, n_flights) |>
+  group_by(adm1name) |>
+  summarise(n_flights = sum(n_flights)) |>
+  arrange(- n_flights) |>
+  slice_head(n = 5)
+
+styled_note("Top 5 รัฐที่มีจำนวนเที่ยวบินไปมากที่สุดในที่ 2013")
+summaries_data23
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-4-1.png" width="400" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-4-1.png')">
+        </div>
+        
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ต่อไปเป็นการ <mark>สร้าง bar chart แสดงผลลัพธ์</mark>
+            โดยใช้ <code class="inline-code">ggplot2</code> เพื่อให้เห็นภาพชัดเจนยิ่งขึ้น
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+visualize_data13 <- prep_n_flights13 |>
+  select(adm1name, n_flights) |>
+  group_by(adm1name) |>
+  summarise(n_flights = sum(n_flights)) |>
+  arrange(- n_flights) |>
+  slice_head(n = 5) |>
+  ggplot(aes(x = reorder(adm1name,  n_flights), y = n_flights)) +
+  geom_col() +
+  coord_flip() +
+  labs(
+      title = "Top 5 states with the highest number of departing flights in 2013"
+  )
+
+styled_note("Top 5 รัฐที่มีจำนวนเที่ยวบินไปมากที่สุดในที่ 2013")
+visualize_data13
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-4-2.png" width="400" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-4-2.png')">
+        </div>
+
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+visualize_data23 <- prep_n_flights23 |>
+  select(adm1name, n_flights) |>
+  group_by(adm1name) |>
+  summarise(n_flights = sum(n_flights)) |>
+  arrange(- n_flights) |>
+  slice_head(n = 5) |>
+  ggplot(aes(x = reorder(adm1name,  n_flights), y = n_flights)) +
+  geom_col() +
+  coord_flip() +
+  labs(
+      title = "Top 5 states with the highest number of departing flights in 2023."
+  )
+styled_note("Top 5 รัฐที่มีจำนวนเที่ยวบินไปมากที่สุดในที่ 2023")
+visualize_data23
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-4-3.png" width="400" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-4-3.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify;">
+            📌 ผมขอละการอธิบายโค้ดแต่ละบรรทัดไว้ที่
+            <a href="https://colab.research.google.com/drive/1SwBmA0Z2Zeta6G13PouYCCIQTVD2sO4K?authuser=1#scrollTo=1_4_Sumaaries_Visualize_Data"
+                class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> และ <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P05-EDA-and-Comparison-of-NYC-Flights-Data-2013-vs-2023-with-R.ipynb"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+            นะครับ
+        </p>
+        
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            จะเห็นได้ว่า <mark>รัฐที่มีจำนวนเที่ยวบินไปมากที่สุดในปี 2013, 2023 คือ Florida</mark>
+            อยู่ที่จำนวน 58,677 เที่ยวบิน และเพิ่มขึ้นมาเป็น 75,388 เที่ยวบินในปี 2023 <mark>ที่เหลือลำดับจะเหมือนเดิมยกเว้น
+            ลำดับที่ 5 ที่เปลี่ยนจาก illinois มาเป็น virginia ในปี 2013</mark>
+            bar chart จะทำให้เห็นความแตกต่างของจำนวนเที่ยวบินที่บินไปในแต่ละรัฐได้ชัดเจนมากขึ้น
+        </p>
+        
+    </section>
+
+    <section>
+        <h4 class="link-cursor">2.1.5 Conclusion..people go to?</h4>
         <p>
-            <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Resume : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15nJgYPrUrUmD8pAVQZIr0tJVHaJVO8g4/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Transcript : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15n_nmZaSY619ehogn_O0V75CKyuq7max/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Graduation Certificate : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span>
+            ในปี 2013 และ 2023
+            <mark>รัฐที่มีจำนวนเที่ยวบินไปมากที่สุดคือ Florida</mark>
+            ดังนั้น<mark>เราจะปักหมุดไว้ที่รัฐ Florida ว่าเราจะไปเที่ยวพักร้อนที่นั่นกัน❗️</mark>
+            แล้วเราจะไปช่วงเดือนไหนดี❓ เริ่มไปหาข้อมูลที่หัวข้อต่อไปกันได้เลยครับ
+            ชื่อว่า <mark>When is the best month to fly?</mark>
+        </p>
+    </section>
+    
+    <section>
+        <h3 class="link-cursor">2.2 When is the best month to fly?</h3>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ช่วงเดือนไหนที่คนบินไป Florida มากที่สุดในปี 2013 และ 2023❓เราจะมาสร้าง Line Chart
+            เพื่อดูจำนวนเที่ยวบินที่บินไป Florida ในแต่ละเดือนของปี 2013 และ 2023 กัน !
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+season_travel_flights13 <- flights13 |>
+    left_join(state13, by = c("dest" = "faa")) |>
+    mutate(
+    adm1name = case_when(
+      is.na(adm1name) & dest == "STT" ~ "U.S. Virgin Islands",
+      is.na(adm1name) & dest == "BQN" ~ "Puerto Rico",
+      is.na(adm1name) & dest == "SJU" ~ "Puerto Rico",
+      is.na(adm1name) & dest == "PSE" ~ "Puerto Rico",
+      TRUE ~ adm1name
+    ),
+    airport_name = case_when(
+      is.na(airport_name) & dest == "STT" ~ "Cyril E. King Airport",
+      is.na(airport_name) & dest == "BQN" ~ "Rafael Hernández Airport",
+      is.na(airport_name) & dest == "SJU" ~ "Luis Muñoz Marín International Airport",
+      is.na(airport_name) & dest == "PSE" ~ "Mercedita Airport",
+      TRUE ~ airport_name
+    )
+  ) |>
+    filter(adm1name == "Florida") |>
+    mutate(month = month(time_hour, label = TRUE)) |>
+    group_by(month) |>
+    summarise(total_flights = n()) |>
+    ggplot(aes(x = month, y = total_flights, group = 1)) +
+    geom_line(color = "blue", size = 1.2) +
+    geom_point(color = "red", size = 3) +
+    labs(
+      title = "Number of Flights to Florida by Month 2013",
+      x = "Month",
+      y = "Total Flights"
+    ) +
+    theme_minimal()
+styled_note("Top 5 เดือนที่คนนิยมไปมากที่สุดในปี 2013")
+season_travel_flights13
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-42-1.png" width="400" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-42-1.png')">
+        </div>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+season_travel_flights23 <- flights23 |>
+    left_join(state23, by = c("dest" = "faa")) |>
+    mutate(
+    adm1name = case_when(
+      is.na(adm1name) & dest == "STT" ~ "U.S. Virgin Islands",
+      is.na(adm1name) & dest == "BQN" ~ "Puerto Rico",
+      is.na(adm1name) & dest == "SJU" ~ "Puerto Rico",
+      is.na(adm1name) & dest == "PSE" ~ "Puerto Rico",
+      TRUE ~ adm1name
+    ),
+    airport_name = case_when(
+      is.na(airport_name) & dest == "STT" ~ "Cyril E. King Airport",
+      is.na(airport_name) & dest == "BQN" ~ "Rafael Hernández Airport",
+      is.na(airport_name) & dest == "SJU" ~ "Luis Muñoz Marín International Airport",
+      is.na(airport_name) & dest == "PSE" ~ "Mercedita Airport",
+      TRUE ~ airport_name
+    )
+  ) |>
+    filter(adm1name == "Florida") |>
+    mutate(month = month(time_hour, label = TRUE)) |>
+    group_by(month) |>
+    summarise(total_flights = n()) |>
+    ggplot(aes(x = month, y = total_flights, group = 1)) +
+    geom_line(color = "blue", size = 1.2) +
+    geom_point(color = "red", size = 3) +
+    labs(
+      title = "Number of Flights to Florida by Month 2023",
+      x = "Month",
+      y = "Total Flights"
+    ) +
+    theme_minimal()
+styled_note("Top 5 เดือนที่คนนิยมไปมากที่สุดในปี 2023")
+season_travel_flights23
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-42-2.png" width="400" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-42-2.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify;">
+            📌 ผมขอละการอธิบายโค้ดแต่ละบรรทัดไว้ที่
+            <a href="https://colab.research.google.com/drive/1SwBmA0Z2Zeta6G13PouYCCIQTVD2sO4K?authuser=1#scrollTo=When_is_the_best_month_to_fly_"
+                class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> และ <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P05-EDA-and-Comparison-of-NYC-Flights-Data-2013-vs-2023-with-R.ipynb"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+            นะครับ
+        </p>
+
+    </section>
+
+    <section>
+        <h4 class="link-cursor"> Conclusion..month travel?</h4>
+        
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+               สรุป จำนวนเที่ยวบินทั้งหมดที่คนนิยมไป Top 4 Months
+        </p>
+        
+        <ul>
+            <li class="link-cursor">
+                ปี 2013 Mar, Dec, Apr, Jan ตามลำดับ
+            </li>
+            <li class="link-cursor">
+                ปี 2023 Mar, Dec, Jan, Apr ตามลำดับ
+            </li>
+        </ul>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ลำดับจะเหมือนเดิมกันหมด ยกเว้นลำดับที่ 4 ที่สลับลำดับกัน 3 เป็น 4 ตามปี
+            หมายเหตุ จะเห็นได้ว่าใน<mark>ปี 2023 ลำดับที่ 2, 3, 4 แทบจะไม่แตกต่างกันอย่างมีนัยยะสำคัญเลย</mark>
+            ดังนั้น การเลือกเดินทางของเราอาจจะไปที่ ⭐️ Florida เราอาจจะมีหลายแผน ❗️
+            <mark>แผน A ไปเดือน ⭐️ March นี้แหละ (best case) เพราะคนนิยมไปกัน</mark>
+            แผน B, C, .. ต่อไปก็พิจารณาจากเดือนลำดับถัดๆไป
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สรุป ณ <mark>ตอนนี้ เราจะได้ Florida ช่วงเดือน March</mark> เป็นแผนหลักของเรา
+            ถัดไปแล้วสายการบินไหนดีล่ะ❓ ที่เราคิดว่าเหมาะที่สุด เชิฐชมได้ที่หัวข้อถัดไปครับ
+        </p>
+    </section>
+    
+    <section>
+        <h3 class="link-cursor">2.3 Which airline is the best?</h3>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ณ ตอนนี้ เรามีแผนที่จะไปพักร้อนที่ Florida ในเดือน March ต่อมาเราจะมาเลือกสายการบินตามเงื่อนไขที่เรากำหนด
+            แน่นอนว่า เราต้องอยากได้สายการบินที่ออกตรงเวลาหรืออย่างน้อยก็ถึงจุดหมายปลายทางที่เร็วกว่ากำหนด
+            ดังนั้น ผมได้จัดลำดับความสำคัญกับสิ่งที่ต้องการมากที่สุดน 3 ข้อหลักๆ ตามลำดับไว้ดังนี้
+        </p>
+
+        <ol>
+            <li class="link-cursor" style="text-align: justify;">
+                ไฟต์ดีเลย์ น้อยขาออก + ถึงก่อนเวลา (best)
+            </li>
+            
+            <li class="link-cursor" style="text-align: justify;">               
+            ใช้เวลาบินน้อยสุด + ระยะเวลาบินต่อเที่ยวบิน ใน 1 ปี
+            </li>
+            
+            <li class="link-cursor" style="text-align: justify;">
+                เราต้องมาถึงสนามบินอย่างน้อย 3 ชม.<br>
+                (เพื่อเวลา Check-in, ทานข้าว, เวลาฉุกเฉินเร่งด่วน เพราะ บางสายการบิน มีการออกก่อนเวลา 2 ชม กว่าๆ)
+            </li>
+        </ol>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+the_best_airlines_2013 <- flights13 |>
+  left_join(airlines13, by = "carrier") |>
+  left_join(state13, by = c("dest" = "faa")) |>
+  filter(adm1name == "Florida") |>
+  select(name, adm1name, dep_delay, arr_delay, air_time) |>
+  select(-adm1name) |>
+  mutate(time_delay = (dep_delay + arr_delay)) |>
+  select(-dep_delay, -arr_delay) |>
+  arrange(time_delay) |>
+  group_by(name) |>
+  summarise(time_delay = sum(time_delay),
+            air_time = sum(air_time),
+            n_flights = n()) |>
+  mutate(time_delay_per_flight = round(time_delay / n_flights),
+         air_time_per_flight = round(air_time / n_flights)
+        ) |>
+  select(name, time_delay_per_flight, air_time_per_flight) |>
+  arrange(time_delay_per_flight, air_time_per_flight)
+
+styled_note("ตารางรายละเอียดสายการบินเรื่อง เวลาการเดินทาง ขาออก-ขาเข้า และขณะเดินทางไป Florida ในปี 2013")
+the_best_airlines_2013
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-43-1.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-43-1.png')">
+        </div>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+the_best_airlines_2023 <- flights23 |>
+  left_join(airlines23, by = "carrier") |>
+  left_join(state23, by = c("dest" = "faa")) |>
+  filter(adm1name == "Florida") |>
+  select(name, adm1name, dep_delay, arr_delay, air_time) |>
+  select(-adm1name) |>
+  mutate(time_delay = (dep_delay + arr_delay)) |>
+  select(-dep_delay, -arr_delay) |>
+  arrange(time_delay) |>
+  group_by(name) |>
+  summarise(time_delay = sum(time_delay),
+            air_time = sum(air_time),
+            n_flights = n()) |>
+  mutate(time_delay_per_flight = round(time_delay / n_flights),
+         air_time_per_flight = round(air_time / n_flights)
+        ) |>
+  select(name, time_delay_per_flight, air_time_per_flight) |>
+  arrange(time_delay_per_flight, air_time_per_flight)
+
+styled_note("ตารางรายละเอียดสายการบินเรื่อง เวลาการเดินทาง ขาออก-ขาเข้า และขณะเดินทางไป Florida ในปี 2023")
+the_best_airlines_2023
+
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-43-2.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-43-2.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify;">
+            📌 ผมขอละการอธิบายโค้ดแต่ละบรรทัดไว้ที่
+            <a href="https://colab.research.google.com/drive/1SwBmA0Z2Zeta6G13PouYCCIQTVD2sO4K?authuser=1#scrollTo=Which_airline_is_the_best_"
+                class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> และ <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P05-EDA-and-Comparison-of-NYC-Flights-Data-2013-vs-2023-with-R.ipynb"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+            นะครับ
+        </p>
+
+    </section>
+
+    <section>
+        <h4 class="link-cursor"> Conclusion..Airlines?</h4>
+        
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+               สรุป จาก 3 สนามบิน EWR(NJ), JFK(NY), LGA(NY) ที่บินไป florida มี Top 4 สายการบินที่บินไปในแต่ละปี
+        </p>
+        
+        <ul>
+            <li class="link-cursor">
+                ปี 2013 American Airlines Inc., Envoy Air, Delta Air Lines Inc., United Air Lines Inc. ตามลำดับ
+            </li>
+            <li class="link-cursor">
+                ปี 2023 Allegiant Air, Republic Airline, Endeavor Air Inc., American Airlines Inc. ตามลำดับ
+            </li>
+        </ul>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ดูเหมือนจะมีแค่ American Airlines Inc. ที่ติด Top 4
+            ดังนั้น การเลือกเดินทางของเราอาจจะมีหลายแผนอีกเช่นเดิม ❗️
+            <mark>แผน A เลือกสายการบิน Allegiant Air (best เพราะข้อมูลดูใหม่สุดและเข้าเงื่อนไขมากที่สุด)</mark>
+            แผน B, C, .. ต่อไปก็พิจารณาจากเดือนลำดับถัดๆไป
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สรุป ณ ตอนนี้
+            
+            <ul>
+                <li class="link-cursor">
+                    <mark>เราเลือกไปรัฐ Florida</mark>
+                </li>
+                <li class="link-cursor">
+                    <mark>ไปช่วงเดือน March</mark>
+                </li>
+                <li class="link-cursor">
+                    <mark>สายการบิน Allegiant Air</mark>
+                </li>
+            </ul>
+            
+            ถัดไปแล้วไป<mark>สนามบิน และ ช่วงเวลากี่โมงดีล่ะ❓</mark> ที่ลดโอกาสเจอฝนตก เชิญชมได้ที่หัวข้อถัดไปครับ
+
+        </p>
+    </section>
+    
+    <section>
+        <h3 class="link-cursor">2.4 What is the best flight time to choose?</h3>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            หัวข้อสุดท้ายแล้วครับ สำหรับการหาข้อมูล make decision ว่าเราจะมีการวางแผนการพักร้อนยังไง
+            สำหรับหัวข้อนี้เราจะมาหาดูว่า <mark>ไปที่สนามบินไหน และช่วงเวลาไหนที่มีโอกาสเจอฝนตกน้อยที่สุด</mark>
+            ได้ตามเลยครับ
+        </p>
+
+    </section>
+
+    <section>
+        <h4 class="link-cursor">2.4.1 Alert NA (Join)</h4>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เวลาเราอยากรู้ว่าสภาพอากาศในแต่ละสนามบินต้นทางเป็นยังไงบ้าง เราต้องดูที่ตาราง <code class="inline-code">weather</code>
+            ซึ่งมีข้อมูลสภาพอากาศในแต่ละวันของแต่ละสนามบิน ซึ่ง
+            เราจะเอาตาราง <code class="inline-code">flights</code> เป็นตัวตั้ง
+            และนำตาราง weather มา Join เข้ากับตาราง flights โดยเอาคอลัมน์ origin, year, month, day, hour
+            เป็นตัวเชื่อม <mark>ดังนั้นมีโอกาสเกิด NA ได้หลังจากการ Join เราจะมาเช็คดูกัน</mark>
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+styled_note("พบ NA หลัง Join Table ในปี 2013 ภายในคอลัมน์ต่อไปนี้")
+flights13 |>
+  left_join(weather13, by = c("origin", "year", "month", "day", "hour")) |>
+  select(where(~ any(is.na(.)))) 
+
+styled_note("พบ NA หลัง Join Table ในปี 2023 ภายในคอลัมน์ต่อไปนี้")
+flights23 |>
+  left_join(weather23, by = c("origin", "year", "month", "day", "hour")) |>
+  select(where(~ any(is.na(.))))                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-4-4-1.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-4-4-1.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify;">
+            📌 ผมขอละการอธิบายโค้ดแต่ละบรรทัดไว้ที่
+            <a href="https://colab.research.google.com/drive/1SwBmA0Z2Zeta6G13PouYCCIQTVD2sO4K?authuser=1#scrollTo=4_1_Alert_NA_Join_"
+                class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> และ <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P05-EDA-and-Comparison-of-NYC-Flights-Data-2013-vs-2023-with-R.ipynb"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+            นะครับ
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ใน<mark>ปี 2013</mark> มี NA เกิดขึ้น 4 คอลัมน์
+        </p>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ใน<mark>ปี 2023</mark> มี NA เกิดขึ้น 3 คอลัมน์
+        </p>
+        <p class="link-cursor" style="text-align: justify;">
+            ดังนั้นเราจึงต้อง
+            <mark>จัดการกับ NA </mark> ก่อนที่จะทำการ EDA ต่อไป
         </p>
     </section>
 
+    <section>
+        <h4 class="link-cursor">2.4.2 Cleaning Data</h4>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เราจะใช้คอลัมน์ <code class="inline-code">precip</code> ในการดูว่าวันนั้น ที่สนามบินต้นทาง
+            มีฝนตกหรือไม่ ซึ่งเผอิญว่ามีค่า NA อยู่ในคอลัมน์เหล่านั้น ดังนั้นเราจะ<mark>ลบแถวที่มีค่า NA ทั้งหมดอย่างน้อย 1 คอลัมน์</mark>
+            เพื่อให้ข้อมูลสมบูรณ์ที่สุด
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+styled_note("ตัดแถวที่มีค่า NA ออก ในปี 2013")
+flights_weather_clean_2013 <- flights13 |>
+  left_join(weather13, by = c("origin", "year", "month", "day", "hour")) |>
+  filter(if_all(everything(), ~ !is.na(.)))
+flights_weather_clean_2013
+
+styled_note("ตัดแถวที่มีค่า NA ออก ในปี 2023")
+flights_weather_clean_2023 <- flights23 |>
+  left_join(weather23, by = c("origin", "year", "month", "day", "hour")) |>
+  filter(if_all(everything(), ~ !is.na(.))) 
+flights_weather_clean_2023
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-4-4-3.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-4-4-3.png')">
+        </div>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-4-4-4.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-4-4-4.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify;">
+            📌 ผมขอละการอธิบายโค้ดแต่ละบรรทัดไว้ที่
+            <a href="https://colab.research.google.com/drive/1SwBmA0Z2Zeta6G13PouYCCIQTVD2sO4K?authuser=1#scrollTo=4_2_Cleaning_Data"
+                class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> และ <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P05-EDA-and-Comparison-of-NYC-Flights-Data-2013-vs-2023-with-R.ipynb"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+            นะครับ
+        </p>
+        
+        <p class="link-cursor" style="text-align: justify;">
+            จากตารางด้านบนเราได้<mark>จัดการ NA แล้วด้วยการตัดแถวที่มีค่า NA</mark> อย่างน้อย 1 คอลัมน์ เพราะมันส่งผลต่อคอลัมน์
+                <code class="inline-code">precip</code> ซึ่งเป็นคอลัมน์บอกปริมาณฝนที่ตกในแต่ละวัน ณ ที่สนามบินต้นทาง
+        </p>
+
+    </section>
+
+    <section>
+        <h4 class="link-cursor">2.4.3 Check NA</h4>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+        ทดสอบ NA ดูว่าจัดการไปแล้วหรือยัง เพื่อที่จะได้นำไป 
+        Summaries / Visualize Data ต่อไป
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+styled_note("ไม่พบ NA ในปี 2013 แล้ว")
+flights_weather_clean_2013 |> select(where(~ any(is.na(.))))
+styled_note("ไม่พบ NA ในปี 2023 แล้ว")
+flights_weather_clean_2023 |> select(where(~ any(is.na(.))))
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-43.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-43.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify;">
+            📌 ผมขอละการอธิบายโค้ดแต่ละบรรทัดไว้ที่
+            <a href="https://colab.research.google.com/drive/1SwBmA0Z2Zeta6G13PouYCCIQTVD2sO4K?authuser=1#scrollTo=4_3_Check_NA"
+                class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> และ <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P05-EDA-and-Comparison-of-NYC-Flights-Data-2013-vs-2023-with-R.ipynb"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+            นะครับ
+        </p>
+        
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เราเลือกแถวที่มี NA อย่างน้อย 1 คอลัมน์ <mark>พบว่าไม่มีค่า NA ใดๆ</mark> เหลืออยู่แล้ว
+            ดังนั้นเราสามารถทำการ <mark>Summaries / Visualize Data</mark> ได้เลย
+            โดย<mark>สร้าง line chart ย่อยเพื่อเปรียบเทียบเวลาชั่วโมง และแต่ละสนามบินต้นทาง</mark>
+            ว่ามีโอกาสเกิดฝนตกกี่เปอร์เซนต์
+        </p>
+
+    </section>
+
+    <section>
+        <h4 class="link-cursor">2.4.4 Visualize Data</h4>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+        เมื่อ<mark>ข้อมูลไม่มี NA แล้ว</mark>เราสามารถสร้าง line chart ย่อยๆ<mark>เพื่อหาช่วงเวลาและสนามบินที่มีโอกาสเกิดฝนตกน้อยที่สุด</mark>
+        แต่ผมจะพิจารณาเดือนอื่นๆนอกจากเดือน March ด้วย เนื่องจากเรามีแผนหลายแผน
+        ดังนั้น<mark>เป็นโอกาสดีที่เราจะได้มีแผนหลายแผนสำรองไว้</mark>
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+flights_weather_2013 <- flights_weather_clean_2013 |>
+  mutate(rain = ifelse(precip > 0, 1, 0)) |>
+  group_by(origin, month, hour) |>
+  summarise(
+    total_flights = n(),
+    rainy_flights = sum(rain),
+    rain_prob = mean(rain)
+  ) |>
+  arrange(rain_prob) |>
+  ggplot(aes(x = hour, y = rain_prob, color = origin)) +
+    geom_line(size = 1) +
+    facet_wrap(~ month, scales = "free_x") +
+    labs(
+      title = "Rain Probability by Airport and Time of Day 2013",
+      x = "Hour",
+      y = "Rain Probability (%)"
+    ) +
+  theme_minimal()
+
+flights_weather_2013
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-44-1.png" width="600" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-44-1.png')">
+        </div>
+        
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ต่อไปเป็นการ <mark>สร้าง line chart ย่อบๆของปี 2023</mark>
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+flights_weather_2023 <- flights_weather_clean_2023 |>
+  mutate(rain = ifelse(precip > 0, 1, 0)) |>
+  group_by(origin, month, hour) |>
+  summarise(
+    total_flights = n(),
+    rainy_flights = sum(rain),
+    rain_prob = mean(rain)
+  ) |>
+  arrange(rain_prob) |>
+  ggplot(aes(x = hour, y = rain_prob, color = origin)) +
+    geom_line(size = 1) +
+    facet_wrap(~ month, scales = "free_x") +
+    labs(
+      title = "Rain Probability by Airport and Time of Day 2023",
+      x = "Hour",
+      y = "Rain Probability (%)"
+    ) +
+  theme_minimal()
+flights_weather_2023
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p5-4-44-2.png" width="600" class="cursor-zoom-in" onclick="openGalleryModal('p5-4-44-2.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify;">
+            📌 ผมขอละการอธิบายโค้ดแต่ละบรรทัดไว้ที่
+            <a href="https://colab.research.google.com/drive/1SwBmA0Z2Zeta6G13PouYCCIQTVD2sO4K?authuser=1#scrollTo=4_4_Visualize_Data"
+                class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> และ <a
+                href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P05-EDA-and-Comparison-of-NYC-Flights-Data-2013-vs-2023-with-R.ipynb"
+                class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
+                <b> Github</b></a>
+            นะครับ
+        </p>
+        
+    </section>
+
+    <section>
+        <h4 class="link-cursor">2.4.5 Conclusion..people go to?</h4>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สรุป เมื่อเราเลือกไป Florida เดือน Mar สายการบิน เราจะเลือกช่วงเวลาไหน สนามบินไหน
+        </p>
+        <ul>
+            <li class="link-cursor" style="text-align: justify;">
+                ปี 2013 เน้นไปช่วงเช้า ตี 5 ถึง 10 โมงเช้าที่สายการบิน JFK(NY)(สีเขียว) เพราะช่วงเช้าจะมีฝนตกบ้างที่ LGA(NY) และ 8-10 โมงเริ่มมีฝนตกบ้างที่ EWR(NJ)
+            </li>
+            
+            <li class="link-cursor" style="text-align: justify;">
+                ปี 2023 เน้นไปช่วงเช้า ตี 5 ถึง 10 โมงเช้าที่สายการบินไหนก็ได้ EWR(NJ), <mark>JFK(NY)</mark>, LGA(NY)
+            </li>
+        </ul>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ดังนั้น <mark>การเลือกเดินทางของเราอาจจะไปที่ ⭐️ JFK(NY)(สีเขียว) ช่วงเวลาตี 5 ถึง 10 โมง❗️</mark>
+        </p>
+    </section>
+
+    <!-- Prism Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- Prism Language Components -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-r.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>
 </body>
+
 </html>

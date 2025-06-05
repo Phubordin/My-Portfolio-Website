@@ -9,7 +9,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-0MKCCGG3QF');
     </script>
     <meta charset="UTF-8">
@@ -47,14 +46,15 @@
 <button id="scrollToTopBtn" title="Go to top">⇧</button>
 <button id="toggle-toc-btn">≡</button>
 <aside id="table-of-contents" class="active">
-    <h3 class= "link-cursor">Navigation Menu</h3>
+    <h3 class="link-cursor">Navigation Menu</h3>
     <ul id="toc-list"></ul>
 </aside>
 
 <body class="fade-slide-in project-page">
     <header>
         <div class="header-background"></div>
-        <h2 style="font-size: 1.5em; font-weight: bold;" class= "link-cursor"><span class="strong1">Project</span> Overview</h2>
+        <h2 style="font-size: 1.5em; font-weight: bold;" class="link-cursor"><span class="strong1">Project</span>
+            Overview</h2>
     </header>
 
     <!-- Navigation Bar -->
@@ -80,26 +80,26 @@
                     <li><a onclick="navigateToProject_ggsheet_dsb10()">P1 : Data Exploration and Transformation with
                             <img src="sheets.png" style="vertical-align:middle" width="25"> Google Sheets</a></li>
                     <li><a onclick="navigateToProject_cafe_r_sql_dsb10()">P2 : Building a Café Restaurant Database
-                            Using  <img src="R.png" style="vertical-align:middle" width="25"> R and <img src="SQL.png"
+                            Using <img src="R.png" style="vertical-align:middle" width="25"> R and <img src="SQL.png"
                                 style="vertical-align:middle" width="25"> SQL</a></li>
                     <li><a onclick="navigateToProject_rfm_py_dsb10()">P3 : Customer Segmentation and RFM Analysis Using
                             <img src="python.png" style="vertical-align:middle" width="25">Python and <img src="R.png"
                                 style="vertical-align:middle" width="25"> R for Strategic Business Insight</a></li>
                     <li><a onclick="navigateToProject_pyc_r_py_dsb10()">P4 : Creating a Multi-Round Rock-Paper-Scissors
-                            Game in <img src="R.png" style="vertical-align:middle" width="25"> R and <img src="python.png"
-                                style="vertical-align:middle" width="25"> Python</a></li>
+                            Game in <img src="R.png" style="vertical-align:middle" width="25"> R and <img
+                                src="python.png" style="vertical-align:middle" width="25"> Python</a></li>
                     <li><a onclick="navigateToProject_nycflight13_23_dsb10()">P5 : EDA and Comparison of NYC Flights
-                            Data (2013 vs. 2023) with  <img src="R.png" style="vertical-align:middle" width="25"> R</a>
+                            Data (2013 vs. 2023) with <img src="R.png" style="vertical-align:middle" width="25"> R</a>
                     </li>
                     <li><a onclick="navigateToProject_vizdimond_dsb10()">P6 : EDA Visualization of the Diamond Dataset
-                            Using  <img src="R.png" style="vertical-align:middle" width="25"> R and R Markdown </a></li>
+                            Using <img src="R.png" style="vertical-align:middle" width="25"> R and R Markdown </a></li>
                     <li><a onclick="navigateToProject_titanic_glm_dsb10()">P7 : Logistic Regression Analysis on the
-                            Titanic Dataset Using  <img src="R.png" style="vertical-align:middle" width="25"> R</a></li>
+                            Titanic Dataset Using <img src="R.png" style="vertical-align:middle" width="25"> R</a></li>
                     <li><a onclick="navigateToProject_looker_dsb10()">P8 : Data-Driven Insights: Sales Performance &
                             Profitability in <img src="looker.png" style="vertical-align:middle" width="25">Looker
                             Studio</a></li>
                     <li><a onclick="navigateToProject_pizza_chatbot_dsb10()">P9 : Chatbot Development for a Pizza
-                            Business Using  <img src="R.png" style="vertical-align:middle" width="25"> R Programming</a>
+                            Business Using <img src="R.png" style="vertical-align:middle" width="25"> R Programming</a>
                     </li>
                     <li><a onclick="navigateToProject_atm_oop_py_dsb10()">P10 : Object-Oriented ATM System: Financial
                             Transactions with <img src="python.png" style="vertical-align:middle" width="25"> Python
@@ -118,112 +118,126 @@
 
     <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
     <section id="toc-section1">
-        <p style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Content of Tables <span class="text-description link-cursor">(⭐️ Recommended)</span></p>
+        <p style="font-size: 1.5em; font-weight: bold;" class="link-cursor">Content of Tables <span
+                class="text-description link-cursor">(⭐️ Recommended)</span></p>
         <div id="toc-marker"></div>
         <div id="toc-section1"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
     </section>
 
     <section id="project1">
-        <h2 class= "link-cursor">P1 : Data Exploration and Transformation with <img src="sheets.png" style="vertical-align:middle"
-                width="25"> Google Sheets</h2>
-        <p class= "link-cursor" style="text-align: justify;">
+        <h2 class="link-cursor">P1 : Data Exploration and Transformation with <img src="sheets.png"
+                style="vertical-align:middle" width="25"> Google Sheets</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             ใช้เครื่องมือใน Google Sheets จัดการและสำรวจข้อมูลตัวอย่างพนักงานจากบริษัทแห่งหนึ่ง
         </p>
-            
-        <details class= "detail">
-            <summary>คำอธิบาย</summary>
+        <ul class="link-cursor">
+            <li><code class="inline-code">Filter()</code>, <code class="inline-code">Sort()</code>, Dropdown List แบบ
+                Dynamic</li>
+            <li><mark>Highlight Conditional Formatting</mark>โดยที่ Highlight 4 รูปแบบตามเงื่อนไข</li>
+            <li>Dymamic Query ใช้ฟังก์ชัน <code class="inline-code">Query()</code> ในการ filter ข้อมูลพนักงาน</li>
+            <li><code class="inline-code">VLOOKUP()</code> ใช้ return ข้อมูลพนักงานเพิ่มเติมจากอีก Table</li>
+            <li>Convert Date แปลงวันที่ภาษาไทยเป็นวันที่มาตรฐานสากล ISO <code class="inline-code">yyyy-mm-dd</code></li>
+            <li>
+                Regular Expression ใช้ฟังก์ชัน <code class="inline-code">REGEXEXTRACT()</code> กับ <code
+                    class="inline-code">REGEXMATCH()</code>
+                หา Pattern ของข้อมูลพนักงาน เช่น Email, Phone Number, ID Card ต่างๆเพื่อที่จะตรวจสอลว่ามีหรือไม่มี
+                หรือเพื่อดึงข้อมูลที่ต้องการออกมา <img src="right-down-corner-arrow.png" width="18">
+            </li>
+        </ul>
 
-            <h3 class= "link-cursor">Contents</h3>
-            <ul class= "link-cursor">
-                <li><code class="inline-code">Filter()</code>, <code class="inline-code">Sort()</code>, Dropdown List แบบ Dynamic</li>
-                <li><mark>Highlight Conditional Formatting</mark>โดยที่ Highlight 4 รูปแบบตามเงื่อนไข</li>
-                <li>Dymamic Query ใช้ฟังก์ชัน <code class="inline-code">Query()</code> ในการ filter ข้อมูลพนักงาน</li>
-                <li><code class="inline-code">VLOOKUP()</code> ใช้ return ข้อมูลพนักงานเพิ่มเติมจากอีก Table</li>
-                <li>Convert Date แปลงวันที่ภาษาไทยเป็นวันที่มาตรฐานสากล ISO <code class="inline-code">yyyy-mm-dd</code></li>
-                <li>
-                    Regular Expression ใช้ฟังก์ชัน <code class="inline-code">REGEXEXTRACT()</code> กับ <code class="inline-code">REGEXMATCH()</code>
-                    หา Pattern ของข้อมูลพนักงาน เช่น Email, Phone Number, ID Card ต่างๆเพื่อที่จะตรวจสอลว่ามีหรือไม่มี หรือเพื่อดึงข้อมูลที่ต้องการออกมา
-                </li>
+        <details class="detail">
+            <summary>Example</summary>
+
+            <h3 class="link-cursor">Contents</h3>
+
+            <ul>
+
+                <li class="link-cursor"><b><mark>Filter & Sort Dynamic</mark></b></li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p1-1-6.gif" width="600" class="cursor-zoom-in" onclick="openGalleryModal('p1-1-6.gif')">
+                </div>
+
+                <li class="link-cursor"><b><mark>Conditional Formatting: Highlight Row</mark></b></li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="hcf-filter.gif" width="600" class="cursor-zoom-in"
+                        onclick="openGalleryModal('hcf-filter.gif')">
+                </div>
+
+                <li class="link-cursor"><b><mark>Dynamic Query</mark></b></li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p1-3-6.gif" width="600" class="cursor-zoom-in" onclick="openGalleryModal('p1-3-6.gif')">
+                </div>
+
+                <li class="link-cursor"><b><mark>Vlookup</mark></b></li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p1-4-6.gif" width="600" class="cursor-zoom-in" onclick="openGalleryModal('p1-4-6.gif')">
+                </div>
+
+                <li class="link-cursor"><b><mark>Convert Date</mark></b></li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p1-5-6.gif" width="600" class="cursor-zoom-in" onclick="openGalleryModal('p1-5-6.gif')">
+                </div>
+
+                <li class="link-cursor"><b><mark>Regular Expression</mark></b></li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p1-6-6.png" width="600" class="cursor-zoom-in" onclick="openGalleryModal('p1-6-6.png')">
+                </div>
+
             </ul>
 
-            <p>เป็นรูปแค่บางส่วน สามารถดูเนื้อหารายละเอียดเต็มๆได้ที่ <span class="link-website" onclick="navigateToProject_ggsheet_dsb10()">Read More</span></p>
-
-            <h3 class="link-cursor">1. Filter & Sort Dynamic</h3>
-            
-            <div class="iframe-container cursor-zoom-in">
-                <img src="p1-1-6.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-1-6.gif')">
-            </div>
-
-            <h3 class="link-cursor">2. Conditional Formatting: Highlight Row</h3>
-            
-            <div class="iframe-container cursor-zoom-in">
-                <img src="hcf-filter.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('hcf-filter.gif')">
-            </div>
-
-            <h3 class="link-cursor">3. Dynamic Query</h3>
-            
-            <div class="iframe-container cursor-zoom-in">
-                <img src="p1-3-6.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-3-6.gif')">
-            </div>
-
-            <h3 class="link-cursor">4. Vlookup</h3>
-            
-            <div class="iframe-container cursor-zoom-in">
-                <img src="p1-4-6.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-4-6.gif')">
-            </div>
-
-            <h3 class="link-cursor">5. Convert Date</h3>
-
-            <div class="iframe-container cursor-zoom-in">
-                <img src="p1-5-6.gif" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-5-6.gif')">
-            </div>
-
-            <h3 class="link-cursor">6. Regular Expression</h3>
-
-            <div class="iframe-container cursor-zoom-in">
-                <img src="p1-6-6.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p1-6-6.png')">
-            </div>
         </details>
         </p>
-        
+
         <div class="corner-text" onclick="navigateToProject_ggsheet_dsb10()">Read More</div>
 
     </section>
 
     <section id="project2">
-        <h2 class= "link-cursor">P2 : Building a Café Restaurant Database Using  <img src="R.png" style="vertical-align:middle" width="25"> R
+        <h2 class="link-cursor">P2 : Building a Café Restaurant Database Using <img src="R.png"
+                style="vertical-align:middle" width="25"> R
             and <img src="SQL.png" style="vertical-align:middle" width="25"> SQL</h2>
-        <p class= "link-cursor" style="text-align: justify;">สร้าง Database ไว้เก็บข้อมูลร้านอาหารทั้งหมด 5 ตารางด้วยภาษา SQL และ R รวมถึงการสร้าง ER Diagram ไว้ดูความสัมพันธ์โครงสร้างภายในของ Database</p>
-        <details class= "detail">
-            <summary>คำอธิบาย</summary>
-            <h3 class= "link-cursor">Contents</h3>
-            <ul class= "link-cursor">
-                <li>สร้าง Database ด้วยภาษา SQL และดึง Feedback ของลูกค้ามาสำรวจ และนำไป Action ต่อ</li>
-                <li>สร้าง SQLite Database ด้วย Library RSQLite</li>
-                <li>สร้าง ER Diagram ด้วยเว็บ dbdiagram.io</li>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;"><mark>สร้าง Database
+                เก็บข้อมูลร้านอาหาร</mark>ทั้งหมด 5 ตาราง<mark>ด้วยภาษา SQL และ R</mark> รวมถึงการสร้าง <mark>ER
+                Diagram</mark> ไว้ดูความสัมพันธ์โครงสร้างภายในของ Database</p>
+        <h3 class="link-cursor">Contents</h3>
+        <ul class="link-cursor">
+            <li>สร้าง Database ด้วยภาษา SQL และดึง Feedback ของลูกค้ามาสำรวจ และนำไป Action ต่อ</li>
+            <li>สร้าง SQLite Database ด้วย Library RSQLite</li>
+            <li>สร้าง ER Diagram ด้วยเว็บ dbdiagram.io <img src="right-down-corner-arrow.png" width="18"></li>
+        </ul>
+        <details class="detail">
+            <summary>Example</summary>
+            <ul>
+
+                <li class="link-cursor"><b><mark>Create Tables and Perform SQL INSERT with Basic Queries and
+                            Aggregation</mark></b></li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p2-cafe-sql1.png" width="600" class="cursor-zoom-in"
+                        onclick="openGalleryModal('p2-cafe-sql1.png')">
+                </div>
+
+                <li class="link-cursor"><b><mark>Create Tables and Perform INSERT Using R</mark></b></li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p2-cafe-r.png" width="600" class="cursor-zoom-in"
+                        onclick="openGalleryModal('p2-cafe-r.png')">
+                </div>
+
+                <li class="link-cursor"><b><mark>Create ER Diagram (DBML Code)</mark></b></li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="er-diagram.png" width="600" class="cursor-zoom-in"
+                        onclick="openGalleryModal('er-diagram.png')">
+                </div>
+
             </ul>
-
-            <p>เป็นรูปแค่บางส่วน สามารถดูเนื้อหารายละเอียดเต็มๆได้ที่ <span class="link-website" onclick="navigateToProject_cafe_r_sql_dsb10()">Read More</span></p>
-            
-            <h3 class="link-cursor">1. Create Tables and Perform SQL INSERT with Basic Queries and Aggregation</h3>
-            
-            <div class="iframe-container cursor-zoom-in">
-                <img src="p2-cafe-sql1.png" width="800" class="cursor-zoom-in"
-                    onclick="openGalleryModal('p2-cafe-sql1.png')">
-            </div>
-
-            <h3 class="link-cursor">2. Create Tables and Perform INSERT Using R</h3>
-
-            <div class="iframe-container cursor-zoom-in">
-                <img src="p2-cafe-r.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('p2-cafe-r.png')">
-            </div>
-
-            <h3 class="link-cursor">3. Create ER Diagram (DBML Code)</h3>
-
-            <div class="iframe-container cursor-zoom-in">
-                <img src="er-diagram.png" width="800" class="cursor-zoom-in" onclick="openGalleryModal('er-diagram.png')">
-            </div>
-            
         </details>
         </p>
         <div class="corner-text" onclick="navigateToProject_cafe_r_sql_dsb10()">Read More</div>
@@ -231,130 +245,143 @@
     </section>
 
     <section id="project3">
-        <h2 class= "link-cursor">⭐️ P3 : Customer Segmentation and RFM Analysis Using <img src="python.png" style="vertical-align:middle"
-                width="25">Python and  <img src="R.png" style="vertical-align:middle" width="25"> R for Strategic Business
+        <h2 class="link-cursor">⭐️ P3 : Customer Segmentation and RFM Analysis Using <img src="python.png"
+                style="vertical-align:middle" width="25">Python and <img src="R.png" style="vertical-align:middle"
+                width="25"> R for Strategic Business
             Insight</h2>
-        <p class= "link-cursor">วิเคราะห์พฤติกรรมการใช้จ่ายของลูกค้า โดยแบ่งเป็น 11 กลุ่มแสดงเป็น Table และ Heat Map Chart ตามจำนวนลูกค้าในแต่ละ Segment</p>
-       
-        <details class= "detail">
-            <summary>คำอธิบาย</summary>
-
-        <ul>
-        
-            <li class="link-cursor"><b>RFM Analysis Using Python - Heat Map Level Business Impact : ⬇︎</b></li>
-
-            <div class="iframe-container cursor-zoom-in">
-                <img src="p3-viz-level-rfm.png" width="800" class="cursor-zoom-in"
-                    onclick="openGalleryModal('p3-viz-level-rfm.png')">
-            </div>
-            
-            <li class="link-cursor"><b>RFM No. Customers Table: ⬇︎</b></li>
-
-            <div class="iframe-container cursor-zoom-in">
-                <img src="p3-count-rfm.png" width="800" class="cursor-zoom-in"
-                    onclick="openGalleryModal('p3-count-rfm.png')">
-            </div>
-            
-            <li class="link-cursor"><b>RFM Analysis Using Python - Heat Map No. Customers : ⬇︎</b></li>
-
-            <div class="iframe-container cursor-zoom-in">
-                <img src="p3-viz-count-rfm.png" width="800" class="cursor-zoom-in"
-                    onclick="openGalleryModal('p3-viz-count-rfm.png')">
-            </div>
-            
-            <li class="link-cursor"><b>RFM Analysis Using R - Heat Map No. Customers : ⬇︎</b></li>
-
-            <div class="iframe-container cursor-zoom-in">
-                <img src="p3-viz-count-rfm-r.png" width="800" class="cursor-zoom-in"
-                    onclick="openGalleryModal('p3-viz-count-rfm-r.png')">
-            </div>
-
-        </ul>
-
-        <p class="link-cursor" style="text-align: justify;">
-            <b>ส่วนที่ 1 : โหลดข้อมูล ➤ สำรวจข้อมูล ➤ ทำความสะอาดข้อมูล :</b>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;"><mark>วิเคราะห์พฤติกรรมการใช้จ่ายของลูกค้า
+                โดยใช้หลักการ RFM Model</mark> วิธีการ คิือแบ่งเป็นลูกค้าออกเป็นทั้งหมด 11 กลุ่ม
+            แบ่งตาม metric 3 ตัวคือ Recency, Frequency และ Monetary โดย<mark>ใช้ Python และ R
+                ในการวิเคราะห์ข้อมูล</mark> แสดงผลเป็น
+            Heat Map เพื่อดูการกระจายตัวของกลุ่มลูกค้าแต่ละกลุ่ม และสามารถ <mark>Actionable Insight</mark>
+            ได้เลยว่าแต่ละกลุ่มควรจะทำอย่างไรต่อไป
+            โดยจะแบ่งระดับดาวไว้ว่า 5 ดาวยิ่งมี Business Impact มาก 1 ดาวมี Business Impact น้อย ซึ่งพิจารณาจาก Revenue
+            Oppurtunity & Retention Oppurtunity <img src="right-down-corner-arrow.png" width="18">
         </p>
 
-        <ul>
-            <li class="link-cursor" style="text-align: justify;">
-                จัดการ NaN ลบคอลัมน์ทิ้ง (วิธีที่ดีที่สุดในการจัดการ NaN ควรไปแก้ไขตอนเก็บข้อมูลต้นทาง)
-            </li>
-            <li class="link-cursor" style="text-align: justify;">
-                ปรับคอลัมน์ Order Date และ Ship Date ให้เป็นมาตรฐาน ISO
-            </li>
-            <li class="link-cursor" style="text-align: justify;">
-                กำจัดช่องว่างส่วนเกินโดยใช้ TRIM
-            </li>
+        <details class="detail">
+            <summary>Example</summary>
 
-        </ul>
+            <ul>
 
-        <p class="link-cursor" style="text-align: justify;">
-            <b>ส่วนที่ 2 : วิเคราะห์ข้อมูลด้วย RFM Model ด้วย R และ Python</b><br>
-            ➤ 📍 เน้นแสดง Insight ของลูกค้า
-        </p>
+                <li class="link-cursor"><b><mark>RFM Analysis Using Python - Heat Map Level Business Impact :
+                            ⬇︎</mark></b></li>
 
-        <ul>
-            <li class="link-cursor" style="text-align: justify;">
-                RFM Analysis Using Python : 
-                <ul>
-                    <li>
-                        Aggregate ยอดขายเฉลี่ยต่อเดือน, จำนวนครั้งที่ลุกค้าใช้จ่าย และวันล่าสุดที่ลูกค้าซื้อ
-                    </li>
-                    <li>
-                        สำรวจการกระจายตัวด้วย Boxplot และใช้การวัดตำแหน่ง quartile และ Percentile ในการหา
-                        R Scode, F Score และ M Score
-                    </li>
-                    <li>
-                        แบ่งกลุ่มลูกค้าออกเป็นทั้งหมด 11 กลุ่ม พร้อม Level Business Impact จากตัว RFM Score
-                    </li>
-                    <li>
-                        คำนวณหาจำนวนลูกค้าแต่ละกลุ่ม
-                    </li>
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p3-viz-level-rfm.png" width="600" class="cursor-zoom-in"
+                        onclick="openGalleryModal('p3-viz-level-rfm.png')">
+                </div>
 
-                    <li>
-                        ทำการ Plot Tree Map RFM Analysis เพื่อดูการกระจายตัวของกลุ่มลูกค้าแต่ละกลุ่ม
-                    </li>
-                </ul>
-            </li>
-            <li class="link-cursor" style="text-align: justify;">
-                RFM Analysis Using Python R : คล้ายกับการวิเคราะห์ด้วย Python เลยแต่ใช้เป็นภาษา R
-                แต่ตัดตัวตอนสำรวจข้อมูลด้วย Boxplot ออกไป จะเน้นเป็นการเขียน R เพื่อวิเคราะห์ RFM เลย 
-            </li>
-        </ul>
+                <li class="link-cursor"><b><mark>RFM No. Customers Table: ⬇︎</mark></b></li>
 
-        <p class="link-cursor" style="text-align: justify;">
-            <b>ส่วนที่ 3 (ส่วนเสริม) : วิเคราะห์ข้อมูลยอดขายลูกค้าปี 2017-2020 มีทั้งหมด 9 ตัวอย่าง โดยใช้
-                Python</b><br>
-            ➤ 📍 เน้นตั้งคำถาม
-        </p>
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p3-count-rfm.png" width="600" class="cursor-zoom-in"
+                        onclick="openGalleryModal('p3-count-rfm.png')">
+                </div>
 
-        <ol class="link-cursor" style="text-align: justify;">
-            <li>Export Customer Data in California (CSV Format)<br>➤ ส่งออกข้อมูลลุฏค้าที่อยู่ในรัฐ Califonia</li><br>
-            <li>Export Order Data (CSV): Customers in California and Texas, 2017<br>➤ ส่งออกข้อมูลลุฏค้าที่อยู่ในรัฐ Califonia และ Texas ในปี 2017
-            </li><br>
-            <li>Sales Analysis 2017: Total, Average, and Standard Deviation by Month, Day, and Order
-                <br>➤ คำนวณยอดขายโดยเฉลี่ยต่อวัน ต่อเดือน ต่อออเดอร์ ในปี 2017
-            </li><br>
-            <li>Highest Profit Segment in 2018
-                <br>➤ กลุ่มลูกค้าที่สร้างกำไรให้เราสูงสุดใน 2018
-            </li><br>
-            <li>Top 5 States with the Lowest Total Sales (15 April – 31 December 2019)
-                <br>➤ รัฐที่มียอดขายต่ำสุด 5 อันดับแรกช่วงวันที่ตั้งแต่ 151 เมษายน ถึึง 31 ธันวาคม 2019
-            </li><br>
-            <li>Sales Proportion (%) in West and Central Regions, 2019
-                <br>➤ สัดส่วนยอดขายของภูมิภาคตะวันตกรวมกับภูมิภาคตอนกลาง เทียบกับ ยอดขายรวมทั้งหมด ในปี 2019
-            </li><br>
-            <li>Top 10 Products by Order Volume vs. Total Sales (2019–2020)
-                <br>➤ ยอดขายสินค้าโดยเฉลี่ยต่อออเดอร์ 10 อันดับแรกในปี 2019 ถึง 2020
-            </li><br>
-            <li>Visual Insights: At Two Plots
-                <br>➤ ดูการกระจายตัวของยอดขาย เทียบกำไร ด้วย Scatter Plot
-                และ ดูการกระจายตัวของจำนวนออเดอร์ เทียบกับยอดขายด้วย Histogram
-            </li><br>
-            <li>Summary Exploratory Sales & Customer Analysis (2017-2020)
-                <br>➤ สรุปผลลัพธ์ส่วนที่ 3
-            </li>
-        </ol>
+                <li class="link-cursor"><b><mark>RFM Analysis Using Python - Heat Map No. Customers : ⬇︎</mark></b></li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p3-viz-count-rfm.png" width="600" class="cursor-zoom-in"
+                        onclick="openGalleryModal('p3-viz-count-rfm.png')">
+                </div>
+
+                <li class="link-cursor"><b><mark>RFM Analysis Using R - Heat Map No. Customers : ⬇︎</mark></b></li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p3-viz-count-rfm-r.png" width="600" class="cursor-zoom-in"
+                        onclick="openGalleryModal('p3-viz-count-rfm-r.png')">
+                </div>
+
+            </ul>
+
+            <p class="link-cursor" style="text-align: justify;">
+                <b><mark>ส่วนที่ 1 :</mark> โหลดข้อมูล ➤ สำรวจข้อมูล ➤ ทำความสะอาดข้อมูล :</b>
+            </p>
+
+            <ul>
+                <li class="link-cursor" style="text-align: justify;">
+                    จัดการ NaN ลบคอลัมน์ทิ้ง (วิธีที่ดีที่สุดในการจัดการ NaN ควรไปแก้ไขตอนเก็บข้อมูลต้นทาง)
+                </li>
+                <li class="link-cursor" style="text-align: justify;">
+                    ปรับคอลัมน์ Order Date และ Ship Date ให้เป็นมาตรฐาน ISO
+                </li>
+                <li class="link-cursor" style="text-align: justify;">
+                    กำจัดช่องว่างส่วนเกินโดยใช้ TRIM
+                </li>
+
+            </ul>
+
+            <p class="link-cursor" style="text-align: justify;">
+                <b><mark>ส่วนที่ 2 :</mark> วิเคราะห์ข้อมูลด้วย RFM Model ด้วย R และ Python</b><br>
+                ➤ 📍 เน้นแสดง Insight ของลูกค้า
+            </p>
+
+            <ul>
+                <li class="link-cursor" style="text-align: justify;">
+                    RFM Analysis Using Python :
+                    <ul>
+                        <li>
+                            Aggregate ยอดขายเฉลี่ยต่อเดือน, จำนวนครั้งที่ลุกค้าใช้จ่าย และวันล่าสุดที่ลูกค้าซื้อ
+                        </li>
+                        <li>
+                            สำรวจการกระจายตัวด้วย Boxplot และใช้การวัดตำแหน่ง quartile และ Percentile ในการหา
+                            R Scode, F Score และ M Score
+                        </li>
+                        <li>
+                            แบ่งกลุ่มลูกค้าออกเป็นทั้งหมด 11 กลุ่ม พร้อม Level Business Impact จากตัว RFM Score
+                        </li>
+                        <li>
+                            คำนวณหาจำนวนลูกค้าแต่ละกลุ่ม
+                        </li>
+
+                        <li>
+                            ทำการ Plot Tree Map RFM Analysis เพื่อดูการกระจายตัวของกลุ่มลูกค้าแต่ละกลุ่ม
+                        </li>
+                    </ul>
+                </li>
+                <li class="link-cursor" style="text-align: justify;">
+                    RFM Analysis Using Python R : คล้ายกับการวิเคราะห์ด้วย Python เลยแต่ใช้เป็นภาษา R
+                    แต่ตัดตัวตอนสำรวจข้อมูลด้วย Boxplot ออกไป จะเน้นเป็นการเขียน R เพื่อวิเคราะห์ RFM เลย
+                </li>
+            </ul>
+
+            <p class="link-cursor" style="text-align: justify;">
+                <b><mark>ส่วนที่ 3 (ส่วนเสริม)</mark> : วิเคราะห์ข้อมูลยอดขายลูกค้าปี 2017-2020 มีทั้งหมด 9 ตัวอย่าง
+                    โดยใช้
+                    Python</b><br>
+                ➤ 📍 เน้นตั้งคำถาม
+            </p>
+
+            <ol class="link-cursor" style="text-align: justify;">
+                <li>Export Customer Data in California (CSV Format)<br>➤ ส่งออกข้อมูลลุฏค้าที่อยู่ในรัฐ Califonia</li>
+                <br>
+                <li>Export Order Data (CSV): Customers in California and Texas, 2017<br>➤ ส่งออกข้อมูลลุฏค้าที่อยู่ในรัฐ
+                    Califonia และ Texas ในปี 2017
+                </li><br>
+                <li>Sales Analysis 2017: Total, Average, and Standard Deviation by Month, Day, and Order
+                    <br>➤ คำนวณยอดขายโดยเฉลี่ยต่อวัน ต่อเดือน ต่อออเดอร์ ในปี 2017
+                </li><br>
+                <li>Highest Profit Segment in 2018
+                    <br>➤ กลุ่มลูกค้าที่สร้างกำไรให้เราสูงสุดใน 2018
+                </li><br>
+                <li>Top 5 States with the Lowest Total Sales (15 April – 31 December 2019)
+                    <br>➤ รัฐที่มียอดขายต่ำสุด 5 อันดับแรกช่วงวันที่ตั้งแต่ 151 เมษายน ถึึง 31 ธันวาคม 2019
+                </li><br>
+                <li>Sales Proportion (%) in West and Central Regions, 2019
+                    <br>➤ สัดส่วนยอดขายของภูมิภาคตะวันตกรวมกับภูมิภาคตอนกลาง เทียบกับ ยอดขายรวมทั้งหมด ในปี 2019
+                </li><br>
+                <li>Top 10 Products by Order Volume vs. Total Sales (2019–2020)
+                    <br>➤ ยอดขายสินค้าโดยเฉลี่ยต่อออเดอร์ 10 อันดับแรกในปี 2019 ถึง 2020
+                </li><br>
+                <li>Visual Insights: At Two Plots
+                    <br>➤ ดูการกระจายตัวของยอดขาย เทียบกำไร ด้วย Scatter Plot
+                    และ ดูการกระจายตัวของจำนวนออเดอร์ เทียบกับยอดขายด้วย Histogram
+                </li><br>
+                <li>Summary Exploratory Sales & Customer Analysis (2017-2020)
+                    <br>➤ สรุปผลลัพธ์ส่วนที่ 3
+                </li>
+            </ol>
 
         </details>
 
@@ -363,47 +390,95 @@
     </section>
 
     <section id="project4">
-        <h2 class= "link-cursor">P4 : Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png" style="vertical-align:middle"
-                width="25"> R and <img src="python.png" style="vertical-align:middle" width="25"> Python</h2>
-        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
-        <details class= "detail">
-            <summary>คำอธิบาย</summary>
-            <h3 class= "link-cursor">Project Questions</h3>
-            <ul class= "link-cursor">
-                <li>คำถาม 1</li>
-                <li>คำถาม 2</li>
-                <li>คำถาม .</li>
-                <li>คำถาม .</li>
-                <li>คำถาม N</li>
-            </ul>
-
-            <h3 class= "link-cursor">Skills & Tools</h3>
-            <ul class= "link-cursor">
-                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
-                <li>📈 Data Visualization (chart ต่างๆ)</li>
-                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
-                <li>🗄️ Dashboard (Looker Studio)</li>
-            </ul>
-
-            <h3 class= "link-cursor">Project Summary </h3>
-            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
-                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
-            </p>
-        </details>
+        <h2 class="link-cursor">P4 : Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png"
+                style="vertical-align:middle" width="25"> R and <img src="python.png" style="vertical-align:middle"
+                width="25"> Python</h2>
+        <p class="link-cursor"> <mark>สร้างเกมเป่ายิ้งฉุบแบบหลายรอบ โดยใช้ภาษา R และ Python</mark>
+            โดยมีการเก็บสถิติการเล่นของผู้เล่นและ Computer ว่าตอนจบ 10 รอบใครจะเป็นผู้ชนะ
+            เป็นโปรเจกต์ที่<mark>ฝึกทักษะ Control Flow เป็นหลัก</mark> <code class="inline-code">if</code>, <code
+                class="inline-code">for</code>,
+            <code class="inline-code">while</code> ซึ่งเป็น Programimng ที่ส่วนใหญ่ใช้กัน <img
+                src="right-down-corner-arrow.png" width="18">
         </p>
+
+        <details class="detail">
+            <summary>Example</summary>
+
+            <ul>
+
+                <li class="link-cursor"><b><mark>Rock-Paper-Scissors Game WorkFlow : ⬇︎</mark></b></li>
+
+                <pre class="mermaid link-cursor">
+                graph TD
+                    A[Start Function: hammer_scissor_paper] --> B[Initialize Variables and Rules Displayed]
+                    B --> C[Loop Round 1 to 10]
+                    C --> D[Computer chooses randomly]
+                    D --> E[Input loop: Ask for user input]
+
+                    E --> F{Input is 'check'?}
+                    F -- Yes --> G[Show scores and results table]
+                    G --> E
+
+                    F -- No --> H{Input is valid?}
+                    H -- No --> I[Show invalid input message]
+                    I --> E
+
+                    H -- Yes --> J[Show both choices]
+                    J --> K{Compare choices}
+
+                    K -- Draw --> L[Set winner = Draw]
+                    K -- User wins --> M[Set winner = User<br>+1 to user_score]
+                    K -- Computer wins --> N[Set winner = Computer<br>+1 to computer_score]
+
+                    L --> O[Record result to data.frame]
+                    M --> O
+                    N --> O
+
+                    O --> P{All 10 rounds done?}
+                    P -- No --> C
+                    P -- Yes --> Q[Show all round results]
+
+                    Q --> R{Who has more points?}
+                    R -- User --> S[Announce: User Wins]
+                    R -- Computer --> T[Announce: Computer Wins]
+                    R -- Draw --> U[Announce: It's a Draw]
+
+                    S --> V[End]
+                    T --> V
+                    U --> V
+                </pre>
+
+                <li class="link-cursor"><b><mark>A Video Simulation of Rock–Paper–Scissors Game Using R : ⬇︎</mark></b>
+                </li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p4-video-R.gif" width="600" class="cursor-zoom-in"
+                        onclick="openGalleryModal('p4-video-R.gif')">
+                </div>
+
+                <li class="link-cursor"><b><mark>A Video Simulation of Rock–Paper–Scissors Game Using Python :
+                            ⬇︎</mark></b></li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p4-video-Python.gif" width="600" class="cursor-zoom-in"
+                        onclick="openGalleryModal('p4-video-Python.gif')">
+                </div>
+            </ul>
+        </details>
 
         <div class="corner-text" onclick="navigateToProject_pyc_r_py_dsb10()">Read More</div>
 
     </section>
 
     <section id="project5">
-        <h2 class= "link-cursor">⭐️ P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png"
+        <h2 class="link-cursor">⭐️ P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png"
                 style="vertical-align:middle" width="25"> R</h2>
-        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
-        <details class= "detail">
-            <summary>คำอธิบาย</summary>
-            <h3 class= "link-cursor">Project Questions</h3>
-            <ul class= "link-cursor">
+        <p class="link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย
+            DSB10 DataRockie
+        <details class="detail">
+            <summary>Example</summary>
+            <h3 class="link-cursor">Project Questions</h3>
+            <ul class="link-cursor">
                 <li>คำถาม 1</li>
                 <li>คำถาม 2</li>
                 <li>คำถาม .</li>
@@ -411,16 +486,16 @@
                 <li>คำถาม N</li>
             </ul>
 
-            <h3 class= "link-cursor">Skills & Tools</h3>
-            <ul class= "link-cursor">
+            <h3 class="link-cursor">Skills & Tools</h3>
+            <ul class="link-cursor">
                 <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
                 <li>📈 Data Visualization (chart ต่างๆ)</li>
                 <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
                 <li>🗄️ Dashboard (Looker Studio)</li>
             </ul>
 
-            <h3 class= "link-cursor">Project Summary </h3>
-            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+            <h3 class="link-cursor">Project Summary </h3>
+            <p class="link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
                 <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
             </p>
         </details>
@@ -431,13 +506,14 @@
     </section>
 
     <section id="project6">
-        <h2 class= "link-cursor">⭐️ P6 : EDA Visualization of the Diamond Dataset Using <img src="R.png" style="vertical-align:middle"
-                width="25"> R and R Markdown</h2>
-        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
-        <details class= "detail">
-            <summary>คำอธิบาย</summary>
-            <h3 class= "link-cursor">Project Questions</h3>
-            <ul class= "link-cursor">
+        <h2 class="link-cursor">⭐️ P6 : EDA Visualization of the Diamond Dataset Using <img src="R.png"
+                style="vertical-align:middle" width="25"> R and R Markdown</h2>
+        <p class="link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย
+            DSB10 DataRockie
+        <details class="detail">
+            <summary>Example</summary>
+            <h3 class="link-cursor">Project Questions</h3>
+            <ul class="link-cursor">
                 <li>คำถาม 1</li>
                 <li>คำถาม 2</li>
                 <li>คำถาม .</li>
@@ -445,16 +521,16 @@
                 <li>คำถาม N</li>
             </ul>
 
-            <h3 class= "link-cursor">Skills & Tools</h3>
-            <ul class= "link-cursor">
+            <h3 class="link-cursor">Skills & Tools</h3>
+            <ul class="link-cursor">
                 <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
                 <li>📈 Data Visualization (chart ต่างๆ)</li>
                 <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
                 <li>🗄️ Dashboard (Looker Studio)</li>
             </ul>
 
-            <h3 class= "link-cursor">Project Summary </h3>
-            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+            <h3 class="link-cursor">Project Summary </h3>
+            <p class="link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
                 <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
             </p>
         </details>
@@ -465,13 +541,14 @@
     </section>
 
     <section id="project7">
-        <h2 class= "link-cursor">⭐️ P7 : Logistic Regression Analysis on the Titanic Dataset Using <img src="R.png"
+        <h2 class="link-cursor">⭐️ P7 : Logistic Regression Analysis on the Titanic Dataset Using <img src="R.png"
                 style="vertical-align:middle" width="25"> R</h2>
-        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
-        <details class= "detail">
-            <summary>คำอธิบาย</summary>
-            <h3 class= "link-cursor">Project Questions</h3>
-            <ul class= "link-cursor">
+        <p class="link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย
+            DSB10 DataRockie
+        <details class="detail">
+            <summary>Example</summary>
+            <h3 class="link-cursor">Project Questions</h3>
+            <ul class="link-cursor">
                 <li>คำถาม 1</li>
                 <li>คำถาม 2</li>
                 <li>คำถาม .</li>
@@ -479,16 +556,16 @@
                 <li>คำถาม N</li>
             </ul>
 
-            <h3 class= "link-cursor">Skills & Tools</h3>
-            <ul class= "link-cursor">
+            <h3 class="link-cursor">Skills & Tools</h3>
+            <ul class="link-cursor">
                 <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
                 <li>📈 Data Visualization (chart ต่างๆ)</li>
                 <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
                 <li>🗄️ Dashboard (Looker Studio)</li>
             </ul>
 
-            <h3 class= "link-cursor">Project Summary </h3>
-            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+            <h3 class="link-cursor">Project Summary </h3>
+            <p class="link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
                 <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
             </p>
         </details>
@@ -499,13 +576,14 @@
     </section>
 
     <section id="project8">
-        <h2 class= "link-cursor">⭐️ P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"
+        <h2 class="link-cursor">⭐️ P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"
                 style="vertical-align:middle" width="25">Looker Studio</h2>
-        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
-        <details class= "detail">
-            <summary>คำอธิบาย</summary>
-            <h3 class= "link-cursor">Project Questions</h3>
-            <ul class= "link-cursor">
+        <p class="link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย
+            DSB10 DataRockie
+        <details class="detail">
+            <summary>Example</summary>
+            <h3 class="link-cursor">Project Questions</h3>
+            <ul class="link-cursor">
                 <li>คำถาม 1</li>
                 <li>คำถาม 2</li>
                 <li>คำถาม .</li>
@@ -513,16 +591,16 @@
                 <li>คำถาม N</li>
             </ul>
 
-            <h3 class= "link-cursor">Skills & Tools</h3>
-            <ul class= "link-cursor">
+            <h3 class="link-cursor">Skills & Tools</h3>
+            <ul class="link-cursor">
                 <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
                 <li>📈 Data Visualization (chart ต่างๆ)</li>
                 <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
                 <li>🗄️ Dashboard (Looker Studio)</li>
             </ul>
 
-            <h3 class= "link-cursor">Project Summary </h3>
-            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+            <h3 class="link-cursor">Project Summary </h3>
+            <p class="link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
                 <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
             </p>
         </details>
@@ -533,13 +611,14 @@
     </section>
 
     <section id="project9">
-        <h2 class= "link-cursor">P9 : Chatbot Development for a Pizza Business Using <img src="R.png" style="vertical-align:middle"
-                width="25"> R Programming</h2>
-        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
-        <details class= "detail">
-            <summary>คำอธิบาย</summary>
-            <h3 class= "link-cursor">Project Questions</h3>
-            <ul class= "link-cursor">
+        <h2 class="link-cursor">P9 : Chatbot Development for a Pizza Business Using <img src="R.png"
+                style="vertical-align:middle" width="25"> R Programming</h2>
+        <p class="link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย
+            DSB10 DataRockie
+        <details class="detail">
+            <summary>Example</summary>
+            <h3 class="link-cursor">Project Questions</h3>
+            <ul class="link-cursor">
                 <li>คำถาม 1</li>
                 <li>คำถาม 2</li>
                 <li>คำถาม .</li>
@@ -547,16 +626,16 @@
                 <li>คำถาม N</li>
             </ul>
 
-            <h3 class= "link-cursor">Skills & Tools</h3>
-            <ul class= "link-cursor">
+            <h3 class="link-cursor">Skills & Tools</h3>
+            <ul class="link-cursor">
                 <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
                 <li>📈 Data Visualization (chart ต่างๆ)</li>
                 <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
                 <li>🗄️ Dashboard (Looker Studio)</li>
             </ul>
 
-            <h3 class= "link-cursor">Project Summary </h3>
-            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+            <h3 class="link-cursor">Project Summary </h3>
+            <p class="link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
                 <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
             </p>
         </details>
@@ -567,13 +646,14 @@
     </section>
 
     <section id="project10">
-        <h2 class= "link-cursor">P10 : Object-Oriented ATM System: Financial Transactions with <img src="python.png"
+        <h2 class="link-cursor">P10 : Object-Oriented ATM System: Financial Transactions with <img src="python.png"
                 style="vertical-align:middle" width="25"> Python OOP</h2>
-        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
-        <details class= "detail">
-            <summary>คำอธิบาย</summary>
-            <h3 class= "link-cursor">Project Questions</h3>
-            <ul class= "link-cursor">
+        <p class="link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย
+            DSB10 DataRockie
+        <details class="detail">
+            <summary>Example</summary>
+            <h3 class="link-cursor">Project Questions</h3>
+            <ul class="link-cursor">
                 <li>คำถาม 1</li>
                 <li>คำถาม 2</li>
                 <li>คำถาม .</li>
@@ -581,16 +661,16 @@
                 <li>คำถาม N</li>
             </ul>
 
-            <h3 class= "link-cursor">Skills & Tools</h3>
-            <ul class= "link-cursor">
+            <h3 class="link-cursor">Skills & Tools</h3>
+            <ul class="link-cursor">
                 <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
                 <li>📈 Data Visualization (chart ต่างๆ)</li>
                 <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
                 <li>🗄️ Dashboard (Looker Studio)</li>
             </ul>
 
-            <h3 class= "link-cursor">Project Summary </h3>
-            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+            <h3 class="link-cursor">Project Summary </h3>
+            <p class="link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
                 <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
             </p>
         </details>
@@ -601,13 +681,14 @@
     </section>
 
     <section id="project11">
-        <h2 class= "link-cursor">mini P11 : Extracting Public API Data with <img src="python.png" style="vertical-align:middle"
-                width="25"> Python: Air Quality Analytics</h2>
-        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
-        <details class= "detail">
-            <summary>คำอธิบาย</summary>
-            <h3 class= "link-cursor">Project Questions</h3>
-            <ul class= "link-cursor">
+        <h2 class="link-cursor">mini P11 : Extracting Public API Data with <img src="python.png"
+                style="vertical-align:middle" width="25"> Python: Air Quality Analytics</h2>
+        <p class="link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย
+            DSB10 DataRockie
+        <details class="detail">
+            <summary>Example</summary>
+            <h3 class="link-cursor">Project Questions</h3>
+            <ul class="link-cursor">
                 <li>คำถาม 1</li>
                 <li>คำถาม 2</li>
                 <li>คำถาม .</li>
@@ -615,16 +696,16 @@
                 <li>คำถาม N</li>
             </ul>
 
-            <h3 class= "link-cursor">Skills & Tools</h3>
-            <ul class= "link-cursor">
+            <h3 class="link-cursor">Skills & Tools</h3>
+            <ul class="link-cursor">
                 <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
                 <li>📈 Data Visualization (chart ต่างๆ)</li>
                 <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
                 <li>🗄️ Dashboard (Looker Studio)</li>
             </ul>
 
-            <h3 class= "link-cursor">Project Summary </h3>
-            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+            <h3 class="link-cursor">Project Summary </h3>
+            <p class="link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
                 <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
             </p>
         </details>
@@ -635,13 +716,15 @@
     </section>
 
     <section id="project12">
-        <h2 class= "link-cursor">mini P12 : Cafe Menu Data Structure with <img src="xml.png" style="vertical-align:middle" width="25"> XML
+        <h2 class="link-cursor">mini P12 : Cafe Menu Data Structure with <img src="xml.png"
+                style="vertical-align:middle" width="25"> XML
         </h2>
-        <p class= "link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย DSB10 DataRockie
-        <details class= "detail">
-            <summary>คำอธิบาย</summary>
-            <h3 class= "link-cursor">Project Questions</h3>
-            <ul class= "link-cursor">
+        <p class="link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย
+            DSB10 DataRockie
+        <details class="detail">
+            <summary>Example</summary>
+            <h3 class="link-cursor">Project Questions</h3>
+            <ul class="link-cursor">
                 <li>คำถาม 1</li>
                 <li>คำถาม 2</li>
                 <li>คำถาม .</li>
@@ -649,16 +732,16 @@
                 <li>คำถาม N</li>
             </ul>
 
-            <h3 class= "link-cursor">Skills & Tools</h3>
-            <ul class= "link-cursor">
+            <h3 class="link-cursor">Skills & Tools</h3>
+            <ul class="link-cursor">
                 <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
                 <li>📈 Data Visualization (chart ต่างๆ)</li>
                 <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
                 <li>🗄️ Dashboard (Looker Studio)</li>
             </ul>
 
-            <h3 class= "link-cursor">Project Summary </h3>
-            <p class= "link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
+            <h3 class="link-cursor">Project Summary </h3>
+            <p class="link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
                 <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
             </p>
         </details>
@@ -668,7 +751,14 @@
 
     </section>
 
+    <!-- Prism Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- Prism Language Components -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-r.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>
 </body>

@@ -191,16 +191,16 @@ function findCertificateIndexById(certId) {
 }
 
 // ฟังก์ชันใหม่เพื่อเปิด slideshow จาก certificate ที่เลือก
-function openSlideshowFromCertificate(certId) {
-    const index = findCertificateIndexById(certId);
-    if (index !== -1) {
-        currentIndex = index;
-        currentView = 'slideshow';
-        nextViewText = 'Switch to List View';
-        renderView();
-        updateViewToggleButton();
-    }
-}
+// function openSlideshowFromCertificate(certId) {
+//     const index = findCertificateIndexById(certId);
+//     if (index !== -1) {
+//         currentIndex = index;
+//         currentView = 'slideshow';
+//         nextViewText = 'Switch to List View';
+//         renderView();
+//         updateViewToggleButton();
+//     }
+// }
 
 // Render certificate card
 function renderCertificateCard(cert) {
@@ -210,9 +210,9 @@ function renderCertificateCard(cert) {
 
     return `
         <div class="certificate-card fade-in ${darkModeClass}" data-cert-id="${cert.id}" >
-            <img src="${cert.image}" alt="${cert.title}" class="certificate-image cursor-zoom-in" onclick="openGalleryModal('${cert.image}')" >
+            <img src="${cert.image}" alt="${cert.title}" class="certificate-image cursor-zoom-in" onclick="openGalleryModal('${cert.image}')">
             <div class="certificate-details ${darkModeClass}">
-                <h3 class="certificate-title1" onclick="openSlideshowFromCertificate(${cert.id})">${cert.title}</h3>
+                <h3 class="certificate-title1" onclick="openGalleryModal('${cert.image}')">${cert.title}</h3>
                 <div><a href= "${cert.schoolLink}" class="certificate-school ${darkModeClass}">🏫 : ${cert.school}</a></div>
                 
                 <details>
@@ -358,12 +358,12 @@ function renderListView() {
                 </thead>
                 <tbody>
                     ${filteredCerts.map(cert => `
-                        <tr onclick="openSlideshowFromCertificate(${cert.id})">
-                            <td onmouseover="showPreview(event, '${cert.image}')" onmouseout="hidePreview()">${cert.title}</td>
+                        <tr>
+                            <td onclick="openGalleryModal('${cert.image}')" onmouseover="showPreview(event, '${cert.image}')" onmouseout="hidePreview()">${cert.title}</td>
                             <td><a href="${cert.schoolLink}" class="certificate-school">${cert.school}</a></td>
-                            <td><a href="${cert.costlink}" class="certificate-link">${cert.cost}</a></td>
-                            <td><a href="${cert.notionLink}" class="certificate-link"><span><img src="notion.webp" width="20" class="notion-icon"> Notion</span></a></td>
-                            <td><a href="${cert.certificateLink}">Check</a></td>
+                            <td><a href="${cert.costlink}" class="check">${cert.cost}</a></td>
+                            <td><a href="${cert.notionLink}" class="check"><img src="notion.webp" width="20" class="notion-icon"> Notion</a></td>
+                            <td><a href="${cert.certificateLink}" class="check">Check</a></td>
                         </tr>
                     `).join('')}
                 </tbody>
@@ -567,4 +567,4 @@ window.openGalleryModal = openGalleryModal;
 window.previousSlide = previousSlide;
 window.nextSlide = nextSlide;
 window.toggleView = toggleView;
-window.openSlideshowFromCertificate = openSlideshowFromCertificate;
+// window.openSlideshowFromCertificate = openSlideshowFromCertificate;

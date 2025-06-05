@@ -172,6 +172,23 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.307);
 }
 
+.check {
+    display: inline-flex; /* ใช้ inline-flex เพื่อให้เหมือน tag */
+    align-items: center;
+    gap: 0.5rem;
+    color: #242424; /* สีตัวอักษรปกติ */
+    font-size: 15.5px; /* ขนาดฟอนต์พอดีกับข้อความ */
+    font-weight: 500; /* ตัวหนาเล็กน้อย */
+    padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+    border-radius: 20px; /* ขอบมุมโค้งมน */
+    text-decoration: none; /* ไม่มีเส้นใต้ */
+    transition: color 0.3s, transform 0.3s; /* ให้การเปลี่ยปลงเป็นไปอย่างนุ่มนวล */
+}
+
+.check:hover {
+    padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+}
+
 .certificate-school:hover {
     color: hsl(0, 0%, 100%); /* สีตัวอักษรเป็นสีน้ำเงินฟ้าเมื่อ hover */
     background-color: #000000; /* สีพื้นหลังเป็นสีน้ำเงินฟ้าเมื่อ hover */
@@ -181,6 +198,7 @@
                  0px 0px 0.9px cyan,
                  0px 0px 0.4px cyan,
                  0px 0px 0.9px cyan;
+    padding: 0.3rem 0.8rem;
 }
 
 .certificate-title1 {
@@ -484,6 +502,10 @@ verify-icon:hover {
     color: white;
 }
 
+.dark-mode .corner-text0 {
+    color: white;
+}
+
 .dark-mode .certificate-links {
     border-top-color: rgba(255, 255, 255, 0.1);
 }
@@ -503,6 +525,10 @@ verify-icon:hover {
 }
 
 .dark-mode details summary {
+    color: #000000;
+}
+
+.dark-mode .line-code {
     color: #000000;
 }
 

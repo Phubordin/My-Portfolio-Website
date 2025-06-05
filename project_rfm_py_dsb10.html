@@ -13,7 +13,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1024, initial-scale=1">
-    <title>Project - RFM Analysis</title>
+    <title>Project 3 - RFM Analysis</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="certificate-style.css">
     <link rel="icon" type="image/png" href="website.png">
@@ -449,7 +449,7 @@
         <ol class="link-cursor" style="text-align: justify;">
             <li>Load Data : เชื่อมต่อกับ Google Drive ที่ผม Public Data ไว้</li>
             <li>Explore Data : สำรวจดู Data Type, จำนวน NaN, Preview ภาพรวม</li>
-            <li>Data Wrangling : จัดการกับ Format Data Type, จัดการกับ NaN</li>
+            <li>Data Cleaning : จัดการกับ Format Data Type, จัดการกับ NaN</li>
         </ol>
 
         <p class="link-cursor" style="text-align: justify;">
@@ -942,8 +942,6 @@ display(df.info())
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             ดูภาพรวมของคอลัมน์ Postal Code
         </p>
-
-        <p>
         <details class="detail1">
 
             <summary>Code</summary>
@@ -1113,11 +1111,11 @@ display(df.loc[:, df.isna().any()
             <tbody>
                 <tr>
                     <td><code class="inline-code">df["Postal Code"].astype(str)</code></td>
-                    <td>แปลงประข้อมูลคอลัมน์ Postal Code เป็นข้อความ (str)</td>
+                    <td>แปลงประเภทข้อมูลคอลัมน์ Postal Code เป็นข้อความ (str)</td>
                 </tr>
                 <tr>
-                    <td><code class="inline-code">df["Postal Code"].astype(float</code>)</td>
-                    <td>แปลงประข้อมูลคอลัมน์ Postal Code เป็นตัวเลข (float)</td>
+                    <td><code class="inline-code">df["Postal Code"].astype(float)</code></td>
+                    <td>แปลงประเภทข้อมูลคอลัมน์ Postal Code เป็นตัวเลข (float)</td>
                 </tr>
                 <tr>
                     <td><code class="inline-code">df.loc[:, df.isna().any()]</code></td>
@@ -1677,7 +1675,7 @@ df[df["City"] == "Burlington"][
     </section>
 
     <section>
-        <h2 class="link-cursor">6. Data Wrangling</h2>
+        <h2 class="link-cursor">6. Data Cleaning</h2>
 
         <p class="link-cursor" style="text-align: justify;">3 ข้อที่ต้องจัดการกับข้อมูลชุดนี้</p>
 
@@ -1854,27 +1852,27 @@ display(df)
             </thead>
             <tbody>
                 <tr>
-                    <td>df.columns</td>
+                    <td><code class="inline-code">df.columns</code></td>
                     <td>รายชื่อคอลัมน์ทั้งหมดใน DataFrame</td>
                 </tr>
                 <tr>
-                    <td>for col in df.columns</td>
+                    <td><code class="inline-code">for col in df.columns</code></td>
                     <td>วนลูปชื่อคอลัมน์ทีละตัว</td>
                 </tr>
                 <tr>
-                    <td>re.sub(r"\s+", " ", col)</td>
+                    <td><code class="inline-code">re.sub(r"\s+", " ", col)</code></td>
                     <td>แทนที่ช่องว่างหลายอันด้วยช่องว่างอันเดียวในชื่อคอลัมน์</td>
                 </tr>
                 <tr>
-                    <td>.strip()</td>
+                    <td><code class="inline-code">.strip()</code></td>
                     <td>ลบช่องว่างหน้า-หลังชื่อคอลัมน์</td>
                 </tr>
                 <tr>
-                    <td>[...]</td>
+                    <td><code class="inline-code">[...]</code></td>
                     <td>สร้างลิสต์ชื่อคอลัมน์ใหม่</td>
                 </tr>
                 <tr>
-                    <td>df.columns = ...</td>
+                    <td><code class="inline-code">df.columns = ...</code></td>
                     <td>กำหนดชื่อคอลัมน์ใหม่กลับเข้าไปใน DataFrame</td>
                 </tr>
             </tbody>
@@ -1988,9 +1986,9 @@ display(df)
     </section>
 
     <section>
-        <h3 class="link-cursor">⭐️ 6.4 Tidy Data</h3>
+        <h3 class="link-cursor">⭐️ 6.4 Clean Data</h3>
         <p class="link-cursor" style="text-align: justify;">
-            📍 Tidy Data คือการจัดระเบียบข้อมูลให้เป็นระเบียบเรียบร้อย โดยมีหลักการ 3 ข้อ
+            สรุปในหัวข้อ 📍Clean Data ผมได้ทำความสะอาดข้อมูลก่อนนำไปใช้งาน มีอยู่หลักๆ 3 ข้อ
         </p>
 
         <ol>
@@ -2000,8 +1998,7 @@ display(df)
         </ol>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
-            โดยการทำ Tidy Data จะช่วยให้การวิเคราะห์ข้อมูลเป็นไปได้ง่ายขึ้น
-            โดยเฉพาะการทำ Data Visualization
+            โดยการทำ Clean Data จะช่วยให้การวิเคราะห์ข้อมูลเป็นไปได้ง่ายขึ้น
             ตอนนี้หน้าตาของข้อมูลพร้อมใช้งานแล้ว : ⬇︎
         </p>
 
@@ -2018,13 +2015,18 @@ display(df)
                     </button>
                 </div>
                 <pre><code class="link-cursor language-python">
-styled_note("ข้อมูลที่พร้อมนำไปวิเคราะห์ต่อ Tidy Data : ⬇︎")
+styled_note("ข้อมูลที่พร้อมนำไปวิเคราะห์ต่อ Clean Data : ⬇︎")
 display(df.head())
                     </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
 
         </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p3-clean-data0.png" width="800" class="cursor-zoom-in"
+                onclick="openGalleryModal('p3-clean-data0.png')">
+        </div>
 
         <p class="link-cursor">
             📌 <b>ผลลัพธ์ที่ได้</b>
@@ -2035,10 +2037,13 @@ display(df.head())
             Using R)
         </p>
 
-        <h3 class="link-cursor">6.5 Export Tidy Data</h3>
+    </section>
+
+    <section>
+        <h3 class="link-cursor">6.5 Export Clean Data</h3>
 
         <p class="link-cursor" style="text-align: justify;">
-            📍 Tidy Data ส่งออกข้อมูลที่ clean แล้วโดยลบ เลข index หรือเลขแถวออก : ⬇︎
+            📍 Clean Data ส่งออกข้อมูลที่ clean แล้วโดยลบ เลข index หรือเลขแถวออก : ⬇︎
         </p>
 
         <p>
@@ -2054,7 +2059,7 @@ display(df.head())
                     </button>
                 </div>
                 <pre><code class="link-cursor language-python">
-df.to_csv("tidy-data.csv", index = False)
+df.to_csv("clean-data.csv", index = False)
                     </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -2067,33 +2072,32 @@ df.to_csv("tidy-data.csv", index = False)
 
         <ul>
             <li><code class="inline-code">df.to_csv</code> ➤ ส่งออกไฟล์ csv</li>
-            <li><code class="inline-code">"tidy-data.csv"</code> ➤ ตั้งชื่อไฟล์ที่ส่งออก</li>
+            <li><code class="inline-code">"clean-data.csv"</code> ➤ ตั้งชื่อไฟล์ที่ส่งออก</li>
             <li><code class="inline-code">index = False</code> ➤ ไม่ให้ส่งออกเลข index หรือเลขแถว</li>
         </ul>
 
         <p class="link-cursor" style="text-align: justify;">
-            📍 ส่งออกไฟล์ tidy-data.csv สามารถดูได้บน Google Drive ของเรา โดยการคลิก ➤
+            📍 ส่งออกไฟล์ clean-data.csv สามารถดูได้บน Google Drive ของเรา โดยการคลิก ➤
         </p>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             📸 Preview : <a href="https://drive.google.com/file/d/1-5e9t33a17v5HjV3heZJ7bnKLM2A9Xc9/view?usp=sharing"
-                class="link-website" target="_datblank">tidy-data.csv</a>
+                class="link-website" target="_datblank">clean-data.csv</a>
         </p>
 
         <div class="iframe-container cursor-zoom-in">
-            <img src="p3-tidy-data.png" width="800" class="cursor-zoom-in"
-                onclick="openGalleryModal('p3-tidy-data.png')">
+            <img src="p3-clean-data.png" width="800" class="cursor-zoom-in"
+                onclick="openGalleryModal('p3-clean-data.png')">
         </div>
 
         <p class="link-cursor">📌 สามารถเข้าไปดูคำอธิบายโค้ดเพิ่มเติมได้ที่ :
-            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=Export_Tidy_Data"
+            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=Export_Clean_Data"
                 class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
                 <b> Google Colab</b></a><br> หรือ <a
                 href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P03-Customer-Segmentation-and-RFM-Analysis-Using-Python-and-R-for-Strategic-Business-Insight.ipynb"
                 class="hover-expand certificate-school notion-icon"><img src="github.png" width="25">
-                <b> Github</b></a> Ctrl+F หาคำว่า "Export Tidy Data"
+                <b> Github</b></a> Ctrl+F หาคำว่า "Export Clean Data"
         </p>
-
     </section>
 
     <section>
@@ -3050,7 +3054,7 @@ plt.close(fig3)
     </section>
 
     <section>
-        <h3 class="link-cursor">8.2 Import Library</h3>
+        <h3 class="link-cursor">8.2 R : Import Library</h3>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             📍 ก่อนที่จะเริ่มการวิเคราะห์ RFM เราต้องเรียกใช้เครื่องมือต่างๆที่นักพัฒนา สร้างขึ้นมาให้ใช้งานแล้ว
@@ -3137,7 +3141,7 @@ invisible(lapply(packages, library, character.only = TRUE))
 
         <p class="link-cursor" style="text-align: justify;">
             📌 สามารถเข้าไปดูคำอธิบายโค้ดเพิ่มเติมได้ที่ :
-            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=Import_Library"
+            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=R_Import_Library"
                 class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
                 <b> Google Colab</b></a>
         </p>
@@ -3145,10 +3149,10 @@ invisible(lapply(packages, library, character.only = TRUE))
     </section>
 
     <section>
-        <h3 class="link-cursor">8.3 Import Tidy Data</h3>
+        <h3 class="link-cursor">8.3 R : Import Clean Data</h3>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
-            📍 จากหัวข้อ (6.5 Export Tidy Data) เราได้ไฟล์ที่พร้อมสำหรับการวิเคราะห์ RFM มาแล้ว
+            📍 จากหัวข้อ (6.5 Export Clean Data) เราได้ไฟล์ที่พร้อมสำหรับการวิเคราะห์ RFM มาแล้ว
             เราจะนำช้อมูลนั้นมาอ่านและกำหนดเป็น df ต่อไป ด้วย Code ด้านล่างนี้ : ⬇︎
         </p>
 
@@ -3166,8 +3170,8 @@ invisible(lapply(packages, library, character.only = TRUE))
                 <pre><code class="link-cursor language-r">
 %%R
 
-# อ่านข้อมูลจาก CSV ที่ export มาจาก clean python (tidy data)
-df <- read_csv("tidy-data.csv")
+# อ่านข้อมูลจาก CSV ที่ export มาจาก clean python (clean data)
+df <- read_csv("clean-data.csv")
                 </code></pre>
                 <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
             </div>
@@ -3200,7 +3204,7 @@ df <- read_csv("tidy-data.csv")
 
         <p class="link-cursor" style="text-align: justify;">
             📌 สามารถเข้าไปดูคำอธิบายโค้ดเพิ่มเติมได้ที่ :
-            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=Import_Tidy_Data"
+            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=R_Import_Clean_Data"
                 class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
                 <b> Google Colab</b></a>
         </p>
@@ -3208,7 +3212,7 @@ df <- read_csv("tidy-data.csv")
     </section>
 
     <section>
-        <h3 class="link-cursor">8.4 Create an RFM table to analyze customer purchasing behavior</h3>
+        <h3 class="link-cursor">8.4 R : Create an RFM table to analyze customer purchasing behavior</h3>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             📍 ดูพฤติกรรมของลูกค้า โดยกาคำนวณค่า Recently (Days), Frequency, Monetary ของ Customer Name แต่ละคน ด้วย
@@ -3273,7 +3277,7 @@ df_rfm1 <- copy(df_rfm)
         </details>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
-            หลังจากรันโค้ดด้านบนแล้ว ⬆︎ ให้เราเพิ่มช่อง cell อีกช่อง และใส่ <code class="inine-code">%R df_rfm1</code>
+            หลังจากรันโค้ดด้านบนแล้ว ⬆︎ ให้เราเพิ่มช่อง cell อีกช่อง และใส่ <code class="inline-code">%R df_rfm1</code>
             เพื่อที่ผลลัพธ์จะได้แสดงเป็น ✅ RFM Table : ⬇︎
         </p>
 
@@ -3288,7 +3292,7 @@ df_rfm1 <- copy(df_rfm)
 
         <p class="link-cursor" style="text-align: justify;">
             📌 สามารถเข้าไปดูคำอธิบายโค้ดเพิ่มเติมได้ที่ :
-            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=Create_an_RFM_table_to_analyze_customer_purchasing_behavior"
+            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=R_Create_an_RFM_table_to_analyze_customer_purchasing_behavior"
                 class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
                 <b> Google Colab</b></a>
         </p>
@@ -3296,7 +3300,7 @@ df_rfm1 <- copy(df_rfm)
     </section>
 
     <section>
-        <h3 class="link-cursor">8.5 Generating RFM Scores for Customer Segmentation</h3>
+        <h3 class="link-cursor">8.5 R : Generating RFM Scores for Customer Segmentation</h3>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             📍 ให้คะแนน RFM สำหรับลูกค้าแต่ละคน โดยการใช้เกณฑ์ที่เราตัดสินใจไว้ในหัวข้อก่อนหน้า
@@ -3366,7 +3370,7 @@ df_rfm2 <- copy(df_rfm)
 
         <p class="link-cursor" style="text-align: justify;">
             📌 สามารถเข้าไปดูคำอธิบายโค้ดเพิ่มเติมได้ที่ :
-            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=Generating_RFM_Scores_for_Customer_Segmentation"
+            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=R_Generating_RFM_Scores_for_Customer_Segmentation"
                 class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
                 <b> Google Colab</b></a>
         </p>
@@ -3374,7 +3378,7 @@ df_rfm2 <- copy(df_rfm)
     </section>
 
     <section>
-        <h3 class="link-cursor">8.6 Creating the Customer Segment Column Based on RFM Score (RFM Final)</h3>
+        <h3 class="link-cursor">8.6 R : Creating the Customer Segment Column Based on RFM Score (RFM Final)</h3>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             📍 กำหนด Segment ของลูกค้าแต่ละคน โดยการใช้ RFM Score ที่เราสร้างขึ้นในหัวข้อก่อนหน้า
@@ -3452,7 +3456,7 @@ df_rfm_final <- copy(df_rfm)
 
         <p class="link-cursor" style="text-align: justify;">
             📌 สามารถเข้าไปดูคำอธิบายโค้ดเพิ่มเติมได้ที่ :
-            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=Creating_the_Customer_Segment_Column_Based_on_RFM_Score_RFM_Final_"
+            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=R_Creating_the_Customer_Segment_Column_Based_on_RFM_Score_RFM_Final_"
                 class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
                 <b> Google Colab</b></a>
         </p>
@@ -3460,7 +3464,7 @@ df_rfm_final <- copy(df_rfm)
     </section>
 
     <section>
-        <h3 class="link-cursor">⭐️ 8.7 Customer Count and Business Impact by Segment</h3>
+        <h3 class="link-cursor">⭐️ 8.7 R : Customer Count and Business Impact by Segment</h3>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             📍 สร้างตาราง Customer Count and Business Impact by Segment
@@ -3508,7 +3512,7 @@ segment_n <- df_rfm %>%
 
         <p class="link-cursor" style="text-align: justify;">
             📌 สามารถเข้าไปดูคำอธิบายโค้ดเพิ่มเติมได้ที่ :
-            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=Customer_Count_and_Business_Impact_by_Segment"
+            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=R_Customer_Count_and_Business_Impact_by_Segment"
                 class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
                 <b> Google Colab</b></a>
         </p>
@@ -3516,7 +3520,7 @@ segment_n <- df_rfm %>%
     </section>
 
     <section>
-        <h3 class="link-cursor">⭐️ 8.8 Viz-The RFM Model Chart Pattern Based on Our Data</h3>
+        <h3 class="link-cursor">⭐️ 8.8 R : Viz-The RFM Model Chart Pattern Based on Our Data</h3>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             📍 สร้างกราฟแสดงการกระจายตัวของลูกค้าในแต่ละ Segment
@@ -3659,7 +3663,7 @@ display(Image("rfm-heatmap.png")) # Visual Heat Map Chart
 
         <p class="link-cursor" style="text-align: justify;">
             📌 สามารถเข้าไปดูคำอธิบายโค้ดเพิ่มเติมได้ที่ :
-            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=Viz_The_RFM_Model_Chart_Pattern_Based_on_Our_Data"
+            <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh#scrollTo=R_Viz_The_RFM_Model_Chart_Pattern_Based_on_Our_Data"
                 class="hover-expand certificate-school notion-icon"><img src="colab.png" width="25">
                 <b> Google Colab</b></a>
         </p>
@@ -4504,7 +4508,7 @@ for (var in ls()) {
             </a> <span class="text-description link-cursor">Open with google drive</span> <br>
             <a href="https://drive.google.com/file/d/1-5e9t33a17v5HjV3heZJ7bnKLM2A9Xc9/view?usp=sharing"
                 class="download-btn" style="text-align: center; margin-top: 10px;">
-                tidy-data.csv : 📥
+                clean-data.csv : 📥
             </a> <span class="text-description link-cursor">Open with google drive</span> <br>
             <a href="https://drive.google.com/file/d/1aA7XziO9fjJVDbfFRbmLHoSPsF8ahDFb/view?usp=sharing"
                 class="download-btn" style="text-align: center; margin-top: 10px;">

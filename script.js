@@ -513,7 +513,7 @@ function showPreview(event, src) {
 
     // ปรับตำแหน่งให้อยู่บนขวาของ cursor
     previewImage.style.left = event.pageX + 15 + "px"; // ขยับไปทางขวาของ cursor
-    previewImage.style.top = event.pageY - 80 + "px";  // ขยับขึ้นไปด้านบน cursor
+    previewImage.style.top = event.pageY - 250 + "px";  // ขยับขึ้นไปด้านบน cursor
 }
 
 function hidePreview() {
@@ -703,3 +703,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*-------------------------------------------------------------------------------- */
+// Load and initialize Mermaid
+document.addEventListener("DOMContentLoaded", function () {
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: "default", // ลองเปลี่ยนเป็น 'forest', 'dark', 'neutral' ก็ได้
+    flowchart: {
+      curve: "basis"
+    }
+  });
+});
+// -----------------------------------------------------------------------------------------------
