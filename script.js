@@ -684,7 +684,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const viewportHeight = window.innerHeight;
 
         // ปรับตำแหน่งปุ่มให้อยู่ล่างสุดของหน้าจอแบบลอยตาม scroll
-        scrollToTopBtn.style.top = `${scrollY + viewportHeight - 80}px`;
+        scrollToTopBtn.style.top = `${scrollY + viewportHeight - 80}px`; /*80*/
 
         // แสดงปุ่มเมื่อ scroll ลงมาเกิน 200px
         if (scrollY > 200) {

@@ -119,11 +119,11 @@
     <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
     <section id="toc-section1">
         <p style="font-size: 1.5em; font-weight: bold;" class="link-cursor">Content of Tables <span
-                class="text-description link-cursor">(⭐️ Recommended)</span></p>
-        <div id="toc-marker"></div>
-        <div id="toc-section1"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
-    </section>
-
+            class="text-description link-cursor">(⭐️ Recommended)</span></p>
+            <div id="toc-marker"></div>
+            <div id="toc-section1"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
+        </section>
+    <!-- P1 -->
     <section id="project1">
         <h2 class="link-cursor">P1 : Data Exploration and Transformation with <img src="sheets.png"
                 style="vertical-align:middle" width="25"> Google Sheets</h2>
@@ -197,7 +197,7 @@
         <div class="corner-text" onclick="navigateToProject_ggsheet_dsb10()">Read More</div>
 
     </section>
-
+    <!-- P2 -->
     <section id="project2">
         <h2 class="link-cursor">P2 : Building a Café Restaurant Database Using <img src="R.png"
                 style="vertical-align:middle" width="25"> R
@@ -243,7 +243,7 @@
         <div class="corner-text" onclick="navigateToProject_cafe_r_sql_dsb10()">Read More</div>
 
     </section>
-
+    <!-- P3 -->
     <section id="project3">
         <h2 class="link-cursor">⭐️ P3 : Customer Segmentation and RFM Analysis Using <img src="python.png"
                 style="vertical-align:middle" width="25">Python and <img src="R.png" style="vertical-align:middle"
@@ -388,7 +388,7 @@
         <div class="corner-text" onclick="navigateToProject_rfm_py_dsb10()">Read More</div>
 
     </section>
-
+    <!-- P4 -->
     <section id="project4">
         <h2 class="link-cursor">P4 : Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png"
                 style="vertical-align:middle" width="25"> R and <img src="python.png" style="vertical-align:middle"
@@ -469,7 +469,7 @@
         <div class="corner-text" onclick="navigateToProject_pyc_r_py_dsb10()">Read More</div>
 
     </section>
-
+    <!-- P5 -->
     <section id="project5">
         <h2 class="link-cursor">⭐️ P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png"
                 style="vertical-align:middle" width="25"> R</h2>
@@ -581,42 +581,103 @@
         <div class="corner-text" onclick="navigateToProject_nycflight13_23_dsb10()">Read More</div>
 
     </section>
-
+    <!-- P6 -->
     <section id="project6">
         <h2 class="link-cursor">⭐️ P6 : EDA Visualization of the Diamond Dataset Using <img src="R.png"
                 style="vertical-align:middle" width="25"> R and R Markdown</h2>
-        <p class="link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย
-            DSB10 DataRockie
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            นำข้อมูล Diamonds จาก library(ggplot2) มาวิเคราะห์เชิงสำรวจด้วย R และแปลงเป็นเอกสารสวยงามด้วย R Markdown
+             ซึ่งประกอบด้วยข้อมูลเพชรกว่า 53,000 เม็ดจากบริษัทจำหน่ายเพชรจริงในสหรัฐฯ ในปี 2008
+             จุดประสงค์หลักคือใช้สำหรับการเรียนรู้การวิเคราะห์ข้อมูลและการสร้างกราฟ
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+            ผมได้<mark><b></b>ตั้งคำถามในการวิเคราะห์เชิงสำรวจข้อมูลและ Visualize มาทั้งหมด 4 ข้อใหญ่</b></mark> ต่อไปนี้
+        </p>
+
+        <ol>
+            <li class="link-cursor" style="text-align: justify">🔥 สำรวจเพชรส่วนใหญ่มีราคาอยู่ที่ช่วงเท่าไรต่อดอลลาร์</li>
+            
+            <li class="link-cursor" style="text-align: justify">
+            🔥 สำรวจการกระจายตัวของราคาเพชร แบ่งตามเกรดการเจียระไนเพชร
+            </li>
+            
+            <li class="link-cursor" style="text-align: justify">
+            🔥 สำรวจดูสัดส่วนความลึกเทียบกับเส้นผ่านศูนย์กลางเฉลี่ย กับการเจียระไน และ ราคา
+            </li>
+            
+            <li class="link-cursor" style="text-align: justify">
+            🔥 สำรวจความสัมพันธ์น้ำหนักเพชร เทียบกับ ราคาเพชร แบ่งตามเกรดการเจียระไนเพชรระดับสูง
+            และแยกสี E, F, G
+            </li>
+        </ol>
+
         <details class="detail">
             <summary>Example</summary>
-            <h3 class="link-cursor">Project Questions</h3>
-            <ul class="link-cursor">
-                <li>คำถาม 1</li>
-                <li>คำถาม 2</li>
-                <li>คำถาม .</li>
-                <li>คำถาม .</li>
-                <li>คำถาม N</li>
-            </ul>
 
-            <h3 class="link-cursor">Skills & Tools</h3>
-            <ul class="link-cursor">
-                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
-                <li>📈 Data Visualization (chart ต่างๆ)</li>
-                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
-                <li>🗄️ Dashboard (Looker Studio)</li>
-            </ul>
+            <ul>
+                <li class="link-cursor"><b><mark> R Markdown Knit to PDF. : ⬇︎</mark></b></li>
 
-            <h3 class="link-cursor">Project Summary </h3>
-            <p class="link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
-                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
-            </p>
+                <div class="iframe-container">
+                    <iframe
+                    width="80%"
+                    height="888px"
+                    src="https://drive.google.com/file/d/1AXv1rkCWzJpR6hvlHzx_vzImQp7SafD8/preview"
+                    frameborder="0"
+                    style="border: 0"
+                    allowfullscreen
+                    loading="lazy"
+                    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+                    >
+                    </iframe>
+                </div>
+
+                <li class="link-cursor"><b><mark> Distribution of price groups of diamonds by Density, Table : ⬇︎</mark></b></li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p6-5.1.1.png" width="650" class="cursor-zoom-in"
+                        onclick="openGalleryModal('p6-5.1.1.png')">
+                </div>
+                
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p6-5.1.2.png" width="650" class="cursor-zoom-in"
+                        onclick="openGalleryModal('p6-5.1.2.png')">
+                </div>
+
+                <li class="link-cursor"><b><mark> Sub-Diagram of Diamond Price Groups, Divided by cut. : ⬇︎</mark></b></li>
+                
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p6-5.2.png" width="650" class="cursor-zoom-in"
+                        onclick="openGalleryModal('p6-5.2.png')">
+                </div>
+
+                <li class="link-cursor"><b><mark>Depth Distribution Across Diamond Cut Quality. : ⬇︎</mark></b>
+                </li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p6-5.3.1.png" width="650" class="cursor-zoom-in"
+                        onclick="openGalleryModal('p6-5.3.1.png')">
+                </div>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p6-5.3.2.png" width="650" class="cursor-zoom-in"
+                        onclick="openGalleryModal('p6-5.3.2.png')">
+                </div>
+
+                <li class="link-cursor"><b><mark>Correlation Between Carat and Diamond Price. :
+                            ⬇︎</mark></b></li>
+
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p6-5.4.png" width="650" class="cursor-zoom-in"
+                        onclick="openGalleryModal('p6-5.4.png')">
+                </div>
+            </ul>
         </details>
-        </p>
 
         <div class="corner-text" onclick="navigateToProject_vizdimond_dsb10()">Read More</div>
 
     </section>
-
+    <!-- P7 -->
     <section id="project7">
         <h2 class="link-cursor">⭐️ P7 : Logistic Regression Analysis on the Titanic Dataset Using <img src="R.png"
                 style="vertical-align:middle" width="25"> R</h2>
@@ -651,7 +712,7 @@
         <div class="corner-text" onclick="navigateToProject_titanic_glm_dsb10()">Read More</div>
 
     </section>
-
+    <!-- P8 -->
     <section id="project8">
         <h2 class="link-cursor">⭐️ P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"
                 style="vertical-align:middle" width="25">Looker Studio</h2>
@@ -686,7 +747,7 @@
         <div class="corner-text" onclick="navigateToProject_looker_dsb10()">Read More</div>
 
     </section>
-
+    <!-- P9 -->
     <section id="project9">
         <h2 class="link-cursor">P9 : Chatbot Development for a Pizza Business Using <img src="R.png"
                 style="vertical-align:middle" width="25"> R Programming</h2>
@@ -721,7 +782,7 @@
         <div class="corner-text" onclick="navigateToProject_pizza_chatbot_dsb10()">Read More</div>
 
     </section>
-
+    <!-- P10 -->
     <section id="project10">
         <h2 class="link-cursor">P10 : Object-Oriented ATM System: Financial Transactions with <img src="python.png"
                 style="vertical-align:middle" width="25"> Python OOP</h2>
@@ -756,7 +817,7 @@
         <div class="corner-text" onclick="navigateToProject_atm_oop_py_dsb10()">Read More</div>
 
     </section>
-
+    <!-- P11 -->
     <section id="project11">
         <h2 class="link-cursor">mini P11 : Extracting Public API Data with <img src="python.png"
                 style="vertical-align:middle" width="25"> Python: Air Quality Analytics</h2>
@@ -791,7 +852,7 @@
         <div class="corner-text" onclick="navigateToProject_mini_api_py()">Read More</div>
 
     </section>
-
+    <!-- P12 -->
     <section id="project12">
         <h2 class="link-cursor">mini P12 : Cafe Menu Data Structure with <img src="xml.png"
                 style="vertical-align:middle" width="25"> XML
