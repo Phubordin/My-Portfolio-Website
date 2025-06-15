@@ -58,11 +58,11 @@ body.no-transition {
 }
 
 .project_cafe-page {
-    min-height: 500vh;
+    min-height: 1350vh;
 }
 
 .project_ggsheet-page {
-    min-height: 4600vh;
+    min-height: 3870vh;
 }
 
 .project_looker-page {
@@ -78,7 +78,7 @@ body.no-transition {
 }
 
 .project_nycflight-page {
-    min-height: 3000vh;
+    min-height: 2430vh;
 }
 
 .project_pizza-page {
@@ -86,7 +86,7 @@ body.no-transition {
 }
 
 .project_pyc-page {
-    min-height: 1400vh;
+    min-height: 1130vh;
 }
 
 .project_rfm-page {
