@@ -1,142 +1,1463 @@
 <!-- project.html -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MKCCGG3QF"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0MKCCGG3QF"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-0MKCCGG3QF');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-0MKCCGG3QF");
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1024, initial-scale=1" />
     <title>Project - Titanic</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="certificate-style.css">
-    <link rel="icon" type="image/png" href="website.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="certificate-style.css" />
+    <link rel="icon" type="image/png" href="website.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<div class="theme-switch-wrapper">
+  <div class="theme-switch-wrapper">
     <!-- ปุ่ม Blur Background -->
     <label class="switch">
-        <span><img src="darkmode4.png" width="30" class="notion-icon"></span>
-        <input type="checkbox" id="theme-toggle">
-        <span class="slider"></span>
-        <span class="switch-label"></span>
+      <span><img src="darkmode4.png" width="30" class="notion-icon" /></span>
+      <input type="checkbox" id="theme-toggle" />
+      <span class="slider"></span>
+      <span class="switch-label"></span>
     </label>
-</div>
+  </div>
 
-<div class="theme-switch1-wrapper">
+  <div class="theme-switch1-wrapper">
     <!-- ปุ่ม Blur Background -->
     <label class="switch1">
-        <img src="focus.png" width="30" class="notion-icon">
-        <input type="checkbox" id="blur-toggle">
-        <span class="slider1"></span>
-        <span class="switch-label1"></span>
+      <img src="focus.png" width="30" class="notion-icon" />
+      <input type="checkbox" id="blur-toggle" />
+      <span class="slider1"></span>
+      <span class="switch-label1"></span>
     </label>
-</div>
+  </div>
 
-<!-- Table of Contents -->
-<!-- ปุ่มเลื่อนไปด้านบน -->
-<button id="scrollToTopBtn" title="Go to top">⇧</button>
-<button id="toggle-toc-btn">≡</button>
-<aside id="table-of-contents" class="active">
-    <h3 class= "link-cursor">Navigation Menu</h3>
-    <ul id="toc-list"></ul>
-</aside>
+  <!-- Table of Contents -->
+  <!-- ปุ่มเลื่อนไปด้านบน -->
+  <button id="scrollToTopBtn" title="Go to top">⇧</button>
+  <button id="toggle-toc-btn">≡</button>
+  <aside id="table-of-contents" class="active">
+    <h3 class="link-cursor">Navigation Menu</h3>
+    <ul id="toc-list1"></ul>
+  </aside>
 
-<body class="fade-slide-in project_titanic-page">
+  <body class="fade-slide-in project_titanic-page">
     <header>
-        <div class="header-background"></div>
-        <h2 style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Project 7 : <span class= "strong1" >Titanic Survival Prediction:<br>A Comparative Analysis of Classification Models <img src="R.png"  style="vertical-align:middle" width="25" ></span></h2>
+      <div class="header-background"></div>
+      <h2 style="font-size: 1.5em; font-weight: bold" class="link-cursor">
+        Project 7 :
+        <span class="strong1"
+          >Titanic Survival Prediction:<br />A Comparative Analysis of
+          Classification Models
+          <img src="R.png" style="vertical-align: middle" width="25"
+        /></span>
+      </h2>
     </header>
 
     <!-- Navigation Bar -->
     <nav>
-        <ul>
-            <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
-            <li><a href="home.html" onclick="navigateToHome()">🏠 Home </a></li> <!-- Home Tab with House Emoji -->
-            <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li> <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
-            <!-- Work Experience Dropdown -->
-            <li class="dropdown1">
-                <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
-                <ul class="dropdown-menu1">
-                    <li><a onclick="navigateToExperience_leowood()">Leowood Intertrade Co Ltd. </a></li>
-                    <li><a onclick="navigateToExperience_arrow()">Arrow IT Systems Co Ltd.</a></li>
-                </ul>
+      <ul>
+        <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
+        <li><a href="home.html" onclick="navigateToHome()">🏠 Home </a></li>
+        <!-- Home Tab with House Emoji -->
+        <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li>
+        <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
+        <!-- Work Experience Dropdown -->
+        <li class="dropdown1">
+          <a href="experience.html" onclick="navigateToExperience()"
+            >Work Experience</a
+          >
+          <ul class="dropdown-menu1">
+            <li>
+              <a onclick="navigateToExperience_leowood()"
+                >Leowood Intertrade Co Ltd.
+              </a>
             </li>
+            <li>
+              <a onclick="navigateToExperience_arrow()"
+                >Arrow IT Systems Co Ltd.</a
+              >
+            </li>
+          </ul>
+        </li>
 
-            <!-- Projects Dropdown -->
-            <li class="dropdown">
-                <a href="project.html" class="active" onclick="scrollToTop(event)">Project Overview</a>
-                <ul class="dropdown-menu">
-                    <li><a onclick="navigateToProject_ggsheet_dsb10()" >P1 : Data Exploration and Transformation with <img src="sheets.png"  style="vertical-align:middle" width="25" > Google Sheets</a></li>
-                    <li><a onclick="navigateToProject_cafe_r_sql_dsb10()" >P2 : Building a Café Restaurant Database Using <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="SQL.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_rfm_py_dsb10()" >P3 : Customer Segmentation and RFM Analysis Using <img src="python.png"  style="vertical-align:middle" width="25" >Python and <img src="R.png"  style="vertical-align:middle" width="25" > for Strategic Business Insight</a></li>
-                    <li><a onclick="navigateToProject_pyc_r_py_dsb10()" >P4 : Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="python.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_nycflight13_23_dsb10()" >P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_vizdimond_dsb10()" >P6 : EDA Visualization of the Diamond Dataset Using <img src="R.png"  style="vertical-align:middle" width="25" > and R Markdown </a></li>
-                    <li><a class="active1" onclick="scrollToTop(event)" onclick="navigateToProject_titanic_glm_dsb10()" >P7 : Titanic Survival Prediction: A Comparative Analysis of Classification Models <img src="R.png" style="vertical-align:middle" width="25" > R</a></li>
-                    <li><a onclick="navigateToProject_looker_dsb10()" >P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"  style="vertical-align:middle" width="25" >Looker Studio</a></li>
-                    <li><a onclick="navigateToProject_pizza_chatbot_dsb10()" >P9 : Chatbot Development for a Pizza Business Using <img src="R.png"  style="vertical-align:middle" width="25" > Programming</a></li>
-                    <li><a onclick="navigateToProject_atm_oop_py_dsb10()" >P10 : Object-Oriented ATM System: Financial Transactions with <img src="python.png"  style="vertical-align:middle" width="25" >Python OOP</a></li>
-                    <li><a onclick="navigateToProject_mini_api_py()" >mini P11 : Extracting Public API Data with <img src="python.png"  style="vertical-align:middle" width="25" >Python: Air Quality Analytics</a></li>
-                    <li><a onclick="navigateToProject_mini_xml_cafe()" >mini P12 : Cafe Menu Data Structure with <img src="xml.png"  style="vertical-align:middle" width="25" >XML</a></li>
-                </ul>
+        <!-- Projects Dropdown -->
+        <li class="dropdown">
+          <a href="project.html" class="active" onclick="scrollToTop(event)"
+            >Project Overview</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a onclick="navigateToProject_ggsheet_dsb10()"
+                >P1 : Data Exploration and Transformation with
+                <img
+                  src="sheets.png"
+                  style="vertical-align: middle"
+                  width="25"
+                />
+                Google Sheets</a
+              >
             </li>
-            <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li>
-            <li><a href="contact.html" onclick="navigateToContact()">Contact</a></li>
-        </ul>
+            <li>
+              <a onclick="navigateToProject_cafe_r_sql_dsb10()"
+                >P2 : Building a Café Restaurant Database Using
+                <img src="R.png" style="vertical-align: middle" width="25" />
+                and
+                <img src="SQL.png" style="vertical-align: middle" width="25"
+              /></a>
+            </li>
+            <li>
+              <a onclick="navigateToProject_rfm_py_dsb10()"
+                >P3 : Customer Segmentation and RFM Analysis Using
+                <img
+                  src="python.png"
+                  style="vertical-align: middle"
+                  width="25"
+                />Python and
+                <img src="R.png" style="vertical-align: middle" width="25" />
+                for Strategic Business Insight</a
+              >
+            </li>
+            <li>
+              <a onclick="navigateToProject_pyc_r_py_dsb10()"
+                >P4 : Creating a Multi-Round Rock-Paper-Scissors Game in
+                <img src="R.png" style="vertical-align: middle" width="25" />
+                and
+                <img src="python.png" style="vertical-align: middle" width="25"
+              /></a>
+            </li>
+            <li>
+              <a onclick="navigateToProject_nycflight13_23_dsb10()"
+                >P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023)
+                with <img src="R.png" style="vertical-align: middle" width="25"
+              /></a>
+            </li>
+            <li>
+              <a onclick="navigateToProject_vizdimond_dsb10()"
+                >P6 : EDA Visualization of the Diamond Dataset Using
+                <img src="R.png" style="vertical-align: middle" width="25" />
+                and R Markdown
+              </a>
+            </li>
+            <li>
+              <a
+                class="active1"
+                onclick="scrollToTop(event)"
+                onclick="navigateToProject_titanic_glm_dsb10()"
+                >P7 : Titanic Survival Prediction: A Comparative Analysis of
+                Classification Models
+                <img src="R.png" style="vertical-align: middle" width="25" />
+                R</a
+              >
+            </li>
+            <li>
+              <a onclick="navigateToProject_looker_dsb10()"
+                >P8 : Data-Driven Insights: Sales Performance & Profitability in
+                <img
+                  src="looker.png"
+                  style="vertical-align: middle"
+                  width="25"
+                />Looker Studio</a
+              >
+            </li>
+            <li>
+              <a onclick="navigateToProject_pizza_chatbot_dsb10()"
+                >P9 : Chatbot Development for a Pizza Business Using
+                <img src="R.png" style="vertical-align: middle" width="25" />
+                Programming</a
+              >
+            </li>
+            <li>
+              <a onclick="navigateToProject_atm_oop_py_dsb10()"
+                >P10 : Object-Oriented ATM System: Financial Transactions with
+                <img
+                  src="python.png"
+                  style="vertical-align: middle"
+                  width="25"
+                />Python OOP</a
+              >
+            </li>
+            <li>
+              <a onclick="navigateToProject_mini_api_py()"
+                >mini P11 : Extracting Public API Data with
+                <img
+                  src="python.png"
+                  style="vertical-align: middle"
+                  width="25"
+                />Python: Air Quality Analytics</a
+              >
+            </li>
+            <li>
+              <a onclick="navigateToProject_mini_xml_cafe()"
+                >mini P12 : Cafe Menu Data Structure with
+                <img
+                  src="xml.png"
+                  style="vertical-align: middle"
+                  width="25"
+                />XML</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="certificate.html" onclick="navigateToCertificate()"
+            >Certificates</a
+          >
+        </li>
+        <li>
+          <a href="contact.html" onclick="navigateToContact()">Contact</a>
+        </li>
+      </ul>
     </nav>
 
     <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
     <section id="toc-section">
-        <p style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Content of Tables</p>
-        <div id="toc-marker"></div>
-        <div id="toc-section"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
+      <p style="font-size: 1.5em; font-weight: bold" class="link-cursor">
+        Content of Tables
+      </p>
+      <div id="toc-marker"></div>
+      <div id="toc-section"></div>
+      <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
     </section>
 
-    <a style= "text-decoration: none;" href="project.html">
-        <button class="back-button">⬅︎ </button>
+    <a style="text-decoration: none" href="project.html">
+      <button class="back-button">⬅︎</button>
     </a>
 
+    <!-- Project Introduction -->
     <section>
-        <h2 class = "link-cursor">Dashboard</h2>
-        <p class = "link-cursor">Dashboard ที่แสดงอยู่ด้านล่างนี้ เป็นเครื่องมือที่ถูกสร้างขึ้นหลังจากจบ Project ตัวนี้เรียบร้อยเเล้ว
-            ซึ่งใช้ในการ monitor ผลประกอบการของร้านค้าแห่งหนึ่ง และตอบคำถามที่สงสัยมาตอนต้น <strong>ไปดูกันเลย!</strong>
-            สามาถลองกดเล่นที่ Dashboard ได้เลยนะครับ
-        </p>
-        <p class = "link-cursor">ขั้นตอนแรก ผมจะ Explore Dataset เพื่อดูว่าหน้าตาของ data ก้อนนี้เป็นยังไงบ้าง</p>
+      <h2 class="link-cursor">Project Introduction</h2>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        สวัสดีครับ ยินดีต้อนรับเข้าสู่โปรเจกต์ไททานิค (Titanic) ซึ่งเป็นเหตุการณ์ที่น่าสลดที่เรืออัปปางในวันที่ 15 เมษายน ค.ศ. 1912 ขอแสดงความเสียใจด้วยครับ
+        แน่นอนว่า
+      </p>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        <mark>เป้าหมายของโปรเจกต์นี้คือ สำรวจและวิเคราะห์การรอดชีวิตของผู้โดยสารจากเหตุการณ์ครั้งนี้</mark> และที่สำคัญคือ จะ<mark>สร้าง Machine Learning Model
+        เพื่อทำนายคนรอดชีวิตและเปรียบเทียบประสิทธิภาพของแต่ละโมเดล</mark>ว่า โมเดลไหนทำงานได้ดีกว่ากัน ซึ่งมีทั้งหมด 5 Classification Models
+      </p>
+        
+      <ol>
+            <li class="link-cursor" style="text-align: justify">
+                🔥 K-Nearest Neighbors
+            </li>
+            <li class="link-cursor" style="text-align: justify">
+                🔥 Logitic Regression
+            </li>
+            <li class="link-cursor" style="text-align: justify">
+                🔥 Ridge/Lasso Regression
+            </li>
+            <li class="link-cursor" style="text-align: justify">
+                🔥 Decision Tree
+            </li>
+            <li class="link-cursor" style="text-align: justify">
+                🔥 Random Forest
+            </li>
+      </ol>
+
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        📍ก่อนอื่นผมได้แบ่งหัวข้อของโปรเจกต์นี้ไว้ 5 หัวข้อใหญ่คือ
+      </p>
+      
+      <ol>
+            <li class="link-cursor" style="text-align: justify">
+                <b>Load Library/Data</b><br> : โหลดไลบรารีและข้อมูลที่จำเป็นสำหรับการวิเคราะห์
+            </li><br>
+            <li class="link-cursor" style="text-align: justify">
+                <b>Explore Data</b><br> : สำรวจค่า NA และ Missing Value, โครงสร้างตารางข้อมูลประเภทข้อมูล, ข้อมูลซ้ำไหม?, ค่าสถิติเบื้องต้นของแต่ละคอลัมน์
+            </li><br>
+            <li class="link-cursor" style="text-align: justify">
+                <b>🔥 Clensing Titanic Dataset</b><br> : ส่วนใหญ่<mark>หาข้อมูลผู้โดยสารจาก Internet มาแทนค่า NA และ Missing Value</mark> เช่น รอดชีวิตไหม?, อายุ, ราคาตั๋ว, ท่าเรือที่ขึ้น 
+                โดยข้อมูลเหล่านั้นน่าเชื่อถือและมีอ้างอิงที่ชัดเจน ผมบันทึกลงไฟล์ Excel ไว้ สามารถเข้าไปดูที่หัวข้อได้เลย
+            </li><br>
+            <li class="link-cursor" style="text-align: justify">
+                <b>⭐️ Analyze & Transform Data</b><br> : สำรวจความสัมพันธ์ระหว่างตัวแปรต่างๆ เช่น เพศ, อายุ, ราคาตั๋ว, ท่าเรือที่ขึ้น, ชั้นโดยสาร และการรอดชีวิต
+            </li><br>
+            <li class="link-cursor" style="text-align: justify">
+                <b>⭐⭐ Machine Learning Modeling</b><br> : <mark>สร้างโมเดล Machine Learning เพื่อทำนายการรอดชีวิตของผู้โดยสาร</mark> โดยใช้ 5 Classification Models ที่ได้กล่าวไว้ข้างต้น
+            </li>
+     </ol>
+
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        <b>โดยผมเลือกอธิบายเฉพาะแค่ 3 หัวข้อ เท่านั้น ❗️</b>
+        
+        <ol>
+            <li class="link-cursor" style="text-align: justify">
+                🔥 Clensing Titanic Dataset
+            </li>
+            <li class="link-cursor" style="text-align: justify">
+                ⭐️ Analyze & Transform Data
+            </li>
+            <li class="link-cursor" style="text-align: justify">
+                ⭐⭐ Machine Learning Modeling
+            </li>
+        </ol>
+      </p>
+
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        <b>ซึ่งหัวข้อเหล่านี้ <mark>(ไม่เน้นอธิบายโค้ด แต่เน้นอ่านผลลัพธ์ครับ)</mark></b>
+      </p>
+      
+      <hr>
+      
+      <p class="link-cursor">
+        <mark>แต่ถ้าหากสนใจหัวข้อไหนเป็นพิเศษ</mark> <span> สามารถเข้าไปดูได้ที่
+        <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+            class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+        </a></span>
+      </p>
+
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        Preview 📸 (หน้าเว็บที่เน้นอธิบายโค้ด ใน Github ครับ)
+      </p>
+
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-preview-html.gif" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-preview-html.gif')">
+      </div> 
+
+      <p class="link-cursor">
+        ดังนั้นผมจะเริ่มอธิบายหัวข้อ 🔥 Clensing Titanic Dataset กันเลยนะครับ
+      </p>
+
     </section>
 
-    <section id="file">
-        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
-                    width="30" class="notion-icon"></a> Github & <a href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing" class="hover-expand"><img src="googledrive.png"
-                    width="30" class="notion-icon"></a> Google Drive</h2>
-        <p>
-            <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Resume : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15nJgYPrUrUmD8pAVQZIr0tJVHaJVO8g4/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Transcript : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15n_nmZaSY619ehogn_O0V75CKyuq7max/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Graduation Certificate : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span>
-        </p>
+    <!-- 5.🔥 Clensing Titanic Dataset -->
+    <section>
+      <h2 class="link-cursor">5.🔥 Clensing Titanic Dataset</h2>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        จากหัวข้อ Explore Data ผม<mark>สรุปค่า NA กับ Missing Value ไว้ในตารางต่อไปนี้</mark> (จบหัวข้อนี้เราจะเห็นหน้าตาของตารางข้อมูลที่เราจะไปใช้ในการวิเคราะห์กันนะครับ)
+      </p>
+      <table class="link-cursor tableizer-table">
+        <thead><tr class="tableizer-firstrow"><th>Columns</th><th>NA</th><th>Missing Value</th></tr></thead><tbody>
+        <tr><td><code class="inline-code">Survived</code></td><td>❌train 0, ✅test 418</td><td>❌train 0, ❌test 0</td></tr>
+        <tr><td><code class="inline-code">Age</code></td><td>✅train 177, ✅test 86</td><td>❌train 0, ❌test 0</td></tr>
+        <tr><td><code class="inline-code">Fare</code></td><td>❌train 0, ✅test 1</td><td>❌train 0, ❌test 0</td></tr>
+        <tr><td><code class="inline-code">Cabin</code></td><td>❌train 0, ❌test 0</td><td>✅train 687, ✅test 327</td></tr>
+        <tr><td><code class="inline-code">Embarked</code></td><td>❌train 0, ❌test 0</td><td>✅train 2, ❌test 0</td></tr>
+        </tbody>
+      </table>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        	❌train 0, ✅test 418 หมายถึง คอลัมน์นี้ไม่มีค่า NA ในชุดข้อมูล train แต่มีค่า NA ในชุดข้อมูล test
+      </p>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        	ดังนั้นเราจะมา<mark>จัดการค่า NA กับ Missing Value ตามลำดับ</mark> กันเลยครับ โดยผมจะจัดการแต่ละคอลัมน์ ดังนี้
+      </p>
+
+      <ol>
+            <li class="link-cursor" style="text-align: justify">
+                <code class="inline-code"><b>Survived</b></code><br>
+                NA เกิดจาก titanic_test ไม่มีคอลัมน์ Survived ตอน bind_rows ดังนั้นวิธีการจัดการ NA ผมใช้ AI สร้างคอลัมน์ 3 คอลัมน์
+                Name, Survived, Reference แล้วสุ่มตรวจคนรอด กับคนไม่รอดอย่างละ 5 คน พบว่าส่วนใหญ่ ไม่ตรงกับลิงก์ที่ให้มา 
+                ผมจำเป็นที่ต้อง<mark>ตรวจสอบผู้โดยสารแต่ละคนจาก Website ที่น่าเชื่อถือ แล้วนำไป บันทึกลงไฟล์ .xlsx</mark> ซึ่งเราจะนำไฟล์นี้ไปใส่ลงตาราง titanic
+            </li><br>
+            <li class="link-cursor" style="text-align: justify">
+                <code class="inline-code"><b>Age</b></code><br>
+                มี NA ทั้งใน test, train วิธีการจัดการกับ NA ผมก็ทำเหมือนข้อแรกที่ผ่านมาใช้ AI และสุ่มตรวจสอบ พบว่า ไม่ตรงกัน เราจึงตรวจสอบและบันทึกผลผู้โดยสารทีละคนลงไฟล์ .xlsx เช่นเดียวกัน
+                แต่ ! จะมีผู้โดยสารอยู่ 2 คนที่ไม่มีการบันทึกที่แน่ชัดเลยว่าอายุ เท่าไร คือ
+                <ul><br>
+                    <li class="link-cursor">
+                         หมายเลขโดยสาร 43 คุณ Kraeff, Mr. Theodor ไม่พบอายุที่แน่ชัด\ 
+                    </li>
+                    <li class="link-cursor">
+                         หมายเลขโดยสาร 421 คุณ Gheorgheff, Mr. Stanio ไม่พบอายุที่แน่ชัด
+                    </li>
+                </ul><br>
+                ดังนั้นเช่นเดิม <mark>ผมจะนำไฟล์ที่บันทึกค่า Age มาแล้วใส่ลงไปในตาราง titanic (ในไฟล์มีอ้างอิงที่มา)</mark> ส่วนอีก 2 ค่าผมจะใช้ค่าอะไรต้องไปสำรวจข้อมูลดูทีหลังในหัวข้อ Age Preparation
+            </li><br>
+            <li class="link-cursor" style="text-align: justify">
+                <code class="inline-code"><b>Fare</b></code><br>
+                เกิด NA ราคาตั๋วโดยสารของผู้โดยสาร 1044 Storey, Mr. Thomas 1 ค่า ซึ่งในปี 1912 (ช่วงเรือไททานิค) สหราชอาณาจักรใช้ระบบเงินตราดังนี้:
+                <ul><br>
+                    <li class="link-cursor">
+                         1 ปอนด์ (£1) = 20 ชิลลิง (s)
+                    </li>
+                    <li class="link-cursor">
+                         1 ชิลลิง (s) = 12 เพนนี (d)
+                    </li>
+                </ul><br>
+                ซึ่งคุณ <mark>Thomas มี 7 ปอนด์ 5 ชิลลิง</mark> แสดงว่าเราจะต้อง<mark>แทนค่า NA นี้เท่ากับ <code class="inline-code">7.25</code> ปอนด์<mark>
+                    บันทึกลงไฟล์ .xlsxเพื่อนำข้อมูลนี้มาใส่ในตาราง titanic</mark>
+            </li><br>
+            <li class="link-cursor" style="text-align: justify">
+                <code class="inline-code"><b>Cabin</b></code><br>
+                : จำนวนผู้โดยสารมีทั้งหมด 1,309 คน พบว่ามีค่า Missing Value อยู่ 1,014 คน คิดเป็น ~77% และ Cabin คือหมายเลขห้องผู้โดยสาร
+                ที่มันอาจไม่ส่งผลหรือส่งผลน้อยมาก อย่างมีนัยยะสำคัญกับการรอดชีวิตของผู้โดยสาร ดังนั้น <mark>วิธีจัดการ กับ Missing Value นี้ ผมจะตัดคอลัมน์นี้ทิ้ง
+                ก่อนนำข้อมูลไปใช้หรือเทรนโมเดล</mark>
+            </li><br>
+            <li class="link-cursor" style="text-align: justify">
+                <code class="inline-code"><b>Embarked</b></code><br>
+                ท่าเรือที่ออกเดินทาง พบ Missing Value 2 ค่า คือ ของคุณ
+                <ul><br>
+                    <li class="link-cursor">
+                        หมายเลขโดยสาร 62  คุณ Icard, Miss. Amelie หาจากลิงก์ข้อ 1. พบว่าขึ้นที่ท่า Southampton (S)
+                    </li>
+                    <li class="link-cursor">
+                        หมายเลขโดยสาร 830 คุณ Stone, Mrs. George Nelson (Martha Evelyn) Southampton (S)
+                    </li>
+                </ul><br>
+                <mark>บันทึกลงไฟล์ `.xlsx`เพื่อนำข้อมูลนี้มาใส่ในตาราง titanic</mark>
+            </li>
+      </ol>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        <b>สรุปวิธีการจัดการ NA และ Missing Value โดยรวม</b><br>
+        : <mark>ผมจะตัดคอลัมน์ Cabin ทิ้งและคอลัมน์ Survived, Age, Fare, Embarked ผมจะใช้ไฟล์ที่เก็บข้อมูลมาแทนค่า NA และ Missing Value</mark> แต่อย่างที่ผมกล่าวไป
+        ผู้โดยสารที่ไม่มี Age มีอยู่ 2 คน ดังนั้นผมจะแทนด้วยค่ากลางของข้อมูลหลังจากแทนที่ค่า NA ส่วนอื่นๆไปหมดแล้ว ต้องไปดูอีกทีว่าข้อมูลกระจายตัวยังไง แทนด้วย mean, median, mode
+        แบบไหนดีกว่ากัน
+      </p>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        ปล. ผมจะไม่ตัดแถวที่มี NA ทิ้ง เพราะบางคอลัมน์เหมาะสมที่จะนำไปเทรนโมเดล + <mark>การจัดการ NA ที่ดีที่สุด คือไปแก้ที่ข้อมูลต้นทาง โดยไปหาข้อมูลมาเพิ่มตามแหล่งที่น่าเชื่อถือ</mark>
+        ผมจะเก็บข้อมูลของผู้โดยสารทั้งหมด 1,309 คนไว้ในตารางโดยไม่ตัดแถวใดๆหรือคนใดๆทิ้ง
+      </p>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        📍 ก่อนอื่นผมจะเอา 2 ไฟล์ที่ผมไปหาข้อมูลมาเพิ่มและบันทึกข้อมูลไว้ผมจะ import เข้า Rstudio ก่อน และค่อยทำการแทนที่ค่า NA และ Missing Value ภายหลัง
+      </p>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        Preview ข้อมูลที่เก็บมาได้ที่ลิงก์ด้านล่าง
+      </p>
+        
+      <p>
+        <a href="https://docs.google.com/spreadsheets/d/1rFNpxPFH17jefH_ZFr8fa0gJFm7ZIJDI/edit?usp=drive_link&ouid=116663168376755112559&rtpof=true&sd=true"
+            class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+            Fill_NA_Test.xlsx
+        </a> <span class="text-description link-cursor">Open with google drive</span> <br>
+        
+        <a href="https://docs.google.com/spreadsheets/d/1vLxs8TM6-q8kLvRoYGQn6jq3rABkdGaz/edit?usp=sharing&ouid=116663168376755112559&rtpof=true&sd=true"
+            class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+            Fill_NA_Train.xlsx
+        </a> <span class="text-description link-cursor">Open with google drive</span> 
+      </p>
     </section>
 
+    <!-- 5.1 Read / Preview Fill_NA_Test.xlsx File -->
+    <section>
+      <h3 class="link-cursor">5.1 Read / Preview Fill_NA_Test.xlsx File</h3>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        ผมได้เก็บข้อมูลที่ไว้แทนค่า NA และ Missing Value ของชุดข้อมูล <mark>Test_Data</mark> ไว้แล้วที่ : <a
+                    href="https://docs.google.com/spreadsheets/d/1rFNpxPFH17jefH_ZFr8fa0gJFm7ZIJDI/edit?gid=259138146#gid=259138146"
+                    class="link-website" target="_datblank"><code class="inline-code">Fill_NA_Test.xlsx</code></a>
+      </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+# อ่านไฟล์ Excel (ควรไฟล์ไว้โฟลเดอร์เดียวกับโปรเจกต์นี้)
+fill_na_test <- read_excel("Fill_NA_Test.xlsx") # นำไฟล์ Fill_NA_TEST.xlsx เก็บไว้ในตัวแปรใน R
+
+fill_na_test <- fill_na_test |> 
+  select(PassengerId, Name_Test, Survived_Test, Age_Test, Fare_Test) # เลือกมาเฉพาะคอลัมน์ PassengerId, Name_Test, Survived_Test, Age_Test, Fare_Test
+
+fill_na_test |> 
+  head(10) |> # ดู 10 แถวบนสุด
+  styled_kable() # ธีมตาราง
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p7-read-xl-test.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-read-xl-test.png')">
+        </div>
+
+        <p class="link-cursor">
+            ดูตัวอย่างเต็มได้ที่ :
+            <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+            </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+        </p>
+
+    </section> 
+    
+    <!-- 5.2 Read / Preview Fill_NA_Train.xlsx File -->
+    <section>
+      <h3 class="link-cursor">5.2 Read / Preview Fill_NA_Train.xlsx File</h3>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        ผมได้เก็บข้อมูลที่ไว้แทนค่า NA และ Missing Value ของชุดข้อมูล <mark>Train_Data</mark> ไว้แล้วที่ : <a
+                    href="https://drive.google.com/file/d/194SsrPbjCc1uMlN07za0cPTQ4DQon66m/view"
+                    class="link-website" target="_datblank"><code class="inline-code">Fill_NA_Train.xlsx</code></a>
+      </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+# อ่านไฟล์ Excel (ควรไฟล์ไว้โฟลเดอร์เดียวกับโปรเจกต์นี้)
+fill_na_train <- read_excel("Fill_NA_Train.xlsx") # นำไฟล์ Fill_NA_Train.xlsx เก็บไว้ในตัวแปรใน R
+
+fill_na_train <- fill_na_train |> 
+  select(PassengerId, Name_Train, Survived_Train, Age_Train, Embarked_Train) # เลือกมาเฉพาะคอลัมน์ PassengerId, Name_Train, Survived_Train, Age_Train, Embarked_Train
+
+fill_na_train |> 
+  head(10) |> # ดู 10 แถวบนสุด
+  styled_kable() # ธีมตาราง
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p7-read-xl-train.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-read-xl-train.png')">
+        </div>
+
+        <p class="link-cursor">
+            ดูตัวอย่างเต็มได้ที่ :
+            <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+            </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+        </p>
+
+    </section> 
+    
+    <!-- 5.3 Joining Tables for Data Preparation -->
+    <section>
+      <h3 class="link-cursor">5.3 Joining Tables for Data Preparation </h3>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        ผมนำไฟล์ทั้ง 2 มารวมกับ Table หลักเพื่อรอการแทนที่ NA และ Missing Value ตารางที่รวมกันแล้ว ⬇︎
+      </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+# นำ 2 ตารางเข้ามา Join กับ titanic_data
+join_table <- titanic_data |>
+  left_join(fill_na_test, by = "PassengerId") |> # join table fill_na_test ด้วย PassengerId
+  left_join(fill_na_train, by = "PassengerId") # join table fill_na_train ด้วย PassengerId
+join_table |> 
+  styled_kable() # ธีมตาราง
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p7-join-table.GIF" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-join-table.GIF')">
+        </div>
+
+        <p class="link-cursor">
+            ดูตัวอย่างเต็มได้ที่ :
+            <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+            </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+        </p>
+
+    </section>
+    
+    <!-- 5.3.1 Survived Preparation -->
+    <section>
+      <h4 class="link-cursor">5.3.1 Survived Preparation</h4>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        แทนค่า NA คอลัมน์ Survived ด้วยคอลัมน์ Survived_Test ซึ่งมีค่า NA อยู่ ❌train 0, ✅test 418
+      </p>
+
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+# แทนค่า NA ในคอลัมน์ Survived
+prep_survived <- join_table |>
+mutate(
+  Survived = coalesce(Survived, Survived_Test) # ใช้คำสั่ง coalesce แทนค่า NA ในคอลัมน์ Survived ด้วยคอลัมน์ Survived_Test และเขียนทับกลับไปที่คอลัมน์ Survived
+)
+
+prep_survived |> 
+filter(Source == "titanic_test") |> # กรองดูเฉพาะของมูลที่มาจาก test เพราะค่า NA จากคอลัมน์ Survived มาจากชุดข้อมูล Test
+select(Survived, Source) |> # เลือกมาเฉพาะคอลัมน์ Survived
+styled_kable() # ธีมตาราง
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details>
+
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-na-survived.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-na-survived.png')">
+      </div>
+
+      <p class="link-cursor">
+          ดูตัวอย่างเต็มได้ที่ :
+          <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+              class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+          </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+      </p>
+
+    </section>  
+    
+    <!-- 5.3.2 Age Preparation -->
+    <section>
+      <h4 class="link-cursor">5.3.2 Age Preparation</h4>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        แทนค่า NA ด้วย Age_Test เข้าไปในคอลัมน์ Age มีค่า NA อยู่ใน ✅train 177, ✅test 86 ค่า
+      </p>
+
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+# แทนค่า NA ในคอลัมน์ Age
+prep_survived_age <- prep_survived |>
+mutate(
+  Age = coalesce(Age, Age_Test), # แทนค่า NA ในคอลัมน์ Age ด้วยคอลัมน์ Age_Test
+  Age = coalesce(Age, Age_Train), # เมื่อแทนแล้วให้ เราแทนค่า NA ในคอลัมน์ Age ด้วยคอลัมน์ Age_Train
+  Age = if_else(is.na(Age), median(Age, na.rm = TRUE), Age) # ส่วนค่า NA ที่เหลืออีก 2 คน ให้แทนด้วยค่า median 28 นั่นเองเหตุผลด้านล่าง
+)
+
+prep_survived_age |> 
+select(Age) |> # เลือกเฉพาะคอลัมน์ Age
+styled_kable() # ธีมตาราง
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-na-age-1.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-na-age-1.png')">
+      </div>
+        
+      <p class="link-cursor" style="text-align: justify">
+        เหตุผลที่เราแทนค่า NA 2 ตัวสุดท้าย ด้้วย median = 28 เพราะว่า
+        <ol><br>
+          <li class="link-cursor">
+            ผู้โดยสารส่วนใหญ่อายุอยู่ในช่วง 20-30 ปี (อิงจาก Density ด้านล่าง)
+          </li>
+          <li class="link-cursor">
+            <mark>กราฟเบ้ขวา</mark> ถ้าเราเพิ่มค่า Median เข้าไปในข้อมูล จะลดโอกาสเกิด Nosie ของข้อมูลได้มาก
+          </li>
+        </ol><br>
+        ดังนั้นเช่นเดิม <mark>ผมจะนำไฟล์ที่บันทึกค่า Age มาแล้วใส่ลงไปในตาราง titanic (ในไฟล์มีอ้างอิงที่มา)</mark> ส่วนอีก 2 ค่าผมจะใช้ค่าอะไรต้องไปสำรวจข้อมูลดูทีหลังในหัวข้อ Age Preparation
+      </p>
+        
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        ก่อนที่จะไปดูเหตุผลผมของตั้งค่าธีมเริ่มต้น เพื่อนำไปใช้สำหรับทุกๆ Chart รวมถึงเหตุผลข้อนี้ด้วยเช่นกัน
+      </p>
+      
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+# กำหนดธีมสำหรับเป็นพื้นฐานให้กราฟทุกกราฟในโปรเจกต์นี้
+custom_theme <- theme_linedraw() + # กำหนดธีมพื้นหลังแกนฟกราฟสีขาว, กราฟมีกรอบ, มีกริดสีเทาๆอ่อนๆ ดูเรียบง่าบสบายตา
+theme(
+  plot.title = element_text(  # ชื่อหัวข้อของเนื้อในกราฟ
+    face = "bold",          # ตัวหนา
+    size = rel(1.1),        # ขนาดปรับตามใหญ่ขึ้น 110% เทียบกับสัดส่วนอื่นๆในกราฟ
+    color = "black",        # สีดำ
+    margin = margin(b = 10) # ห่างจากเนื้อหาส่วนล่าง 10 pt
+  ),
+  
+  plot.subtitle = element_text( # หัวข้อรองรองลงมา
+    size = rel(0.9),        # ปรับขนาดเล็กลงมาหน่อย 90% เทียบกับส่วนอื่นๆของกราฟ
+    color = "#2F4F4F",      # ปรับสี
+    margin = margin(b = 15)  # ห่างจากเนื้อด้านล่าง 15 pt
+  ),
+  
+  plot.caption = element_text(  # เพิ่ม caption มุมล่างขวา
+    size = 8,               # ขนาด 8 pt
+    color = "#4A4A4A",      # ปรับสี
+    margin = margin(t = 10) # ห่างจากเนื้อหาด้านบน 10 pt
+  ),
+  
+  axis.title = element_text( # ชื่อแกน x
+    size = 11,          # ขนาด 11 pt
+    color = "#1C1C1C",  # ปรับสี
+    face = "bold"       # ตัวหนา
+  ),
+  
+  panel.grid.major.y = element_blank(), # ลบเส้นตารางหลักแกน y 
+  panel.grid.major.x = element_blank(), # ลบเส้นตารางหลักแกน x 
+  panel.grid.minor.x = element_blank(), # ลบเส้นตารางรองแกน x
+  panel.grid.minor.y = element_blank(), # ลบเส้นตารางรองแกน y
+  legend.title = element_text(face = "bold"), # ชื่อหัวข้อ legend หัวหนา
+  legend.text = element_text(size = 10), # ข้อความภายใน legend ขนาด 10 pt
+  plot.margin = margin(15, 15, 15, 15) # ปรับระยะห่าง ซ้าย, ขวา, บน, ล่าง อย่างละ 15 pt
+)
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details>
+        
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        <mark>กราฟเบ้ขวา</mark>ถ้าเราเพิ่มค่า Median เข้าไปในข้อมูล จะลดโอกาสเกิด Nosie ของข้อมูลได้มาก
+      </p>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-na-age-2.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-na-age-2.png')">
+      </div>
+        
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        หลังจากนำข้อมูลจาก 2 ไฟล์แทนค่า NA เข้าไปแล้ว เราจะเอาค่า median = 28 ไปแทนที่ค่า NA ที่เหลืออีก 2 ค่า
+      </p>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-na-age-3.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-na-age-3.png')">
+      </div>
+
+      <p class="link-cursor">
+          ดูตัวอย่างเต็มได้ที่ :
+          <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+              class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+          </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+      </p>
+
+    </section> 
+    
+    <!-- 5.3.3 Fare Preparation -->
+    <section>
+      <h4 class="link-cursor">5.3.3 Fare Preparation</h4>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        แทนค่า NA ด้วย Fare_Test เข้าไปในคอลัมน์ Fare มี 1 ค่าใน titanic_test
+      </p>
+
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+prep_survived_age_fare <- prep_survived_age |>
+  mutate(
+    Fare = coalesce(Fare, Fare_Test) # แทนค่า NA ในคอลัมน์ Fare ด้วยคอลัมน์ Fare_Test
+  )
+prep_survived_age_fare |> styled_kable() # ธีมตาราง
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-na-fare.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-na-fare.png')">
+      </div>
+      
+      <p class="link-cursor">
+          ดูตัวอย่างเต็มได้ที่ :
+          <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+              class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+          </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+      </p>
+
+    </section> 
+    
+    <!-- 5.3.4 Cabin Preparation -->
+    <section>
+      <h4 class="link-cursor">5.3.4 Cabin Preparation</h4>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        ลบคอลัมน์นี้ทิ้ง เนื่องจาก Missing Value เกิดขึ้นกว่า 70% ของข้อมูลทั้งหมดในคอลัมน์ Cabin
+      </p>
+
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+prep_survived_age_fare$Cabin <- NULL # ลบคอลัมน์ Cabin ทิ้ง
+
+prep_survived_age_fare_cabin <- prep_survived_age_fare # reuseable ตัวแปร
+
+prep_survived_age_fare_cabin |> styled_kable() # ธีมตาราง
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-drop-cabin.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-drop-cabin.png')">
+      </div>
+      
+      <p class="link-cursor">
+          ดูตัวอย่างเต็มได้ที่ :
+          <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+              class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+          </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+      </p>
+
+    </section> 
+    
+    <!-- 5.3.5 Embarked Preparation -->
+    <section>
+      <h4 class="link-cursor">5.3.5 Embarked Preparation</h4>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        จัดการค่า Missing Value ด้วยแทนเป็น NA ก่อนแล้วแทนค่า NA ด้วยค่าใน Embarked_Train ทีหลัง
+      </p>
+
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+prep_survived_age_fare_cabin$Embarked[prep_survived_age_fare_cabin$Embarked == ""] <- NA # เบื้องแทนค่า Missing Value ด้วย NA ในคอลัมน์ Embarked
+
+prep_survived_age_fare_cabin_embarked <- prep_survived_age_fare_cabin |>
+  mutate(
+    Embarked = coalesce(Embarked, Embarked_Train) # แทนค่า NA ในคอลัมน์ Embarked ด้วย Embarked_Train
+  )
+
+prep_survived_age_fare_cabin_embarked |> styled_kable() # ธีมตาราง
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-mv-embarked-1.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-mv-embarked-1.png')">
+      </div>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-mv-embarked-2.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-mv-embarked-2.png')">
+      </div>
+      
+      <p class="link-cursor">
+          ดูตัวอย่างเต็มได้ที่ :
+          <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+              class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+          </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+      </p>
+
+    </section>
+    
+    <!-- 5.4 Check NA/Missing Value Cleansing Data / 5.4.1 Check NA Survived -->
+    <section>
+      <h3 class="link-cursor">5.4 Check NA/Missing Value Cleansing Data</h3>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        เช็คคอลัมน์ทั้ง 5 ว่า Preparation เสร็จเรียบร้อยหรือยัง เช่น NA, Missing Value, Drop Columns
+      </p>
+      
+      <h4 class="link-cursor">5.4.1 Check NA Survived</h4>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        เช็คว่าคอลัมน์ <code class="inline-code">Survived</code> ไม่มีค่า NA เหลืออยู่แล้ว
+      </p>
+      
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+prep_survived |>
+  filter(Survived %in% c(NA)) |> # กรองเฉพาะค่า NA ในคอลัมน์ Survived
+  styled_kable() # ธีมตาราง
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-check-na-survived.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-check-na-survived.png')">
+      </div>
+      
+      <p class="link-cursor">
+          ดูตัวอย่างเต็มได้ที่ :
+          <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+              class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+          </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+      </p>
+    </section>
+    
+    <!-- 5.4.2 Check NA Age -->
+    <section>
+      <h4 class="link-cursor">5.4.2 Check NA Age</h4>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        เช็คว่าคอลัมน์ <code class="inline-code">Age</code> ไม่มีค่า NA เหลืออยู่แล้ว
+      </p>
+      
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+prep_survived_age |>
+  filter(Age %in% c(NA)) |> # กรองเฉพาะค่า NA ในคอลัมน์ Age
+  styled_kable() # ธีมตาราง
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-check-na-age.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-check-na-age.png')">
+      </div>
+      
+      <p class="link-cursor">
+          ดูตัวอย่างเต็มได้ที่ :
+          <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+              class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+          </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+      </p>
+    </section>
+    
+    <!-- 5.4.3 Check NA Fare -->
+    <section>
+      <h4 class="link-cursor">5.4.3 Check NA Fare</h4>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        เช็คว่าคอลัมน์ <code class="inline-code">Fare</code> ไม่มีค่า NA เหลืออยู่แล้ว
+      </p>
+      
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+prep_survived_age |>
+  filter(Age %in% c(NA)) |> # กรองเฉพาะค่า NA ในคอลัมน์ Age
+  styled_kable() # ธีมตาราง
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-check-na-fare.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-check-na-fare.png')">
+      </div>
+      
+      <p class="link-cursor">
+          ดูตัวอย่างเต็มได้ที่ :
+          <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+              class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+          </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+      </p>
+    </section>
+    
+    <!-- 5.4.4 Check Exist Cabin -->
+    <section>
+      <h4 class="link-cursor">5.4.4 Check Exist Cabin </h4>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        เช็คว่าคอลัมน์ <code class="inline-code">Cabin</code> ยังอยู่หรือไม่
+      </p>
+      
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+prep_survived_age_fare_cabin$Cabin # ตรวจสอบค่าเราลบคอลัมน์ Cabin ทิ้งไปหรือยัง?
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-check-drop-cabin.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-check-drop-cabin.png')">
+      </div>
+      
+      <p class="link-cursor">
+          ดูตัวอย่างเต็มได้ที่ :
+          <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+              class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+          </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+      </p>
+    </section>
+    
+    <!-- 5.4.5 Check Exist Cabin -->
+    <section>
+      <h4 class="link-cursor">5.4.4 Check Missing Value Embarked</h4>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+         เช็คว่าคอลัมน์ <code class="inline-code">Embarked</code> ไม่มีค่า Missing Value เหลืออยู่แล้ว
+      </p>
+      
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+prep_survived_age_fare_cabin_embarked |>
+  filter(Embarked %in% c(NA,"")) |>  # กรองเฉพาะค่าที่มีค่า NA หรือ Missing Value ในคอลัมน์ Embarked
+  styled_kable() # ธีมตาราง
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-check-mv-embarked.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-check-mv-embarked.png')">
+      </div>
+      
+      <p class="link-cursor">
+          ดูตัวอย่างเต็มได้ที่ :
+          <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+              class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+          </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+      </p>
+    </section>
+    
+    <!-- 5.4.6 Check NA / Missing Value Overall -->
+    <section>
+      <h4 class="link-cursor">5.4.6 Check NA / Missing Value Overall</h4>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+         ตรวจสอบ ค่า NA / Missing Value เฉพาะคอลัมน์ที่เราจะนำไปใช้งาน(คอลัมน์เดิมที่ชุดข้อมูลเดิมได้มา)
+      </p>
+      
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+prep_survived_age_fare_cabin_embarked |>
+  select(PassengerId, Survived, Pclass, 
+         Name, Sex, Age, SibSp, Parch, 
+         Ticket, Fare, Embarked) |> # เลือกเฉพาะคอลัมน์ ที่เราต้องการ (กล่าวคือ คอลัมน์ที่ R ให้มาแต่ทีแรก)
+  select(where(~ any(is.na(.) | . == ""))) # สำรวจดูว่ามีคอลัมน์ไหนไหมที่มีค่า NA หรือ ค่า Misising Value อย่างน้อย 1 แถว
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-check-na-mv-overall.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-check-na-mv-overall.png')">
+      </div>
+      
+      <p class="link-cursor">
+          ดูตัวอย่างเต็มได้ที่ :
+          <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+              class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+          </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+      </p>
+    </section>
+    
+    <!-- 5.5 Finalized Dataset for EDA and Model Training/ 5.5.1 🔥 Finalized Dataset -->
+    <section>
+      <h3 class="link-cursor">5.5 Finalized Dataset for EDA and Model Training</h3>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+         เราได้ข้อมูลที่พร้อมนำไปวิเคราะห์เชิงสำรวจ และเทรนโมเดลแล้ว โดยเราจะเลือกคอลัมน์เดิม ตามที่ชุดข้อมูลนี้ที่ ให้มา พร้อมกับ Preview และ Export ตามหัวข้อด้านล่าง
+      </p>
+      
+      <h4 class="link-cursor">5.5.1 🔥 Finalized Dataset </h4>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+         นี่คือชุดข้อมูลที่เราจะใช้ในการวิเคราะห์เชิงสำรวจ (Exploratory Data Analysis - EDA) และเทรนโมเดล
+      </p>
+      
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+# ข้อมูลที่พร้อมใช้งาน สามารถนำไปวิเคราะห์ต่อ
+finalize_titanic_data <- prep_survived_age_fare_cabin_embarked |>
+  select(PassengerId, Survived, Pclass, 
+         Name, Sex, Age, SibSp, Parch, 
+         Ticket, Fare, Embarked) # เลือกเฉพาะคอลัมน์ที่มีตั้งแต่เรื่มต้น (ตัดคอลัมน์ที่ Join เข้ามาทิ้ง)
+
+finalize_titanic_data |> styled_kable() # ธีมตาราง
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-finalize-table.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-finalize-table.png')">
+      </div>
+      
+      <p class="link-cursor">
+          ดูตัวอย่างเต็มได้ที่ :
+          <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+              class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+          </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+      </p>
+    </section>
+    
+    <!-- 5.5.2 Summary Finalized Dataset -->
+    <section>
+      <h4 class="link-cursor">5.5.2 Summary Finalized Dataset</h4>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+         สรุปค่าสถิติเบื้องต้นสำหรับแต่ละคอลัมน์ในชุดข้อมูลที่เราจะใช้ในการวิเคราะห์เชิงสำรวจ (Exploratory Data Analysis - EDA) และเทรนโมเดล
+      </p>
+      
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+# สรุปค่าสถิติเบื้องต้น ทุกคอลัมน์
+finalize_titanic_data |> 
+  summary() 
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-summary-fianlize-table.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-summary-fianlize-table.png')">
+      </div>
+      
+      <p class="link-cursor">
+          ดูตัวอย่างเต็มได้ที่ :
+          <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+              class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+          </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+      </p>
+    </section>
+    
+    <!-- 5.5.3 Export Finalized Dataset File -->
+    <section>
+      <h4 class="link-cursor">5.5.3 Export Finalized Dataset File </h4>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+         ส่งออกข้อมูล เผื่อเราจะนำไปใช้ในโปรแกรมอื่นๆ หรือเก็บไว้เป็นไฟล์ CSV และอ่านกลับเข้ามาใหม่
+      </p>
+      
+      <details class="detail">
+
+          <summary>Code</summary>
+
+          <div class="code-container" style="position: relative;">
+              <div class="code-header">
+                  <span class="language-label link-cursor">R</span>
+                  <button class="copy-btn notion-icon">
+                      <img src="icon-copy1.png" alt="Copy" width="20">
+                  </button>
+              </div>
+              <pre><code class="link-cursor language-r">
+# เราสามารถใช้ write_csv() แทนได้ เพราะ Table ไม่มีภาษาไทย แต่ผมจะใช้ write_excel_csv เพราะมันสามารถ export ได้ทั้งไทยและอังกฤษ
+finalize_titanic_data |> 
+  write_xlsx(path = "finalize_titanic_data.xlsx")
+
+# อ่านกลับเข้ามาใหม่ด้วย
+
+finalize_titanic_data <- read_excel("finalize_titanic_data.xlsx")
+                  </code></pre>
+              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+          </div>
+
+      </details><br>
+
+      <a
+        href="https://docs.google.com/spreadsheets/d/1DTZIGZ-SmP1xpIPbygdXXU6WrwlTlXwx/edit?usp=sharing&ouid=116663168376755112559&rtpof=true&sd=true"
+        class="hover-expand certificate-school notion-icon"
+        target="_blank"
+      >
+        <img src="googledrive.png" width="25">finalize_titanic_data.xlsx
+      </a>
+      <span class="text-description link-cursor">Open with google drive</span>
+
+      <div class="iframe-container">
+        <iframe
+          width="80%"
+          height="888px"
+          src="https://drive.google.com/file/d/1DTZIGZ-SmP1xpIPbygdXXU6WrwlTlXwx/preview"
+          frameborder="0"
+          style="border: 0"
+          allowfullscreen
+          loading="lazy"
+          sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+        >
+        </iframe>
+      </div>
+      
+      <p class="link-cursor">
+          ดูตัวอย่างเต็มได้ที่ :
+          <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P07-Titanic-Survival-Prediction-A-Comparative-Analysis-of-Classification-Models.md"
+              class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25"><b> Github</b>
+          </a></span> (กด Ctrl+F เพื่อค้นหาและพิมพ์หัวข้อนี้)
+      </p>
+    </section>
+
+    <!-- ถึงนี่ 6. ⭐️ Analyze & Transform Data -->
+    <section>
+      <h2 class="link-cursor">6. ถึงนี่⭐️ Analyze & Transform Data </h2>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        จากหัวข้อ Explore Data ผม<mark>สรุปค่า NA กับ Missing Value ไว้ในตารางต่อไปนี้</mark> (จบหัวข้อนี้เราจะเห็นหน้าตาของตารางข้อมูลที่เราจะไปใช้ในการวิเคราะห์กันนะครับ)
+      </p>
+      <table class="link-cursor tableizer-table">
+        <thead><tr class="tableizer-firstrow"><th>Columns</th><th>NA</th><th>Missing Value</th></tr></thead><tbody>
+        <tr><td><code class="inline-code">Survived</code></td><td>❌train 0, ✅test 418</td><td>❌train 0, ❌test 0</td></tr>
+        <tr><td><code class="inline-code">Age</code></td><td>✅train 177, ✅test 86</td><td>❌train 0, ❌test 0</td></tr>
+        <tr><td><code class="inline-code">Fare</code></td><td>❌train 0, ✅test 1</td><td>❌train 0, ❌test 0</td></tr>
+        <tr><td><code class="inline-code">Cabin</code></td><td>❌train 0, ❌test 0</td><td>✅train 687, ✅test 327</td></tr>
+        <tr><td><code class="inline-code">Embarked</code></td><td>❌train 0, ❌test 0</td><td>✅train 2, ❌test 0</td></tr>
+        </tbody>
+      </table>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        	❌train 0, ✅test 418 หมายถึง คอลัมน์นี้ไม่มีค่า NA ในชุดข้อมูล train แต่มีค่า NA ในชุดข้อมูล test
+      </p>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        	ดังนั้นเราจะมา<mark>จัดการค่า NA กับ Missing Value ตามลำดับ</mark> กันเลยครับ โดยผมจะจัดการแต่ละคอลัมน์ ดังนี้
+      </p>
+
+      <ol>
+            <li class="link-cursor" style="text-align: justify">
+                <code class="inline-code"><b>Survived</b></code><br>
+                NA เกิดจาก titanic_test ไม่มีคอลัมน์ Survived ตอน bind_rows ดังนั้นวิธีการจัดการ NA ผมใช้ AI สร้างคอลัมน์ 3 คอลัมน์
+                Name, Survived, Reference แล้วสุ่มตรวจคนรอด กับคนไม่รอดอย่างละ 5 คน พบว่าส่วนใหญ่ ไม่ตรงกับลิงก์ที่ให้มา 
+                ผมจำเป็นที่ต้อง<mark>ตรวจสอบผู้โดยสารแต่ละคนจาก Website ที่น่าเชื่อถือ แล้วนำไป บันทึกลงไฟล์ .xlsx</mark> ซึ่งเราจะนำไฟล์นี้ไปใส่ลงตาราง titanic
+            </li><br>
+            <li class="link-cursor" style="text-align: justify">
+                <code class="inline-code"><b>Age</b></code><br>
+                มี NA ทั้งใน test, train วิธีการจัดการกับ NA ผมก็ทำเหมือนข้อแรกที่ผ่านมาใช้ AI และสุ่มตรวจสอบ พบว่า ไม่ตรงกัน เราจึงตรวจสอบและบันทึกผลผู้โดยสารทีละคนลงไฟล์ .xlsx เช่นเดียวกัน
+                แต่ ! จะมีผู้โดยสารอยู่ 2 คนที่ไม่มีการบันทึกที่แน่ชัดเลยว่าอายุ เท่าไร คือ
+                <ul><br>
+                    <li class="link-cursor">
+                         หมายเลขโดยสาร 43 คุณ Kraeff, Mr. Theodor ไม่พบอายุที่แน่ชัด\ 
+                    </li>
+                    <li class="link-cursor">
+                         หมายเลขโดยสาร 421 คุณ Gheorgheff, Mr. Stanio ไม่พบอายุที่แน่ชัด
+                    </li>
+                </ul><br>
+                ดังนั้นเช่นเดิม <mark>ผมจะนำไฟล์ที่บันทึกค่า Age มาแล้วใส่ลงไปในตาราง titanic (ในไฟล์มีอ้างอิงที่มา)</mark> ส่วนอีก 2 ค่าผมจะใช้ค่าอะไรต้องไปสำรวจข้อมูลดูทีหลังในหัวข้อ Age Preparation
+            </li><br>
+            <li class="link-cursor" style="text-align: justify">
+                <code class="inline-code"><b>Fare</b></code><br>
+                เกิด NA ราคาตั๋วโดยสารของผู้โดยสาร 1044 Storey, Mr. Thomas 1 ค่า ซึ่งในปี 1912 (ช่วงเรือไททานิค) สหราชอาณาจักรใช้ระบบเงินตราดังนี้:
+                <ul><br>
+                    <li class="link-cursor">
+                         1 ปอนด์ (£1) = 20 ชิลลิง (s)
+                    </li>
+                    <li class="link-cursor">
+                         1 ชิลลิง (s) = 12 เพนนี (d)
+                    </li>
+                </ul><br>
+                ซึ่งคุณ <mark>Thomas มี 7 ปอนด์ 5 ชิลลิง</mark> แสดงว่าเราจะต้อง<mark>แทนค่า NA นี้เท่ากับ <code class="inline-code">7.25</code> ปอนด์<mark>
+                    บันทึกลงไฟล์ .xlsxเพื่อนำข้อมูลนี้มาใส่ในตาราง titanic</mark>
+            </li><br>
+            <li class="link-cursor" style="text-align: justify">
+                <code class="inline-code"><b>Cabin</b></code><br>
+                : จำนวนผู้โดยสารมีทั้งหมด 1,309 คน พบว่ามีค่า Missing Value อยู่ 1,014 คน คิดเป็น ~77% และ Cabin คือหมายเลขห้องผู้โดยสาร
+                ที่มันอาจไม่ส่งผลหรือส่งผลน้อยมาก อย่างมีนัยยะสำคัญกับการรอดชีวิตของผู้โดยสาร ดังนั้น <mark>วิธีจัดการ กับ Missing Value นี้ ผมจะตัดคอลัมน์นี้ทิ้ง
+                ก่อนนำข้อมูลไปใช้หรือเทรนโมเดล</mark>
+            </li><br>
+            <li class="link-cursor" style="text-align: justify">
+                <code class="inline-code"><b>Embarked</b></code><br>
+                ท่าเรือที่ออกเดินทาง พบ Missing Value 2 ค่า คือ ของคุณ
+                <ul><br>
+                    <li class="link-cursor">
+                        หมายเลขโดยสาร 62  คุณ Icard, Miss. Amelie หาจากลิงก์ข้อ 1. พบว่าขึ้นที่ท่า Southampton (S)
+                    </li>
+                    <li class="link-cursor">
+                        หมายเลขโดยสาร 830 คุณ Stone, Mrs. George Nelson (Martha Evelyn) Southampton (S)
+                    </li>
+                </ul><br>
+                <mark>บันทึกลงไฟล์ `.xlsx`เพื่อนำข้อมูลนี้มาใส่ในตาราง titanic</mark>
+            </li>
+      </ol>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        <b>สรุปวิธีการจัดการ NA และ Missing Value โดยรวม</b><br>
+        : <mark>ผมจะตัดคอลัมน์ Cabin ทิ้งและคอลัมน์ Survived, Age, Fare, Embarked ผมจะใช้ไฟล์ที่เก็บข้อมูลมาแทนค่า NA และ Missing Value</mark> แต่อย่างที่ผมกล่าวไป
+        ผู้โดยสารที่ไม่มี Age มีอยู่ 2 คน ดังนั้นผมจะแทนด้วยค่ากลางของข้อมูลหลังจากแทนที่ค่า NA ส่วนอื่นๆไปหมดแล้ว ต้องไปดูอีกทีว่าข้อมูลกระจายตัวยังไง แทนด้วย mean, median, mode
+        แบบไหนดีกว่ากัน
+      </p>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        ปล. ผมจะไม่ตัดแถวที่มี NA ทิ้ง เพราะบางคอลัมน์เหมาะสมที่จะนำไปเทรนโมเดล + <mark>การจัดการ NA ที่ดีที่สุด คือไปแก้ที่ข้อมูลต้นทาง โดยไปหาข้อมูลมาเพิ่มตามแหล่งที่น่าเชื่อถือ</mark>
+        ผมจะเก็บข้อมูลของผู้โดยสารทั้งหมด 1,309 คนไว้ในตารางโดยไม่ตัดแถวใดๆหรือคนใดๆทิ้ง
+      </p>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        📍 ก่อนอื่นผมจะเอา 2 ไฟล์ที่ผมไปหาข้อมูลมาเพิ่มและบันทึกข้อมูลไว้ผมจะ import เข้า Rstudio ก่อน และค่อยทำการแทนที่ค่า NA และ Missing Value ภายหลัง
+      </p>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        Preview ข้อมูลที่เก็บมาได้ที่ลิงก์ด้านล่าง
+      </p>
+        
+      <p>
+        <a href="https://docs.google.com/spreadsheets/d/1rFNpxPFH17jefH_ZFr8fa0gJFm7ZIJDI/edit?usp=drive_link&ouid=116663168376755112559&rtpof=true&sd=true"
+            class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+            Fill_NA_Test.xlsx
+        </a> <span class="text-description link-cursor">Open with google drive</span> <br>
+        
+        <a href="https://docs.google.com/spreadsheets/d/1vLxs8TM6-q8kLvRoYGQn6jq3rABkdGaz/edit?usp=sharing&ouid=116663168376755112559&rtpof=true&sd=true"
+            class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+            Fill_NA_Train.xlsx
+        </a> <span class="text-description link-cursor">Open with google drive</span> 
+      </p>
+    </section>
+    
+    <!-- <section>
+      <h2 class="link-cursor">1. Project Introduction</h2>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        สวัสดีครับ ยินดีต้อนรับเข้าสู่โปรเจกต์ไททานิค (Titanic) ที่เกี่ยวข้องกับการที่เรืออัปปางในวันที่ 15 เมษายน ค.ศ. 1912
+        ซึ่ง<mark>เป้าหมายหลักของโปรเจกต์นี้คือ สำรวจวิเคาาะห์คนรอดชีวิตจากเหตุการณ์นี้</mark> และที่สำคัญคือ จะ<mark>สร้าง Machine Learning Model
+        เพื่อทำนายคนรอดชีวิตและเปรียบเทียบประสิทธิภาพของแต่ละโมเดล</mark>ว่า โมเดลไหนทำงานได้ดีกว่ากัน ซึ่งมีทั้งหมด 5 Classification Models
+      </p>
+
+      <ol><br>
+          <li class="link-cursor">
+            ผู้โดยสารส่วนใหญ่อายุอยู่ในช่วง 20-30 ปี (อิงจาก Density ด้านล่าง)
+          </li>
+          <li class="link-cursor">
+            <mark>กราฟเบ้ขวา</mark> ถ้าเราเพิ่มค่า Median เข้าไปในข้อมูล จะลดโอกาสเกิด Nosie ของข้อมูลได้มาก
+          </li>
+        </ol>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p7-na-age-1.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-na-age-1.png')">
+      </div>
+    </section> -->
+    <!-- Prism Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- Prism Language Components -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-r.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/api/libs/prism/1.29.0/components/prism-markdown.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>
-</body>
+  </body>
 </html>
