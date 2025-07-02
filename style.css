@@ -1479,3 +1479,27 @@ pre.mermaid {
 }
 
 /* ---------------------------------------------------------------------------------------- */
+/* smart phone view */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .sidebar {
+    display: none; /* ซ่อน sidebar บนมือถือ */
+  }
+
+  .nav {
+    flex-direction: column; /* เรียงลิงก์แนวตั้ง */
+    align-items: center;
+  }
+
+  .nav a {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #444;
+  }
+
+}
+
