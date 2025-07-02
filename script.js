@@ -714,3 +714,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // -----------------------------------------------------------------------------------------------
+// เลื่อนหน้าไปยังตำแหน่งที่มี hash ใน URL
+window.addEventListener("DOMContentLoaded", function () {
+const hash = window.location.hash;
+
+// ตรวจสอบว่า hash เริ่มต้นด้วย #name-project
+if (hash.startsWith("#name-project")) {
+    const target = document.querySelector(hash);
+    if (target) {
+    setTimeout(() => {
+        const yOffset = -100; // ปรับให้เลื่อนขึ้น 100px จากตำแหน่งจริง
+        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+    }, 100);
+    }
+}
+});
+
+// -----------------------------------------------------------------------------------------------
+
