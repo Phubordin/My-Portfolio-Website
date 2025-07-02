@@ -1480,29 +1480,26 @@ pre.mermaid {
 
 /* ---------------------------------------------------------------------------------------- */
 /* smart phone view */
-
-.container {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 20px;
-    }
-
-.card {
-    flex: 1 1 300px;
-    margin: 10px;
-    background: #f0f0f0;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-@media (max-width: 600px) {
-    .container {
+@media (max-width: 768px) {
+  .container {
     flex-direction: column;
-    }
+    padding: 10px;
+  }
+
+  .sidebar {
+    display: none; /* ซ่อน sidebar บนมือถือ */
+  }
+
+  .nav {
+    flex-direction: column; /* เรียงลิงก์แนวตั้ง */
+    align-items: center;
+  }
+
+  .nav a {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #444;
+  }
+
 }
+
