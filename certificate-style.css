@@ -554,7 +554,7 @@ verify-icon:hover {
     display: block;
 }
 
-/* Media Queries */
+/* Media Queries
 @media (max-width: 768px) {
     .view-controls {
         flex-direction: column;
@@ -573,7 +573,7 @@ verify-icon:hover {
     .certificate-grid {
         grid-template-columns: 1fr;
     }
-}
+} */
 
 .gallery-modal {
     position: fixed;
@@ -764,7 +764,7 @@ verify-icon:hover {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .certificate-list {
         width: 95%;
     }
@@ -777,7 +777,7 @@ verify-icon:hover {
     .list-table td {
         padding: 12px 14px;
     }
-}
+} */
 
 /* Dark Mode Support */
 .dark-mode .list-table {
