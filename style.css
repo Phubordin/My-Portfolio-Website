@@ -1482,23 +1482,24 @@ pre.mermaid {
 
 /* smart phone view */
 @media (max-width: 768px) {
+  /* บังคับแสดง layout แบบ desktop */
   .container {
-    flex-direction: column;
-    padding: 10px;
+    flex-direction: row !important;
+    padding: 20px !important;
   }
 
   .sidebar {
-    display: none; /* ซ่อน sidebar บนมือถือ */
+    display: block !important;
   }
 
   .nav {
-    flex-direction: column; /* เรียงลิงก์แนวตั้ง */
-    align-items: center;
+    flex-direction: row !important;
+    align-items: flex-start !important;
   }
 
   .nav a {
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid #444;
+    width: auto !important;
+    text-align: left !important;
+    border-top: none !important;
   }
 }
