@@ -1480,26 +1480,54 @@ pre.mermaid {
 
 /* ---------------------------------------------------------------------------------------- */
 
-/* smart phone view */
+/* ✅ รีเซ็ตค่าพื้นฐาน เพื่อให้ layout เสถียรทุกเบราว์เซอร์ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* ✅ กำหนด layout พื้นฐานสำหรับ Desktop (ค่า default) */
+.container {
+  display: flex;
+  flex-direction: row; /* แสดงแบบแถว */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 25%;
+}
+
+.main-content {
+  width: 75%;
+}
+
+/* ✅ ปรับ layout เฉพาะบน Mobile */
 @media (max-width: 768px) {
-  /* บังคับแสดง layout แบบ desktop */
   .container {
-    flex-direction: row !important;
-    padding: 20px !important;
+    flex-direction: column;
+    padding: 10px;
   }
 
   .sidebar {
-    display: block !important;
+    display: none; /* ซ่อน sidebar บนมือถือ */
   }
 
-  .nav {
-    flex-direction: row !important;
-    align-items: flex-start !important;
+  .main-content {
+    width: 100%;
   }
+}
 
-  .nav a {
-    width: auto !important;
-    text-align: left !important;
-    border-top: none !important;
-  }
+/* ✅ ปรับรูปภาพให้ไม่เกินขนาดจอ */
+img {
+  max-width: 100%;
+  height: auto;
 }
