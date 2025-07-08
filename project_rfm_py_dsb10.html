@@ -133,9 +133,9 @@
         <h2 class="link-cursor">1. Project Introduction</h2>
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             สวัสดีครับ สำหรับ Project นี้ผมมี <a class="link-website" target="_blank" href="https://community.tableau.com/s/question/0D54T00000CWeX8SAL/sample-superstore-sales-excelxls?_gl=1*6jtjnc*_ga*MzUyOTA0ODIyLjE3NTE5NjQxMzE.*_ga_8YLN0SNXVS*czE3NTE5NjQxMjkkbzEkZzEkdDE3NTE5NjQyMDMkajQ2JGwwJGgw*_gcl_au*NTkxNDEyNzk2LjE3NTE5NjQxMzE.">Sample-Superstore Sales (Excel).xls</a> 
-            ที่เอามาจาก Tableau ซึ่งเป็นข้อมูลการขายสินค้าใน Superstore ในสหรัฐอเมริกา (ไม่ใช่ข้อมูลจริงนะครับ) ข้อมูลนี้ถูกออกแบบขึ้นมาเพื่อใช้ประกอบการฝึกวิเคราะห์ด้วยเครื่องมือเช่น 
-            Tableau, Power BI, Excel, SQL และ Python โดยมีโครงสร้างและบริบทใกล้เคียงกับข้อมูลจริง แต่ไม่ได้อ้างอิงจากบริษัทใดบริษัทหนึ่งโดยตรง โดยเราจะนำเอาแค่ชีตที่มี Transaction
-            ข้อมูลการขายสินค้าเท่านั้น โดยผมจะนำมาวิเคราะห์ดูพฤติกรรมการซื้อ-ขายสินค้าของลูกค้า โดยการใช้วิธี RFM Model ที่ิอาศัยการแบ่งกลุ่มลูกค้าออกเป็น 11 กลุ่ม ตามพฤติกรรมการซื้อของลูกค้า
+            ที่เอามาจาก Tableau ซึ่งเป็นข้อมูลการขายสินค้าใน Superstore ในสหรัฐอเมริกา (ไม่ใช่ข้อมูลจริงนะครับ) <mark>ข้อมูลนี้ถูกออกแบบขึ้นมาเพื่อใช้ประกอบการฝึกวิเคราะห์ด้วยเครื่องมือเช่น 
+            Tableau, Power BI, Excel, SQL และ Python โดยมีโครงสร้างและบริบทใกล้เคียงกับข้อมูลจริง</mark>แต่ไม่ได้อ้างอิงจากบริษัทใดบริษัทหนึ่งโดยตรง โดยเราจะนำเอาแค่ชีตที่มี Transaction
+            ข้อมูลการขายสินค้าเท่านั้น โดยผมจะวิเคราะห์ดูพฤติกรรมการซื้อของลูกค้า โดยการใช้วิธี RFM Model ที่อาศัยการแบ่งกลุ่มลูกค้าออกเป็น 11 กลุ่ม ตามพฤติกรรม Rencently, Frequency, Monetary
         </p>
 
         <div class="iframe-container cursor-zoom-in">
@@ -443,7 +443,7 @@
             <a href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh?usp=sharing"
                 class="hover-expand"><img src="colab.png" width="30" class="notion-icon"></a>
             <a class="link-website" target="_blank"
-                href="https://drive.google.com/file/d/1-3p1eJCJZjYpfO4rfRh4aMehnUWS2LKY/view?usp=sharing">
+                href="https://colab.research.google.com/drive/1-zaB6ZUy02SvfJKNKsgmx-6X_3BOsoMh?usp=sharing">
                 P3 : Customer Segmentation and RFM Analysis Using Python and R for Strategic Business Insight</a>
         </p>
 
@@ -2002,13 +2002,19 @@ display(df)
         </p>
 
         <ol>
-            <li class="link-cursor">แต่ละตัวแปรควรอยู่ในคอลัมน์ของตัวเอง</li>
-            <li class="link-cursor">แต่ละการสังเกตควรอยู่ในแถวของตัวเอง</li>
-            <li class="link-cursor">แต่ละประเภทข้อมูลควรอยู่ในตารางของตัวเอง</li>
+            <li class="link-cursor">จัดการ NaN</li>
+            <li class="link-cursor">ปรับช่องว่างให้มีระยะห่างเท่ากัน</li>
+            <li class="link-cursor">แปลงวันที่เป็นมาตรฐาน ISO</li>
         </ol>
 
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
-            โดยการทำ Clean Data จะช่วยให้การวิเคราะห์ข้อมูลเป็นไปได้ง่ายขึ้น
+            โดยการทำ Clean Data จะช่วยให้การวิเคราะห์ข้อมูลเป็นไปได้ง่ายขึ้น แต่จริงๆจะมีคอลัมน์
+            <code class="inline-code">Product ID</code> และ <code class="inline-code">Product Name</code>
+            ที่ยังไม่สะอาด เช่น มี 1 Product ID ที่มสามารถมี Product Name ได้หลายอันและ มี 1 Product Name
+            ที่มี Product ID ได้หลายอันด้วยเช่นกัน แต่ผมจะไม่ทำการ Clean Data ในโปรเจกต์นี้ <mark>เนื่องจากยังไม่จำเป็นต้องใช้ในโปรเจกต์นี้</mark>
+            ซึ่งผมจะนำไปแก้ไขใน <a class="link-website" target="_blank"
+                href="https://phubordin.github.io/My-Portfolio-Website/project_looker_dsb10.html#tranform-data-product">
+                <code class="inline-code">Project 8 : Data-Driven Insights: Sales Performance & Profitability in Looker Studio</code></a>
             ตอนนี้หน้าตาของข้อมูลพร้อมใช้งานแล้ว : ⬇︎
         </p>
 
