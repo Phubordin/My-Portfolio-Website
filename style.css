@@ -145,32 +145,40 @@ body.no-transition {
     .contact-page { min-height: 100vh; }
     
     nav ul {
-    display: flex;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE/Edge */
-  }
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        position: relative; /* 👈 สำคัญ เพื่อให้ dropdown ยึดจาก li ได้ */
+    }
 
     nav ul::-webkit-scrollbar {
-        display: none; /* Chrome/Safari */
+        display: none;
     }
 
     nav ul li {
         flex: 0 0 auto;
+        position: relative;
     }
 
     nav ul li .dropdown-menu,
     nav ul li .dropdown-menu1 {
-        position: absolute;
         display: none;
-        top: 100%;
+        position: absolute;
+        top: 100%;        /* ให้ออกมาต่อใต้ปุ่มหลัก */
         left: 0;
-        background: white;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        min-width: 80vw;
         z-index: 9999;
+        min-width: 80vw;
+        padding: 10px;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        border-radius: 6px;
+    }
+
+    nav ul li.open .dropdown-menu,
+    nav ul li.open .dropdown-menu1 {
+        display: block;
     }
 
     nav ul li.open .dropdown-menu,
@@ -243,7 +251,7 @@ body.no-transition {
     }
 
     .back-button-wrapper {
-        margin-top: 8rem ;
+        margin-top: 6rem ;
     }
 }
 
