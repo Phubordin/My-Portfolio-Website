@@ -376,24 +376,51 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 /*------------------------------------------------------------------------------------------------------------------------- */
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdowns = document.querySelectorAll(".dropdown, .dropdown1");
 
-// ป้องกัน dropdown menu หายไปเมื่อคลิก
-document.querySelectorAll('.dropdown, .dropdown1').forEach(dropdown => {
-    dropdown.addEventListener('mouseenter', function () {
-        let menu = this.querySelector('.dropdown-menu, .dropdown-menu1');
-        if (menu) menu.style.display = 'block';
+  dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector("a");
+    const menu = dropdown.querySelector(".dropdown-menu, .dropdown-menu1");
+
+    // Desktop: ใช้ hover
+    dropdown.addEventListener("mouseenter", () => {
+      if (window.innerWidth > 768 && menu) {
+        menu.style.display = "block";
+      }
     });
 
-    dropdown.addEventListener('mouseleave', function () {
-        let menu = this.querySelector('.dropdown-menu, .dropdown-menu1');
-        if (menu) menu.style.display = 'none';
+    dropdown.addEventListener("mouseleave", () => {
+      if (window.innerWidth > 768 && menu) {
+        menu.style.display = "none";
+      }
     });
+
+    // Mobile: ใช้ click toggle class
+    link.addEventListener("click", (e) => {
+      if (window.innerWidth <= 768 && menu) {
+        e.preventDefault();
+        dropdown.classList.toggle("open");
+
+        // ปิด dropdown อื่น
+        dropdowns.forEach(other => {
+          if (other !== dropdown) {
+            other.classList.remove("open");
+            const otherMenu = other.querySelector(".dropdown-menu, .dropdown-menu1");
+            if (otherMenu) otherMenu.style.display = "none";
+          }
+        });
+
+        // toggle แสดง dropdown
+        if (dropdown.classList.contains("open")) {
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "none";
+        }
+      }
+    });
+  });
 });
-
-function navigateToSection(event, sectionId) {
-    event.preventDefault();
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-}
 
 /*------------------------------------------------------------------------------------------------------------------------- */
 
