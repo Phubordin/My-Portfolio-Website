@@ -1540,7 +1540,11 @@ table.tableizer-table {
     /* ทำให้ table อยู่กึ่งกลางแนวนอน */
     display: block;
     /* กำหนดให้เป็น block element */
-    width: fit-content;
+    /* width: fit-content; */
+    width: 100%; /* เปลี่ยนจาก fit-content */
+    min-width: 600px; /* ปรับตามจำนวนคอลัมน์ */
+    border-collapse: collapse;
+
 }
 
 .tableizer-table td {
