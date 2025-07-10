@@ -144,6 +144,10 @@ body.no-transition {
     .certificate-page { min-height: 100vh; }
     .contact-page { min-height: 100vh; }
     
+    nav {
+        position: relative; /* ⭐️ สำคัญ */
+    }
+
     /* CSS เดิมของคุณ */
     nav ul {
         display: flex;
