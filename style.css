@@ -200,13 +200,13 @@ body.no-transition {
         height: auto;
     }
 
-    table.tableizer-table {
+    .tableizer-table {
         font-size: 12px;
     }
 
-    table.tableizer-table th,
-    table.tableizer-table td {
-        padding: 6px 8px;
+    .tableizer-table th,
+    .tableizer-table td {
+        padding: 6px;
     }
 
 }
@@ -1541,19 +1541,18 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
 }
 
 /* ------------------------------------------------------------------------------------------------------------ */
-
-table.tableizer-table {
+.tableizer-table {
     font-size: 14px;
-    font-family: 'Prompt', sans-serif;
     border: 1px solid #CCC;
+    font-family: 'Prompt', sans-serif;
     display: block;
-    overflow-x: auto;
-    white-space: nowrap;
     width: 100%;
     max-width: 100vw;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-collapse: collapse;
     box-sizing: border-box;
 }
-
 
 .tableizer-table td {
     padding: 4px;
