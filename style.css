@@ -144,14 +144,38 @@ body.no-transition {
     .certificate-page { min-height: 100vh; }
     .contact-page { min-height: 100vh; }
     
-    nav ul li {
-        display: block; /* เปลี่ยนจาก inline */
-        margin: 20px 0;
+    nav ul {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE/Edge */
+  }
+
+    nav ul::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
     }
-    
-    nav ul li a {
-        font-size: 16px; /* ลดจาก 20px */
-        padding: 8px;
+
+    nav ul li {
+        flex: 0 0 auto;
+    }
+
+    nav ul li .dropdown-menu,
+    nav ul li .dropdown-menu1 {
+        position: absolute;
+        display: none;
+        top: 100%;
+        left: 0;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        min-width: 80vw;
+        z-index: 9999;
+    }
+
+    nav ul li.open .dropdown-menu,
+    nav ul li.open .dropdown-menu1 {
+        display: block;
     }
 
     #table-of-contents {
@@ -199,10 +223,6 @@ body.no-transition {
         display: none; /* หรือปรับขนาดให้เล็กลง */
     }
 
-    nav ul li .dropdown-menu {
-        min-width: 80vw; /* เปลี่ยนจาก 80vh */
-        left: -20vw; /* ปรับตำแหน่งไม่ให้เกินจอ */
-    }
     
     h1 { font-size: 1.8rem; }
     h2 { font-size: 1.5rem; }
@@ -223,8 +243,7 @@ body.no-transition {
     }
 
     .back-button-wrapper {
-        bottom: 1rem;
-        margin-top: 5rem ;
+        margin-top: 8rem ;
     }
 }
 
@@ -616,7 +635,7 @@ nav ul li.dropdown1:hover .dropdown-menu {
 
 .back-button {
   position: fixed;
-  top: 15rem;
+  top: 12rem;
   left: 2vw;
   z-index: 9999;
   display: inline-flex;

@@ -749,3 +749,30 @@ document.querySelectorAll("table").forEach(function(table) {
 });
 
 // -----------------------------------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+  const isMobile = window.innerWidth <= 768;
+  if (!isMobile) return;
+
+  const dropdownTriggers = document.querySelectorAll("nav ul li > a");
+
+  dropdownTriggers.forEach(link => {
+    link.addEventListener("click", function (e) {
+      const parentLi = this.parentElement;
+      const hasDropdown =
+        parentLi.querySelector(".dropdown-menu") ||
+        parentLi.querySelector(".dropdown-menu1");
+
+      if (hasDropdown) {
+        e.preventDefault(); // ป้องกันเปิดลิงก์ทันที
+        parentLi.classList.toggle("open");
+
+        // ปิด dropdown อื่น ๆ
+        document.querySelectorAll("nav ul li").forEach(li => {
+          if (li !== parentLi) li.classList.remove("open");
+        });
+      }
+    });
+  });
+});
+
+// -----------------------------------------------------------------------------------------------
