@@ -733,3 +733,13 @@ if (hash.startsWith("#name-project")) {
 
 // -----------------------------------------------------------------------------------------------
 
+document.querySelectorAll("table").forEach(function(table) {
+// ตรวจว่า table ยังไม่ถูก wrap ซ้ำ
+    if (!table.parentElement.classList.contains("table-container")) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "table-container";
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+    }
+});
+
