@@ -227,8 +227,7 @@ body.no-transition {
     }
 
     .back-button-wrapper {
-        margin-top: 6rem;
-        margin-bottom: 6rem;
+        margin-top: 6rem ;
     }
 }
 
@@ -607,8 +606,6 @@ nav ul li.dropdown1:hover .dropdown-menu {
 
 /* ปุ่มกลับหน้า ที่ต้องการ-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .back-button-wrapper {
-  margin-top: 0rem;
-  margin-bottom: 0rem;
   position: relative;
   height: 0; /* ป้องกันไม่ให้ดัน layout เพิ่มเกินจำเป็น */
   z-index: 999;
