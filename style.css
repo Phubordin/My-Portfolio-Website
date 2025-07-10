@@ -1538,10 +1538,13 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
     font-size: 14px;
     border: 1px solid #CCC;
     font-family: 'Prompt', sans-serif;
-    display: table; /* ❗เปลี่ยนกลับเป็น table */
-    margin: 0 auto; /* ✅ จัดกึ่งกลาง */
-    width: auto;    /* ✅ ไม่ยืดเต็ม */
+    display: block;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: auto;
+    white-space: nowrap;
     border-collapse: collapse;
+    box-sizing: border-box;
 }
 
 .tableizer-table td {
