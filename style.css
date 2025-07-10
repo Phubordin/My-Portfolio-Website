@@ -146,7 +146,7 @@ body.no-transition {
     
     nav ul li {
         display: block; /* เปลี่ยนจาก inline */
-        margin: 5px 0;
+        margin: 20px 0;
     }
     
     nav ul li a {
@@ -155,7 +155,24 @@ body.no-transition {
     }
 
     #table-of-contents {
-        display: none; /* ซ่อนใน mobile */
+        position: fixed;
+        top: 60px;
+        right: 10px;
+        width: 80vw;
+        max-height: 70vh;
+        overflow-y: auto;
+        background: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        padding: 15px;
+        z-index: 999;
+        transition: opacity 0.3s ease;
+    }
+
+    #table-of-contents.hidden {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
     }
     
     #toggle-toc-btn {
@@ -209,6 +226,10 @@ body.no-transition {
         padding: 6px;
     }
 
+    .back-button-wrapper {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+    }
 }
 
 :root {
@@ -585,35 +606,40 @@ nav ul li.dropdown1:hover .dropdown-menu {
 }
 
 /* ปุ่มกลับหน้า ที่ต้องการ-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.back-button {
-    position: fixed;
-    top: 14rem;
-    /* ปรับตำแหน่งจากขอบบน */
-    left: 2vw;
-    /* ปรับตำแหน่งจากขอบซ้าย */
-    display: flex;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-    padding: 1rem 2rem;
-    background: linear-gradient(145deg, #6366f1 0%, #3b82f6 50%, #2563eb 100%);
-    color: #fff;
-    border-radius: 12px;
-    cursor: url('cursor1.png'), auto;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    border: none;
-    position: fixed;
-    overflow: hidden;
-    transform: translateZ(0);
-    box-shadow:
-        0 4px 6px rgba(59, 130, 246, 0.2),
-        0 10px 15px rgba(59, 130, 246, 0.1);
-    text-decoration: none;
+.back-button-wrapper {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  position: relative;
+  height: 0; /* ป้องกันไม่ให้ดัน layout เพิ่มเกินจำเป็น */
+  z-index: 999;
 }
+
+.back-button-link {
+  text-decoration: none;
+}
+
+.back-button {
+  position: fixed;
+  top: 14rem;
+  left: 2vw;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(145deg, #6366f1 0%, #3b82f6 50%, #2563eb 100%);
+  color: #fff;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  box-shadow:
+    0 4px 6px rgba(59, 130, 246, 0.2),
+    0 10px 15px rgba(59, 130, 246, 0.1);
+  cursor: url('cursor1.png'), auto;
+}
+
 
 .back-button::before {
     content: '';

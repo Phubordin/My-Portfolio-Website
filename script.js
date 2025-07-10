@@ -269,6 +269,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const toc = document.getElementById("table-of-contents");
     const toggleBtn = document.getElementById("toggle-toc-btn");
 
+    // ✅ เพิ่มบรรทัดนี้ เพื่อซ่อน TOC ตอนเปิดบนมือถือครั้งแรก
+    if (window.innerWidth <= 768) {
+        toc.classList.add("hidden");
+    }
+
     // ฟังก์ชันซ่อน/แสดง TOC
     toggleBtn.addEventListener("click", function () {
         toc.classList.toggle("hidden");
@@ -743,3 +748,4 @@ document.querySelectorAll("table").forEach(function(table) {
     }
 });
 
+// -----------------------------------------------------------------------------------------------
