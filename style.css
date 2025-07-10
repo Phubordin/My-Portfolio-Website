@@ -1544,15 +1544,16 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
 
 table.tableizer-table {
     font-size: 14px;
-    border: 1px solid #CCC;
     font-family: 'Prompt', sans-serif;
-    display: block;           /* ทำให้ scroll ได้ */
-    overflow-x: auto;         /* เพิ่มการ scroll แนวนอน */
-    white-space: nowrap;      /* ไม่ให้ wrap คำในเซลล์ */
-    width: 100%;              /* ให้เต็ม container */
-    max-width: 100vw;         /* ไม่ให้เกินขอบจอ */
-    box-sizing: border-box;   /* คำนวณ padding+border ไม่ให้เกิน */
+    border: 1px solid #CCC;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
 }
+
 
 .tableizer-table td {
     padding: 4px;
