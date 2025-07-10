@@ -378,47 +378,15 @@ document.addEventListener("DOMContentLoaded", function () {
 /*------------------------------------------------------------------------------------------------------------------------- */
 
 // ป้องกัน dropdown menu หายไปเมื่อคลิก
-// เวอร์ชันง่าย - ใช้ได้ทั้งคอมและมือถือ
 document.querySelectorAll('.dropdown, .dropdown1').forEach(dropdown => {
-    let menu = dropdown.querySelector('.dropdown-menu, .dropdown-menu1');
-    let isOpen = false;
-    
-    // สำหรับคอมพิวเตอร์ - hover effect
     dropdown.addEventListener('mouseenter', function () {
-        if (menu) {
-            menu.style.display = 'block';
-        }
+        let menu = this.querySelector('.dropdown-menu, .dropdown-menu1');
+        if (menu) menu.style.display = 'block';
     });
 
     dropdown.addEventListener('mouseleave', function () {
-        if (menu) {
-            menu.style.display = 'none';
-            isOpen = false;
-        }
-    });
-
-    // สำหรับมือถือ - click/touch
-    dropdown.addEventListener('click', function (e) {
-        if (menu) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            if (isOpen) {
-                menu.style.display = 'none';
-                isOpen = false;
-            } else {
-                menu.style.display = 'block';
-                isOpen = true;
-            }
-        }
-    });
-
-    // ปิด dropdown เมื่อคลิกข้างนอก
-    document.addEventListener('click', function (e) {
-        if (menu && !dropdown.contains(e.target)) {
-            menu.style.display = 'none';
-            isOpen = false;
-        }
+        let menu = this.querySelector('.dropdown-menu, .dropdown-menu1');
+        if (menu) menu.style.display = 'none';
     });
 });
 
