@@ -145,47 +145,12 @@ body.no-transition {
     .contact-page { min-height: 100vh; }
     
     nav ul {
-        display: flex;
-        overflow-x: auto;
-        white-space: nowrap;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        position: relative; /* 👈 สำคัญ เพื่อให้ dropdown ยึดจาก li ได้ */
+        display: flex; /* ใช้ flexbox เพื่อจัดเรียงรายการในแนวนอน */
+        overflow-x: auto; /* ทำให้ nav เลื่อนซ้าย-ขวาได้ */
+        white-space: nowrap; /* ทำให้รายการใน nav ไม่ตัดบรรทัด */
+        scrollbar-width: none; /* ซ่อน scrollbar */
     }
-
-    nav ul::-webkit-scrollbar {
-        display: none;
-    }
-
-    nav ul li {
-        flex: 0 0 auto;
-        position: relative;
-    }
-
-    nav ul li .dropdown-menu,
-    nav ul li .dropdown-menu1 {
-        display: none;
-        position: absolute;
-        top: 100%;        /* ให้ออกมาต่อใต้ปุ่มหลัก */
-        left: 0;
-        z-index: 9999;
-        min-width: 80vw;
-        padding: 10px;
-        background: white;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        border-radius: 6px;
-    }
-
-    nav ul li.open .dropdown-menu,
-    nav ul li.open .dropdown-menu1 {
-        display: block;
-    }
-
-    nav ul li.open .dropdown-menu,
-    nav ul li.open .dropdown-menu1 {
-        display: block;
-    }
-
+    
     #table-of-contents {
         position: fixed;
         top: 60px;

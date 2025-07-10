@@ -377,19 +377,51 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 /*------------------------------------------------------------------------------------------------------------------------- */
 
-// ป้องกัน dropdown menu หายไปเมื่อคลิก
+// เวอร์ชันง่าย - ใช้ได้ทั้งคอมและมือถือ
 document.querySelectorAll('.dropdown, .dropdown1').forEach(dropdown => {
+    let menu = dropdown.querySelector('.dropdown-menu, .dropdown-menu1');
+    let isOpen = false;
+    
+    // สำหรับคอมพิวเตอร์ - hover effect
     dropdown.addEventListener('mouseenter', function () {
-        let menu = this.querySelector('.dropdown-menu, .dropdown-menu1');
-        if (menu) menu.style.display = 'block';
+        if (menu) {
+            menu.style.display = 'block';
+        }
     });
 
     dropdown.addEventListener('mouseleave', function () {
-        let menu = this.querySelector('.dropdown-menu, .dropdown-menu1');
-        if (menu) menu.style.display = 'none';
+        if (menu) {
+            menu.style.display = 'none';
+            isOpen = false;
+        }
+    });
+
+    // สำหรับมือถือ - click/touch
+    dropdown.addEventListener('click', function (e) {
+        if (menu) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            if (isOpen) {
+                menu.style.display = 'none';
+                isOpen = false;
+            } else {
+                menu.style.display = 'block';
+                isOpen = true;
+            }
+        }
+    });
+
+    // ปิด dropdown เมื่อคลิกข้างนอก
+    document.addEventListener('click', function (e) {
+        if (menu && !dropdown.contains(e.target)) {
+            menu.style.display = 'none';
+            isOpen = false;
+        }
     });
 });
 
+// ฟังก์ชันเดิมสำหรับการนำทาง
 function navigateToSection(event, sectionId) {
     event.preventDefault();
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
@@ -749,30 +781,5 @@ document.querySelectorAll("table").forEach(function(table) {
 });
 
 // -----------------------------------------------------------------------------------------------
-document.addEventListener("DOMContentLoaded", function () {
-  const isMobile = window.innerWidth <= 768;
-  if (!isMobile) return;
-
-  const dropdownTriggers = document.querySelectorAll("nav ul li > a");
-
-  dropdownTriggers.forEach(link => {
-    link.addEventListener("click", function (e) {
-      const parentLi = this.parentElement;
-      const hasDropdown =
-        parentLi.querySelector(".dropdown-menu") ||
-        parentLi.querySelector(".dropdown-menu1");
-
-      if (hasDropdown) {
-        e.preventDefault(); // ป้องกันเปิดลิงก์ทันที
-        parentLi.classList.toggle("open");
-
-        // ปิด dropdown อื่น ๆ
-        document.querySelectorAll("nav ul li").forEach(li => {
-          if (li !== parentLi) li.classList.remove("open");
-        });
-      }
-    });
-  });
-});
 
 // -----------------------------------------------------------------------------------------------
