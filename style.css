@@ -1536,7 +1536,7 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
 /* ------------------------------------------------------------------------------------------------------------ */
 .tableizer-table {
     font-size: 14px;
-    /* border: 1px solid #CCC; */
+    border: 1px;
     font-family: 'Prompt', sans-serif;
     display: table; /* ❗เปลี่ยนกลับเป็น table */
     margin: 0 auto; /* ✅ จัดกึ่งกลาง */
