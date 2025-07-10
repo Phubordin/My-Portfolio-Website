@@ -194,7 +194,11 @@ body.no-transition {
     h1 { font-size: 1.8rem; }
     h2 { font-size: 1.5rem; }
     h3 { font-size: 1.3rem; }
-
+    
+    img {
+    max-width: 100%;
+    height: auto;
+}
 }
 
 :root {
@@ -1556,10 +1560,5 @@ pre.mermaid {
 }
 
 /* ---------------------------------------------------------------------------------------- */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover; /* หรือ contain แล้วแต่กรณี */
-}
+
 /* ---------------------------------------------------------------------------------------- */
