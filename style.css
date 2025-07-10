@@ -223,7 +223,7 @@ body.no-transition {
     }
 
     .back-button-wrapper {
-        top: 100rem;
+        bottom: 1rem;
         margin-top: 5rem ;
     }
 }
@@ -396,17 +396,20 @@ section {
     background: #bbdefb;
 }
 
+.experience p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* เผื่อมือถือแคบจะตัดบรรทัด */
+}
+
+.company-name {
+  font-weight: 500;
+}
+
 .date-info {
-    display: inline-block;
-}
-
-/* ใช้ Attribute Selector เพื่อกำหนดค่า margin-left ---------------------------------------------------------------------------------------------*/
-.date-info[data-space="80"] {
-    margin-left: 271px;
-}
-
-.date-info[data-space="50"] {
-    margin-left: 294px;
+  font-style: italic;
+  color: #666;
 }
 
 /* ใช้ fade-in เข้าหน้าเว็บ ---------------------------------------------------------------------------------------------*/
@@ -613,7 +616,7 @@ nav ul li.dropdown1:hover .dropdown-menu {
 
 .back-button {
   position: fixed;
-  top: 14rem;
+  top: 15rem;
   left: 2vw;
   z-index: 9999;
   display: inline-flex;
