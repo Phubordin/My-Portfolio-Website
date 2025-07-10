@@ -144,11 +144,76 @@ body.no-transition {
     .certificate-page { min-height: 100vh; }
     .contact-page { min-height: 100vh; }
     
+    /* CSS เดิมของคุณ */
     nav ul {
-        display: flex; /* ใช้ flexbox เพื่อจัดเรียงรายการในแนวนอน */
-        overflow-x: auto; /* ทำให้ nav เลื่อนซ้าย-ขวาได้ */
-        white-space: nowrap; /* ทำให้รายการใน nav ไม่ตัดบรรทัด */
-        scrollbar-width: none; /* ซ่อน scrollbar */
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 0;
+        margin: 0;
+        gap: 1rem;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    nav ul li {
+        display: inline-block;
+        flex: 0 0 auto;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        font-size: 16px;
+        padding: 10px 16px;
+        text-decoration: none;
+        color: #333;
+        border-radius: 6px;
+        white-space: nowrap;
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* CSS เพิ่มเติมสำหรับ dropdown */
+    .dropdown, .dropdown1 {
+        position: relative !important;
+    }
+
+    .dropdown-menu, .dropdown-menu1 {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        z-index: 9999 !important;
+        min-width: 200px !important;
+        background-color: white !important;
+        border: 1px solid #ddd !important;
+        border-radius: 6px !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+        display: none !important;
+        padding: 8px 0 !important;
+        margin-top: 4px !important;
+    }
+
+    .dropdown-menu li, .dropdown-menu1 li {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
+        flex: none !important;
+    }
+
+    .dropdown-menu li a, .dropdown-menu1 li a {
+        padding: 8px 16px !important;
+        color: #333 !important;
+        text-decoration: none !important;
+        display: block !important;
+        white-space: nowrap !important;
+    }
+
+    .dropdown-menu li a:hover, .dropdown-menu1 li a:hover {
+        background-color: #f5f5f5 !important;
     }
     
     #table-of-contents {
@@ -567,7 +632,6 @@ nav ul li .dropdown-menu1 {
     scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
     /* กำหนดสี scrollbar */
 }
-
 
 nav ul li .dropdown-menu li,
 nav ul li .dropdown-menu1 li {

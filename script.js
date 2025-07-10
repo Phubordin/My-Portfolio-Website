@@ -377,6 +377,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 /*------------------------------------------------------------------------------------------------------------------------- */
 
+// ป้องกัน dropdown menu หายไปเมื่อคลิก
 // เวอร์ชันง่าย - ใช้ได้ทั้งคอมและมือถือ
 document.querySelectorAll('.dropdown, .dropdown1').forEach(dropdown => {
     let menu = dropdown.querySelector('.dropdown-menu, .dropdown-menu1');
@@ -421,7 +422,6 @@ document.querySelectorAll('.dropdown, .dropdown1').forEach(dropdown => {
     });
 });
 
-// ฟังก์ชันเดิมสำหรับการนำทาง
 function navigateToSection(event, sectionId) {
     event.preventDefault();
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
