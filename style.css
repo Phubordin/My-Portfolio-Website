@@ -143,10 +143,6 @@ body.no-transition {
     .project-page { min-height: 100vh; }
     .certificate-page { min-height: 100vh; }
     .contact-page { min-height: 100vh; }
-    
-    nav {
-        position: relative; /* ⭐️ สำคัญ */
-    }
 
     /* CSS เดิมของคุณ */
     nav ul {
@@ -184,16 +180,16 @@ body.no-transition {
     
     .dropdown-menu,
     .dropdown-menu1 {
-        display: none;
-        position: absolute;
-        top: 100%; /* ใต้ปุ่ม */
+        top: 100%;  /* ใต้ปุ่ม */
         left: 0;
-        background-color: white;
+        position: absolute;
         z-index: 9999;
+        background: white;
         min-width: 80vw;
         padding: 10px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         border-radius: 6px;
+        display: none;
     }
 
     .dropdown.open .dropdown-menu,
@@ -321,49 +317,7 @@ header {
 }
 
 
-/* Navigation Bar ------------------------------------------------------------------------------------------------*/
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.8);
-    text-align: center;
-    padding: 10px 0;
-    position: sticky;
-    /* เปลี่ยนจาก sticky เป็น relative เพื่อติดกับ header */
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    margin-top: -2px;
-}
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    position: relative;
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-/* Highlight Tab เมื่อโฟกัส ---------------------------------------------------------------------------------------------*/
-nav ul li a:hover {
-    background: white;
-    color: black;
-    border-radius: 5px;
-}
 
 /* Sections -----------------------------------------------------------------------------------------------------------*/
 section {
@@ -474,40 +428,52 @@ section {
     }
 }
 
-/* Tab Custom ----------------------------------------------------------------------------------------------------------------------------*/
+/* Navigation Bar ------------------------------------------------------------------------------------------------*/
 nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 10px 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    margin-top: -2px;
     background-color: #333;
     padding: 15px 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* เพิ่มเงา */
+    position: sticky;
+    overflow: visible;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative; /* ✅ เพื่อให้ dropdown menu ผูกกับ ul ได้ถูก */
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block; /* ✅ เปลี่ยนจาก inline เป็น inline-block */
+    margin: 0 20px;
 }
 
 nav ul li a {
-    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
     padding: 10px 15px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
     border-radius: 5px;
-    /* มุมโค้ง */
-    transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
     background: linear-gradient(145deg, #aeaff5 0%, #8587ff 50%, #ff6600 100%);
-    color: white;
-}
-
-/* section project, experience hover---------------------------------------------------------------------------------------------------------------------------- */
-.hover-expand {
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
-    cursor: url('cursor1.png'), auto;
-}
-
-.hover-expand:hover {
-    transform: scale(1.01);
-    background: #bbdefb;
-}
-
-.hover-expand1:hover {
-    cursor: url("cursor.png"), auto;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
 }
 
 nav ul li a.active {
@@ -523,34 +489,6 @@ nav ul li a.active1 {
     border-radius: 5px;
 }
 
-/* customปุ่ม downlod, view---------------------------------------------------------------------------------------------*/
-.download-btn {
-    color: #333;
-    padding: 5px 10px;
-    border: 2px solid #333;
-    cursor: url('cursor1.png'), auto;
-    font-size: 16px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: inline-flex;
-    align-items: center;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.download-btn:hover {
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-shadow: 0px 0px 10px cyan,
-        0px 0px 20px cyan,
-        0px 0px 30px cyan,
-        0px 0px 60px cyan;
-}
-
-/* เพิ่มสไตล์สำหรับ dropdown menu---------------------------------------------------------------------------------------------------------------------------- */
 nav ul {
     list-style: none;
     padding: 0;
@@ -644,6 +582,48 @@ nav ul li .dropdown-menu1 li a:hover {
 nav ul li.dropdown:hover .dropdown-menu,
 nav ul li.dropdown1:hover .dropdown-menu {
     display: block;
+}
+
+/* section project, experience hover---------------------------------------------------------------------------------------------------------------------------- */
+.hover-expand {
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    cursor: url('cursor1.png'), auto;
+}
+
+.hover-expand:hover {
+    transform: scale(1.01);
+    background: #bbdefb;
+}
+
+.hover-expand1:hover {
+    cursor: url("cursor.png"), auto;
+}
+
+/* customปุ่ม downlod, view---------------------------------------------------------------------------------------------*/
+.download-btn {
+    color: #333;
+    padding: 5px 10px;
+    border: 2px solid #333;
+    cursor: url('cursor1.png'), auto;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 0px 10px cyan,
+        0px 0px 20px cyan,
+        0px 0px 30px cyan,
+        0px 0px 60px cyan;
 }
 
 /* ปุ่มกลับหน้า ที่ต้องการ-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
