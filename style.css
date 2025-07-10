@@ -198,7 +198,17 @@ body.no-transition {
     img {
         max-width: 100%;
         height: auto;
-    }  
+    }
+
+    table.tableizer-table {
+        font-size: 12px;
+    }
+
+    table.tableizer-table th,
+    table.tableizer-table td {
+        padding: 6px 8px;
+    }
+
 }
 
 .hero-image {
