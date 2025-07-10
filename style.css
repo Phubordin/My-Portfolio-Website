@@ -113,11 +113,88 @@ body.no-transition {
     min-height: 100vh;
 }
 
+/* เพิ่ม Media Query ครอบคลุมมากขึ้น */
 @media screen and (max-width: 768px) {
     body {
-        background-size: contain;
-        background-position: top center;
+        background-size: cover; /* เปลี่ยนจาก contain */
+        background-position: center top;
+        background-attachment: local; /* เปลี่ยนจาก fixed */
+        font-size: 14px; /* ลดขนาดฟอนต์ base */
     }
+    
+    .home-page { min-height: 100vh; } /* จาก 570vh */
+    .about-page { min-height: 100vh; } /* จาก 1000vh */
+    .project_cafe-page { min-height: 100vh; } /* จาก 1350vh */
+    .project_ggsheet-page { min-height: 100vh; } /* จาก 3870vh */
+    /* ทำแบบนี้กับทุกหน้า */
+    .experience-page { min-height: 100vh; }
+    .experience_leowood-page { min-height: 100vh; }
+    .experience_arrow-page { min-height: 100vh; }
+    .project_atm-page { min-height: 100vh; }
+    .project_looker-page { min-height: 100vh; }
+    .project_api-page { min-height: 100vh; }
+    .project_xml-page { min-height: 100vh; }
+    .project_nycflight-page { min-height: 100vh; }
+    .project_pizza-page { min-height: 100vh; }
+    .project_pyc-page { min-height: 100vh; }
+    .project_rfm-page { min-height: 100vh; }
+    .project_titanic-page { min-height: 100vh; }
+    .project_vizdiamond-page { min-height: 100vh; }
+    .project-page { min-height: 100vh; }
+    .certificate-page { min-height: 100vh; }
+    .contact-page { min-height: 100vh; }
+    
+    nav ul li {
+        display: block; /* เปลี่ยนจาก inline */
+        margin: 5px 0;
+    }
+    
+    nav ul li a {
+        font-size: 16px; /* ลดจาก 20px */
+        padding: 8px;
+    }
+
+    #table-of-contents {
+        display: none; /* ซ่อนใน mobile */
+    }
+    
+    #toggle-toc-btn {
+        display: none;
+    }
+
+    section {
+        margin: 20px 10px; /* ลดจาก 40px auto */
+        padding: 20px 15px; /* ลดจาก 30px */
+        max-width: 95%; /* เพิ่มจาก 800px */
+    }
+
+    .theme-switch-wrapper {
+        top: 5px;
+        right: 10px;
+    }
+    
+    .theme-switch1-wrapper {
+        top: 45px;
+        right: 10px;
+    }
+    
+    header {
+        height: 12vh; /* ลดจาก 15vh */
+    }
+
+    .back-button {
+        display: none; /* หรือปรับขนาดให้เล็กลง */
+    }
+
+    nav ul li .dropdown-menu {
+        min-width: 80vw; /* เปลี่ยนจาก 80vh */
+        left: -20vw; /* ปรับตำแหน่งไม่ให้เกินจอ */
+    }
+    
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.3rem; }
+
 }
 
 :root {
