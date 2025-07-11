@@ -583,7 +583,7 @@ document.addEventListener("DOMContentLoaded", function () {
     headings.forEach((heading, index) => {
         if (heading.tagName === "H2") {
             h2Count++;
-            if (h2Count === 1) return; // ❌ ข้าม h2 ตัวแรก
+            // if (h2Count === 1) return; // ❌ ข้าม h2 ตัวแรก
         }
 
         const id = heading.id || `heading-${index}`;
@@ -641,7 +641,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const tocList = document.createElement("ul");
 
     headings.forEach((heading, index) => {
-        if (index === 0) return; // ข้ามตัวแรก
+        // if (index === 0) return; // ข้ามตัวแรก
     
         const id = heading.id || `heading-${index}`;
         heading.id = id;
