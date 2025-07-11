@@ -163,9 +163,13 @@ body.no-transition {
     }
 
     nav ul li .dropdown-menu li a {
-        font-size: 15px; /* ปรับขนาดให้ไม่ล้น */
+        font-size: 15px;
         line-height: 1.4;
-        word-break: keep-all; 
+        white-space: normal;
+        word-break: break-word;
+        max-width: 90vw;
+        padding: 10px 15px;
+        box-sizing: border-box;
     }
 
     /* แนะนำ: ซ่อนไม่ให้ scroll bar หนาเกิน */
@@ -476,6 +480,7 @@ nav ul li .dropdown-menu {
     top: 100%;
     background: rgba(0, 0, 0, 0.9);
     min-width: 50vw;
+    max-width: 95vw; /* ✅ จำกัดให้ไม่เกินหน้าจอ */
     max-height: 35vh;;
     /* ปรับความสูงให้ไม่เกินขอบจอ */
     padding: 10px 0;
@@ -486,8 +491,8 @@ nav ul li .dropdown-menu {
     scrollbar-width: none;
     /* ทำให้ scrollbar บางลง */
     scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
-    /* กำหนดสี scrollbar */
 }
+
 
 nav ul li .dropdown-menu li {
     display: block;
