@@ -155,6 +155,29 @@ body.no-transition {
         white-space: nowrap;
     }
 
+    nav ul li .dropdown-menu {
+        max-height: 50vh; /* ปรับตามความเหมาะสม */
+        overflow-y: auto;
+        font-size: 14px; /* ปรับขนาดให้อ่านง่ายแต่ไม่ใหญ่เกิน */
+        padding: 8px 0;
+    }
+
+    nav ul li .dropdown-menu li a {
+        font-size: 14px; /* ปรับขนาดให้ไม่ล้น */
+        line-height: 1.4;
+        word-break: break-word; /* กันชื่อยาวเกิน */
+    }
+
+    /* แนะนำ: ซ่อนไม่ให้ scroll bar หนาเกิน */
+    nav ul li .dropdown-menu::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    nav ul li .dropdown-menu::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+    }
+
     .dropdown.open .dropdown-menu {
         display: block;
     }
@@ -185,19 +208,9 @@ body.no-transition {
         padding: 20px 15px; /* ลดจาก 30px */
         max-width: 95%; /* เพิ่มจาก 800px */
     }
-
-    .theme-switch-wrapper {
-        top: 5px;
-        right: 10px;
-    }
-    
-    .theme-switch1-wrapper {
-        top: 45px;
-        right: 10px;
-    }
     
     header {
-        height: 12vh; /* ลดจาก 15vh */
+        height: 1vh; /* ลดจาก 15vh */
     }
     
     h1 { font-size: 1.8rem; }
@@ -219,11 +232,10 @@ body.no-transition {
     }
     
     .back-button {
-        top: 0.5rem;
+        top: 1rem;
         left: 0.5rem;
-        padding: 0.6rem 1.2rem;
+        padding: 0.5rem 1rem;
         font-size: 0.9rem;
-        border-radius: 10px;
         gap: 0.5rem;
     }
 }
@@ -471,7 +483,7 @@ nav ul li .dropdown-menu {
     z-index: 1000;
     overflow-y: auto;
     /* ทำให้เลื่อนขึ้น-ลงได้ */
-    scrollbar-width: thin;
+    scrollbar-width: none;
     /* ทำให้ scrollbar บางลง */
     scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
     /* กำหนดสี scrollbar */
@@ -549,9 +561,9 @@ nav ul li.dropdown.open .dropdown-menu {
 /* ปุ่มกลับหน้า ที่ต้องการ-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .back-button {
-  position: absolute; /* ✅ เปลี่ยนจาก absolute เป็น fixed ให้ลอยอยู่ตลอด */
-  top: 17rem;       /* ✅ อยู่ด้านบนสุด */
-  left: 1rem;      /* ✅ ชิดซ้าย */
+  position: fixed;
+  top: 5rem;
+  left: 1rem;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -791,84 +803,7 @@ nav ul li.dropdown.open .dropdown-menu {
 }
 
 
-/* Switch Toggle ปุ่ม Dark mode -----------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.theme-switch-wrapper {
-    position: fixed;
-    top: 10px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    z-index: 1000;
-}
 
-.switch {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.switch input {
-    opacity: 1;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-    background: linear-gradient(to right, #e2e2e2, #ffffff);
-    transition: all 0.4s ease;
-    border-radius: 30px;
-    cursor: url('cursor1.png'), auto;
-}
-
-.slider:before {
-    position: absolute;
-    content: "☀️";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 24px;
-    width: 24px;
-    left: 3px;
-    bottom: 3px;
-    background-color: #000000;
-    transition: 0.4s;
-    border-radius: 50%;
-}
-
-input:checked+.slider {
-    background: linear-gradient(135deg, #809cf7, #00f0b8);
-}
-
-input:checked+.slider:before {
-    transform: translateX(30px);
-    content: "🌙";
-}
-
-.switch-label {
-    font-size: 16px;
-    padding: 0 0;
-    border-radius: 5%;
-    /* background-color: #e7e4e44a; */
-    font-weight: 700;
-    transition: all 0.3s ease;
-}
-
-/* สำหรับ Light Mode */
-.switch input:not(:checked)+.slider+.switch-label {
-    color: #000000;
-    /* background-color: #ffffff92; */
-}
-
-/* สำหรับ Dark Mode */
-.switch input:checked+.slider+.switch-label {
-    color: #ffffff;
-    /* background-color: #2c3e504a; */
-}
 
 /* จากได้ text ที่ต้องการ ----------------------------------------------------------------------------------------------------------------------------*/
 
@@ -880,10 +815,15 @@ input:checked+.slider:before {
 }
 
 .strong1 {
-    text-shadow: 0px 0px 10px cyan,
-        0px 0px 20px cyan,
-        0px 0px 30px cyan,
-        0px 0px 60px cyan;
+  text-shadow: 0px 0px 10px cyan,
+               0px 0px 20px cyan,
+               0px 0px 30px cyan,
+               0px 0px 60px cyan;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  font-size: clamp(1rem, 2vw, 1.5rem); /* ✅ ขนาดยืดหยุ่นได้ */
+  text-align: center;
 }
 
 .line-code {
@@ -1086,15 +1026,6 @@ details summary:hover {
 
 /* ปุ่มเบลอ ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-.theme-switch1-wrapper {
-    position: fixed;
-    top: 50px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    z-index: 1000;
-}
-
 .switch1 {
     position: relative;
     display: flex;
@@ -1111,7 +1042,7 @@ details summary:hover {
 .slider1 {
     position: relative;
     display: inline-block;
-    width: 60px;
+    width: 30px;
     height: 30px;
     background: linear-gradient(to right, #e2e2e2, #ffffff);
     transition: all 0.4s ease;
@@ -1139,7 +1070,7 @@ input:checked+.slider1 {
 }
 
 input:checked+.slider1:before {
-    transform: translateX(30px);
+    /* transform: translateX(30px); */
     content: "📷";
 }
 
@@ -1172,6 +1103,94 @@ input:checked+.slider1:before {
 .switch1 input[type="checkbox"] {
     margin-left: -10px;
     /* เพิ่มระยะห่างด้านซ้ายของปุ่ม */
+}
+
+/* Switch Toggle ปุ่ม Dark mode -----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.theme-switch1-wrapper { /*เบลอ*/
+    position: fixed;
+    top: 95px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 10000;
+}
+
+.theme-switch-wrapper { /*มืด*/
+    position: fixed;
+    top: 95px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 10000;
+}
+
+.switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.switch input {
+    opacity: 1;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to right, #e2e2e2, #ffffff);
+    transition: all 0.4s ease;
+    border-radius: 30px;
+    cursor: url('cursor1.png'), auto;
+}
+
+.slider:before {
+    position: absolute;
+    content: "☀️";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #000000;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background: linear-gradient(135deg, #809cf7, #00f0b8);
+}
+
+input:checked+.slider:before {
+    /* transform: translateX(30px); */
+    content: "🌙";
+}
+
+.switch-label {
+    font-size: 16px;
+    padding: 0 0;
+    border-radius: 5%;
+    /* background-color: #e7e4e44a; */
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+/* สำหรับ Light Mode */
+.switch input:not(:checked)+.slider+.switch-label {
+    color: #000000;
+    /* background-color: #ffffff92; */
+}
+
+/* สำหรับ Dark Mode */
+.switch input:checked+.slider+.switch-label {
+    color: #ffffff;
+    /* background-color: #2c3e504a; */
 }
 
 /* Grade ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */

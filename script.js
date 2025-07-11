@@ -376,51 +376,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 /*------------------------------------------------------------------------------------------------------------------------- */
-document.addEventListener("DOMContentLoaded", function () {
-  const dropdowns = document.querySelectorAll(".dropdown");
-
-  dropdowns.forEach(dropdown => {
-    const link = dropdown.querySelector("a");
-    const menu = dropdown.querySelector(".dropdown-menu");
-
-    // Desktop: hover
-    dropdown.addEventListener("mouseenter", () => {
-      if (window.innerWidth > 768 && menu) {
-        menu.style.display = "block";
-      }
+// ป้องกัน dropdown menu หายไปเมื่อคลิก
+document.querySelectorAll('.dropdown, .dropdown1').forEach(dropdown => {
+    dropdown.addEventListener('mouseenter', function () {
+        let menu = this.querySelector('.dropdown-menu, .dropdown-menu1');
+        if (menu) menu.style.display = 'block';
     });
 
-    dropdown.addEventListener("mouseleave", () => {
-      if (window.innerWidth > 768 && menu) {
-        menu.style.display = "none";
-      }
+    dropdown.addEventListener('mouseleave', function () {
+        let menu = this.querySelector('.dropdown-menu, .dropdown-menu1');
+        if (menu) menu.style.display = 'none';
     });
-
-    // Mobile: click toggle
-    link.addEventListener("click", (e) => {
-      if (window.innerWidth <= 768 && menu) {
-        e.preventDefault();
-        dropdown.classList.toggle("open");
-
-        // ปิด dropdown อื่นๆ
-        dropdowns.forEach(other => {
-          if (other !== dropdown) {
-            other.classList.remove("open");
-            const otherMenu = other.querySelector(".dropdown-menu");
-            if (otherMenu) otherMenu.style.display = "none";
-          }
-        });
-
-        // toggle menu
-        if (dropdown.classList.contains("open")) {
-          menu.style.display = "block";
-        } else {
-          menu.style.display = "none";
-        }
-      }
-    });
-  });
 });
+
+function navigateToSection(event, sectionId) {
+    event.preventDefault();
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
 /*------------------------------------------------------------------------------------------------------------------------- */
 
 function navigateToProject_ggsheet_dsb10() {
@@ -775,5 +747,30 @@ document.querySelectorAll("table").forEach(function(table) {
 });
 
 // -----------------------------------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+  const isMobile = window.innerWidth <= 768;
+  if (!isMobile) return;
+
+  const dropdownTriggers = document.querySelectorAll("nav ul li > a");
+
+  dropdownTriggers.forEach(link => {
+    link.addEventListener("click", function (e) {
+      const parentLi = this.parentElement;
+      const hasDropdown =
+        parentLi.querySelector(".dropdown-menu") ||
+        parentLi.querySelector(".dropdown-menu1");
+
+      if (hasDropdown) {
+        e.preventDefault(); // ป้องกันเปิดลิงก์ทันที
+        parentLi.classList.toggle("open");
+
+        // ปิด dropdown อื่น ๆ
+        document.querySelectorAll("nav ul li").forEach(li => {
+          if (li !== parentLi) li.classList.remove("open");
+        });
+      }
+    });
+  });
+});
 
 // -----------------------------------------------------------------------------------------------

@@ -1,109 +1,242 @@
 <!-- project_DB.html -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MKCCGG3QF"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0MKCCGG3QF"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-0MKCCGG3QF');
+      gtag("config", "G-0MKCCGG3QF");
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project - Looker</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="certificate-style.css">
-    <link rel="icon" type="image/png" href="website.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="certificate-style.css" />
+    <link rel="icon" type="image/png" href="website.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<div class="theme-switch-wrapper">
+  <div class="theme-switch-wrapper">
     <!-- ปุ่ม Blur Background -->
     <label class="switch">
-        <span><img src="darkmode4.png" width="30" class="notion-icon"></span>
-        <input type="checkbox" id="theme-toggle">
-        <span class="slider"></span>
-        <span class="switch-label"></span>
+      <input type="checkbox" id="theme-toggle" />
+      <span class="slider"></span>
+      <span class="switch-label"></span>
     </label>
-</div>
+  </div>
 
-<div class="theme-switch1-wrapper">
+  <div class="theme-switch1-wrapper">
     <!-- ปุ่ม Blur Background -->
     <label class="switch1">
-        <img src="focus.png" width="30" class="notion-icon">
-        <input type="checkbox" id="blur-toggle">
-        <span class="slider1"></span>
-        <span class="switch-label1"></span>
+      <input type="checkbox" id="blur-toggle" />
+      <span class="slider1"></span>
+      <span class="switch-label1"></span>
     </label>
-</div>
+  </div>
 
-<!-- Table of Contents -->
-<!-- ปุ่มเลื่อนไปด้านบน -->
-<button id="scrollToTopBtn" title="Go to top">⇧</button>
-<button id="toggle-toc-btn">≡</button>
-<aside id="table-of-contents" class="active">
-    <h3 class = "link-cursor">Navigation Menu</h3>
+  <!-- Table of Contents -->
+  <!-- ปุ่มเลื่อนไปด้านบน -->
+  <button id="scrollToTopBtn" title="Go to top">⇧</button>
+  <button id="toggle-toc-btn">≡</button>
+  <aside id="table-of-contents" class="active">
+    <h3 class="link-cursor">Navigation Menu</h3>
     <ul id="toc-list"></ul>
-</aside>
+  </aside>
 
-<body class="fade-slide-in project_looker-page">
+  <body class="fade-slide-in project_looker-page">
     <header>
-        <div class="header-background"></div>
-        <h2 style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Project 8 : <span class= "strong1">Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"  style="vertical-align:middle" width="25" >Looker Studio</span></h2>
+      <div class="header-background"></div>
+      <span class="link-cursor strong1"
+        ><span style="text-shadow: none">Project 8 : </span>Data-Driven
+        Insights: Sales Performance & Profitability in
+        <img src="looker.png" style="vertical-align: middle" width="25" />Looker
+        Studio</span
+      >
     </header>
 
     <!-- Navigation Bar -->
     <nav>
-        <ul>
-            <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
-            <li><a href="home.html" onclick="navigateToHome()">🏠 Home </a></li> <!-- Home Tab with House Emoji -->
-            <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li> <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
-            <!-- Work Experience Dropdown -->
-            <li class="dropdown">
-                <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
-                <ul class="dropdown-menu">
-                    <li><a onclick="navigateToExperience_leowood()">Leowood Intertrade Co Ltd. </a></li>
-                    <li><a onclick="navigateToExperience_arrow()">Arrow IT Systems Co Ltd.</a></li>
-                </ul>
+      <ul>
+        <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
+        <li><a href="home.html" onclick="navigateToHome()">🏠 Home </a></li>
+        <!-- Home Tab with House Emoji -->
+        <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li>
+        <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
+        <!-- Work Experience Dropdown -->
+        <li class="dropdown">
+          <a href="experience.html" onclick="navigateToExperience()"
+            >Work Experience</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a onclick="navigateToExperience_leowood()"
+                >Leowood Intertrade Co Ltd.
+              </a>
             </li>
+            <li>
+              <a onclick="navigateToExperience_arrow()"
+                >Arrow IT Systems Co Ltd.</a
+              >
+            </li>
+          </ul>
+        </li>
 
-            <!-- Projects Dropdown -->
-            <li class="dropdown">
-                <a href="project.html" class="active" onclick="scrollToTop(event)">Project Overview</a>
-                <ul class="dropdown-menu">
-                    <li><a onclick="navigateToProject_ggsheet_dsb10()" >P1 : Data Exploration and Transformation with <img src="sheets.png"  style="vertical-align:middle" width="25" > Google Sheets</a></li>
-                    <li><a onclick="navigateToProject_cafe_r_sql_dsb10()" >P2 : Building a Café Restaurant Database Using <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="SQL.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_rfm_py_dsb10()" >P3 : Customer Segmentation and RFM Analysis Using <img src="python.png"  style="vertical-align:middle" width="25" >Python and <img src="R.png"  style="vertical-align:middle" width="25" > for Strategic Business Insight</a></li>
-                    <li><a onclick="navigateToProject_pyc_r_py_dsb10()" >P4 : Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="python.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_nycflight13_23_dsb10()" >P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_vizdimond_dsb10()" >P6 : EDA Visualization of the Diamond Dataset Using <img src="R.png"  style="vertical-align:middle" width="25" > and R Markdown </a></li>
-                    <li><a onclick="navigateToProject_titanic_glm_dsb10()" >P7 : Titanic Survival Prediction: A Comparative Analysis of Classification Models <img src="R.png" style="vertical-align:middle" width="25" ></a></li>
-                    <li><a class="active1" onclick="scrollToTop(event)" onclick="navigateToProject_looker_dsb10()" >P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"  style="vertical-align:middle" width="25" >Looker Studio</a></li>
-                    <li><a onclick="navigateToProject_pizza_chatbot_dsb10()" >P9 : Chatbot Development for a Pizza Business Using <img src="R.png"  style="vertical-align:middle" width="25" > Programming</a></li>
-                    <li><a onclick="navigateToProject_atm_oop_py_dsb10()" >P10 : Object-Oriented ATM System: Financial Transactions with <img src="python.png"  style="vertical-align:middle" width="25" >Python OOP</a></li>
-                    <li><a onclick="navigateToProject_mini_api_py()" >mini P11 : Extracting Public API Data with <img src="python.png"  style="vertical-align:middle" width="25" >Python: Air Quality Analytics</a></li>
-                    <li><a onclick="navigateToProject_mini_xml_cafe()" >mini P12 : Cafe Menu Data Structure with <img src="xml.png"  style="vertical-align:middle" width="25" >XML</a></li>
-                </ul>
+        <!-- Projects Dropdown -->
+        <li class="dropdown">
+          <a href="project.html" class="active" onclick="scrollToTop(event)"
+            >Project Overview</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a onclick="navigateToProject_ggsheet_dsb10()"
+                >P1 : Data Exploration and Transformation with
+                <img
+                  src="sheets.png"
+                  style="vertical-align: middle"
+                  width="25"
+                />
+                Google Sheets</a
+              >
             </li>
-            <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li>
-            <li><a href="contact.html" onclick="navigateToContact()">Contact</a></li>
-        </ul>
+            <li>
+              <a onclick="navigateToProject_cafe_r_sql_dsb10()"
+                >P2 : Building a Café Restaurant Database Using
+                <img src="R.png" style="vertical-align: middle" width="25" />
+                and
+                <img src="SQL.png" style="vertical-align: middle" width="25"
+              /></a>
+            </li>
+            <li>
+              <a onclick="navigateToProject_rfm_py_dsb10()"
+                >P3 : Customer Segmentation and RFM Analysis Using
+                <img
+                  src="python.png"
+                  style="vertical-align: middle"
+                  width="25"
+                />Python and
+                <img src="R.png" style="vertical-align: middle" width="25" />
+                for Strategic Business Insight</a
+              >
+            </li>
+            <li>
+              <a onclick="navigateToProject_pyc_r_py_dsb10()"
+                >P4 : Creating a Multi-Round Rock-Paper-Scissors Game in
+                <img src="R.png" style="vertical-align: middle" width="25" />
+                and
+                <img src="python.png" style="vertical-align: middle" width="25"
+              /></a>
+            </li>
+            <li>
+              <a onclick="navigateToProject_nycflight13_23_dsb10()"
+                >P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023)
+                with <img src="R.png" style="vertical-align: middle" width="25"
+              /></a>
+            </li>
+            <li>
+              <a onclick="navigateToProject_vizdimond_dsb10()"
+                >P6 : EDA Visualization of the Diamond Dataset Using
+                <img src="R.png" style="vertical-align: middle" width="25" />
+                and R Markdown
+              </a>
+            </li>
+            <li>
+              <a onclick="navigateToProject_titanic_glm_dsb10()"
+                >P7 : Titanic Survival Prediction: A Comparative Analysis of
+                Classification Models
+                <img src="R.png" style="vertical-align: middle" width="25"
+              /></a>
+            </li>
+            <li>
+              <a
+                class="active1"
+                onclick="scrollToTop(event)"
+                onclick="navigateToProject_looker_dsb10()"
+                >P8 : Data-Driven Insights: Sales Performance & Profitability in
+                <img
+                  src="looker.png"
+                  style="vertical-align: middle"
+                  width="25"
+                />Looker Studio</a
+              >
+            </li>
+            <li>
+              <a onclick="navigateToProject_pizza_chatbot_dsb10()"
+                >P9 : Chatbot Development for a Pizza Business Using
+                <img src="R.png" style="vertical-align: middle" width="25" />
+                Programming</a
+              >
+            </li>
+            <li>
+              <a onclick="navigateToProject_atm_oop_py_dsb10()"
+                >P10 : Object-Oriented ATM System: Financial Transactions with
+                <img
+                  src="python.png"
+                  style="vertical-align: middle"
+                  width="25"
+                />Python OOP</a
+              >
+            </li>
+            <li>
+              <a onclick="navigateToProject_mini_api_py()"
+                >mini P11 : Extracting Public API Data with
+                <img
+                  src="python.png"
+                  style="vertical-align: middle"
+                  width="25"
+                />Python: Air Quality Analytics</a
+              >
+            </li>
+            <li>
+              <a onclick="navigateToProject_mini_xml_cafe()"
+                >mini P12 : Cafe Menu Data Structure with
+                <img
+                  src="xml.png"
+                  style="vertical-align: middle"
+                  width="25"
+                />XML</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="certificate.html" onclick="navigateToCertificate()"
+            >Certificates</a
+          >
+        </li>
+        <li>
+          <a href="contact.html" onclick="navigateToContact()">Contact</a>
+        </li>
+      </ul>
     </nav>
 
     <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
     <section id="toc-section">
-        <p style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Content of Tables</p>
-        <div id="toc-marker"></div>
-        <div id="toc-section"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
+      <p style="font-size: 1.5em; font-weight: bold" class="link-cursor">
+        Content of Tables
+      </p>
+      <div id="toc-marker"></div>
+      <div id="toc-section"></div>
+      <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
     </section>
 
-    <a style= "text-decoration: none;" href="project.html">
-        <button class="back-button">⬅︎ </button>
+    <a style="text-decoration: none" href="project.html">
+      <button class="back-button">⬅︎</button>
     </a>
 
     <section>
@@ -111,17 +244,15 @@
       <p class="link-cursor" style="text-align: justify; text-indent: 1em">
         สวัสดี
       </p>
-
     </section>
 
-    <section id= "tranform-data-product">
+    <section id="tranform-data-product">
       <h2 class="link-cursor">2. Transform Data</h2>
       <p class="link-cursor" style="text-align: justify; text-indent: 1em">
         สวัสดี
       </p>
-
     </section>
-    
+
     <!-- <section>
       <h2 class="link-cursor">1. Project Introduction</h2>
       <p class="link-cursor" style="text-align: justify; text-indent: 1em">
@@ -166,5 +297,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>
-</body>
+  </body>
 </html>
