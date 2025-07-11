@@ -775,20 +775,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // -----------------------------------------------------------------------------------------------
 // แก้ไขให้ mermaid สามารถ render ได้เมื่อเปิด <details> ใหม่
-document.querySelectorAll("details").forEach((detail) => {
+mermaid.initialize({ startOnLoad: false });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // render ทันทีถ้าอยู่นอก <details>
+    document.querySelectorAll(".mermaid:not(.rendered)").forEach((el, index) => {
+    try {
+        mermaid.render(`m-init-${index}`, el.innerText, (svgCode) => {
+        el.innerHTML = svgCode;
+        el.classList.add("rendered");
+        });
+    } catch (err) {
+        console.warn("Mermaid render failed (init):", err);
+    }
+    });
+
+    // render เมื่อ <details> เปิด
+    document.querySelectorAll("details").forEach((detail) => {
     detail.addEventListener("toggle", () => {
         if (detail.open) {
-        const unrendered = detail.querySelectorAll(".mermaid:not(.rendered)");
-        unrendered.forEach((el) => {
+        detail.querySelectorAll(".mermaid:not(.rendered)").forEach((el, index) => {
             try {
-            mermaid.render(`m-${Math.random()}`, el.textContent, (svgCode) => {
+            mermaid.render(`m-toggle-${index}`, el.innerText, (svgCode) => {
                 el.innerHTML = svgCode;
                 el.classList.add("rendered");
             });
             } catch (err) {
-            console.error("Mermaid render failed:", err);
+            console.warn("Mermaid render failed (toggle):", err);
             }
         });
         }
+    });
     });
 });
