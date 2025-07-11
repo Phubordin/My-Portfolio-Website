@@ -158,7 +158,6 @@ body.no-transition {
     nav ul li .dropdown-menu {
         max-height: 50vh; /* ปรับตามความเหมาะสม */
         overflow-y: auto;
-        font-size: 14px; /* ปรับขนาดให้อ่านง่ายแต่ไม่ใหญ่เกิน */
         padding: 8px 0;
     }
 
