@@ -162,7 +162,7 @@ body.no-transition {
     }
 
     nav ul li .dropdown-menu li a {
-        font-size: 14px; /* ปรับขนาดให้ไม่ล้น */
+        font-size: 15px;
         line-height: 1.4;
         word-break: break-word; /* กันชื่อยาวเกิน */
     }
