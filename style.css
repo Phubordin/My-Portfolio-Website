@@ -148,13 +148,43 @@ body.no-transition {
     nav ul {
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto;
+        overflow: visible; /* ✅ ไม่ตัด dropdown แล้ว */
         white-space: nowrap;
         padding: 0;
         margin: 0;
         gap: 1rem;
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
+        position: relative;
+    }
+
+    nav ul li {
+        position: relative;
+        display: inline-block;
+        flex: 0 0 auto;
+        margin: 0;
+    }
+
+    .nav-scroll {
+        overflow-x: auto;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* ซ่อนไม่ให้แสดง scrollbar */
+    .nav-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: visible; /* ✅ ให้ dropdown ล้นออกมาได้ */
+        white-space: nowrap;
+        padding: 0;
+        margin: 0;
+        gap: 1rem;
     }
 
     nav ul li {
@@ -166,34 +196,34 @@ body.no-transition {
 
     nav ul li a {
         display: block;
-        font-size: 16px;
+        font-size: 1.1em;
         padding: 10px 16px;
         text-decoration: none;
         color: #333;
-        border-radius: 6px;
+        border-radius: 5px;
         white-space: nowrap;
     }
 
-    nav ul::-webkit-scrollbar {
-        display: none;
+    /* ✅ ไม่จำเป็นต้องมีอันนี้ก็ได้ เพราะ overflow: visible ไปแล้ว */
+    nav ul:has(> .dropdown.open) {
+        overflow-x: visible;
     }
-    
-    .dropdown-menu,
-    .dropdown-menu1 {
-        top: 100%;  /* ใต้ปุ่ม */
-        left: 0;
+
+    /* ✅ Dropdown menu */
+    .dropdown-menu {
         position: absolute;
-        z-index: 9999;
+        top: 100%;
+        left: 0;
         background: white;
+        z-index: 9999;
+        display: none;
         min-width: 80vw;
         padding: 10px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         border-radius: 6px;
-        display: none;
     }
 
-    .dropdown.open .dropdown-menu,
-    .dropdown1.open .dropdown-menu1 {
+    .dropdown.open .dropdown-menu {
         display: block;
     }
 
@@ -241,7 +271,6 @@ body.no-transition {
     .back-button {
         display: none; /* หรือปรับขนาดให้เล็กลง */
     }
-
     
     h1 { font-size: 1.8rem; }
     h2 { font-size: 1.5rem; }
@@ -463,11 +492,12 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 1.1em;
     font-weight: bold;
     padding: 10px 15px;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
     border-radius: 5px;
+    cursor: url('cursor1.png'), auto;
 }
 
 nav ul li a:hover {
@@ -489,30 +519,7 @@ nav ul li a.active1 {
     border-radius: 5px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    position: relative;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    cursor: url('cursor1.png'), auto;
-}
-
-nav ul li.dropdown a,
-nav ul li.dropdown1 a {
+nav ul li.dropdown a{
     cursor: url('cursor1.png'), auto;
 }
 
@@ -523,8 +530,8 @@ nav ul li .dropdown-menu {
     left: 0;
     top: 130%;
     background: rgba(0, 0, 0, 0.9);
-    min-width: 80vh;
-    max-height: calc(1000vh - 965vh);
+    min-width: 80vw;
+    max-height: 35vh;;
     /* ปรับความสูงให้ไม่เกินขอบจอ */
     padding: 10px 0;
     border-radius: 10px;
@@ -537,34 +544,12 @@ nav ul li .dropdown-menu {
     /* กำหนดสี scrollbar */
 }
 
-nav ul li .dropdown-menu1 {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 130%;
-    background: rgba(0, 0, 0, 0.9);
-    min-width: 30vh;
-    max-height: calc(1000vh - 945vh);
-    /* ปรับความสูงให้ไม่เกินขอบจอ */
-    padding: 10px 0;
-    border-radius: 10px;
-    z-index: 1000;
-    overflow-y: auto;
-    /* ทำให้เลื่อนขึ้น-ลงได้ */
-    scrollbar-width: thin;
-    /* ทำให้ scrollbar บางลง */
-    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
-    /* กำหนดสี scrollbar */
-}
-
-nav ul li .dropdown-menu li,
-nav ul li .dropdown-menu1 li {
+nav ul li .dropdown-menu li {
     display: block;
     margin: 0;
 }
 
-nav ul li .dropdown-menu li a,
-nav ul li .dropdown-menu1 li a {
+nav ul li .dropdown-menu li a {
     display: block;
     padding: 10px;
     color: rgb(255, 255, 255);
@@ -573,14 +558,16 @@ nav ul li .dropdown-menu1 li a {
     text-decoration: none;
 }
 
-nav ul li .dropdown-menu li a:hover,
-nav ul li .dropdown-menu1 li a:hover {
+nav ul li .dropdown-menu li a:hover {
     background: linear-gradient(145deg, #aeaff5 0%, #8587ff 50%, #ff6600 100%);
 }
 
 /* แสดง dropdown menu เมื่อ hover */
-nav ul li.dropdown:hover .dropdown-menu,
-nav ul li.dropdown1:hover .dropdown-menu {
+nav ul li.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+nav ul li.dropdown.open .dropdown-menu {
     display: block;
 }
 

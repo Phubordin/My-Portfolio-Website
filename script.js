@@ -377,13 +377,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 /*------------------------------------------------------------------------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdowns = document.querySelectorAll(".dropdown, .dropdown1");
+  const dropdowns = document.querySelectorAll(".dropdown");
 
   dropdowns.forEach(dropdown => {
     const link = dropdown.querySelector("a");
-    const menu = dropdown.querySelector(".dropdown-menu, .dropdown-menu1");
+    const menu = dropdown.querySelector(".dropdown-menu");
 
-    // Desktop: ใช้ hover
+    // Desktop: hover
     dropdown.addEventListener("mouseenter", () => {
       if (window.innerWidth > 768 && menu) {
         menu.style.display = "block";
@@ -396,22 +396,22 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Mobile: ใช้ click toggle class
+    // Mobile: click toggle
     link.addEventListener("click", (e) => {
       if (window.innerWidth <= 768 && menu) {
         e.preventDefault();
         dropdown.classList.toggle("open");
 
-        // ปิด dropdown อื่น
+        // ปิด dropdown อื่นๆ
         dropdowns.forEach(other => {
           if (other !== dropdown) {
             other.classList.remove("open");
-            const otherMenu = other.querySelector(".dropdown-menu, .dropdown-menu1");
+            const otherMenu = other.querySelector(".dropdown-menu");
             if (otherMenu) otherMenu.style.display = "none";
           }
         });
 
-        // toggle แสดง dropdown
+        // toggle menu
         if (dropdown.classList.contains("open")) {
           menu.style.display = "block";
         } else {
