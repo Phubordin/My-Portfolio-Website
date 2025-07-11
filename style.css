@@ -165,7 +165,7 @@ body.no-transition {
     nav ul li .dropdown-menu li a {
         font-size: 15px; /* ปรับขนาดให้ไม่ล้น */
         line-height: 1.4;
-        word-break: normal; 
+        word-break: keep-all; 
     }
 
     /* แนะนำ: ซ่อนไม่ให้ scroll bar หนาเกิน */
