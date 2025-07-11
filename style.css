@@ -144,83 +144,15 @@ body.no-transition {
     .certificate-page { min-height: 100vh; }
     .contact-page { min-height: 100vh; }
 
-    /* CSS เดิมของคุณ */
-    nav ul {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow: visible; /* ✅ ไม่ตัด dropdown แล้ว */
-        white-space: nowrap;
-        padding: 0;
-        margin: 0;
-        gap: 1rem;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        position: relative;
-    }
-
-    nav ul li {
-        position: relative;
-        display: inline-block;
-        flex: 0 0 auto;
-        margin: 0;
-    }
-
-    .nav-scroll {
-        overflow-x: auto;
-        white-space: nowrap;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    /* ซ่อนไม่ให้แสดง scrollbar */
-    .nav-scroll::-webkit-scrollbar {
-        display: none;
-    }
-
-    nav ul {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow: visible; /* ✅ ให้ dropdown ล้นออกมาได้ */
-        white-space: nowrap;
-        padding: 0;
-        margin: 0;
-        gap: 1rem;
-    }
-
-    nav ul li {
-        position: relative;
-        display: inline-block;
-        flex: 0 0 auto;
-        margin: 0;
-    }
-
+    /* ปรับขนาดช่อง bar menu nav */
     nav ul li a {
         display: block;
         font-size: 1.1em;
-        padding: 10px 16px;
+        padding: 15px 25px;
         text-decoration: none;
         color: #333;
         border-radius: 5px;
         white-space: nowrap;
-    }
-
-    /* ✅ ไม่จำเป็นต้องมีอันนี้ก็ได้ เพราะ overflow: visible ไปแล้ว */
-    nav ul:has(> .dropdown.open) {
-        overflow-x: visible;
-    }
-
-    /* ✅ Dropdown menu */
-    .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: white;
-        z-index: 9999;
-        display: none;
-        min-width: 80vw;
-        padding: 10px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        border-radius: 6px;
     }
 
     .dropdown.open .dropdown-menu {
@@ -267,10 +199,6 @@ body.no-transition {
     header {
         height: 12vh; /* ลดจาก 15vh */
     }
-
-    .back-button {
-        display: none; /* หรือปรับขนาดให้เล็กลง */
-    }
     
     h1 { font-size: 1.8rem; }
     h2 { font-size: 1.5rem; }
@@ -289,9 +217,14 @@ body.no-transition {
     .tableizer-table td {
         padding: 6px;
     }
-
-    .back-button-wrapper {
-        margin-top: 6rem ;
+    
+    .back-button {
+        top: 0.5rem;
+        left: 0.5rem;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        border-radius: 10px;
+        gap: 0.5rem;
     }
 }
 
@@ -528,9 +461,9 @@ nav ul li .dropdown-menu {
     display: none;
     position: absolute;
     left: 0;
-    top: 130%;
+    top: 100%;
     background: rgba(0, 0, 0, 0.9);
-    min-width: 80vw;
+    min-width: 50vw;
     max-height: 35vh;;
     /* ปรับความสูงให้ไม่เกินขอบจอ */
     padding: 10px 0;
@@ -614,24 +547,16 @@ nav ul li.dropdown.open .dropdown-menu {
 }
 
 /* ปุ่มกลับหน้า ที่ต้องการ-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.back-button-wrapper {
-  position: relative;
-  z-index: 999;
-}
-
-.back-button-link {
-  text-decoration: none;
-}
 
 .back-button {
-  position: fixed;
-  top: 14rem;
-  left: 2vw;
+  position: absolute; /* ✅ เปลี่ยนจาก absolute เป็น fixed ให้ลอยอยู่ตลอด */
+  top: 17rem;       /* ✅ อยู่ด้านบนสุด */
+  left: 1rem;      /* ✅ ชิดซ้าย */
   z-index: 9999;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
   background: linear-gradient(145deg, #6366f1 0%, #3b82f6 50%, #2563eb 100%);
   color: #fff;
   border-radius: 12px;

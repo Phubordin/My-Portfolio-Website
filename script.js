@@ -421,7 +421,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
 /*------------------------------------------------------------------------------------------------------------------------- */
 
 function navigateToProject_ggsheet_dsb10() {
