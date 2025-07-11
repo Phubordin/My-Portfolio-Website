@@ -774,3 +774,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // -----------------------------------------------------------------------------------------------
+// แก้ไขให้ mermaid สามารถ render ได้เมื่อเปิด <details> ใหม่
+document.querySelectorAll("details").forEach((detail) => {
+detail.addEventListener("toggle", () => {
+    if (detail.open) {
+    const unrendered = detail.querySelectorAll(".mermaid:not(.rendered)");
+    unrendered.forEach((el) => {
+        try {
+        mermaid.render(`m-${Math.random()}`, el.textContent, (svgCode) => {
+            el.innerHTML = svgCode;
+            el.classList.add("rendered");
+        });
+        } catch (err) {
+        console.error("Mermaid render failed:", err);
+        }
+    });
+    }
+});
+});
