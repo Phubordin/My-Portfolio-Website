@@ -346,28 +346,30 @@ function renderListView() {
 
     listView.innerHTML = `
         <div class="certificate-list fade-in">
-            <table class="list-table">
-                <thead>
-                    <tr>
-                        <th>Course Title</th>
-                        <th>School</th>
-                        <th>Value Courses</th>
-                        <th>View Notion</th>
-                        <th>Verify</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    ${filteredCerts.map(cert => `
+            <div class="table-scroll-wrapper">
+                <table class="list-table">
+                    <thead>
                         <tr>
-                            <td onclick="openGalleryModal('${cert.image}')" onmouseover="showPreview(event, '${cert.image}')" onmouseout="hidePreview()">${cert.title}</td>
-                            <td><a href="${cert.schoolLink}" class="certificate-school">${cert.school}</a></td>
-                            <td><a href="${cert.costlink}" class="check">${cert.cost}</a></td>
-                            <td><a href="${cert.notionLink}" class="check"><img src="notion.webp" width="20" class="notion-icon"> Notion</a></td>
-                            <td><a href="${cert.certificateLink}" class="check">Check</a></td>
+                            <th>Course Title</th>
+                            <th>School</th>
+                            <th>Value Courses</th>
+                            <th>View Notion</th>
+                            <th>Verify</th>
                         </tr>
-                    `).join('')}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        ${filteredCerts.map(cert => `
+                            <tr>
+                                <td onclick="openGalleryModal('${cert.image}')" onmouseover="showPreview(event, '${cert.image}')" onmouseout="hidePreview()">${cert.title}</td>
+                                <td><a href="${cert.schoolLink}" class="certificate-school">${cert.school}</a></td>
+                                <td><a href="${cert.costlink}" class="check">${cert.cost}</a></td>
+                                <td><a href="${cert.notionLink}" class="check"><img src="notion.webp" width="20" class="notion-icon"> Notion</a></td>
+                                <td><a href="${cert.certificateLink}" class="check">Check</a></td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
         </div>
     `;
 

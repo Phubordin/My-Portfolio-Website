@@ -715,7 +715,7 @@ if (hash.startsWith("#name-project")) {
     const target = document.querySelector(hash);
     if (target) {
     setTimeout(() => {
-        const yOffset = -100; // ปรับให้เลื่อนขึ้น 100px จากตำแหน่งจริง
+        const yOffset = -340; // ปรับให้เลื่อนขึ้น 100px จากตำแหน่งจริง
         const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
     }, 100);
