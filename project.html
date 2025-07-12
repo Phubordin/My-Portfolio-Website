@@ -405,45 +405,35 @@
                 <li class="link-cursor"><b><mark>Rock-Paper-Scissors Game WorkFlow : ⬇︎</mark></b><br></li>
                 
                 <li style="list-style: none;">
-                    <div class="mermaid link-cursor">
-                    graph TD
-                        A[Start Function: hammer_scissor_paper] --> B[Initialize Variables and Rules Displayed]
-                        B --> C[Loop Round 1 to 10]
-                        C --> D[Computer chooses randomly]
-                        D --> E[Input loop: Ask for user input]
-
-                        E --> F{Input is 'check'?}
-                        F -- Yes --> G[Show scores and results table]
-                        G --> E
-
-                        F -- No --> H{Input is valid?}
-                        H -- No --> I[Show invalid input message]
-                        I --> E
-
-                        H -- Yes --> J[Show both choices]
-                        J --> K{Compare choices}
-
-                        K -- Draw --> L[Set winner = Draw]
-                        K -- User wins --> M[Set winner = User\n+1 to user_score]
-                        K -- Computer wins --> N[Set winner = Computer\n+1 to computer_score]
-
-                        L --> O[Record result to data.frame]
-                        M --> O
-                        N --> O
-
-                        O --> P{All 10 rounds done?}
-                        P -- No --> C
-                        P -- Yes --> Q[Show all round results]
-
-                        Q --> R{Who has more points?}
-                        R -- User --> S[Announce: User Wins]
-                        R -- Computer --> T[Announce: Computer Wins]
-                        R -- Draw --> U[Announce: It's a Draw]
-
-                        S --> V[End]
-                        T --> V
-                        U --> V
-                    </div>
+                    <pre class="mermaid link-cursor">graph TD
+A[Start Function: hammer_scissor_paper] --> B[Initialize Variables and Rules Displayed]
+B --> C[Loop Round 1 to 10]
+C --> D[Computer chooses randomly]
+D --> E[Input loop: Ask for user input]
+E --> F{Input is 'check'?}
+F -- Yes --> G[Show scores and results table]
+G --> E
+F -- No --> H{Input is valid?}
+H -- No --> I[Show invalid input message]
+I --> E
+H -- Yes --> J[Show both choices]
+J --> K{Compare choices}
+K -- Draw --> L[Set winner = Draw]
+K -- User wins --> M[Set winner = User\n+1 to user_score]
+K -- Computer wins --> N[Set winner = Computer\n+1 to computer_score]
+L --> O[Record result to data.frame]
+M --> O
+N --> O
+O --> P{All 10 rounds done?}
+P -- No --> C
+P -- Yes --> Q[Show all round results]
+Q --> R{Who has more points?}
+R -- User --> S[Announce: User Wins]
+R -- Computer --> T[Announce: Computer Wins]
+R -- Draw --> U[Announce: It's a Draw]
+S --> V[End]
+T --> V
+U --> V</pre>
 
                 </li>
 
@@ -467,8 +457,7 @@
                     </div>
                 </li>
             </ul>
-        
-        </details>
+    </details>
 
         <div class="corner-text" onclick="navigateToProject_pyc_r_py_dsb10()">Read More</div>
 
