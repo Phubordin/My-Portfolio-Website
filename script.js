@@ -778,33 +778,33 @@ document.addEventListener("DOMContentLoaded", function () {
 mermaid.initialize({ startOnLoad: false });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // render ทันทีถ้าอยู่นอก <details>
-    document.querySelectorAll(".mermaid:not(.rendered)").forEach((el, index) => {
+  // render นอก <details>
+  document.querySelectorAll(".mermaid:not(.rendered)").forEach((el, index) => {
     try {
-        mermaid.render(`m-init-${index}`, el.innerText, (svgCode) => {
+      mermaid.render(`m-init-${index}`, el.textContent.trim(), (svgCode) => {
         el.innerHTML = svgCode;
         el.classList.add("rendered");
-        });
+      });
     } catch (err) {
-        console.warn("Mermaid render failed (init):", err);
+      console.warn("Mermaid render failed (init):", err);
     }
-    });
+  });
 
-    // render เมื่อ <details> เปิด
-    document.querySelectorAll("details").forEach((detail) => {
+  // render เมื่อ <details> เปิด
+  document.querySelectorAll("details").forEach((detail) => {
     detail.addEventListener("toggle", () => {
-        if (detail.open) {
+      if (detail.open) {
         detail.querySelectorAll(".mermaid:not(.rendered)").forEach((el, index) => {
-            try {
-            mermaid.render(`m-toggle-${index}`, el.innerText, (svgCode) => {
-                el.innerHTML = svgCode;
-                el.classList.add("rendered");
+          try {
+            mermaid.render(`m-toggle-${index}`, el.textContent.trim(), (svgCode) => {
+              el.innerHTML = svgCode;
+              el.classList.add("rendered");
             });
-            } catch (err) {
+          } catch (err) {
             console.warn("Mermaid render failed (toggle):", err);
-            }
+          }
         });
-        }
+      }
     });
-    });
+  });
 });
