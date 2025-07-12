@@ -810,8 +810,10 @@ document.querySelectorAll("details").forEach((detail) => {
     detail.addEventListener("toggle", () => {
     if (detail.open) {
         setTimeout(() => {
-        renderMermaids();
-        }, 300);
+            requestAnimationFrame(() => {
+                renderMermaids(); // ฟังก์ชันที่ใช้ mermaid.run()
+            });
+            }, 500);
     }
     });
 });
