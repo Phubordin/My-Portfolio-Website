@@ -763,49 +763,57 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*-------------------------------------------------------------------------------- */
-// Load and initialize Mermaid
-document.addEventListener("DOMContentLoaded", function () {
-  mermaid.initialize({
-    startOnLoad: true,
-    theme: "default", // ลองเปลี่ยนเป็น 'forest', 'dark', 'neutral' ก็ได้
+
+document.addEventListener("DOMContentLoaded", async function () {
+if (typeof mermaid === "undefined") {
+    console.error("Mermaid is not loaded.");
+    return;
+}
+
+// กำหนดค่าการทำงานของ Mermaid
+mermaid.initialize({
+    startOnLoad: false,
+    theme: "default",
     flowchart: {
-      curve: "basis"
+    curve: "basis"
     }
-  });
 });
-// แก้ไขให้ mermaid สามารถ render ได้เมื่อเปิด <details> ใหม่
-mermaid.initialize({ startOnLoad: false });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // render นอก details
-  document.querySelectorAll(".mermaid:not(.rendered)").forEach((el, index) => {
-    try {
-      mermaid.render(`m-init-${index}`, el.textContent.trim(), (svgCode) => {
-        el.innerHTML = svgCode;
-        el.classList.add("rendered");
-      });
-    } catch (err) {
-      console.warn("Mermaid render failed (init):", err);
-    }
-  });
+// ฟังก์ชันช่วยล้างช่องว่างหน้า
+function cleanMermaidCode(rawText) {
+    return rawText
+    .split('\n')
+    .map(line => line.trimStart())
+    .join('\n')
+    .trim();
+}
 
-  // render เมื่อ details เปิด โดยหน่วงเวลา
-  document.querySelectorAll("details").forEach((detail) => {
-    detail.addEventListener("toggle", () => {
-      if (detail.open) {
-        setTimeout(() => {
-          detail.querySelectorAll(".mermaid:not(.rendered)").forEach((el, index) => {
-            try {
-              mermaid.render(`m-toggle-${index}`, el.textContent.trim(), (svgCode) => {
-                el.innerHTML = svgCode;
-                el.classList.add("rendered");
-              });
-            } catch (err) {
-              console.warn("Mermaid render failed (toggle):", err);
-            }
-          });
-        }, 300); // หรือมากกว่านี้หากยังไม่ทำงาน
-      }
+// เตรียม element ทั้งหมด
+const renderMermaids = () => {
+    document.querySelectorAll(".mermaid:not(.rendered)").forEach((el) => {
+    const cleanCode = cleanMermaidCode(el.textContent);
+    el.innerHTML = cleanCode; // Mermaid ต้องการให้ element มี raw code ข้างใน
+    el.classList.add("rendered");
     });
-  });
+
+    // เรียกให้ Mermaid render ทั้งหมด
+    mermaid.run().catch(err => {
+    console.error("Mermaid run failed:", err);
+    });
+};
+
+// รันรอบแรก
+renderMermaids();
+
+// render เมื่อ toggle <details>
+document.querySelectorAll("details").forEach((detail) => {
+    detail.addEventListener("toggle", () => {
+    if (detail.open) {
+        setTimeout(() => {
+        renderMermaids();
+        }, 300);
+    }
+    });
 });
+});
+
