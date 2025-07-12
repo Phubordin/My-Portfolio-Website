@@ -781,7 +781,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // render นอก <details>
   document.querySelectorAll(".mermaid:not(.rendered)").forEach((el, index) => {
     try {
-      mermaid.render(`m-init-${index}`, el.textContent.trim(), (svgCode) => {
+      mermaid.render(`m-init-${index}`, el.innerHTML.trim(), (svgCode) => {
         el.innerHTML = svgCode;
         el.classList.add("rendered");
       });
@@ -796,7 +796,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (detail.open) {
         detail.querySelectorAll(".mermaid:not(.rendered)").forEach((el, index) => {
           try {
-            mermaid.render(`m-toggle-${index}`, el.textContent.trim(), (svgCode) => {
+            mermaid.render(`m-toggle-${index}`, el.innerHTML.trim(), (svgCode) => {
               el.innerHTML = svgCode;
               el.classList.add("rendered");
             });
