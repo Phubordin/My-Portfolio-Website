@@ -119,6 +119,7 @@
             <div id="toc-marker"></div>
             <div id="toc-section1"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
         </section>
+    
     <!-- P1 -->
     <section id="name-project1">
         <h2 class="link-cursor">P1 : Data Exploration and Transformation with <img src="sheets.png"
@@ -137,7 +138,8 @@
                 Regular Expression ใช้ฟังก์ชัน <code class="inline-code">REGEXEXTRACT()</code> กับ <code
                     class="inline-code">REGEXMATCH()</code>
                 หา Pattern ของข้อมูลพนักงาน เช่น Email, Phone Number, ID Card ต่างๆเพื่อที่จะตรวจสอลว่ามีหรือไม่มี
-                หรือเพื่อดึงข้อมูลที่ต้องการออกมา <img src="right-down-corner-arrow.png" width="18">
+                หรือเพื่อดึงข้อมูลที่ต้องการออกมา....<img
+                src="right-down-corner-arrow.png" width="18">
             </li>
         </ul>
 
@@ -205,7 +207,8 @@
         <ul class="link-cursor">
             <li>สร้าง Database ด้วยภาษา SQL และดึง Feedback ของลูกค้ามาสำรวจ และนำไป Action ต่อ</li>
             <li>สร้าง SQLite Database ด้วย Library RSQLite</li>
-            <li>สร้าง ER Diagram ด้วยเว็บ dbdiagram.io <img src="right-down-corner-arrow.png" width="18"></li>
+            <li>สร้าง ER Diagram ด้วยเว็บ dbdiagram.io....<img
+                src="right-down-corner-arrow.png" width="18"></li>
         </ul>
         <details class="detail">
             <summary>Example</summary>
@@ -245,14 +248,22 @@
                 style="vertical-align:middle" width="25">Python and <img src="R.png" style="vertical-align:middle"
                 width="25"> R for Strategic Business
             Insight</h2>
-        <p class="link-cursor" style="text-align: justify; text-indent: 1em;"><mark>วิเคราะห์พฤติกรรมการใช้จ่ายของลูกค้า
-                โดยใช้หลักการ RFM Model</mark> วิธีการ คิือแบ่งเป็นลูกค้าออกเป็นทั้งหมด 11 กลุ่ม
-            แบ่งตาม metric 3 ตัวคือ Recency, Frequency และ Monetary โดย<mark>ใช้ Python และ R
-                ในการวิเคราะห์ข้อมูล</mark> แสดงผลเป็น
-            Heat Map เพื่อดูการกระจายตัวของกลุ่มลูกค้าแต่ละกลุ่ม และสามารถ <mark>Actionable Insight</mark>
-            ได้เลยว่าแต่ละกลุ่มควรจะทำอย่างไรต่อไป
-            โดยจะแบ่งระดับดาวไว้ว่า 5 ดาวยิ่งมี Business Impact มาก 1 ดาวมี Business Impact น้อย ซึ่งพิจารณาจาก Revenue
-            Oppurtunity & Retention Oppurtunity <img src="right-down-corner-arrow.png" width="18">
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;"><mark>โปรเจกต์นี้คือ วิเคราะห์พฤติกรรมการใช้จ่ายของลูกค้า
+                โดยใช้แนวคิดที่เรียกว่า "RFM Model" กับข้อมูล USA - SuperStore</mark> ซึ่งเป็นการแบ่งลูกค้าออกเป็นทั้งหมด 11 กลุ่ม
+            แบ่งตามพฤติกรรมทั้ง 3 อย่างของลูกค้าคือ
+        </p>
+        
+        <ul class="link-cursor">
+            <li>Recently (ดูครั้งล่าสุดที่ลูกค้าใช้จ่ายกับเรา)</li>
+            <li>Frequency (ดูความถี่ที่ลูกค้าใช้จ่ายกับเรา)</li>
+            <li>Monetary (ยอดใช้จ่ายเฉลี่ยต่อเดือนที่ลูกค้า active กับเรา)</li>
+        </ul>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ซึ่ง Coding หลักที่ผมใช้วิเคราะห์คือ <mark>Python และ R</mark> ผลลัพธ์ที่ได้แสดงผลเป็น Heat Map Chart เน้นการดูการกระจายตัวของจำนวนลูกค้าแต่ละกลุ่ม
+            ว่ามีกี่ราย กี่คน กี่สาขา เป็นต้น เมื่อทราบแล้วก็จะ apply แนวคิดของ RFM ต่อไป เช่น เราเป็นธุรกิจแบบไหน แล้วจำนวนลูกค้าที่อยู่ในแต่ละกลุ่มตอบโจทย์ปัญหาธุรกิจเราได้แล้วหรือยัง
+            หรือ <mark>Actionable Insight</mark> ออกมาช่วยเหลือธุรกิจเราได้มากน้อยแค่ไหน....<img
+                src="right-down-corner-arrow.png" width="18">
         </p>
 
         <details class="detail">
@@ -393,7 +404,7 @@
             โดยมีการเก็บสถิติการเล่นของผู้เล่นและ Computer ว่าตอนจบ 10 รอบใครจะเป็นผู้ชนะ
             เป็นโปรเจกต์ที่<mark>ฝึกทักษะ Control Flow เป็นหลัก</mark> <code class="inline-code">if</code>, <code
                 class="inline-code">for</code>,
-            <code class="inline-code">while</code> ซึ่งเป็น Programimng ที่ส่วนใหญ่ใช้กัน <img
+            <code class="inline-code">while</code> ซึ่งเป็น Programimng ที่ส่วนใหญ่ใช้กัน....<img
                 src="right-down-corner-arrow.png" width="18">
         </p>
         
@@ -442,7 +453,8 @@
         
         <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
             ดังนั้น เราจะมา<mark>สำรวจเพื่อวิเคราะห์ข้อมูล (EDA) เที่ยวบินของ New York City (NYC) ในปี 2013 และ 2023</mark> โดยใช้ภาษา R
-            เพื่อที่จะ <mark>make decision better</mark> ตามคำถามต่อไปนี้
+            เพื่อที่จะ <mark>make better decision </mark> ตามคำถามต่อไปนี้....<img
+                src="right-down-corner-arrow.png" width="18">
         </p>
 
         <details class="detail">
@@ -573,6 +585,11 @@
             </li>
         </ol>
 
+        <p>
+            ....<img
+                src="right-down-corner-arrow.png" width="18">
+        </p>
+
         <details class="detail">
             <summary>Example</summary>
 
@@ -657,7 +674,8 @@
         </ol>
         
         <p class="link-cursor" style="text-align: justify;">
-            เพื่อหาว่า<mark>โมเดลไหนให้ผลลัพธ์ที่ดีที่สุด</mark>ในการทำนายการรอดชีวิตของผู้โดยสารพร้อมกับ<mark>สำรวจข้อมูลในมุมมองต่างๆ 10 ข้อ</mark>
+            เพื่อหาว่า<mark>โมเดลไหนให้ผลลัพธ์ที่ดีที่สุด</mark>ในการทำนายการรอดชีวิตของผู้โดยสารพร้อมกับ<mark>สำรวจข้อมูลในมุมมองต่างๆ 10 ข้อ</mark>....<img
+                src="right-down-corner-arrow.png" width="18">
         </p>
 
         <details class="detail">
