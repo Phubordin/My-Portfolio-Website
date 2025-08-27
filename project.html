@@ -780,36 +780,53 @@
 
     </section>
     <!-- P8 -->
-    <section id="project8">
+    <section id="name-project8">
         <h2 class="link-cursor">⭐️ P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"
                 style="vertical-align:middle" width="25">Looker Studio</h2>
-        <p class="link-cursor"> โปจเจคนี้เป็นการสร้าง Dashboard สำหรับการวิเคราะห์ข้อมูลขายของ โดยใช้ Looker Studio โดย
-            DSB10 DataRockie
-        <details class="detail">
-            <summary>Example</summary>
-            <h3 class="link-cursor">Project Questions</h3>
-            <ul class="link-cursor">
-                <li>คำถาม 1</li>
-                <li>คำถาม 2</li>
-                <li>คำถาม .</li>
-                <li>คำถาม .</li>
-                <li>คำถาม N</li>
-            </ul>
-
-            <h3 class="link-cursor">Skills & Tools</h3>
-            <ul class="link-cursor">
-                <li>📊 Data Understanding (ทำความเข้าใจ Dataset ที่เชื่อมโยงกับ Dashboard นี้) </li>
-                <li>📈 Data Visualization (chart ต่างๆ)</li>
-                <li>🧠 Statistics (Simple Linear Regression, Aggregation Functions)</li>
-                <li>🗄️ Dashboard (Looker Studio)</li>
-            </ul>
-
-            <h3 class="link-cursor">Project Summary </h3>
-            <p class="link-cursor">สามารถเข้ามาอ่านสรุปได้ที่ section สุดท้่ายของหน้าเว็บนี้ครับ โดยการ
-                <a href="project_DB.html" style="text-decoration: none;"><strong>ขอบคุณครับ</strong></a>
-            </p>
-        </details>
+        
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            โปรเจกต์นี้เป็นการสร้าง Dashboard ด้วย Looker Studio จากชุดข้อมูลจำลองการขายของ USA-Superstore ที่มาจาก Tableau Public นะครับ
+            ผมจะนำไปสร้าง Dashboard 3 Page โดยแต่ละ Page จะมีจุดประสงค์ในการสำรวจที่แตกต่างกัน โดยแบ่งเป็น 3 pages ครับ
         </p>
+        
+        <ol>
+            <li class="link-cursor">🔥 Product Sales : ดูสินค้าที่ขายเป็นหลัก เช่น Top-Sell สินค้า, Net Profit, จำนวนขายออกแต่ละกลุ่ม, Timeline จำนวนขายออก ฯลฯ</li>
+            <li class="link-cursor">🔥 Zone Area Sales : ดูยอดขายของลูกค้าตาม ภูมิภาค, รัฐต่างๆในอเมริกา เช่น ลูกค้าคนไหนทำช่วงกำไรหรือใช้จ่ายให้เรามากน้อยเพียงใด, ลูกค้าคนไหนทำ Metric RFM ที่เหมาะสม, ยอดขายส่วนใหย่มากจากรัฐไหน ฯลฯ</li>
+            <li class="link-cursor">🔥 Logistic : ดูเวลาในการจัดส่งสินค้า เช่น เวลาการจัดส่งต่อออเดอร์ นานวันเข้าควรที่ในสเกลที่เหมาะสมไม่มากหรือน้อยจนเกินไป, ช่วงเวลานำส่งสินค้าไหนที่มีจำนวนออเดอร์สูงสุด, การจัดส่งประเภทไหนที่มีเวลานำส่งต่อออเดอร์น้อยและมีจำนวนออเดอร์ที่น้อย ฯลฯ</li>
+        </ol>
+        
+        <p class="link-cursor" style="text-align: justify;">
+            การทำ Data-Diven ดูหลายๆมุมของข้อมูลด้วยภาพที่ Interactive ด้วย Looker Studio ทั้งหมดนี้สามารถเข้ามาดูเต็มๆ ได้ที่....<img
+                src="right-down-corner-arrow.png" width="18">
+        </p><details class="detail">
+            <summary>Example</summary>
+
+            <ul>
+                <li class="link-cursor">🔥️🔥️ <b>Page :<mark> OverView ⬇︎</mark></b></li>
+                
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p8-looker-overview.gif" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-looker-overview.gif')">
+                </div>
+                
+                <li class="link-cursor">🔥️🔥️ <b>Page :<mark> Product Sales ⬇︎</mark></b></li>
+                
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p8-product-sales-overall.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-product-sales-overall.png')">
+                </div>
+                
+                <li class="link-cursor">🔥️🔥️ <b>Page :<mark> Zone Area Sales ⬇︎</mark></b></li>
+                
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p8-zone-area-sales-overall.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-zone-area-sales-overall.png')">
+                </div>
+                
+                <li class="link-cursor">🔥️🔥️ <b>Page :<mark> Logistic ⬇︎</mark></b></li>
+                
+                <div class="iframe-container cursor-zoom-in">
+                    <img src="p8-logitic-overall.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-logitic-overall.png')">
+                </div>
+            </ul>
+        </details>
 
         <div class="corner-text" onclick="navigateToProject_looker_dsb10()">Read More</div>
 

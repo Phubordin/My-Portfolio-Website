@@ -1470,23 +1470,22 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
 /* ------- */
 
 .link-website {
-    color: #000000;
-    text-decoration: none;
+    color: #333366;
+    /* text-decoration: underline;
+    text-decoration-color: rgba(0,0,0,0.2); */
     font-weight: 500;
-    border-radius: 5px;
-    cursor: url('cursor2.png'), auto;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    /* เริ่มจากไม่มีเส้น */
-    background-position: 0 100%;
-    /* ตำแหน่งเส้นใต้ */
-    transition: background-size 0.4s ease;
+    cursor: url('cursor2.png'), pointer;
+    transition: text-decoration-color 0.3s, font-weight 0.3s;
 }
 
 .link-website:hover {
-    background-size: 100% 2px;
-    /* ค่อย ๆ แสดงเส้นใต้ */
+    text-decoration-color: currentColor;
+    font-weight: 600;
+}
+
+.link-website:focus {
+    outline: 2px solid rgba(0,0,0,0.3);
+    outline-offset: 2px;
 }
 
 #scrollToTopBtn {

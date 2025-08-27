@@ -13,7 +13,6 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-0MKCCGG3QF");
     </script>
     <meta charset="UTF-8" />
@@ -56,7 +55,7 @@
   <button id="toggle-toc-btn">≡</button>
   <aside id="table-of-contents" class="active">
     <h3 class="link-cursor">Navigation Menu</h3>
-    <ul id="toc-list"></ul>
+    <ul id="toc-list1"></ul>
   </aside>
 
   <body class="fade-slide-in project_looker-page">
@@ -234,65 +233,618 @@
       <div id="toc-section"></div>
       <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
     </section>
-
+    
+    <!-- Back Botton -->
     <a style="text-decoration: none" href="project.html">
       <button class="back-button">⬅︎</button>
     </a>
-
+    
+    <!-- 1. Project Introduction -->
     <section>
       <h2 class="link-cursor">1. Project Introduction</h2>
       <p class="link-cursor" style="text-align: justify; text-indent: 1em">
-        สวัสดี
+        สวัสดีครับ สำหรับโปรเจกต์นี้<mark>ใช้ชุดข้อมูลจาก <a class="link-website" target="_blank" href="https://community.tableau.com/s/question/0D54T00000CWeX8SAL/sample-superstore-sales-excelxls?_gl=1*6jtjnc*_ga*MzUyOTA0ODIyLjE3NTE5NjQxMzE.*_ga_8YLN0SNXVS*czE3NTE5NjQxMjkkbzEkZzEkdDE3NTE5NjQyMDMkajQ2JGwwJGgw*_gcl_au*NTkxNDEyNzk2LjE3NTE5NjQxMzE.">Tableau - Sample USA SuperStore</a> ที่เกี่ยวข้องกับการขายสินค้าใน Superstore ในสหรัฐอเมริกาตั้งแต่ปี 2017-2020 (ไม่ใช่ข้อมูลจริงนะครับ)</mark> ข้อมูลนี้ถูกออกแบบขึ้นมาเพื่อใช้ประกอบการฝึกวิเคราะห์
+        แต่แน่นอนว่าเป็นข้อมูลที่ใช้ในการฝึกฝนทักษะการวิเคราะห์ได้ในระดับหนึ่ง ซึ่งผมขออนุญาตข้ามวิธีการเตรียมข้อมูลให้พร้อมก่อนการนำไป Connect กับ Looker Studio นะครับ ซึ่งผมได้ทำ Preparation Data
+        ไปแล้วโดยมีหัวข้อดังนี้
       </p>
+
+      <ol>
+        <li class="link-cursor">จัดการ NaN <a class="link-website" target="_blank" href="https://phubordin.github.io/My-Portfolio-Website/project_rfm_py_dsb10.html#61-clean-data">Project 3 - 6.1 Prepare NaN</a></li>
+        <li class="link-cursor">ปรับช่องว่างให้มีระยะห่างเท่ากัน <a class="link-website" target="_blank" href="https://phubordin.github.io/My-Portfolio-Website/project_rfm_py_dsb10.html#62-clean-data">Project 3 - 6.2 TRIM</a></li>
+        <li class="link-cursor">แปลงวันที่เป็นมาตรฐาน ISO <a class="link-website" target="_blank" href="https://phubordin.github.io/My-Portfolio-Website/project_rfm_py_dsb10.html#63-clean-data">Project 3 - 6.3 Convert Data</a></li>
+        <li class="link-cursor">แปลงให้ 1 <code class="inline-code">Product ID</code> มีได้แค่ 1 <code class="inline-code">Product Name</code> <img src="github.png" width="20"> <a class="link-website" target="_blank" href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P08-Data-Driven-Insights-Sales-Performance-&-Profitability-in-Looker-Studio.md#add-columns-equation">Github</a></li>
+        <li class="link-cursor">ต่อเนื่องจากข้อ 4 ต้องอัพเดท Sales กับ Profit ให้สอดคล้องกับด้วย เพราะมีบาง Transaction ที่มีราคาขายของสินค้าไม่เท่ากันทำให้ Profit, Sales อาจจะ diff กันได้ <img src="github.png" width="20"> <a class="link-website" target="_blank" href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P08-Data-Driven-Insights-Sales-Performance-&-Profitability-in-Looker-Studio.md#update-columns">Github</a></li>
+      </ol>
+
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        📌 ปล. ที่เราต้องมาจัดการข้อมูลแบบนี้เพราะ ข้อมูลนี้มันไม่ใช่ข้อมูลจริงตามที่ผมเกรื่นนำไว้เบื้องต้น มันเป็นข้อมูลที่ใช้ฝึกฝนจาก Tableau
+        ดังนั้น มันอาจจะทำให้เกิดการจับคู่ที่ผิดเพี้ยนไปบ้าง ทำให้ผมอาจจะต้องใช้วิธีที่ผลลัพธ์ถูกหลักความเป็นจริงมากที่สุด โดยผมจะกำหนดไว้ว่า..
+      </p>
+
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        <code class="inline-code">1 Product ID</code> = <code class="inline-code">1 Product Name</code> = <code class="inline-code">1 Price</code> = <code class="inline-code">1 Cost</code> = <code class="inline-code">1 Profit</code> = <code class="inline-code">1 %NPM</code> = <code class="inline-code">1 %ROI</code>
+      </p>
+
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        ทั้งหมดนี้เมื่อเชื่อมคอลัมน์กันต้องเป็น (Unique)
+      </p>
+
     </section>
 
-    <section id="tranform-data-product">
-      <h2 class="link-cursor">2. Transform Data</h2>
+    <!-- 1.1 Final Dataset -->
+    <section>
+      <h3 class="link-cursor">1.1 Final Dataset</h3>
       <p class="link-cursor" style="text-align: justify; text-indent: 1em">
-        สวัสดี
-      </p>
-    </section>
-
-    <!-- <section>
-      <h2 class="link-cursor">1. Project Introduction</h2>
-      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
-        สวัสดีครับ ยินดีต้อนรับเข้าสู่โปรเจกต์ไททานิค (Titanic) ที่เกี่ยวข้องกับการที่เรืออัปปางในวันที่ 15 เมษายน ค.ศ. 1912
-        ซึ่ง<mark>เป้าหมายหลักของโปรเจกต์นี้คือ สำรวจวิเคาาะห์คนรอดชีวิตจากเหตุการณ์นี้</mark> และที่สำคัญคือ จะ<mark>สร้าง Machine Learning Model
-        เพื่อทำนายคนรอดชีวิตและเปรียบเทียบประสิทธิภาพของแต่ละโมเดล</mark>ว่า โมเดลไหนทำงานได้ดีกว่ากัน ซึ่งมีทั้งหมด 5 Classification Models
+        ดังนั้นเราก็จะได้หน้าตาข้อมูล ที่ถูกต้องและพร้อมสำหรับการวิเคราะห์ใน <img src="looker.png" width="25">&nbsp;Looker Studio ครับ ตามด้านล่างนี้ครับ
       </p>
 
-      <ol><br>
-          <li class="link-cursor">
-            ผู้โดยสารส่วนใหญ่อายุอยู่ในช่วง 20-30 ปี (อิงจาก Density ด้านล่าง)
-          </li>
-          <li class="link-cursor">
-            <mark>กราฟเบ้ขวา</mark> ถ้าเราเพิ่มค่า Median เข้าไปในข้อมูล จะลดโอกาสเกิด Nosie ของข้อมูลได้มาก
-          </li>
-        </ol>
-      
       <div class="iframe-container cursor-zoom-in">
-          <img src="p7-na-age-1.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p7-na-age-1.png')">
+          <img src="p8-usa-store-ggsheet.gif" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-usa-store-ggsheet.gif')">
       </div>
 
-      <details class="detail">
+      <p class="link-cursor">📌 <b>Sample USA SuperStore</b> : <a
+                href="https://docs.google.com/spreadsheets/d/1W3uxB51xXKMRELejOsqFhjuyJ1SQRVzw5zptCLszZBs/edit?usp=sharing"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="sheets.png" width="25"></a>
+      </p>
 
-          <summary>Code</summary>
+    </section>
 
-          <div class="code-container" style="position: relative;">
-              <div class="code-header">
-                  <span class="language-label link-cursor">R</span>
-                  <button class="copy-btn notion-icon">
-                      <img src="icon-copy1.png" alt="Copy" width="20">
-                  </button>
-              </div>
-              <pre><code class="link-cursor language-r">
-{code}
-                  </code></pre>
-              <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
-          </div>
+    <!-- 1.2 Preview Dashboard -->
+    <section>
+      <h3 class="link-cursor">1.2 Preview Dashboard</h3>
 
-      </details>
-    </section> -->
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        <mark>📌 ต่อไปเราจะนำข้อมูล Sample USA SuperStore นี้ไปสร้าง Dashboard เพื่อดูปัญหาของเราในหลากหลายมุมมองกันเลยครับ โดย Preview Dashboard ตามด้านล่างได้เลยครับ</mark>
+      </p>
+
+      <div class="iframe-container">
+          <iframe 
+              width="100%" 
+              height="1110px"
+              src="https://lookerstudio.google.com/embed/reporting/92339059-263d-4e78-85d6-803cdd1c70a4/page/p_u8jh154pod"
+              frameborder="0" style="border:0" 
+              allowfullscreen 
+              loading="lazy" 
+              sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+          </iframe>
+      </div>
+      
+      <p class="link-cursor">📌 <b>Link Dashboard</b> : <a
+                href="https://lookerstudio.google.com/s/u3-v0ijlk7E"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="looker.png" width="25"></a> & 
+                <a
+                href="https://drive.google.com/file/d/1R5SQylKt0lUTKEzORzVsKakgXC19yLrV/view?usp=drive_link"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="googledrive.png" width="25">PDF</a>
+      </p>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        โดยเป้าหมายหลักข้อโปรเจกต์นี้คือ เราจะสร้าง Dashboard ออกเป็น 3 Pages หลักๆ เพื่อหา Insight ในเชิงของ
+      </p>
+
+      <ol>
+        <li class="link-cursor"><code class="inline-code">Product Sales</code> : โดยรวมสินค้าที่ขายออกเป็นยังไง กำไร, จำนวนขาย ในแต่ละหมวดหมู่หลัก หมวดหมู่ย่อย สินค้าแต่ละตัวมี NPM ก่อนหลังหักส่วนลดเป็นยังไง ฯลฯ</li>
+        <li class="link-cursor"><code class="inline-code">Zone Area Sales</code> : มุ่งเน้นยอดขายไปในเชิงพื้นที่ รัฐไหนขายสินค้าได้มากสุด, ภูมิภาคไหนขายได้กำไรเป็นยังไง กลุ่มลูกค้าที่ทำกำไร/ขาดทุน เป็นยังไง, ประเภทลูกค้ารายไหนใช้จ่ายกับเรามากที่สุด ฯลฯ</li>
+        <li class="link-cursor"><code class="inline-code">Logistic</code> : เน้นไปที่การขนส่ง เช่น Lead Time ต่อวันเป็นยังไง แนวโน้มดีขึ้นไหม?, คำสั่งซื้อแต่ละอัน ให้กำไร/ขาดทุนเป็นยังไง Lead Time นานไหม? ฯลฯ</li>
+      </ol>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        <mark>ทั้ง 3 นี้ผมจะพาไปอ่านกราฟกันแบบละเอียดเลยนะครับ ว่ามีอะไรน่าสนใจบ้าง และเราจะได้ Insight อะไรจากข้อมูลนี้บ้าง โดยแบ่งเป็น 3 Section หลักๆ ตามด้านล่างนี้ครับ</mark>
+      </p>
+
+    </section>
+
+    <!-- 2. Product Sales -->
+    <section>
+      <h2 class="link-cursor">2. Product Sales</h2>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        สำหรับ Page : <b>Product Sales</b> ดูสินค้าที่ขายออกเป็นหลัก ต้นทุน, กำไร(ก่อนและหลัง หักลดสินค้า), ยอดขาย, ส่วนลด, NPM, ROI ในมุมมองของสินค้าแต่ละตัว ดังนี้ครับ 
+      </p>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p8-product-sales-overall.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-product-sales-overall.png')">
+      </div>
+
+      <hr>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        เริ่มต้นด้วย Scorecard และ Dropdown Filter ที่ใช้กรองข้อมูลต่างๆในการดูข้อมูลยอดขายสินค้ากันครับ
+      </p>
+
+      <div class="iframe-container cursor-zoom-in">
+        <img src="p8-product-sales-1.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-product-sales-1.png')">
+      </div>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Order ID Dropdown List</code> : ใช้สำหรับ Filter เพื่อดูเฉพาะ <code class="inline-code">Order ID</code> ที่เราต้องการ
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Customer ID Dropdown List</code> : ใช้สำหรับ Filter เพื่อดูเฉพาะ <code class="inline-code">Customer ID</code> ที่เราต้องการ
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Order Date</code>(มุมบนขวา) : เป็น Filter วันสั่งซื้อสินค้า (Order Date)
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Net Profit</code> : กำไรสุทธิ หลังหักส่วนลด
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Net Sales</code> : ยอดขายสุทธิ หลังหักส่วนลด
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">COGS</code> : cost of goods sold (ต้นทุนขาย)
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Discount</code> : ส่วนลดที่ให้กับลูกค้า
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">%NPM - After Disc</code> : อัตรากำไรสุทธิหลังหักส่วนลด 12.4% (ทุกการขาย 100 บาทเราได้กำไร 12.4 บาท)
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">No. of Products Sold</code> : จำนวนสินค้าที่ขายออก
+        </li>
+      </ul>
+
+      <hr>
+      
+      <p class="link-cursor" style="text-align: justify;">
+        ต่อมาผมจะแบ่งเป็น <b>2 ส่วน</b> หลักๆ คือ
+      </p>
+
+      <ol>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Stacked Smoothed Time Series Chart</code> : ดูแนวโน้ม 3 Metrics ยอดขาย, กำไร, จำนวนสินค้าขายออก</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Sparklines</code> : ใช้ดูแนวโน้มทั้ง 4 metrics 
+          <code class="inline-code">Net Profit</code>, 
+          <code class="inline-code">Discount</code>, 
+          <code class="inline-code">Net Sales</code>, 
+          <code class="inline-code">COGS</code> 
+          แบ่งสีตามหมวดหมู่สินค้าหลักๆ เพื่อดูว่าหมวดหมู่สินค้าไหนที่มี Metrics เหล่านี้ที่แตกต่างกัน </li>
+      </ol>
+
+      <div class="iframe-container cursor-zoom-in">
+        <img src="p8-product-sales-2.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-product-sales-2.png')">
+      </div>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        <b>ส่วนที่ 1</b> : <mark>Time Line 3 Metrics</mark>
+        โดยเราจะใช้เป็นแบบ <code class="inline-code">Stacked Smooth Line</code> แบ่งเป็น 3 เส้นหลักๆ ตามรูป
+      </p>
+
+      <ol>
+        <li class="link-cursor" style="text-align: justify;">
+          จำนวนสินค้าที่ขายออก (<code class="inline-code">Quantity Sold</code>) <span style="color: blue;">สีน้ำเงิน</span>
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          กำไรสุทธิ (<code class="inline-code">Net Profit</code>) <span style="color:turquoise;">สีฟ้า</span>
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          (<code class="inline-code">Net Sales</code>) <span style="color: rgb(242, 15, 151);">ชมพู</span>
+        </li>
+      </ol>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        และมี Drill Down ไปดูแบบ รายวัน, รายเดือน, รายไตรมาส, รายปี ได้ด้วยครับ ที่ลูกศรมุมบนขวา ขึ้น-ลง 
+      </p>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;">เลือกลูกศรลงจะเป็นแบบ รายวัน</li>
+        <li class="link-cursor" style="text-align: justify;">เลือกลูกศรขึ้นจะเป็นแบบ รายไตรมาส และรายปี ครับ <mark>เพราะ default มันจะเป็นแบบรายเดือนอยู่แล้ว</mark></li>
+      </ul>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        และเราจะมี <code class="inline-code">Reference Line (Dot line สีดำ)</code> เป็นเส้นกับกับค่าเฉลี่ยของแต่ละ Metrics ด้วยครับ จากภาพด้านบนจะเห็นว่า
+      </p>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Quantity Sold</code> ต่อเดือนอยู่ที่ 789 EA</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Net Sales</code> ต่อเดือนอยู่ที่ $48,112</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Net Profit</code> ต่อเดือนอยู่ที่ $5,985 เป็นต้น</li>
+      </ul>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        <b>ส่วนที่ 2</b> : <mark>Sparkinglines</mark>
+        เราจะใช้ Sparklines เพื่อดูแนวโน้มของ 4 Metrics เป็นรายเดือน โดยแบ่งกราฟเส้นตามหมวดหมู่สินค้าหลัก ซึ่ง 4 Metrics ที่เราจะดูคือ
+      </p>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Net Profit</code></li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Discount</code></li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Net Sales</code></li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">COGS</code></li>
+      </ul>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        หมวดหมู่สินค้าไหนที่มี <code class="inline-code">Net Profit</code>, <code class="inline-code">Discount</code>, <code class="inline-code">Net Sales</code>, <code class="inline-code">COGS</code>
+        <mark>ที่ค่อนข้างกระโดด หรือเสมอกันมากๆ</mark> เราจะเน้นดูสิ่งนั้นเป็นหลักๆสำหรับ Sparklines ครับ โดยสีกราฟเส้นของหมวดหมู่สินค้าหลักๆ จะมีดังนี้ครับ
+      </p>
+      
+      <ol>
+        <li class="link-cursor" style="text-align: justify;">
+          จำนวนสินค้าที่ขายออก (<code class="inline-code">Technology</code>) <span style="color: blue;">สีน้ำเงิน</span> ใน Dec 2020 จะมี <code class="inline-code">Net Profit</code> อยู่ที่ $5,697 ตามรูปด้านบน
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          กำไรสุทธิ (<code class="inline-code">Office Supplies</code>) <span style="color:turquoise;">สีฟ้า</span> ใน Dec 2020 จะมี <code class="inline-code">Net Profit</code> อยู่ที่ $1,743 ตามรูปด้านบน
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          (<code class="inline-code">Furniture</code>) <span style="color: rgb(242, 15, 151);">ชมพู</span> ใน Dec 2020 จะมี <code class="inline-code">Net Profit</code> อยู่ที่ $1,132 ตามรูปด้านบน
+        </li>
+      </ol>
+
+      <hr>
+      
+      <p class="link-cursor" style="text-align: justify;">
+        ต่อมาจะเป็น <b>Horizontal Bar Chart</b> และ <b>Tree Map</b> ครับ
+      </p>
+
+      <div class="iframe-container cursor-zoom-in">
+        <img src="p8-product-sales-3.gif" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-product-sales-3.gif')">
+      </div>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Horizontal Bar Chart</code> ไว้ดูจำนวนขายออกของสินค้าใน กลุ่มหลักหรือกลุ่มย่อย (สามารถกำ Drill Down ได้)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Tree Map</code> ไว้ดูจำนวนขายออกของสินค้า ยิ่งเข้มยิ่งมีจำนวนขายออกสูง สามารถ Drill Down เลือกดูจำนวนขายออกแค่กลุ่มสินค้าย่อยได้</li>
+      </ul>
+
+      <hr>
+      
+      <p class="link-cursor" style="text-align: justify;">
+        ต่อมาจะเป็น <b>Products Table</b> ที่ใช้บอกว่าสินค้าแต่ละมี Metrics ต่างๆเป็นยังไงบ้าง
+      </p>
+
+      <div class="iframe-container cursor-zoom-in">
+        <img src="p8-product-sales-4.gif" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-product-sales-4.gif')">
+      </div>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Products</code> แสดงชื่อสินค้า สามารถ Drill Down เลือกแสดงเป็น Product ID หรือ Product Name ได้</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Avg. Net Sales per Bill</code> ดูว่าสินค้าตัวนี้ สามารถสร้างยอดขายต่อการซื้อ 1 บิลได้เป็นยังไง</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Net Sales</code> ยอดขายสุทธิ (ณ ที่นี้คือยอดขายที่หักส่วนลดแล้ว)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Bills</code> นับดูว่าสินค้าตัวนี้ ถูกซื้อไปกี่ครั้ง (นับดูว่าไปปรากฎบนกี่บิล)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Quantity</code> จำนวนขายออกของสินค้า</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Disc</code> ส่วนลดทั้งหมดของสินค้า ($)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">COGS</code> Cost of Goods Sold ต้นทุนสินค้า ($)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Gross Sales</code> ยอดขายขั้นต้น = ยอดขายที่ยังไม่หักส่วนลด ($)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">GP</code> Gross Profit (กำไรขั้นต้น) = กำไรที่ยังไม่หักส่วนลด ($)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">NP</code> กำไรสุทธิ (กำไรที่หักส่วนลดแล้ว)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">%NPM Before Disc</code> อัตราส่วนระหว่างกำไรขั้นต้นหารด้วยยอดขายขั้นต้น</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">%NPM After Disc</code> อัตราส่วนระหว่างกำไรสุทธิหารด้วยยอดขายสุทธิ</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Diff %NPM</code> ผลต่างระหว่างก่อนหักส่วนลด และหลังหักส่วนลดแล้ว แบบไหนทำให้เสีย %NPM มากกว่ากัน</li>
+      </ul>
+      
+    </section>
+    
+    <!-- 3. Zone Area Sales -->
+    <section>
+      <h2 class="link-cursor">3. Zone Area Sales</h2>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        สำหรับ Page : <b>Zone Area Sales</b> ดูลูกค้าเป็นรายพื้นที่ ภูมิภาค, รัฐ, ประเภทลูกค้า, ลูกค้าที่ส่งผลต่อกำไร/ขาดทุน ฯลฯ ดังนี้ครับ
+      </p>
+      
+      <div class="iframe-container cursor-zoom-in">
+          <img src="p8-zone-area-sales-overall.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-zone-area-sales-overall.png')">
+      </div>
+
+      <hr>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        เริ่มต้นด้วย Scorecard และ Dropdown Filter เช่นเดิมครับ
+      </p>
+
+      <div class="iframe-container cursor-zoom-in">
+        <img src="p8-zone-area-sales-1.gif" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-zone-area-sales-1.gif')">
+      </div>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Order ID Dropdown List</code> : ใช้สำหรับ Filter เพื่อดูเฉพาะ <code class="inline-code">Order ID</code> ที่เราต้องการ
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Customer ID Dropdown List</code> : ใช้สำหรับ Filter เพื่อดูเฉพาะ <code class="inline-code">Customer ID</code> ที่เราต้องการ
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Order Date</code>(มุมบนขวา) : เป็น Filter วันสั่งซื้อสินค้า (Order Date)
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Net Profit</code> : กำไรสุทธิ หลังหักส่วนลด
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Net Sales</code> : ยอดขายสุทธิ หลังหักส่วนลด
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Discount</code> : ส่วนลดที่ให้กับลูกค้า
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Frequent_Spending</code> : นับจำนวนครั้งที่ลูกค้าซื้อ (จากยอดขาย ~2.3m จะมีจำนวนครั้งที่ลูกค้าซื้อ 5,009 ครั้ง)
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">%NPM - After Disc</code> : อัตรากำไรสุทธิหลังหักส่วนลด 12.4% (ทุกการขาย 100 บาทเราได้กำไร 12.4 บาท)
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">No. of Customers</code> : จำนวนลูกค้าทั้งหมด
+        </li>
+      </ul>
+
+      <hr>
+      
+      <p class="link-cursor" style="text-align: justify;">
+        ต่อมาผมจะแบ่งเป็น <b>2 ส่วน</b> หลักๆ คือ
+      </p>
+
+      <ol>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Stacked Smoothed Time Series Chart</code> : ดูแนวโน้ม 3 Metrics ยอดขายสุทธิ, กำไรสุทธิ, จำนวนสินค้าขายออก</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Horizontal Bar Chart</code> : ใช้ดู 3 Metrics
+          <code class="inline-code">Net Profit</code>,
+          <code class="inline-code">Net Sales</code>, 
+          <code class="inline-code">COGS</code></li>
+      </ol>
+
+      <div class="iframe-container cursor-zoom-in">
+        <img src="p8-zone-area-sales-2.gif" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-zone-area-sales-2.gif')">
+      </div>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        <b>ส่วนที่ 1</b> : <mark>Time Line 3 Metrics</mark>
+        โดยเราจะใช้เป็นแบบ <code class="inline-code">Stacked Smooth Line</code> แบ่งเป็น 3 เส้นหลักๆ ตามรูป
+      </p>
+
+      <ol>
+        <li class="link-cursor" style="text-align: justify;">
+          จำนวนสินค้าที่ขายออก (<code class="inline-code">Quantity Sold</code>) <span style="color: blue;">สีน้ำเงิน</span>
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          กำไรสุทธิ (<code class="inline-code">Net Profit</code>) <span style="color:turquoise;">สีฟ้า</span>
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          (<code class="inline-code">Net Sales</code>) <span style="color: rgb(242, 15, 151);">ชมพู</span>
+        </li>
+      </ol>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        และมี Drill Down ไปดูแบบ รายวัน, รายเดือน, รายไตรมาส, รายปี ได้ด้วยครับ ที่ลูกศรมุมบนขวา ขึ้น-ลง 
+      </p>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;">เลือกลูกศรลงจะเป็นแบบ รายวัน</li>
+        <li class="link-cursor" style="text-align: justify;">เลือกลูกศรขึ้นจะเป็นแบบ รายไตรมาส และรายปี ครับ <mark>เพราะ default มันจะเป็นแบบรายเดือนอยู่แล้ว</mark></li>
+      </ul>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        และเราจะมี <code class="inline-code">Reference Line (Dot line สีดำ)</code> เป็นเส้นกับกับค่าเฉลี่ยของแต่ละ Metrics ด้วยครับ จากภาพด้านบนจะเห็นว่า
+      </p>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Quantity Sold</code> ต่อเดือนอยู่ที่ 789 EA</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Net Sales</code> ต่อเดือนอยู่ที่ $48,112</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Net Profit</code> ต่อเดือนอยู่ที่ $5,985 เป็นต้น</li>
+      </ul>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        <b>ส่วนที่ 2</b> : <mark>Horizontal Bar Chart</mark>
+        ใช้ดู 3 Metrics เป็นรายรัฐ, ภูมิภาค โดยแบ่งกราฟแท่งตามหมวดหมู่สินค้าหลักๆ ซึ่ง 3 Metrics ที่เราจะดูคือ
+      </p>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Net Profit</code></li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Net Sales</code></li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">COGS</code></li>
+      </ul>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        ภูมิภาคไหน หรือรัฐใดที่มี <code class="inline-code">Net Profit</code>, <code class="inline-code">Net Sales</code>, <code class="inline-code">COGS</code>
+        <mark>ที่มียอดขายสุทธิมากที่สุด</mark> (สามารถเลือก Drill Down ดูเป็นรายรัฐ หรือรายภูมิภาคได้)
+      </p>
+
+      <hr>
+      
+      <p class="link-cursor" style="text-align: justify;">
+        ต่อมาจะเป็น <b>Horizontal Bar Chart</b> และ <b>Geo Chart</b> ครับ
+      </p>
+      
+      <div class="iframe-container cursor-zoom-in">
+        <img src="p8-zone-area-sales-3.gif" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-zone-area-sales-3.gif')">
+      </div>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Horizontal Bar Chart</code> 2 bins ที่ไว้ดูว่าลูกค้าจำนวนกี่รายที่ทำกำไร/ขาดทุน ให้กับธุรกิจเรา</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Geo Chart</code> ดูเป็นรายรัฐเลยว่า ยอดขายสุทธิมาจากรัฐไหนมากที่สุด (สามารถ Drill Down ดูเป็นรายเมืองได้ รวมถึงสามารถเปลี่ยนจาก ยอดขายสุทธิเป็น
+          COGS, Net Profit, Discount, No. of Customers ได้ด้วยเช่นกัน)</li>
+      </ul>
+
+      <hr>
+      
+      
+      <p class="link-cursor" style="text-align: justify;">
+        ต่อมาผมจะแบ่งเป็น <b>3 ส่วน</b> หลักๆ คือ
+      </p>
+
+      <ol>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Pie Chart</code> : ดูสัดส่วนประเภทลูกค้าทั้ง 3 Metrics Net Sales, Net Profit, COGS</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Bar Chart</code> : ดูจำนวนลูกค้าในแต่ละช่วงกำไร/ขาดทุน ที่ลูกค้ามอบให้เรา เช่น Profit 0 - 500 มีลูกค้ามากที่สุด</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Bar Chart</code> : ดูกำไรในส่วนที่ เป็นกำไร กับส่วนที่ขาดทุน</li>
+      </ol>
+
+      <div class="iframe-container cursor-zoom-in">
+        <img src="p8-zone-area-sales-4.gif" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-zone-area-sales-4.gif')">
+      </div>
+      
+      <hr>
+      
+      <p class="link-cursor" style="text-align: justify;">
+        ต่อมาจะเป็น <b>Top-Spending Cusotmers Table</b> ใช้ดูว่าลูกค้าแต่ละรายมี Metrics ต่างๆเป็นยังไงบ้าง
+      </p>
+
+      <div class="iframe-container cursor-zoom-in">
+        <img src="p8-zone-area-sales-5.gif" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-zone-area-sales-5.gif')">
+      </div>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Recently Active from 2020-12-31 (Days)</code> แสดงวันที่ลูกค้าห่างหายจากการซื้อสินค้าจากเราไป (วัน)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Frequent_Spending (Rounds)</code> แสดงจำนวนครั้งที่ลูกค้าซื้อเรา (ครั้ง)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Monetary (Spending per Active Months)</code> ยอดใช้จ่ายต่อเดือนที่ซื้อกับเรา</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Active (Months)</code> จำนวนเดือนที่ users active</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Discount Amount</code> ส่วนลดทั้งหมด ($)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Net Profit</code> กำไรสุทธิ ($)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Total Net Spending</code> ยอดขายสุทธิ ($)</li>
+      </ul>
+
+    </section>
+    
+    <!-- 4. Logistic -->
+    <section>
+      <h2 class="link-cursor">4. Logistic</h2>
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        สำหรับ Page : <b>Logistic</b> เน้นดูประสิทธิภาพการขนส่ง เช่น Lead Time, คำสั่งซื้อที่ทำกำไร/ขาดทุน ฯลฯ ดังนี้ครับ
+      </p>
+      <div class="iframe-container cursor-zoom-in">
+        <img src="p8-logitic-overall.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-logitic-overall.png')">
+      </div>
+      
+      <hr>
+      
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em">
+        เริ่มต้นด้วย Scorecard และ Dropdown Filter เช่นเดิมครับ
+      </p>
+
+      <div class="iframe-container cursor-zoom-in">
+        <img src="p8-logistic-1.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-logistic-1.png')">
+      </div>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Order ID Dropdown List</code> : ใช้สำหรับ Filter เพื่อดูเฉพาะ <code class="inline-code">Order ID</code> ที่เราต้องการ
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Customer ID Dropdown List</code> : ใช้สำหรับ Filter เพื่อดูเฉพาะ <code class="inline-code">Customer ID</code> ที่เราต้องการ
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Ship Date</code>(มุมบนขวา) : เป็น Filter วันสั่งซื้อสินค้า (Ship Date) Order สุดท้ายจะถูกจัดส่งวันที่ 5 Jan 2021
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Total Products Shipped</code> : จำนวนสินค้าทั้งหมดที่ถูกจัดส่ง
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Total Orders Shipped</code> : จำนวนคำสั่งซื้อทั้งหมดที่ถูกจัดส่ง
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Total Delivery Days</code> : จำนวนวันที่จัดส่งสินค้า 1,334 วัน (รวมทุก Order)
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Avg Product Delivery Time</code> : จำนวนสินค้าที่ถูกจัดส่งต่อวัน (ณ ที่นี้คือ 28.4 ชิ้น ต่อวัน หรือ 28 EA/วัน)
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Avg Order Delivery Time</code> : จำนวนคำสั่งซื้อที่ถูกจัดส่งต่อวัน (ณ ที่นี้คือ 3.8 คำสั่งซื้อ ต่อวัน หรือ 4 Order/วัน)
+        </li>
+        <li class="link-cursor" style="text-align: justify;">
+          <code class="inline-code">Avg Lead Time per Order</code> : จำนวนวันที่จัดส่งต่อ 1 คำสั่งซื้อ (ณ ที่นี้คือ 3.96 วัน ต่อ 1 Order หรือ 4 วัน/Order <mark>Metric นี้ผมมองว่าสำคัญมาก มันสามารถบอกประสิทธิในการจัดส่งสินค้าในแต่ละช่วง Time Frame ได้เลย</mark>)
+        </li>
+      </ul>
+      
+      <hr>
+      
+      <p class="link-cursor" style="text-align: justify;">
+        ต่อมาผมจะแบ่งเป็น <b>3 ส่วน</b> หลักๆ คือ
+      </p>
+
+      <ol>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Stacked Smoothed Time Series Chart</code> : ดูแนวโน้ม 3 Metrics เวลาจัดส่งต่อออเดอรืในแต่ละช่วงกรอบเวลา, จำนวนสินค้าที่จัดส่งในแต่ละกรอบเวลา, จำนวนออเดอร์ที่จัดส่งในแต่ละกรอบเวลา (ณ ที่นี้คือมีค่าเฉลี่ยต่อกรอบเวลาเดือน ของเวลานำส่งต่อออเดอร์อยู่ที่ 4 วันต่ออเดอร์ใน 1 เดือน, ส่งสินค้าไปจำนวน 773 EA/เดือน และจำนวนออเดอร์ที่จัดส่งต่อเดือนอยู่ที่ 102 ออเดอร์/เดือน)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Bar/Column Chart</code> : ดูประเภทการขนส่งสินค้า ว่าแบบไหนมี ออเดอร์มากกว่าหรือน้อยกว่ายังไง และเวลาในการจัดส่งต่อออเดอร์ว่า ประเภทการขนส่งไหนที่มีเวลาในการจัดส่งต่อ 1 ออเดอร์มากน้อยแตกต่างกันอย่างไร เช่นกัน (ณ ที่นี้คือ จำนวนออเดอร์ และเวลานำส่งต่ออเดอร์การขนส่งแบบ Standard Class จะสูงที่สุดอยู่ 2,994 Orders และเวลานำส่ง 2.55 วัน/ออเดอร์)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Horizontal Bar Chart</code> : ดู Top 10 สินค้าที่มีจำนวนการขนส่งสูงสุด (ณ ที่นี้คือ Logitecg P710e Mobile Speakerphone อยู่ที่ 75 EA)</li>
+        
+      </ol>
+
+      <div class="iframe-container cursor-zoom-in">
+        <img src="p8-logistic-2.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-logistic-2.png')">
+      </div>
+
+      <hr>
+      
+      <p class="link-cursor" style="text-align: justify;">
+        ต่อมาจะเป็น <b>Geo Chart</b>, <b>Tree Map</b> และ <b>Horizontal Bar Chart</b> ครับ
+      </p>
+      
+      <div class="iframe-container cursor-zoom-in">
+        <img src="p8-logistic-3.gif" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-logistic-3.gif')">
+      </div>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Geo Chart</code> ดูว่ารัฐไหนที่มีออเดอร์ที่ถูกจัดส่งไปมากที่สุด ไล่สีเข้มตามจำนวนออเดอร์ที่สูง (ใช้ Drill Down ลงไปถึงระดับเมืองได้)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Tree Map</code> ดูจำนวนสินค้าที่ขายออกในแต่ละ หมวดหมู่สินค้าหลัก-ย่อย ได้ (สามารถ Drill Down ลงไปดูแบบหมวดหมู่สินค้าย่อยอย่างเดียวได้)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Horizontal Bar Chart</code> สามารถดูได้ว่า Order ได้ที่มีช่วงของ Lead Time ที่มากน้อยแตกต่างกันเพียงใด เช่น ≥ 5 Days, 3-5 Days, 1-3 Days, Same-day เป็นต้น</li>
+      </ul>
+      
+      <hr>
+      
+      <p class="link-cursor" style="text-align: justify;">
+        ต่อมาจะเป็น <b>Top Lead-Time Orders Table</b> ใช้ดูว่าคำสั่งซื้อแต่ละอันมี Metrics ต่างๆเป็นยังไงบ้าง
+      </p>
+
+      <div class="iframe-container cursor-zoom-in">
+        <img src="p8-logistic-4.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p8-logistic-4.png')">
+      </div>
+
+      <ul>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Net Sales</code> ยอดขายสุทธิ</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Products</code> ดูว่าภายในแต่ละคำสั่งซื้อมีสินค้ากี่แบบ เช่น ออเดอร์ CA-2020-136007 มีสินค้า 2 แบบ</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Lead Time (Days)</code> จำนวนวันนำส่ง (วันที่ลูกค้าสั่งซื้อ จนถึง วันที่เริ่มจัดส่ง) ในแต่ละออเดอร์นั้นๆ</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Disc</code> ส่วนลดทั้งหมดของสินค้า ($)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">COGS</code> Cost of Goods Sold ต้นทุนสินค้า ($)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Gross Sales</code> ยอดขายขั้นต้น = ยอดขายที่ยังไม่หักส่วนลด ($)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">GP</code> Gross Profit (กำไรขั้นต้น) = กำไรที่ยังไม่หักส่วนลด ($)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">NP</code> กำไรสุทธิ (กำไรที่หักส่วนลดแล้ว)</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">%NPM Before Disc</code> อัตราส่วนระหว่างกำไรขั้นต้นหารด้วยยอดขายขั้นต้น</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">%NPM After Disc</code> อัตราส่วนระหว่างกำไรสุทธิหารด้วยยอดขายสุทธิ</li>
+        <li class="link-cursor" style="text-align: justify;"><code class="inline-code">Diff %NPM</code> ผลต่างระหว่างก่อนหักส่วนลด และหลังหักส่วนลดแล้ว แบบไหนทำให้เสีย %NPM มากกว่ากัน</li>
+      </ul>
+
+      <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+        ก็จบลงไแล้วครับ สำหรับโปรเจกต์การสร้าง Dashboard ด้วย Looker Studio กับชุดข้อมูลจำลอง USA-Superstore จาก Tableau หวังว่าจะช่วยให้มองเห็นภาพเครื่องมือ กราฟ, insight ต่างๆ ได้ชัดเจนนะครับ
+        ฝากโปรเจกต์อื่นๆของผมด้วยนะครับ โดยเฉพาะอันที่มี ⭐️ ผมชอบมากๆ ขอบคุณมากๆครับ
+      </p>
+
+    </section>
+    
+    <!-- Github & Google Drive & Google Sheet & Looker Studio-->
+    <section id="file">
+        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand" target="_blank"><img src="github.png"
+                    width="30" class="notion-icon"></a> Github & <a
+                href="https://docs.google.com/spreadsheets/d/1W3uxB51xXKMRELejOsqFhjuyJ1SQRVzw5zptCLszZBs/edit?pli=1&gid=854918076#gid=854918076"
+            class="hover-expand" target="_blank"><img src="sheets.png" width="30" class="notion-icon"></a> Google Sheets & <a
+                href="https://lookerstudio.google.com/reporting/92339059-263d-4e78-85d6-803cdd1c70a4"
+            class="hover-expand" target="_blank"><img src="looker.png" width="30" class="notion-icon"></a> Looker Studio & <a
+                href="https://drive.google.com/drive/folders/1DMA9LyifttNjKVF9ZKUBFaAPDgCQRUDC?usp=drive_link"
+            class="hover-expand" target="_blank"><img src="googledrive.png" width="30" class="notion-icon"></a> Google Drive
+        </h2>
+        
+        <p>
+            <a href="https://github.com/Phubordin/portfolio-project/blob/7c9357877451eb4337fef0a8c92da76f46b7c553/portfolio-project/P08-Data-Driven-Insights-Sales-Performance-%26-Profitability-in-Looker-Studio.md"
+                class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+                <img src="github.png" width="25">&nbsp;Github
+            </a> <br>
+            <a href="https://drive.google.com/drive/folders/1DMA9LyifttNjKVF9ZKUBFaAPDgCQRUDC?usp=sharing"
+                class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+                <img src="googledrive.png" width="25">&nbsp;Google Drive
+            </a> <br>
+            <a href="https://docs.google.com/spreadsheets/d/1W3uxB51xXKMRELejOsqFhjuyJ1SQRVzw5zptCLszZBs/edit?usp=sharing"
+                class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+                <img src="sheets.png" width="25">&nbsp;Google Sheets
+            </a> <br>
+            <a href="https://lookerstudio.google.com/reporting/92339059-263d-4e78-85d6-803cdd1c70a4"
+                class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+                <img src="looker.png" width="25">&nbsp;Looker Studio
+            </a>
+
+            <div class="iframe-container">
+                <iframe 
+                    width="100%" 
+                    height="1110px"
+                    src="https://lookerstudio.google.com/embed/reporting/92339059-263d-4e78-85d6-803cdd1c70a4/page/p_u8jh154pod"
+                    frameborder="0" style="border:0" 
+                    allowfullscreen 
+                    loading="lazy" 
+                    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+                </iframe>
+            </div>
+        </p>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="script.js"></script>
