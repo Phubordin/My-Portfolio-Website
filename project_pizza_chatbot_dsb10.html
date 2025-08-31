@@ -9,7 +9,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-0MKCCGG3QF');
     </script>
     <meta charset="UTF-8">
@@ -23,7 +22,7 @@
 </head>
 
 <div class="theme-switch-wrapper">
-    <!-- ปุ่ม Blur Background -->
+    <!-- ปุ่ม Dark Mode -->
     <label class="switch">
         <input type="checkbox" id="theme-toggle">
         <span class="slider"></span>
@@ -45,8 +44,8 @@
 <button id="scrollToTopBtn" title="Go to top">⇧</button>
 <button id="toggle-toc-btn">≡</button>
 <aside id="table-of-contents" class="active">
-    <h3 class= "link-cursor">Navigation Menu</h3>
-    <ul id="toc-list"></ul>
+    <h3 class="link-cursor">Navigation Menu</h3>
+    <ul id="toc-list1"></ul>
 </aside>
 
 <body class="fade-slide-in project_pizza-page">
@@ -76,12 +75,12 @@
                 <ul class="dropdown-menu">
                     <li><a onclick="navigateToProject_ggsheet_dsb10()" >P1 : Data Exploration and Transformation with <img src="sheets.png"  style="vertical-align:middle" width="25" > Google Sheets</a></li>
                     <li><a onclick="navigateToProject_cafe_r_sql_dsb10()" >P2 : Building a Café Restaurant Database Using <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="SQL.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_rfm_py_dsb10()" >P3 : Customer Segmentation and RFM Analysis Using <img src="python.png"  style="vertical-align:middle" width="25" >Python and <img src="R.png"  style="vertical-align:middle" width="25" > for Strategic Business Insight</a></li>
+                    <li><a onclick="navigateToProject_rfm_py_dsb10()" >⭐️ P3 : Customer Segmentation and RFM Analysis Using <img src="python.png"  style="vertical-align:middle" width="25" >Python and <img src="R.png"  style="vertical-align:middle" width="25" > for Strategic Business Insight</a></li>
                     <li><a onclick="navigateToProject_pyc_r_py_dsb10()" >P4 : Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png"  style="vertical-align:middle" width="25" > and <img src="python.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_nycflight13_23_dsb10()" >P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png"  style="vertical-align:middle" width="25" ></a></li>
-                    <li><a onclick="navigateToProject_vizdimond_dsb10()" >P6 : EDA Visualization of the Diamond Dataset Using <img src="R.png"  style="vertical-align:middle" width="25" > and R Markdown </a></li>
-                    <li><a onclick="navigateToProject_titanic_glm_dsb10()" >P7 : Titanic Survival Prediction: A Comparative Analysis of Classification Models <img src="R.png" style="vertical-align:middle" width="25" > R</a></li>
-                    <li><a onclick="navigateToProject_looker_dsb10()" >P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"  style="vertical-align:middle" width="25" >Looker Studio</a></li>
+                    <li><a onclick="navigateToProject_nycflight13_23_dsb10()" >⭐️ P5 : EDA and Comparison of NYC Flights Data (2013 vs. 2023) with <img src="R.png"  style="vertical-align:middle" width="25" ></a></li>
+                    <li><a onclick="navigateToProject_vizdimond_dsb10()" >⭐️ P6 : EDA Visualization of the Diamond Dataset Using <img src="R.png"  style="vertical-align:middle" width="25" > and R Markdown </a></li>
+                    <li><a onclick="navigateToProject_titanic_glm_dsb10()" >⭐️ P7 : Titanic Survival Prediction: A Comparative Analysis of Classification Models <img src="R.png" style="vertical-align:middle" width="25" > R</a></li>
+                    <li><a onclick="navigateToProject_looker_dsb10()" >⭐️ P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"  style="vertical-align:middle" width="25" >Looker Studio</a></li>
                     <li><a class="active1" onclick="scrollToTop(event)" onclick="navigateToProject_pizza_chatbot_dsb10()" >P9 : Chatbot Development for a Pizza Business Using <img src="R.png"  style="vertical-align:middle" width="25" > Programming</a></li>
                     <li><a onclick="navigateToProject_atm_oop_py_dsb10()" >P10 : Object-Oriented ATM System: Financial Transactions with <img src="python.png"  style="vertical-align:middle" width="25" >Python OOP</a></li>
                     <li><a onclick="navigateToProject_mini_api_py()" >mini P11 : Extracting Public API Data with <img src="python.png"  style="vertical-align:middle" width="25" >Python: Air Quality Analytics</a></li>
@@ -95,46 +94,463 @@
 
     <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
     <section id="toc-section">
-        <p style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Content of Tables</p>
+        <p style="font-size: 1.5em; font-weight: bold;" class="link-cursor">Content of Tables</p>
         <div id="toc-marker"></div>
         <div id="toc-section"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
     </section>
 
-    <a style= "text-decoration: none;" href="project.html">
+    <a style="text-decoration: none;" href="project.html">
         <button class="back-button">⬅︎ </button>
     </a>
-
+    
+    <!-- 1. Project Introduction -->
     <section>
-        <h2 class = "link-cursor">Dashboard</h2>
-        <p class = "link-cursor">Dashboard ที่แสดงอยู่ด้านล่างนี้ เป็นเครื่องมือที่ถูกสร้างขึ้นหลังจากจบ Project ตัวนี้เรียบร้อยเเล้ว
-            ซึ่งใช้ในการ monitor ผลประกอบการของร้านค้าแห่งหนึ่ง และตอบคำถามที่สงสัยมาตอนต้น <strong>ไปดูกันเลย!</strong>
-            สามาถลองกดเล่นที่ Dashboard ได้เลยนะครับ
+        <h2 class="link-cursor">1. Project Introduction</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สวัสดีครับ โปรเจกต์นี้มีวัตถุประสงค์คือ สร้าง Chatbot สั่ง Pizza และเมนูเครื่องดื่มอื่นๆภายในร้านครับ ซึ่งจะ<mark>มุ่งเน้นไปใช้ Control Flow (While, If-Else) เป็นหลัก</mark>
+            คล้ายๆเหมือนกับ <a href="https://phubordin.github.io/My-Portfolio-Website/project_pyc_r_py_dsb10.html"
+                class="link-website" target="_blank">Project 4</a> ที่ผมได้ทำไปก่อนหน้านี้ครับ แต่จะมาลองสร้างเป็นร้าน Pizza ดูบ้างครับ
+            <mark>ภาษาที่ใช้คือ R</mark> รันบน <a href="https://colab.research.google.com/drive/1r5JBCZ9OCMExucj47YEKTu8Utino1N5E?usp=sharing"
+                class="link-website" target="_blank">Google Colab</a> เช่นเดิม ซึ่งเราจะได้หน้าตา Chatbot ตามภาพด้านล่างนี้เลยครับ
         </p>
-        <p class = "link-cursor">ขั้นตอนแรก ผมจะ Explore Dataset เพื่อดูว่าหน้าตาของ data ก้อนนี้เป็นยังไงบ้าง</p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p9-simulate-order.gif" width="600" class="cursor-zoom-in" onclick="openGalleryModal('p9-simulate-order.gif')">
+        </div>
+        
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            แน่นอนครับว่าสำหรับโปรเจกต์นี้ ผมจะขออนุญาตนำเสนอวิธีการใช้งาน(วิธีการสั่งอาหาร) ให้เห็นภาพเป็นหลักนะครับ
+            ส่วน<mark>เรื่องของ Coding ผมได้เขียนอธิบายไว้ใน Code Comment ทีละบรรทัดไว้แล้วครับ</mark> ใครที่สนใจสามารถเข้าไปดูได้ที่..
+        </p>
+        
+        <ul>
+            <li class="link-cursor">
+                <a href="https://colab.research.google.com/drive/1r5JBCZ9OCMExucj47YEKTu8Utino1N5E?usp=sharing"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> ✅ อ่าน Code, ✅ ลองสั่งอาหาร
+            </li>
+            <li class="link-cursor">
+                <a
+                href="https://github.com/Phubordin/portfolio-project/blob/ee6cbfe6236652de4759cd8173ab22f04b0a80d4/portfolio-project/P09-Chatbot-Development-for-a-Pizza-Business-Using-R-Programming.ipynb"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25">
+                <b> Github</b></a> ✅ อ่าน Code, ❌ ลองสั่งอาหาร
+            </li>
+        </ul>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ต่อไป จะเป็น WorkFlow Chart ของ Chatbot และจะเป็น<mark>วิดิโอสาธิตการสั่งอาหารผ่าน Chatbot (1 นาที)</mark> ครับ
+        </p>
+        
     </section>
 
-    <section id="file">
-        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
-                    width="30" class="notion-icon"></a> Github & <a href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing" class="hover-expand"><img src="googledrive.png"
-                    width="30" class="notion-icon"></a> Google Drive</h2>
+    <!-- 2. Pizza Chatbot Workflow -->
+    <section>
+        <h2 class="link-cursor">2. Pizza Chatbot Workflow</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            <mark>Workflow นี้จะแสดงการทำงานของ Chatbot</mark> ในการสั่ง Pizza และเครื่องดื่มอื่นๆภายในร้านครับ
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Mermaid</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-mermaid">  
+graph TD
+    A[Start Function pizza] --> B[Show welcome message]
+    B --> C[Initialize empty basket: collect_order list]
+    C --> D[Loop while TRUE]
+    D --> E[Show instructions to user]
+    E --> F[Ask for user input order_item]
+    F -- menu --> G[Show menu table and prices]
+    G --> D
+    F -- check --> H{Is basket empty?}
+    H -- Yes --> I[Show message Basket is empty]
+    I --> D
+    H -- No --> J[Show basket summary and total]
+    J --> K[Ask for confirmation Y/N]
+    K -- Y --> L[Show order confirmed Return order_summary]
+    L --> W[End Function]
+    K -- N --> D
+    K -- Invalid --> M[Show invalid input message]
+    M --> D
+    F -- reorder --> N[Clear basket and restart]
+    N --> D
+    F -- stop --> O{Is basket empty?}
+    O -- Yes --> P[Show message Basket empty]
+    P --> W
+    O -- No --> Q[Show message Items will be cleared next visit]
+    Q --> W
+    F -- valid menu name --> R[Ask for quantity]
+    R -- Invalid qty --> S[Show error Enter positive integer]
+    S --> D
+    R -- Valid qty --> T{Menu already in basket?}
+    T -- Yes --> U[Ask to add more Y/N]
+    U -- Y --> V[Update quantity in basket]
+    V --> D
+                </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        
+        <div class="mermaid-wide">
+            <pre class="mermaid link-cursor">
+            graph TD
+                A[Start Function pizza] --> B[Show welcome message]
+                B --> C[Initialize empty basket: collect_order list]
+                C --> D[Loop while TRUE]
+                D --> E[Show instructions to user]
+                E --> F[Ask for user input order_item]
+                F -- menu --> G[Show menu table and prices]
+                G --> D
+                F -- check --> H{Is basket empty?}
+                H -- Yes --> I[Show message Basket is empty]
+                I --> D
+                H -- No --> J[Show basket summary and total]
+                J --> K[Ask for confirmation Y/N]
+                K -- Y --> L[Show order confirmed Return order_summary]
+                L --> W[End Function]
+                K -- N --> D
+                K -- Invalid --> M[Show invalid input message]
+                M --> D
+                F -- reorder --> N[Clear basket and restart]
+                N --> D
+                F -- stop --> O{Is basket empty?}
+                O -- Yes --> P[Show message Basket empty]
+                P --> W
+                O -- No --> Q[Show message Items will be cleared next visit]
+                Q --> W
+                F -- valid menu name --> R[Ask for quantity]
+                R -- Invalid qty --> S[Show error Enter positive integer]
+                S --> D
+                R -- Valid qty --> T{Menu already in basket?}
+                T -- Yes --> U[Ask to add more Y/N]
+                U -- Y --> V[Update quantity in basket]
+                V --> D
+            </pre>
+        </div>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ใช่แล้วครับ ด้านบน ⬆︎ เป็น Workflow ของ Chatbot สั่ง Pizza และเครื่องดื่มอื่นๆภายในร้านครับ
+            ถ้าเราลองกดที่ปุ่ม Code เราจะเห็น Mermaid Code ที่ผมใช้สร้าง Workflow นี้ขึ้นมาครับ ต่อไปเราจะมาลองดูโครงสร้าง
+            ของ Code ที่ใช้สำหรับสร้าง Chatbot กันครับ
+        </p>
+
+    </section>
+
+    <!-- 3. Coding for Chatbot Development -->
+    <section>
+        <h2 class="link-cursor">3. Coding for Chatbot Development</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ภาพรวมของ Code ทั้งหมดที่ใช้สร้าง Chatbot (สามารถลองคลิกปุ่มด้านล่างเพื่อดูโครงสร้าง Code ได้ครับ)
+        </p>
+
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">R</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-r">
+menu <- c(
+  "Margherita Pizza", "Pepperoni Pizza",
+  "BBQ Chicken Pizza", "Vegetarian Pizza",
+  "Seafood Deluxe Pizza",
+  "Coca-Cola", "Iced Lemon Tea",
+  "Orange Juice", "Sparkling Water",
+  "Mango Smoothie",
+  "Chocolate Lava Cake", "Tiramisu",
+  "Cheesecake", "Fruit Salad",
+  "Ice Cream Sunday"
+)
+
+menu_lower <- tolower(menu)
+
+price <- c(
+  sample(15:20, 5),  
+  sample(2:6, 5),    
+  sample(7:12, 5)    
+)
+
+df_menu <- data.frame(MENU = menu, PRICE = price)
+
+pizza <- function() {
+  cat("\nWelcome to the Wonderful Pizza Shop!\n") 
+
+  collect_order <- list()  
+  
+  while (TRUE) {
+    
+    cat("Order now! :\n") 
+    cat("Type 'menu' to see the menu,\n") 
+    cat("Type 'check' to view your basket and check the bill,\n") 
+    cat("Type 'reorder' to clear your basket and start over,\n") 
+    cat("Type 'stop' to leave the restaurant.\n") 
+    
+    order_item <- tolower(readline("What would you like to do? "))
+    
+    if (order_item %in% "menu") { 
+      cat("\n----------- MENU -----------\n") 
+      print(df_menu) 
+      next 
+    }
+
+    if (order_item %in% "stop") { 
+      break 
+    }
+
+    if (order_item %in% "check") { 
+      if (length(collect_order) == 0) { 
+        cat("\nYour basket is empty.\n") 
+      } else { 
+        original_menu_names <- sapply(names(collect_order), function(name) {
+          menu[match(name, menu_lower)]
+        })
+        
+        order_summary <- data.frame(
+          Menu = unname(original_menu_names), 
+          Quantity = unname(unlist(collect_order)),
+          Unit_Price_Dollar = price[match(names(collect_order), menu_lower)],
+          Total_Price_Dollar = unname(unlist(collect_order) * price[match(names(collect_order), menu_lower)]),
+          stringsAsFactors = FALSE
+        )
+        cat("\nYour current order summary:\n") 
+        print(order_summary) 
+        
+        total_order <- sum(order_summary$Total_Price_Dollar)
+        cat("\nOrder Total: $", total_order, "\n", sep = "") 
+        
+        confirm_order <- tolower(readline("\nDo you confirm your order? (Y/N): "))
+
+        if (confirm_order %in% "y") {
+          cat("\nOrder confirmed! Thank you for your purchase.\n")
+          return(order_summary)
+        } else if (confirm_order %in% "n") {  
+          cat("\nYou can continue ordering.\n")
+          next 
+        } else { 
+          cat("Invalid input. Returning to menu.\n")
+          next 
+        }
+      }
+      next 
+    }
+    if (order_item %in% "reorder") {
+      cat("\nYou chose to clear your basket and start over.\n") 
+      collect_order <- list() 
+      next 
+    }
+    if (order_item %in% menu_lower) { 
+      order_quantity <- as.integer(readline(paste("How many", order_item, "would you like to order? "))) 
+
+      if (is.na(order_quantity) || order_quantity <= 0) { 
+        cat("Invalid quantity. Please enter only a positive integer!\n") 
+        next 
+      }
+
+      if (order_item %in% names(collect_order)) { 
+        confirm_add <- tolower(readline("You have already ordered this item. Do you want to add more? (Y/N): ")) 
+
+        if (confirm_add %in% "y") { 
+          collect_order[[order_item]] <- collect_order[[order_item]] + order_quantity 
+          cat("Updated:", order_item, "-", collect_order[[order_item]], "in total.\n") 
+        } else if (confirm_add %in% "n") { 
+          next 
+        } else { 
+          cat("Invalid input. Skipping this item.\n") 
+          next 
+        }
+      } else { 
+        collect_order[[order_item]] <- order_quantity 
+        cat("Added:", order_item, "->", order_quantity, "\n") 
+      }
+    } else { 
+      cat("Invalid input. Please try again.\n") 
+    }
+  }
+
+  if (length(collect_order) == 0) { 
+    print("Your basket is currently empty. Thank you for visiting and using our service!") 
+  } else { 
+    print("If you return for a new visit, the items in your basket will no longer be there. We warmly invite you and look forward to welcoming you again!")
+  }
+}
+
+order_summary <- pizza()
+
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+        
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เนื่องจากสำหรับหน้าเว็บนี้ ผม<mark>เน้นถึงวิธีการใช้งานเป็นหลัก(วิธีเริ่มคุยกับ Chatbot, วิธีสั่งอาหาร, วิธีดูเมนู, วิธีเช็คบิล, วิธียืนยันออเดอร์, วิธีล้างตะกร้า)</mark>
+            ถ้าอยากดูวว่า Code แต่ละบรรทัดทำงานอย่างไร ผมได้เขียนอธิบายไว้ใน Code Comment ทีละบรรทัดไว้แล้วครับ
+            ใครที่สนใจสามารถเข้าไปดูได้ที่ Google Colab หรือ Github ด้านล่างได้เลยครับ
+        </p>
+        
+        <ul>
+            <li class="link-cursor">
+                <a href="https://colab.research.google.com/drive/1r5JBCZ9OCMExucj47YEKTu8Utino1N5E?usp=sharing"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> ✅ อ่าน Code, ✅ ลองสั่งอาหาร
+            </li>
+            <li class="link-cursor">
+                <a
+                href="https://github.com/Phubordin/portfolio-project/blob/ee6cbfe6236652de4759cd8173ab22f04b0a80d4/portfolio-project/P09-Chatbot-Development-for-a-Pizza-Business-Using-R-Programming.ipynb"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25">
+                <b> Github</b></a> ✅ อ่าน Code, ❌ ลองสั่งอาหาร
+            </li>
+        </ul>
+        
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ต่อไปจะเป็นการอธิบายเรื่องวิธีการใช้งาน Chatbot เพื่อสั่งอาหารภายในร้านครับ โดยจะแบ่งเป็น 2 หัวข้อย่อย ต่อไปนี้
+        </p>
+
+        <ul>
+            <li class="link-cursor"><b>3.1 Starter Guide</b></li>
+            <li class="link-cursor"><b>3.2 1-Minute Video</b> (แนะนำ Scenario ทั้งหมด 4 แบบ ที่ Chatbot จะทำงานครับ)</li>
+        </ul>
+
+    </section>
+
+    <!-- 3.1 Starter Guide -->
+    <section>
+        <h3 class="link-cursor">3.1 Starter Guide</h3>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เราจะมาดู<mark>คำแนะนำที่ Chatbot ตอบเรากลับมาอัตโนมัติกันก่อนครับ</mark> แน่นอนว่าถ้าเราอยากเริ่มสั่งอาหาร
+            เราต้องรันโค้ดด้านบนทั้งหมดก่อน 1 ครั้ง ถ้าครั้งต่อไปเราสามารถพิมพ์ <code class="inline-code">pizza()</code> และกดรันได้เลยครับ
+            มันจะเริ่มต้นใช้งาน Chatbot ให้เราอัตโนมัติ โดยเมื่อรันเสร็จมันจะตอบกลับ อัตโนมัติ ดังนี้ครับ
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p9-guide32-1.png" width="600" class="cursor-zoom-in" onclick="openGalleryModal('p9-guide32-1.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            จากภาพด้านบน ⬆︎ เป็น ข้อความตอบกลับอัตโนมัติจาก Chatbot หลังจากเรารันโค้ดเสร็จแล้ว
+            โดย Chatbot จะทักทายเราก่อนว่า "Welcome to the Wonderful Pizza Shop!" และจะบอกคำแนะนำ
+            ว่าเราสามารถพิมพ์คำสั่งอะไรได้บ้าง เช่น
+        </p>
+
+        <ol>
+            <li class="link-cursor">พิมพ์ <code class="inline-code">menu</code> : เพื่อดูเมนูอาหารและราคา (แนะนำ)</li>
+            <li class="link-cursor">พิมพ์ <code class="inline-code">check</code> : เพื่อดูตะกร้าสินค้าและเช็คบิล</li>
+            <li class="link-cursor">พิมพ์ <code class="inline-code">reorder</code> : เพื่อล้างตะกร้าสินค้าและเริ่มสั่งใหม่</li>
+            <li class="link-cursor">พิมพ์ <code class="inline-code">stop</code> : เพื่อออกจากร้าน (ระบบจะเช็คตระกร้าดูว่า ว่างหรือไม่)</li>
+        </ol>
+        <ul>
+            <li class="link-cursor" style="text-align: justify;">ถ้า<u>ว่าง</u> จะขึ้นข้อความว่า<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code class="inline-code">"Your basket is currently empty. Thank you for visiting and using our service!"</code></li>
+            <li class="link-cursor" style="text-align: justify;">ถ้า<u>ไม่ว่าง</u> จะขึ้นข้อความเตือนว่า<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code class="inline-code">"If you return for a new visit, the items in your basket will no longer be there.</code><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code class="inline-code">We warmly invite you and look forward to welcoming you again!"</code></li>
+        </ul>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เราจะมาลองสั่งง่ายๆดูครับ <mark>สมมติว่าผมอยากซื้อ Cheesecake 25 ชิ้น</mark>
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            <b>Step 1</b> : ถ้าหากเราลองพิมพ์คำสั่ง <code class="inline-code">menu</code> และกด Enter เราจะเห็นเมนูอาหารและราคา
+            ที่ร้านขายทั้งหมด 15 เมนู : ⬇︎
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p9-guide32-2.png" width="600" class="cursor-zoom-in" onclick="openGalleryModal('p9-guide32-2.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            <b>Step 2</b> : ผมลองสั่ง <code class="inline-code">Cheesecake 25 ชิ้น</code> จะมีข้อความบอกว่าเราได้เพิ่มลงในตะกร้าเรียบร้อยแล้ว : ⬇︎
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p9-guide32-3.png" width="600" class="cursor-zoom-in" onclick="openGalleryModal('p9-guide32-3.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            <b>Step 3</b> : ผมจะดูของในตระกร้าพร้อมเช็คบิลผมก็จะพิมพ์ว่า <code class="inline-code">Check</code> จะมีตารางสรุปคำสั่งซื้อให้ดู พร้อมถามเรากลับว่า
+            จะยืนยันคำสั่งซื้อไหม ถ้าเรายืนยันให้ตอบกลับว่า <code class="inline-code">Y</code> : ⬇︎
+        </p>
+
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p9-guide32-4.png" width="600" class="cursor-zoom-in" onclick="openGalleryModal('p9-guide32-4.png')">
+        </div>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เราก็จะสั่งซื้อ Cheesecake 25 ชิ้น สำเร็จเรียบร้อยครับ 🎉 นี่ก็เป็นตัวอย่างง่ายๆ ต่อไปผมจะมีวิดิโอ 1 นาทีสำเร็จลองสั่งเมนูอื่นๆดู รวมถึงถ้าเราลองสั่งผิดพลาด Chatbot จะตอบกลับยังไง, ลองพิมพ์ <code class="inline-code">reorder</code> เพื่อเริ่มสั่งใหม่, ลองพิมพ์ <code class="inline-code">stop</code> เพื่อออกจากร้าน
+            (ทั้งกรณีตะกร้าว่างกับไม่ว่าง) ให้ดูครับ สามารถดูได้ที่หัวข้อ <b>3.2 1-Minute Video</b>
+        </p>
+    </section>
+    
+    <!-- 3.2 1-Minute Video -->
+    <section>
+        <h3 class="link-cursor">3.2 1-Minute Video</h3>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สำหรับวิดิโอสาธิตการสั่งอาหารผ่าน Chatbot (1 นาที) จะเป็นการแนะนำ Scenario ทั้งหมด 4 แบบ ที่ Chatbot จะทำงานครับ
+            สามารถดูได้ที่วิดิโอด้านล่างนี้เลยครับ
+        </p>
         <p>
-            <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Resume : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15nJgYPrUrUmD8pAVQZIr0tJVHaJVO8g4/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Transcript : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15n_nmZaSY619ehogn_O0V75CKyuq7max/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Graduation Certificate : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span>
+            <a target="_blank" href="https://youtu.be/K-SbNrfKcxk" class="hover-expand"><img src="youtube.png" width="30"
+                    class="notion-icon"></a> ⬅︎ Full Video (YouTube)
+        </p>
+        <div style="text-align: center;" class="video-container">
+            <iframe src="https://www.youtube.com/embed/K-SbNrfKcxk" frameborder="0"
+                style="border:0" allowfullscreen loading="lazy"
+                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+            </iframe>
+        </div>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            จบแล้วครับ ! สำหรับโปรเจกต์นี้ หวังว่าจะเป็นประโยชน์กับทุกท่านที่สนใจอยากลองสร้าง Chatbot ง่ายๆ ด้วย R Programming นะครับ
+            <mark>ฝากติดตามผลงานของผมในโปรเจกต์อื่นๆด้วยนะครับ โดยเฉพาะอันที่ติดดาว ⭐ ไว้เป็นโปรเจกต์ที่ผมชอบมากๆ</mark> (โปรเจกต์อื่นก็ชอบนะครับ ฮ่าๆ)
+            ขอบคุณมากครับ
         </p>
     </section>
+    
+    <!-- Github & Google Colab -->
+    <section id="file">
+        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand" target="_blank"><img src="github.png"
+                    width="30" class="notion-icon"></a> Github &
+            <a href="https://colab.research.google.com/drive/1r5JBCZ9OCMExucj47YEKTu8Utino1N5E?usp=sharing"
+                class="hover-expand" target="_blank"><img src="colab.png" width="30" class="notion-icon"></a> Google Colab
+        </h2>
+        
+        <p>
+            <a href="https://colab.research.google.com/drive/1r5JBCZ9OCMExucj47YEKTu8Utino1N5E?usp=sharing"
+                class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+                <img src="colab.png" width="25">&nbsp;Google Colab
+            </a> <br>
+            <a href="https://github.com/Phubordin/portfolio-project/blob/ee6cbfe6236652de4759cd8173ab22f04b0a80d4/portfolio-project/P09-Chatbot-Development-for-a-Pizza-Business-Using-R-Programming.ipynb"
+                class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+                <img src="github.png" width="25">&nbsp;Github
+            </a>
+        </p>
 
+    </section>
+    
+    <!-- Prism Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- Prism Language Components -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-mermaid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-r.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>
 </body>
+
 </html>

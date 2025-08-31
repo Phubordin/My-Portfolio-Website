@@ -213,7 +213,7 @@ function renderCertificateCard(cert) {
             <img src="${cert.image}" alt="${cert.title}" class="certificate-image cursor-zoom-in" onclick="openGalleryModal('${cert.image}')">
             <div class="certificate-details ${darkModeClass}">
                 <h3 class="certificate-title1" onclick="openGalleryModal('${cert.image}')">${cert.title}</h3>
-                <div><a href= "${cert.schoolLink}" class="certificate-school ${darkModeClass}">🏫 : ${cert.school}</a></div>
+                <div><a target="_blank" href= "${cert.schoolLink}" class="certificate-school ${darkModeClass}">🏫 : ${cert.school}</a></div>
                 
                 <details>
                     <summary>คำอธิบาย<span class="text-description">2x click to open just one</span></summary>
@@ -302,7 +302,7 @@ function renderSlideshowView() {
                 </div>
                 <div class="slideshow-details ${darkModeClass}">
                     <h2 class="certificate-title1">${cert.title}</h2>
-                    <p><a href= "${cert.schoolLink}" class="certificate-school ${darkModeClass}">🏫: ${cert.school}</a></p>
+                    <p><a target="_blank" href= "${cert.schoolLink}" class="certificate-school ${darkModeClass}">🏫: ${cert.school}</a></p>
                     <p class="certificate-description">${cert.description}</p>
                     <div class="certificate-links">
                         <a href="${cert.notionLink}" class="certificate-link ${darkModeClass}" target="_blank">
@@ -361,10 +361,10 @@ function renderListView() {
                         ${filteredCerts.map(cert => `
                             <tr>
                                 <td onclick="openGalleryModal('${cert.image}')" onmouseover="showPreview(event, '${cert.image}')" onmouseout="hidePreview()">${cert.title}</td>
-                                <td><a href="${cert.schoolLink}" class="certificate-school">${cert.school}</a></td>
-                                <td><a href="${cert.costlink}" class="check">${cert.cost}</a></td>
-                                <td><a href="${cert.notionLink}" class="check"><img src="notion.webp" width="20" class="notion-icon"> Notion</a></td>
-                                <td><a href="${cert.certificateLink}" class="check">Check</a></td>
+                                <td><a target="_blank" href="${cert.schoolLink}" class="certificate-school">${cert.school}</a></td>
+                                <td><a target="_blank" href="${cert.costlink}" class="check">${cert.cost}</a></td>
+                                <td><a target="_blank" href="${cert.notionLink}" class="check"><img src="notion.webp" width="20" class="notion-icon"> Notion</a></td>
+                                <td><a target="_blank" href="${cert.certificateLink}" class="check">Check</a></td>
                             </tr>
                         `).join('')}
                     </tbody>

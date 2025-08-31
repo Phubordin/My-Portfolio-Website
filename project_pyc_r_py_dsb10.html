@@ -81,20 +81,20 @@
                     <li><a onclick="navigateToProject_cafe_r_sql_dsb10()">P2 : Building a Café Restaurant Database Using
                             <img src="R.png" style="vertical-align:middle" width="25"> and <img src="SQL.png"
                                 style="vertical-align:middle" width="25"></a></li>
-                    <li><a onclick="navigateToProject_rfm_py_dsb10()">P3 : Customer Segmentation and RFM Analysis Using
+                    <li><a onclick="navigateToProject_rfm_py_dsb10()">⭐️ P3 : Customer Segmentation and RFM Analysis Using
                             <img src="python.png" style="vertical-align:middle" width="25">Python and <img src="R.png"
                                 style="vertical-align:middle" width="25"> for Strategic Business Insight</a></li>
                     <li><a class="active1" onclick="scrollToTop(event)" onclick="navigateToProject_pyc_r_py_dsb10()">P4
                             : Creating a Multi-Round Rock-Paper-Scissors Game in <img src="R.png"
                                 style="vertical-align:middle" width="25"> and <img src="python.png"
                                 style="vertical-align:middle" width="25"></a></li>
-                    <li><a onclick="navigateToProject_nycflight13_23_dsb10()">P5 : EDA and Comparison of NYC Flights
+                    <li><a onclick="navigateToProject_nycflight13_23_dsb10()">⭐️ P5 : EDA and Comparison of NYC Flights
                             Data (2013 vs. 2023) with <img src="R.png" style="vertical-align:middle" width="25"></a>
                     </li>
-                    <li><a onclick="navigateToProject_vizdimond_dsb10()">P6 : EDA Visualization of the Diamond Dataset
+                    <li><a onclick="navigateToProject_vizdimond_dsb10()">⭐️ P6 : EDA Visualization of the Diamond Dataset
                             Using <img src="R.png" style="vertical-align:middle" width="25"> and R Markdown </a></li>
-                    <li><a onclick="navigateToProject_titanic_glm_dsb10()">P7 : Titanic Survival Prediction: A Comparative Analysis of Classification Models <img src="R.png" style="vertical-align:middle" width="25" > R</a></li>
-                    <li><a onclick="navigateToProject_looker_dsb10()">P8 : Data-Driven Insights: Sales Performance &
+                    <li><a onclick="navigateToProject_titanic_glm_dsb10()">⭐️ P7 : Titanic Survival Prediction: A Comparative Analysis of Classification Models <img src="R.png" style="vertical-align:middle" width="25" > R</a></li>
+                    <li><a onclick="navigateToProject_looker_dsb10()">⭐️ P8 : Data-Driven Insights: Sales Performance &
                             Profitability in <img src="looker.png" style="vertical-align:middle" width="25">Looker
                             Studio</a></li>
                     <li><a onclick="navigateToProject_pizza_chatbot_dsb10()">P9 : Chatbot Development for a Pizza
@@ -147,8 +147,7 @@
             จะนำเสนอ if, for while ที่เป็น Control Flow หลัก ๆ ของโปรเจกต์นี้
             ข้อดีของ WorkFlow จะ<mark>ช่วยให้มองเห็นภาพรวมการทำงานของ Code ได้ชัดเจนยิ่งขึ้น</mark>
             ซึ่งสร้างมาจาก Mermaid Code ทำงานเหมือนกับ Marmaid ใน Notion
-            ถ้าอยากทราบว่า Mermaid Code หน้าตาเป็นยังไง สามารถคลิกได้ที่ <span class="line-code"> Code</span> ด้านล่าง
-            (Code ยาวนิดนึงนะครับ) ⬇︎
+            ถ้าอยากทราบว่า Mermaid Code หน้าตาเป็นยังไง สามารถคลิกได้ที่ด้านล่าง ⬇︎
         </p>
 
         <details class="detail">
@@ -206,45 +205,47 @@
 
         </details>
 
-        <pre class="mermaid link-cursor">
-        graph TD
-            A[Start Function: hammer_scissor_paper] --> B[Initialize Variables and Rules Displayed]
-            B --> C[Loop Round 1 to 10]
-            C --> D[Computer chooses randomly]
-            D --> E[Input loop: Ask for user input]
+        <div class="mermaid-normal">
+            <pre class="mermaid link-cursor">
+            graph TD
+                A[Start Function: hammer_scissor_paper] --> B[Initialize Variables and Rules Displayed]
+                B --> C[Loop Round 1 to 10]
+                C --> D[Computer chooses randomly]
+                D --> E[Input loop: Ask for user input]
 
-            E --> F{Input is 'check'?}
-            F -- Yes --> G[Show scores and results table]
-            G --> E
+                E --> F{Input is 'check'?}
+                F -- Yes --> G[Show scores and results table]
+                G --> E
 
-            F -- No --> H{Input is valid?}
-            H -- No --> I[Show invalid input message]
-            I --> E
+                F -- No --> H{Input is valid?}
+                H -- No --> I[Show invalid input message]
+                I --> E
 
-            H -- Yes --> J[Show both choices]
-            J --> K{Compare choices}
+                H -- Yes --> J[Show both choices]
+                J --> K{Compare choices}
 
-            K -- Draw --> L[Set winner = Draw]
-            K -- User wins --> M[Set winner = User<br>+1 to user_score]
-            K -- Computer wins --> N[Set winner = Computer<br>+1 to computer_score]
+                K -- Draw --> L[Set winner = Draw]
+                K -- User wins --> M[Set winner = User<br>+1 to user_score]
+                K -- Computer wins --> N[Set winner = Computer<br>+1 to computer_score]
 
-            L --> O[Record result to data.frame]
-            M --> O
-            N --> O
+                L --> O[Record result to data.frame]
+                M --> O
+                N --> O
 
-            O --> P{All 10 rounds done?}
-            P -- No --> C
-            P -- Yes --> Q[Show all round results]
+                O --> P{All 10 rounds done?}
+                P -- No --> C
+                P -- Yes --> Q[Show all round results]
 
-            Q --> R{Who has more points?}
-            R -- User --> S[Announce: User Wins]
-            R -- Computer --> T[Announce: Computer Wins]
-            R -- Draw --> U[Announce: It's a Draw]
+                Q --> R{Who has more points?}
+                R -- User --> S[Announce: User Wins]
+                R -- Computer --> T[Announce: Computer Wins]
+                R -- Draw --> U[Announce: It's a Draw]
 
-            S --> V[End]
-            T --> V
-            U --> V
-        </pre>
+                S --> V[End]
+                T --> V
+                U --> V
+            </pre>
+        </div>
 
         <p class="link-cursor">กติกาของเกมก็ง่ายๆเลยครับ 3 ข้อ</p>
 
@@ -563,11 +564,11 @@ while (!valid_input) {
     <section>
         <h3 class="link-cursor">3.2 A Video Simulation of Rock–Paper–Scissors Game Using <mark>R</mark></h3>
         <p>
-            <a href="https://youtu.be/mvmKynvYfko" class="hover-expand"><img src="youtube.png" width="30"
+            <a target="_blank" href="https://youtu.be/mvmKynvYfko" class="hover-expand"><img src="youtube.png" width="30"
                     class="notion-icon"></a> ⬅︎ Full Video<br>
-            <a href="https://colab.research.google.com/drive/1ITMHVGs7FL05r5lJSdYmBqhDgtva2sbr?authuser=1#scrollTo=_R"
+            <a target="_blank" href="https://colab.research.google.com/drive/1ITMHVGs7FL05r5lJSdYmBqhDgtva2sbr?authuser=1#scrollTo=_R"
                 class="hover-expand"><img src="colab.png" width="30" class="notion-icon"></a> ⬅︎ Google Colab Link<br>
-            <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P04-Creating-a-Multi-Round-Rock-Paper-Scissors-Game-in-R-and-Python.ipynb"
+            <a target="_blank" href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P04-Creating-a-Multi-Round-Rock-Paper-Scissors-Game-in-R-and-Python.ipynb"
                 class="hover-expand"><img src="github.png" width="30" class="notion-icon"></a> ⬅︎ GitHub Link
         </p>
         <div style="text-align: center;" class="video-container">
@@ -804,11 +805,11 @@ while (len(points_computer + points_user) / 2) < 10:
     <section>
         <h3 class="link-cursor">4.2 A Video Simulation of Rock–Paper–Scissors Game Using <mark>Python</mark></h3>
         <p>
-            <a href="https://youtu.be/K-SbNrfKcxk" class="hover-expand"><img src="youtube.png" width="30"
+            <a target="_blank" href="https://youtu.be/K-SbNrfKcxk" class="hover-expand"><img src="youtube.png" width="30"
                     class="notion-icon"></a> ⬅︎ Full Video<br>
-            <a href="https://colab.research.google.com/drive/1ITMHVGs7FL05r5lJSdYmBqhDgtva2sbr?authuser=1#scrollTo=_Python"
+            <a target="_blank" href="https://colab.research.google.com/drive/1ITMHVGs7FL05r5lJSdYmBqhDgtva2sbr?authuser=1#scrollTo=_Python"
                 class="hover-expand"><img src="colab.png" width="30" class="notion-icon"></a> ⬅︎ Google Colab Link<br>
-            <a href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P04-Creating-a-Multi-Round-Rock-Paper-Scissors-Game-in-R-and-Python.ipynb"
+            <a target="_blank" href="https://github.com/Phubordin/portfolio-project/blob/main/portfolio-project/P04-Creating-a-Multi-Round-Rock-Paper-Scissors-Game-in-R-and-Python.ipynb"
                 class="hover-expand"><img src="github.png" width="30" class="notion-icon"></a> ⬅︎ GitHub Link
         </p>
         <div style="text-align: center;" class="video-container">
