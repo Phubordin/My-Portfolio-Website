@@ -529,10 +529,6 @@ nav ul li.dropdown.open .dropdown-menu {
     background: #bbdefb;
 }
 
-.hover-expand1:hover {
-    cursor: url("cursor.png"), auto;
-}
-
 /* customปุ่ม downlod, view---------------------------------------------------------------------------------------------*/
 .download-btn {
     color: #333;
