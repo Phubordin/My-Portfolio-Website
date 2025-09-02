@@ -9,7 +9,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-0MKCCGG3QF');
     </script>
     <meta charset="UTF-8">
@@ -45,8 +44,8 @@
 <button id="scrollToTopBtn" title="Go to top">⇧</button>
 <button id="toggle-toc-btn">≡</button>
 <aside id="table-of-contents" class="active">
-    <h3 class = "link-cursor">Navigation Menu</h3>
-    <ul id="toc-list"></ul>
+    <h3 class="link-cursor">Navigation Menu</h3>
+    <ul id="toc-list1"></ul>
 </aside>
 
 <body class="fade-slide-in project_atm-page">
@@ -95,45 +94,164 @@
 
     <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
     <section id="toc-section">
-        <p style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Content of Tables</p>
+        <p style="font-size: 1.5em; font-weight: bold;" class="link-cursor">Table of Contents</p>
         <div id="toc-marker"></div>
         <div id="toc-section"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
     </section>
 
-    <a style= "text-decoration: none;" href="project.html">
+    <a style="text-decoration: none;" href="project.html">
         <button class="back-button">⬅︎ </button>
     </a>
 
+<!-- 1. Project Introduction -->
     <section>
-        <h2 class = "link-cursor">Dashboard</h2>
-        <p class = "link-cursor">Dashboard ที่แสดงอยู่ด้านล่างนี้ เป็นเครื่องมือที่ถูกสร้างขึ้นหลังจากจบ Project ตัวนี้เรียบร้อยเเล้ว
-            ซึ่งใช้ในการ monitor ผลประกอบการของร้านค้าแห่งหนึ่ง และตอบคำถามที่สงสัยมาตอนต้น <strong>ไปดูกันเลย!</strong>
-            สามาถลองกดเล่นที่ Dashboard ได้เลยนะครับ
+        <h2 class="link-cursor">1. Project Introduction</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            Hi
         </p>
-        <p class = "link-cursor">ขั้นตอนแรก ผมจะ Explore Dataset เพื่อดูว่าหน้าตาของ data ก้อนนี้เป็นยังไงบ้าง</p>
+        <!-- โครงโค้ด OOP ATM -->
+        <details class="detail">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Python</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-python">
+class Atm():    
+  
+  def __init__(self, name, bank, balance, statement):        
+    self.name = name         
+    self.bank = bank         
+    self.balance = balance   
+    self.statement = statement     
+  
+  def __str__(self):
+    text = "You should type (my_atm.Attribute | my_atm.Methods(__, __) to view info." 
+    return text 
+  
+  def withdraw(self, num, hint):
+    self.balance -= num  
+    self.statement["#Hints"] += [hint]       
+    self.statement["$Cash"] += [f"- {num}"]   
+    self.statement["Transactions"] += ["Withdraw"] 
+    if self.balance < 0:  
+      return "You don't have enough money"    
+    else:
+      text = f"""WithDraw: - {num} | * {hint}"""  
+      return text 
+  
+  def paybills(self, num, hint):
+    self.balance -= num  
+    self.statement["#Hints"] += [hint]       
+    self.statement["$Cash"] += [f"- {num}"]   
+    self.statement["Transactions"] += ["Pay Bills"] 
+    if self.balance < 0:  
+      return "You don't have enough money"    
+    else:
+      text = f"""Pay Bills: - {num} | * {hint}"""  
+      return text 
+  
+  def deposit(self, num, hint):
+    self.balance += num  
+    self.statement["#Hints"] += [hint]       
+    self.statement["$Cash"] += [f"+ {num}"]   
+    self.statement["Transactions"] += ["Pay Bills"] 
+    text = f"""Deposit : + {num} | * {hint}""" 
+    return text 
+
+my_atm = Atm(
+    "Phu",               
+    "Bualuang Bank",     
+    1000,                
+    {                    
+        "Transactions": [],
+        "$Cash": [],
+        "#Hints": [],
+    }
+)
+
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
     </section>
 
+<!-- 2. Object-Oriented ATM System with Python -->
+    <section>
+        <h2 class="link-cursor">2. Object-Oriented ATM System with Python</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            Hi
+        </p>
+        
+    </section>
+
+<!-- 3. Simulate ATM Transactions -->
+    <section>
+        <h2 class="link-cursor">3. Simulate ATM Transactions</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            Hi
+        </p>
+    </section>
+
+<!-- 4. Transform into a Table -->
+    <section>
+        <h2 class="link-cursor">4. Transform into a Table</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            Hi
+        </p>
+    </section>
+
+<!-- 5. Verify ATM Balance -->
+    <section>
+        <h2 class="link-cursor">5. Verify ATM Balance</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            Hi
+        </p>
+    </section>
+
+<!-- 6. A Video Simulation of ATM Transactions -->
+    <section>
+        <h2 class="link-cursor">6. A Video Simulation of ATM Transactions</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            Hi
+        </p>
+    </section>
+    
+    <!-- Github & Google Colab -->
     <section id="file">
-        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
-                    width="30" class="notion-icon"></a> Github & <a href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing" class="hover-expand"><img src="googledrive.png"
-                    width="30" class="notion-icon"></a> Google Drive</h2>
+        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand" target="_blank"><img src="github.png"
+                    width="30" class="notion-icon"></a> Github &
+            <a href="https://colab.research.google.com/drive/1M_BwQw89HmOfFR-MxLDf8VJeot5LtVeX?usp=sharing"
+                class="hover-expand" target="_blank"><img src="colab.png" width="30" class="notion-icon"></a> Google Colab
+        </h2>
+        
         <p>
-            <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Resume : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15nJgYPrUrUmD8pAVQZIr0tJVHaJVO8g4/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Transcript : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15n_nmZaSY619ehogn_O0V75CKyuq7max/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Graduation Certificate : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span>
+            <a href="https://colab.research.google.com/drive/1M_BwQw89HmOfFR-MxLDf8VJeot5LtVeX?usp=sharing"
+                class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+                <img src="colab.png" width="25">&nbsp;Google Colab
+            </a> <br>
+            <a href="https://github.com/Phubordin/portfolio-project/blob/30eb4fcf4236bfef452778dff11cf54522a598ce/portfolio-project/P10-Object-Oriented-ATM-System-Financial-Transactions-with-Python-OOP.ipynb"
+                class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+                <img src="github.png" width="25">&nbsp;Github
+            </a>
         </p>
+
+    </section>
+    
     </section>
 
+    <!-- Prism Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- Prism Language Components -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-r.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>
 </body>
