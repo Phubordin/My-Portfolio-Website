@@ -54,7 +54,7 @@ body.no-transition {
 }
 
 .project_atm-page {
-    min-height: 500vh;
+    min-height: 580vh;
 }
 
 .project_cafe-page {
@@ -70,7 +70,7 @@ body.no-transition {
 }
 
 .project_api-page {
-    min-height: 500vh;
+    min-height: 700vh;
 }
 
 .project_xml-page {

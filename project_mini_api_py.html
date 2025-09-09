@@ -9,7 +9,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-0MKCCGG3QF');
     </script>
     <meta charset="UTF-8">
@@ -23,7 +22,7 @@
 </head>
 
 <div class="theme-switch-wrapper">
-    <!-- ปุ่ม Blur Background -->
+    <!-- ปุ่ม Dark Mode -->
     <label class="switch">
         <input type="checkbox" id="theme-toggle">
         <span class="slider"></span>
@@ -45,8 +44,8 @@
 <button id="scrollToTopBtn" title="Go to top">⇧</button>
 <button id="toggle-toc-btn">≡</button>
 <aside id="table-of-contents" class="active">
-    <h3 class= "link-cursor">Navigation Menu</h3>
-    <ul id="toc-list"></ul>
+    <h3 class="link-cursor">Navigation Menu</h3>
+    <ul id="toc-list1"></ul>
 </aside>
 
 <body class="fade-slide-in project_api-page">
@@ -95,45 +94,292 @@
 
     <!-- Section ที่จะแสดง TOC อัตโนมัติ -->
     <section id="toc-section">
-        <p style="font-size: 1.5em; font-weight: bold;" class= "link-cursor">Table of Contents</p>
+        <p style="font-size: 1.5em; font-weight: bold;" class="link-cursor">Table of Contents</p>
         <div id="toc-marker"></div>
         <div id="toc-section"></div> <!-- ตรงนี้ TOC จะถูกสร้างอัตโนมัติ -->
     </section>
 
-    <a style= "text-decoration: none;" href="project.html">
+    <a style="text-decoration: none;" href="project.html">
         <button class="back-button">⬅︎ </button>
     </a>
-
+    
+    <!-- 1. Project Introduction -->    
     <section>
-        <h2 class = "link-cursor">Dashboard</h2>
-        <p class = "link-cursor">Dashboard ที่แสดงอยู่ด้านล่างนี้ เป็นเครื่องมือที่ถูกสร้างขึ้นหลังจากจบ Project ตัวนี้เรียบร้อยเเล้ว
-            ซึ่งใช้ในการ monitor ผลประกอบการของร้านค้าแห่งหนึ่ง และตอบคำถามที่สงสัยมาตอนต้น <strong>ไปดูกันเลย!</strong>
-            สามาถลองกดเล่นที่ Dashboard ได้เลยนะครับ
+        <h2 class="link-cursor">1. Project Introduction</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สวัสดีครับสำหรับโปรเจกต์ มีจุดประสงค์ให้เข้าใจและใช้งาน API Public มาจากเว็บไซต์ <a class="link-website" target="_blank" href="https://open-meteo.com/?utm_source">Air Quality API (Open-Meteo)</a>
+            <mark>ข้อมูลที่ผมจะดึงคือ คุณภาพอากาศจากฝุ่น PM2.5, PM10 เป็นรายชั่วโมงย้อนหลัง 90 วัน ที่กรุงเทพมหานคร ประเทศไทย</mark> แต่ก่อนอื่นเราจะมาทำความเข้าใจเกี่ยวกับหัวข้อต่อไปนี้ก่อนครับ
         </p>
-        <p class = "link-cursor">ขั้นตอนแรก ผมจะ Explore Dataset เพื่อดูว่าหน้าตาของ data ก้อนนี้เป็นยังไงบ้าง</p>
-    </section>
 
-    <section id="file">
-        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
-                    width="30" class="notion-icon"></a> Github & <a href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing" class="hover-expand"><img src="googledrive.png"
-                    width="30" class="notion-icon"></a> Google Drive</h2>
-        <p>
-            <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Resume : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15nJgYPrUrUmD8pAVQZIr0tJVHaJVO8g4/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Transcript : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15n_nmZaSY619ehogn_O0V75CKyuq7max/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Graduation Certificate : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span>
+        <ul>
+            <li class="link-cursor" style="text-align: justify;">
+                <b>💭🤔 API คืออะไร ?</b> <br>
+                Application Programming Interface คือ “ช่องทาง/ประตู” ที่เปิดให้โปรแกรมภายนอก
+                (เช่น Python, แอปมือถือ, เว็บอื่น) เข้ามาดึงข้อมูลหรือสั่งงานระบบหนึ่งได้ โดยไม่ต้องรู้รายละเอียดการทำงานข้างในทั้งหมด เช่น
+                ยกตัวอย่าง <mark>เราใช้ API ของ Open-Meteo เพื่อ “ขอข้อมูลคุณภาพอากาศ” → เขาจะส่งกลับมาเป็น JSON ที่อ่านง่าย (ตามตัวอย่างนี้เลยครับ)</mark>
+            </li><br>
+            <li class="link-cursor" style="text-align: justify;">
+                <b>💭🤔 เว็บ Air Quality API (Open-Meteo) คือใคร ?</b> <br>
+                เป็นบริการ ฟรี ที่เปิด API เกี่ยวกับสภาพอากาศและคุณภาพอากาศ ผู้พัฒนาคือ บริษัทสตาร์ทอัพขนาดเล็กจากยุโรป (Germany/Switzerland)
+                ที่อยากให้ข้อมูลอุตุนิยมวิทยาเปิดกว้างสำหรับนักพัฒนา → เน้น non-commercial use ฟรี (งานวิจัย, โปรเจกต์ส่วนตัว, นักเรียน นักศึกษา)
+                ข้อมูลคุณภาพอากาศที่ได้ (pm2.5, pm10 ฯลฯ) นั้น <mark>Open-Meteo ไม่ได้วัดเอง แต่ ดึงมาจากแหล่งข้อมูลกลาง/องค์กรวิจัยด้านอากาศ (เช่น CAMS ของยุโรป, ECMWF, NASA) </mark>
+                แล้วนำมาคำนวณ forecast/ประมวลผลอีกทีจุดประสงค์ → ให้ทุกคนเข้าถึงข้อมูลอากาศ/มลพิษ ฟรี แบบง่ายๆ ผ่าน API
+            </li><br>
+            <li class="link-cursor" style="text-align: justify;">
+                <b>💭🤔 ความถี่ในการเรียก API (Rate limit) ?</b> <br>
+                Open-Meteo Public API → ฟรีแต่มีข้อจำกัด<mark>โดยทั่วไป 1,000 requests/วัน ต่อ IP</mark> (ใช้ได้เยอะพอสมควรสำหรับโปรเจกต์ส่วนตัว)
+                ถ้าต้องการ มากกว่า (เช่น ดึงแบบ real-time หลายหมื่นครั้ง/วัน, ใช้เชิงพาณิชย์) ต้องจ่ายเงินเพื่อใช้เวอร์ชัน Pro
+                รายชั่วโมง (1 request ต่อชั่วโมง) = แค่ 24 ครั้ง/วัน → สบายมากๆ ไม่เกิน limit แน่นอน
+            </li><br>
+            <li class="link-cursor" style="text-align: justify;">
+                <b>💭🤔 ความหมายของ PM2.5 และ PM10 ?</b> <br>
+                PM = Particulate Matter = ฝุ่นละอองแขวนลอยในอากาศ<br>
+                ตัวเลข 2.5 และ 10 = ขนาดเส้นผ่านศูนย์กลางของฝุ่น (ไมครอน, µm)<br>
+                PM10 = ฝุ่นที่มีเส้นผ่านศูนย์กลาง ≤ 10 µm → ฝุ่นหยาบ (เช่น ฝุ่นดิน, ทราย, ควันไฟ, เขม่ารถ)<br>
+                PM2.5 = ฝุ่นเล็กมาก ≤ 2.5 µm → ฝุ่นละเอียด (เช่น ควันบุหรี่, ไอเสียเครื่องยนต์, การเผาไหม้)<br>
+                หน่วยที่ใช้ = µg/m³ (ไมโครกรัมต่อหนึ่งลูกบาศก์เมตรของอากาศ)<br>
+                ตัวอย่างให้เห็นภาพนะครับ :<br>
+                เส้นผมคนเรามีขนาดประมาณ 70 µm<br>
+                ฝุ่น PM10 เล็กกว่าผมประมาณ 7 เท่า<br>
+                ฝุ่น PM2.5 เล็กกว่าผมประมาณ 30 เท่า → เล็กจนแทรกเข้าปอดและเส้นเลือดได้<br>
+                หรือ <mark>ฝุ่น PM2.5 = 50 µg/m³ → “ใน 1 ลูกบาศก์เมตร ก็จะมีฝุ่น PM2.5 หนักรวมกัน 50 ไมโครกรัม แขวนลอยอยู่” (ซึ่งเป็นข้อมูลที่เราดึงมาใช้ในโปรเจกต์นี้ครับ)</mark>
+            </li>
+        </ul>
+        
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เมื่อทราบข้อมูล เบื้องต้นไปแล้ว เราจะมา<mark>ลองเรียกใช้ API ของ Open-Meteo โดยใช้ภาษา Python กันครับ</mark> 
+            (โปรเจกต์นี้ผมดึงมาอย่างเดียวนะครับ เราอาจนำค่าจตัวเลขไปวิเคราะห์ต่อได้อีก เช่น µg/m³ เท่าไรที่อันตรายแบ่งเป็น Segment สูง, กลาง หรือต่ำได้)
         </p>
+
     </section>
     
+    <!-- 2. Import Library -->
+    <section>
+        <h2 class="link-cursor">2. Import Library</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เริ่มต้นด้วยการนำเข้าไลบรารีที่จำเป็นสำหรับการทำงานกับ API และการจัดการข้อมูล ใน Python กันครับจะมีอยู่ 2 ตัวหลักๆ คือ
+            pandas (ใช้สำหรับการจัดการข้อมูล เช่นรูปแบบวันที่ต่างๆ) และ requests (ใช้สำหรับการส่งคำขอ HTTP เพื่อดึงข้อมูลจาก API)
+        </p>
+        
+        <details class="detail1">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Python</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-python">
+from requests import get 
+import pandas as pd
+
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            แน่นอนครับว่าสำหรับโปรเจกต์นี้ ผมจะขออนุญาตนำเสนอวิธีการเรียกใช้ API เป็นหลักเพื่อดึงข้อมูลสภาพอากาศมานะครับ หากใครต้องการ
+            <mark>เรื่องของ Coding ผมได้เขียนอธิบายไว้ใน Code Comment ทีละบรรทัดไว้แล้วครับ</mark> ใครที่สนใจสามารถเข้าไปดูได้ที่..
+        </p>
+        
+        <ul>
+            <li class="link-cursor">
+                <a href="https://colab.research.google.com/drive/1C9q4bvxtMzzw_7L1CMXhHkP1UAARDDVl?usp=sharing"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> ✅ อ่าน Code, ✅ ลองเปลี่ยนพิกัดดูได้ครับ
+            </li>
+            <li class="link-cursor">
+                <a
+                href="https://github.com/Phubordin/portfolio-project/blob/e4a103f0912a2564ca4e6fda55a8faa92696b9a8/portfolio-project/P11-Extracting-Public-API-Data-with-Python-Air-Quality-Analytics.ipynb"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25">
+                <b> Github</b></a> ✅ อ่าน Code, ❌ ลองเปลี่ยนพิกัดดูได้ครับ
+            </li>
+        </ul>
+
+    </section>
+    
+    <!-- 3. Configure Coordinates and Files -->
+    <section>
+        <h2 class="link-cursor">3. Configure Coordinates and Files</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ต่อมา เราจะมากำหนดค่าพิกัดละติจูด (latitude) และลองจิจูด (longitude) สำหรับกรุงเทพมหานคร ประเทศไทย
+            และจะ<mark>สร้างไฟล์ Excel เพื่อบันทึกข้อมูลที่ดึงมาจาก API</mark> กันครับ โดยมีชื่อว่า <mark>"air_quality.xlsx"</mark>
+            (ใครอยากเปลี่ยนพิกัดเมืองอื่นๆ ก็สามารถเปลี่ยนค่า lat, lon ได้เลยครับ) ณ ตัวอย่างนี้จะเป็น<mark>พิกัดของกรุงเทพฯ
+            ที่ lat = 13.7563, lon = 100.5018 ครับ</mark>
+        </p>
+        
+        <details class="detail1">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Python</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-python">
+lat, lon = 13.7563, 100.5018
+file_name = "air_quality.xlsx"
+
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            <mark>เรื่องของ Coding ผมได้เขียนอธิบายไว้ใน Code Comment ทีละบรรทัดไว้แล้วครับ</mark> ใครที่สนใจสามารถเข้าไปดูได้ที่..
+        </p>
+        
+        <div class="iframe-container cursor-zoom-in">
+            <img src="p11-lad-log.png" width="700" class="cursor-zoom-in" onclick="openGalleryModal('p11-lad-log.png')">
+        </div>
+        
+        <ul>
+            <li class="link-cursor">
+                <a href="https://colab.research.google.com/drive/1C9q4bvxtMzzw_7L1CMXhHkP1UAARDDVl?usp=sharing"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> ✅ อ่าน Code, ✅ ลองเปลี่ยนพิกัดดูได้ครับ
+            </li>
+            <li class="link-cursor">
+                <a
+                href="https://github.com/Phubordin/portfolio-project/blob/e4a103f0912a2564ca4e6fda55a8faa92696b9a8/portfolio-project/P11-Extracting-Public-API-Data-with-Python-Air-Quality-Analytics.ipynb"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25">
+                <b> Github</b></a> ✅ อ่าน Code, ❌ ลองเปลี่ยนพิกัดดูได้ครับ
+            </li>
+        </ul>
+    </section>
+    
+    <!-- 4. Retrieve Data for the Past 90 Days -->
+    <section>
+        <h2 class="link-cursor">4. Retrieve Data for the Past 90 Days</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เริ่มเขียนโค้ดเพื่อดึงข้อมูลคุณภาพอากาศย้อนหลัง 90 วันจาก API ของ Open-Meteo กันครับ
+        </p>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            กระบวนการโค้ดหลักๆ คือ<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b> 1️⃣ กำหนด URL ของ API ➡︎ 2️⃣ รับข้อมูล API ➡︎ 3️⃣ จัดการข้อมูลรูปแบบวันที่ ➡︎ 4️⃣ บันทึกลงไฟล์ Excel</b>
+        </p>
+        
+        <details class="detail1">
+
+            <summary>Code</summary>
+
+            <div class="code-container" style="position: relative;">
+                <div class="code-header">
+                    <span class="language-label link-cursor">Python</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                </div>
+                <pre><code class="link-cursor language-python">
+url = (
+    "https://air-quality-api.open-meteo.com/v1/air-quality"
+    f"?latitude={lat}&longitude={lon}"
+    "&hourly=pm10,pm2_5"
+    "&past_days=90"
+    "&timezone=Asia/Bangkok"         
+)
+
+api = get(url)
+api_json = api.json()
+df = pd.DataFrame(api_json["hourly"])
+
+df["time"] = pd.to_datetime(df["time"]).dt.tz_localize("Asia/Bangkok")
+
+cut_time = pd.Timestamp.now(tz="Asia/Bangkok").floor("h") - pd.Timedelta(hours=1)
+
+df = df[df["time"] <= cut_time]
+
+df["time"] = df["time"].dt.tz_localize(None)
+
+df.to_excel(file_name, index=False)
+print(f"สร้างไฟล์ใหม่พร้อมข้อมูลย้อนหลัง 90 วันจนถึง {cut_time} ✅ (เวลาย้อนหลัง 1 ชม.เทียบกับเวลา ณ ปัจจุบัน เพื่อการยืนยันข้อมูลที่ถูกต้อง)")
+
+df = pd.read_excel(file_name)
+print(df)
+
+
+                    </code></pre>
+                <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+            </div>
+
+        </details>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            จะสังเกตได้ว่าลิงก์ <code class="inline-code">url</code> สามารถกำหนดพารามิเตอร์ต่างๆ ได้ เช่น
+        </p>
+
+        <ul>
+            <li class="link-cursor" style="text-align: justify;"><code class="inline-code">?latitude={lat}&longitude={lon}</code> :<br>
+                 กำหนดพิกัดละติจูด (latitude) และลองจิจูด (longitude) ของสถานที่ที่ต้องการดึงข้อมูล
+            </li><br>
+            <li class="link-cursor" style="text-align: justify;"><code class="inline-code">&hourly=pm10,pm2_5</code> :<br>
+                 ระบุว่าต้องการข้อมูลคุณภาพอากาศรายชั่วโมง (hourly) สำหรับฝุ่น PM10 และ PM2.5
+            </li><br>
+            <li class="link-cursor" style="text-align: justify;"><code class="inline-code">&past_days=90</code> :<br>
+                 ระบุจำนวนวันที่ต้องการดึงข้อมูลย้อนหลัง (ในที่นี้คือ 90 วัน)
+            </li><br>
+            <li class="link-cursor" style="text-align: justify;"><code class="inline-code">timezone=Asia/Bangkok</code> :<br>
+                 กำหนดโซนเวลาที่ต้องการใช้ (ในที่นี้คือ Asia/Bangkok)
+            </li>
+        </ul>
+
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เราก็จะได้ข้อมูลคุณภาพอากาศฝุ่น PM10 และ PM2.5 รายชั่วโมงย้อนหลัง 90 วัน ที่กรุงเทพมหานคร ประเทศไทยเป็นที่เรียบร้อยแล้วครับ
+            เราสามารถนำข้อมูลนี้ไปวิเคราะห์ต่อยอดได้อีก เช่น (คุณภาพ อากาศดี/ปานกลาง/แย่ ควรมีค่าไมโครกรัมต่อ ลูกบาศก์เมตร เท่าไรกันแน่ เป็นต้น) 
+            <mark>เรื่องของ Coding ผมได้เขียนอธิบายไว้ใน Code Comment ทีละบรรทัดไว้แล้วครับ</mark> ใครที่สนใจสามารถเข้าไปดูได้ที่..
+        </p>
+        
+        <ul>
+            <li class="link-cursor">
+                <a href="https://colab.research.google.com/drive/1C9q4bvxtMzzw_7L1CMXhHkP1UAARDDVl?usp=sharing"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="colab.png" width="25">
+                <b> Google Colab</b></a> ✅ อ่าน Code, ✅ ลองเปลี่ยนพิกัดดูได้ครับ
+            </li>
+            <li class="link-cursor">
+                <a
+                href="https://github.com/Phubordin/portfolio-project/blob/e4a103f0912a2564ca4e6fda55a8faa92696b9a8/portfolio-project/P11-Extracting-Public-API-Data-with-Python-Air-Quality-Analytics.ipynb"
+                class="hover-expand certificate-school notion-icon" target="_blank"><img src="github.png" width="25">
+                <b> Github</b></a> ✅ อ่าน Code, ❌ ลองเปลี่ยนพิกัดดูได้ครับ
+            </li>
+        </ul>
+    </section>
+    
+    <!-- Github & Google Colab -->
+    <section id="file">
+        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand" target="_blank"><img src="github.png"
+                    width="30" class="notion-icon"></a> Github &
+            <a href="https://colab.research.google.com/drive/1C9q4bvxtMzzw_7L1CMXhHkP1UAARDDVl?usp=sharing"
+                class="hover-expand" target="_blank"><img src="colab.png" width="30" class="notion-icon"></a> Google Colab
+        </h2>
+        
+        <p>
+            <a href="https://colab.research.google.com/drive/1C9q4bvxtMzzw_7L1CMXhHkP1UAARDDVl?usp=sharing"
+                class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+                <img src="colab.png" width="25">&nbsp;Google Colab
+            </a> <br>
+            <a href="https://github.com/Phubordin/portfolio-project/blob/c36d6528767eceea707a3cce71fde291a74802d5/portfolio-project/P11-Extracting-Public-API-Data-with-Python-Air-Quality-Analytics.ipynb"
+                class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+                <img src="github.png" width="25">&nbsp;Github
+            </a>
+        </p>
+
+    </section>
+
+    <!-- Prism Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- Prism Language Components -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-r.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>
 </body>
