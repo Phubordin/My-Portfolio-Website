@@ -819,3 +819,53 @@ document.querySelectorAll("details").forEach((detail) => {
 });
 });
 
+/*-------------------------------------------------------------------------------- */
+const hamburger = document.getElementById('hamburger')
+const mobileMenu = document.getElementById('mobileMenu')
+const closeBtn = document.getElementById('closeBtn')
+
+
+function openMenu(){
+mobileMenu.classList.add('open')
+mobileMenu.setAttribute('aria-hidden','false')
+hamburger.setAttribute('aria-expanded','true')
+closeBtn.focus()
+document.body.style.overflow = 'hidden'
+}
+
+
+function closeMenu(){
+mobileMenu.classList.remove('open')
+mobileMenu.setAttribute('aria-hidden','true')
+hamburger.setAttribute('aria-expanded','false')
+hamburger.focus()
+document.body.style.overflow = ''
+}
+
+
+hamburger.addEventListener('click', ()=>{
+const expanded = hamburger.getAttribute('aria-expanded') === 'true'
+if(expanded) closeMenu(); else openMenu();
+})
+
+
+closeBtn.addEventListener('click', closeMenu)
+
+
+mobileMenu.addEventListener('click', (e)=>{
+if(e.target === mobileMenu) closeMenu()
+})
+
+
+document.addEventListener('keydown', (e)=>{
+if(e.key === 'Escape' && mobileMenu.classList.contains('open')){
+closeMenu()
+}
+})
+
+
+document.querySelectorAll('.mobile-link').forEach(a=>{
+a.addEventListener('click', ()=>{
+closeMenu()
+})
+})
