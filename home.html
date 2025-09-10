@@ -23,7 +23,8 @@
 
 <div class="theme-switch-wrapper">
     <!-- ปุ่ม Blur Background -->
-    <label class="switch"><input type="checkbox" id="theme-toggle">
+    <label class="switch">
+        <input type="checkbox" id="theme-toggle">
         <span class="slider"></span>
         <span class="switch-label"></span>
     </label>
@@ -42,6 +43,10 @@
 <!-- ปุ่มเลื่อนไปด้านบน -->
 <button id="scrollToTopBtn" title="Go to top">⇧</button>
 <button id="toggle-toc-btn">≡</button>
+<!-- Hamburger for mobile -->
+<button class="hamburger" id="hamburger" aria-haspopup="true" aria-controls="mobileMenu" aria-expanded="false" aria-label="เปิดเมนู">
+◀
+</button>
 <aside id="table-of-contents" class="active">
     <h3 class="link-cursor">Navigation Menu</h3>
     <ul id="toc-list"></ul>
@@ -49,12 +54,15 @@
 
 <body class="fade-slide-in home-page">
     <header>
-        <div class="header-background"></div>
-        <span class= "link-cursor strong1"><span style="text-shadow: none;">Data </span>AI Driven</span>
+        <div class="header-background">
+        </div>
+        <span class= "link-cursor strong1">
+            <span style="text-shadow: none;">Data </span>AI Driven
+        </span>
     </header>
-
+        
     <!-- Navigation Bar -->
-    <nav>
+    <nav class="primary" aria-label="เมนูหลัก">
         <ul>
             <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
             <li><a href="home.html" class="active" onclick="scrollToTop(event)">🏠 Home</a></li>
@@ -66,7 +74,6 @@
                 <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
                 <ul class="dropdown-menu">
                     <li><a onclick="navigateToExperience_leowood()">Leowood Intertrade Co Ltd. </a></li>
-                    <li><a onclick="navigateToExperience_arrow()">Arrow IT Systems Co Ltd.</a></li>
                 </ul>
             </li>
 
@@ -113,6 +120,71 @@
             <li><a href="contact.html" onclick="navigateToContact()">Contact</a></li>
         </ul>
     </nav>
+    
+    <!-- Mobile overlay menu -->
+    <div id="mobileMenu" class="mobile-panel" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="panel-inner">
+            <button class="close-btn" id="closeBtn" aria-label="ปิดเมนู">✕</button>
+                <nav aria-label="เมนูมือถือ">
+                    <ul>
+                        <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
+                        <li><a href="home.html" class="active" onclick="scrollToTop(event)">🏠 Home</a></li><br>
+                        <!-- Home Tab with House Emoji -->
+                        <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li>
+                        <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
+                        <!-- Work Experience Dropdown -->
+                        <li class="dropdown">
+                            <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="navigateToExperience_leowood()">Leowood Intertrade Co Ltd. </a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Projects Dropdown -->
+                        <li class="dropdown">
+                            <a href="project.html" onclick="navigateToProject()">Project Overview</a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="navigateToProject_ggsheet_dsb10()">P1 : Data Exploration and Transformation with
+                                        <img src="sheets.png" style="vertical-align:middle" width="25"> Google Sheets</a></li>
+                                <li><a onclick="navigateToProject_cafe_r_sql_dsb10()">P2 : Building a Café Restaurant Database
+                                        Using  <img src="R.png" style="vertical-align:middle" width="25"> R and <img src="SQL.png"
+                                            style="vertical-align:middle" width="25"> SQL</a></li>
+                                <li><a onclick="navigateToProject_rfm_py_dsb10()">⭐️ P3 : Customer Segmentation and RFM Analysis Using
+                                        <img src="python.png" style="vertical-align:middle" width="25">Python and <img src="R.png"
+                                            style="vertical-align:middle" width="25"> R for Strategic Business Insight</a></li>
+                                <li><a onclick="navigateToProject_pyc_r_py_dsb10()">P4 : Creating a Multi-Round Rock-Paper-Scissors
+                                        Game in <img src="R.png" style="vertical-align:middle" width="25"> R and <img src="python.png"
+                                            style="vertical-align:middle" width="25"> Python</a></li>
+                                <li><a onclick="navigateToProject_nycflight13_23_dsb10()">⭐️ P5 : EDA and Comparison of NYC Flights
+                                        Data (2013 vs. 2023) with  <img src="R.png" style="vertical-align:middle" width="25"> R</a>
+                                </li>
+                                <li><a onclick="navigateToProject_vizdimond_dsb10()">⭐️ P6 : EDA Visualization of the Diamond Dataset
+                                        Using  <img src="R.png" style="vertical-align:middle" width="25"> R and R Markdown </a></li>
+                                <li><a onclick="navigateToProject_titanic_glm_dsb10()">P7 : Logistic Regression Analysis on the
+                                        Titanic Dataset Using  <img src="R.png" style="vertical-align:middle" width="25"> R</a></li>
+                                <li><a onclick="navigateToProject_looker_dsb10()">⭐️ P8 : Data-Driven Insights: Sales Performance &
+                                        Profitability in <img src="looker.png" style="vertical-align:middle" width="25">Looker
+                                        Studio</a></li>
+                                <li><a onclick="navigateToProject_pizza_chatbot_dsb10()">P9 : Chatbot Development for a Pizza
+                                        Business Using  <img src="R.png" style="vertical-align:middle" width="25"> R Programming</a>
+                                </li>
+                                <li><a onclick="navigateToProject_atm_oop_py_dsb10()">P10 : Object-Oriented ATM System: Financial
+                                        Transactions with <img src="python.png" style="vertical-align:middle" width="25"> Python
+                                        OOP</a></li>
+                                <li><a onclick="navigateToProject_mini_api_py()">mini P11 : Extracting Public API Data with <img
+                                            src="python.png" style="vertical-align:middle" width="25"> Python: Air Quality
+                                        Analytics</a></li>
+                                <li><a onclick="navigateToProject_mini_xml_cafe()">mini P12 : Cafe Menu Data Structure with <img
+                                            src="xml.png" style="vertical-align:middle" width="25"> XML</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li><br>
+                        <li><a href="contact.html" onclick="navigateToContact()">Contact</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </div>
 
     <a style= "text-decoration: none;"  href="index.html">
         <button class="back-button">⬅︎ 📭</button>
@@ -143,14 +215,6 @@
             <p>
                 <span class="company-name">Leowood Intertrade Co Ltd.</span>
                 <span class="date-info"><i>Jul 2023 - Apr 2024 (10 Months)</i></span>
-            </p>
-        </div>
-
-        <div class="experience cursor21" onclick="navigateToExperience_arrow()">
-            <h3>Project Internship</h3>
-            <p>
-                <span class="company-name">Arrow IT Systems Co Ltd.</span>
-                <span class="date-info"><i>Jan 2022 - Jun 2022 (6 Months)</i></span>
             </p>
         </div>
 

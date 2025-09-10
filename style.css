@@ -150,7 +150,7 @@ body.no-transition {
         font-size: 1.1em;
         padding: 15px 25px;
         text-decoration: none;
-        color: #333;
+        color: #f20000;
         border-radius: 5px;
         white-space: nowrap;
     }
@@ -233,14 +233,6 @@ body.no-transition {
     .tableizer-table th,
     .tableizer-table td {
         padding: 6px;
-    }
-    
-    .back-button {
-        top: 1rem;
-        left: 0.5rem;
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-        gap: 0.5rem;
     }
 }
 
@@ -561,12 +553,12 @@ nav ul li.dropdown.open .dropdown-menu {
 .back-button {
   position: fixed;
   top: 5rem;
-  left: 1rem;
+  left: 0;
   z-index: 9999;
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.75rem 1.5rem;
+  padding: 16px;
   background: linear-gradient(145deg, #6366f1 0%, #3b82f6 50%, #2563eb 100%);
   color: #fff;
   border-radius: 12px;
@@ -578,6 +570,7 @@ nav ul li.dropdown.open .dropdown-menu {
     0 4px 6px rgba(59, 130, 246, 0.2),
     0 10px 15px rgba(59, 130, 246, 0.1);
   cursor: url('cursor1.png'), auto;
+  height: 54px;
 }
 
 
@@ -1107,7 +1100,7 @@ input:checked+.slider1:before {
 .theme-switch1-wrapper { /*เบลอ*/
     position: fixed;
     top: 95px;
-    right: 20px;
+    right: 25px;
     display: flex;
     align-items: center;
     z-index: 10000;
@@ -1595,15 +1588,30 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
 /* ---------------------------------------------------------------------------------------- */
 *{box-sizing:border-box}
 
-.hamburger{
-    display:none;
-    background:transparent;
-    border:0;
-    color:inherit;
-    font-size:20px;
-    padding:8px;
-    cursor: url('cursor2.png'), auto;
-    position: sticky;
+/* ปุ่ม Hamburger */
+.hamburger {
+    display: none; /* ซ่อนบน desktop */
+    position: absolute;
+    top: 80px;                     /* ปรับจากให้ห่างจากด้านบน 12px */
+    right: 0;                     /* ชิดขวาสุด */
+    background: linear-gradient(145deg, #6366f1 0%, #3b82f6 50%, #2563eb 100%);
+    border-radius: 12px 0 0 12px;   /* มุมโค้งด้านซ้าย */
+    font-size: 16px;              /* ขนาดลูกศร */
+    width: 23px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: url('cursor2.png'), pointer;
+    transition: background 0.25s ease, transform 0.2s ease;
+    z-index: 100;
+    border: none;                  /* กันไว้ถ้า browser บางตัวใส่ border */
+    outline: none;                 /* เอาเส้น focus outline ออก */
+}
+
+/* เอฟเฟกต์เวลา hover */
+.hamburger:hover {
+    transform: scale(1.05);
 }
 
 .mobile-panel {
@@ -1611,7 +1619,7 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
     inset: 0;                     /* ยึดเต็มพื้นที่จอ (top:0; right:0; bottom:0; left:0;) */
     display: flex;                /* ใช้ flexbox สำหรับจัดเรียงเนื้อหาภายใน */
     flex-direction: column;       /* จัดเรียงลูกในแนวตั้ง */
-    align-items: flex-start;      /* จัดลูกชิดซ้าย (เริ่มจากซ้ายมือ) */
+    align-items: center;      /* จัดให้อยู่กลางแนวตั้ง */
     padding: 16px;                /* ระยะห่างรอบใน 16px */
     padding-top: 60px;            /* เพิ่ม padding ด้านบนให้มากขึ้น (เผื่อพื้นที่ header ปุ่มปิด) */
     background: rgba(0,0,0,0.6);  /* พื้นหลังโปร่งแสงสีดำ 60% */
@@ -1626,11 +1634,6 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
     z-index: 60000;                  /* กำหนดลำดับชั้นให้อยู่บนสุด (เหนือ element อื่น) */
 }
 
-/* text-shadow: 0px 0px 10px cyan,
-        0px 0px 20px cyan,
-        0px 0px 30px cyan,
-        0px 0px 60px cyan; */
-
 .mobile-panel.open{
     visibility:visible;
     opacity:1;
@@ -1638,19 +1641,22 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
 }
 
 .mobile-panel .panel-inner{
-    background:#fff;
+    background:rgb(255, 255, 255);
     color:#111;
     width:100%;
     max-width:360px;
     border-radius:10px;
-    padding:12px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.2)
+    padding:8px;
+    box-shadow: 0px 0px 10px cyan,
+                0px 0px 20px cyan,
+                0px 0px 40px cyan,
+                0px 0px 60px cyan;
 }
 
 .close-btn {
     position: absolute;                 /* กำหนดตำแหน่งแบบ absolute */
-    top: 12px;                          /* ชิดด้านบน 12px */
-    left: 12px;                         /* ชิดด้านซ้าย 12px */
+    top: 1px;                          /* ชิดด้านบน 12px */
+    right: 1px;                          /* ชิดด้านขวา */
     background: rgba(255, 255, 255, 0.15); /* พื้นหลังโปร่งแสงดูหรู */
     border: 1px solid rgba(255, 255, 255, 0.3); /* เส้นขอบบาง ๆ */
     border-radius: 50%;                 /* ทำให้ปุ่มเป็นวงกลม */
@@ -1679,4 +1685,8 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
     .hamburger{
         display:inline-flex
     }
+    
+    /* .back-button {
+        display: none;
+    } */
 }

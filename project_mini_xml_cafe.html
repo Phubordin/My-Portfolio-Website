@@ -9,7 +9,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-0MKCCGG3QF');
     </script>
     <meta charset="UTF-8">
@@ -44,6 +43,10 @@
 <!-- ปุ่มเลื่อนไปด้านบน -->
 <button id="scrollToTopBtn" title="Go to top">⇧</button>
 <button id="toggle-toc-btn">≡</button>
+<!-- Hamburger for mobile -->
+<button class="hamburger" id="hamburger" aria-haspopup="true" aria-controls="mobileMenu" aria-expanded="false" aria-label="เปิดเมนู">
+◀
+</button>
 <aside id="table-of-contents" class="active">
     <h3 class= "link-cursor">Navigation Menu</h3>
     <ul id="toc-list"></ul>
@@ -57,11 +60,6 @@
             <span style="text-shadow: none;">Mini Project 12 : </span>
             Cafe Menu Data Structure with <img src="xml.png"  style="vertical-align:middle" width="25" >XML
         </span>
-
-        <!-- Hamburger for mobile -->
-        <button class="hamburger" id="hamburger" aria-haspopup="true" aria-controls="mobileMenu" aria-expanded="false" aria-label="เปิดเมนู">
-        ☰
-        </button>
     </header>
         
     <!-- Navigation Bar -->
@@ -75,7 +73,6 @@
                 <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
                 <ul class="dropdown-menu">
                     <li><a onclick="navigateToExperience_leowood()">Leowood Intertrade Co Ltd. </a></li>
-                    <li><a onclick="navigateToExperience_arrow()">Arrow IT Systems Co Ltd.</a></li>
                 </ul>
             </li>
 
@@ -107,16 +104,16 @@
         <div class="panel-inner">
             <button class="close-btn" id="closeBtn" aria-label="ปิดเมนู">✕</button>
                 <nav aria-label="เมนูมือถือ">
+                    
                     <ul>
                         <!-- <li><a href="index.html" onclick = "navigateToIndex()" ><img src="door.png" width="25" class="notion-icon"></a></li> come back index page -->
-                        <li><a href="home.html" onclick="navigateToHome()">🏠 Home </a></li> <!-- Home Tab with House Emoji -->
+                        <li><a href="home.html" onclick="navigateToHome()">🏠 Home </a></li><br> <!-- Home Tab with House Emoji -->
                         <li><a href="about.html" onclick="navigateToAbout()">About Me</a></li> <!-- เปลี่ยนเป็นลิงก์ไปยัง about.html -->
                         <!-- Work Experience Dropdown -->
                         <li class="dropdown">
                             <a href="experience.html" onclick="navigateToExperience()">Work Experience</a>
                             <ul class="dropdown-menu">
                                 <li><a onclick="navigateToExperience_leowood()">Leowood Intertrade Co Ltd. </a></li>
-                                <li><a onclick="navigateToExperience_arrow()">Arrow IT Systems Co Ltd.</a></li>
                             </ul>
                         </li>
 
@@ -138,7 +135,7 @@
                                 <li><a class="active1" onclick="navigateToProject_mini_xml_cafe()" >mini P12 : Cafe Menu Data Structure with <img src="xml.png"  style="vertical-align:middle" width="25" >XML</a></li>
                             </ul>
                         </li>
-                        <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li>
+                        <li><a href="certificate.html" onclick="navigateToCertificate()">Certificates</a></li><br>
                         <li><a href="contact.html" onclick="navigateToContact()">Contact</a></li>
                     </ul>
                 </nav>

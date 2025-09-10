@@ -465,11 +465,6 @@ function navigateToExperience_leowood() {
     window.location.href = "experience_leowood.html";
 }
 
-function navigateToExperience_arrow() {
-    event.stopPropagation(); // ป้องกันไม่ให้ event ถูก propagate ไปยังพ่อแม่
-    window.location.href = "experience_arrow.html";
-}
-
 /*------------------------------------------------------------------------------------------------------------------------- */
 // เพิ่ม script เล็กน้อยเพื่อให้แน่ใจว่า tooltip แสดงผลถูกต้อง
 document.addEventListener('DOMContentLoaded', function () {
