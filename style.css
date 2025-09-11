@@ -102,7 +102,7 @@ body.no-transition {
 }
 
 .project-page {
-    min-height: 575vh;
+    min-height: 700vh;
 }
 
 .certificate-page {
@@ -481,7 +481,6 @@ nav ul li .dropdown-menu {
     /* ทำให้ scrollbar บางลง */
     scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
 }
-
 
 nav ul li .dropdown-menu li {
     display: block;

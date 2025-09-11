@@ -90,7 +90,7 @@
                     <li><a onclick="navigateToProject_looker_dsb10()" >⭐️ P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"  style="vertical-align:middle" width="25" >Looker Studio</a></li>
                     <li><a onclick="navigateToProject_pizza_chatbot_dsb10()" >P9 : Chatbot Development for a Pizza Business Using <img src="R.png"  style="vertical-align:middle" width="25" > Programming</a></li>
                     <li><a onclick="navigateToProject_atm_oop_py_dsb10()" >P10 : Object-Oriented ATM System: Financial Transactions with <img src="python.png"  style="vertical-align:middle" width="25" >Python OOP</a></li>
-                    <li><a onclick="scrollToTop(event)" onclick="navigateToProject_mini_api_py()" >mini P11 : Extracting Public API Data with <img src="python.png"  style="vertical-align:middle" width="25" >Python: Air Quality Analytics</a></li>
+                    <li><a onclick="navigateToProject_mini_api_py()" >mini P11 : Extracting Public API Data with <img src="python.png"  style="vertical-align:middle" width="25" >Python: Air Quality Analytics</a></li>
                     <li><a class="active1" onclick="navigateToProject_mini_xml_cafe()" >mini P12 : Cafe Menu Data Structure with <img src="xml.png"  style="vertical-align:middle" width="25" >XML</a></li>
                 </ul>
             </li>
@@ -131,7 +131,7 @@
                                 <li><a onclick="navigateToProject_looker_dsb10()" >⭐️ P8 : Data-Driven Insights: Sales Performance & Profitability in <img src="looker.png"  style="vertical-align:middle" width="25" >Looker Studio</a></li>
                                 <li><a onclick="navigateToProject_pizza_chatbot_dsb10()" >P9 : Chatbot Development for a Pizza Business Using <img src="R.png"  style="vertical-align:middle" width="25" > Programming</a></li>
                                 <li><a onclick="navigateToProject_atm_oop_py_dsb10()" >P10 : Object-Oriented ATM System: Financial Transactions with <img src="python.png"  style="vertical-align:middle" width="25" >Python OOP</a></li>
-                                <li><a onclick="scrollToTop(event)" onclick="navigateToProject_mini_api_py()" >mini P11 : Extracting Public API Data with <img src="python.png"  style="vertical-align:middle" width="25" >Python: Air Quality Analytics</a></li>
+                                <li><a onclick="navigateToProject_mini_api_py()" >mini P11 : Extracting Public API Data with <img src="python.png"  style="vertical-align:middle" width="25" >Python: Air Quality Analytics</a></li>
                                 <li><a class="active1" onclick="navigateToProject_mini_xml_cafe()" >mini P12 : Cafe Menu Data Structure with <img src="xml.png"  style="vertical-align:middle" width="25" >XML</a></li>
                             </ul>
                         </li>
@@ -153,36 +153,293 @@
         <button class="back-button">⬅︎ </button>
     </a>
 
+    <!-- 1. Project Introduction -->
     <section>
-        <h2 class = "link-cursor">Dashboard</h2>
-        <p class = "link-cursor">Dashboard ที่แสดงอยู่ด้านล่างนี้ เป็นเครื่องมือที่ถูกสร้างขึ้นหลังจากจบ Project ตัวนี้เรียบร้อยเเล้ว
-            ซึ่งใช้ในการ monitor ผลประกอบการของร้านค้าแห่งหนึ่ง และตอบคำถามที่สงสัยมาตอนต้น <strong>ไปดูกันเลย!</strong>
-            สามาถลองกดเล่นที่ Dashboard ได้เลยนะครับ
+        <h2 class="link-cursor">1. Project Introduction</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            สวัสดีครับ สำหรับโปรเจกต์นี้ผมจะลองทำความรู้จักการเขียนภาษา XML เก็บข้อมูลเมนูอาหารร้านคาเฟ่ง่ายๆ ของเรากันครับ
+            ก่อนอื่นผมจะมาทำความรู้จักหัวข้อเหล่านี้กันก่อน
         </p>
-        <p class = "link-cursor">ขั้นตอนแรก ผมจะ Explore Dataset เพื่อดูว่าหน้าตาของ data ก้อนนี้เป็นยังไงบ้าง</p>
+
+        <ul>
+            <li class="link-cursor" style="text-align: justify;"><b>💭🤔 ภาษา XML คืออะไร สำคัญยังไง ใช้ทำอะไร ?</b><br>
+                (Extensible Markup Language) คือภาษาที่ใช้เก็บข้อมูลในรูปแบบที่ “อ่านง่ายทั้งคนและคอมพิวเตอร์”
+                <mark>ทำหน้าที่เก็บ/แลก ข้อมูล, ตั้งค่าโปรแกรม</mark> ซึ่งเราสามารถกำหนดเองได้ว่าจะมีแท็กอะไร (เช่น <code class="inline-code">&lt;rice&gt;</code>, <code class="inline-code">&lt;drink&gt;</code> )
+                เน้นที่ โครงสร้างของข้อมูล มากกว่าการแสดงผล
+                <mark>ข้อดีคือมันเป็น มาตรฐานสากล สามารถใช้แลกเปลี่ยนข้อมูลระหว่างระบบต่าง ๆ ได้</mark> เช่น
+                <ul>
+                    <li class="link-cursor" style="text-align: justify;">
+                        ใบเมนูร้านกาแฟ → XML เก็บเป็นโครงสร้างข้อมูล
+                    </li>
+                    <li class="link-cursor" style="text-align: justify;">
+                        แอปมือถือ → อ่านไฟล์ XML นี้แล้วเอาไปแสดงผลใน UI
+                    </li>
+                    <li class="link-cursor" style="text-align: justify;">
+                        ข้อมูลจะเหมือนกัน 100% ไม่ว่าจะแสดงผลที่เว็บ, แอป, หรือส่งไปเครื่องอื่น
+                    </li>
+                </ul>เหมือนเรามี คลังสินค้า (XML) แล้วใครอยากมาซื้อของ (อ่านข้อมูล) ก็เข้ามาหยิบได้เลย
+            </li><br>
+            <li class="link-cursor" style="text-align: justify;"><b>💭🤔 XML ต่างจาก html มากน้อยแค่ไหน ?</b><br>
+                HTML = หน้าตาของเมนู, XML = เนื้อหาของเมนู<br>
+                <table  class="link-cursor tableizer-table">
+                    <thead>
+                        <tr class="tableizer-firstrow">
+                            <th>Subject</th>
+                            <th>XML</th>
+                            <th>HTML</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>วัตถุประสงค์</td>
+                            <td>เก็บและขนส่งข้อมูล (Data storage &amp; exchange)</td>
+                            <td>แสดงผลข้อมูลบนเว็บ (Presentation)</td>
+                        </tr>
+                        <tr>
+                            <td>แท็ก</td>
+                            <td>เราสามารถกำหนดเองได้ เช่น <code class="inline-code">&lt;coffee&gt;</code> <code class="inline-code">&lt;price&gt;</code></td>
+                            <td>มีมาตรฐานตายตัว เช่น <code class="inline-code">&lt;h1&gt;</code> <code class="inline-code">&lt;p&gt;</code> <code class="inline-code">&lt;img&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>โฟกัส</td>
+                            <td>ความหมายและโครงสร้างของข้อมูล (What is it?)</td>
+                            <td>การแสดงผลและ layout (How it looks?)</td>
+                        </tr>
+                        <tr>
+                            <td>เบราว์เซอร์</td>
+                            <td>เปิดได้ แต่จะแสดงเหมือน plain text</td>
+                            <td>เปิดแล้ว render เป็นหน้าเว็บสวยงาม</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li><br>
+            <li class="link-cursor" style="text-align: justify;"><b>💭🤔 XML ในโลกของการทำงานมันเอาไปประยุกต์ยังไง ?</b><br>
+                XML ในโลกการทำงานจริง ถูกใช้เยอะมาก แม้จะมี JSON เข้ามาแทนที่ในหลาย ๆ ที่ แต่ XML ก็ยังสำคัญอยู่ โดยเฉพาะในองค์กรใหญ่ ๆ และระบบที่ต้องการมาตรฐานชัดเจน<br>
+                เพราะมัน มี Schema / Validation ชัดเจน → ลดโอกาสข้อมูลเพี้ยน
+                <ol>
+                    <li class="link-cursor" style="text-align: justify;"><b>การแลกเปลี่ยนข้อมูลระหว่างระบบ (Data Exchange)</b>
+                        <ul>
+                            <li class="link-cursor" style="text-align: justify;">
+                                <mark>XML = มาตรฐานกลาง สำหรับให้ระบบต่าง ๆ คุยกัน</mark> เช่น<br>
+                                - ระบบร้านอาหารส่งใบเสร็จขายรายวันให้บริษัทบัญชี → ส่งเป็นไฟล์ XML<br>
+                                - เว็บชำระเงิน (Payment Gateway) ส่งผลการจ่ายเงิน → กลับมาเป็น XML
+                            </li>
+                            <li class="link-cursor" style="text-align: justify;">
+                                📌 เคสจริง :<br>
+                                - ธนาคาร, บริษัทประกัน, โรงพยาบาล → ใช้ XML เพื่อแลกข้อมูลกันระหว่างระบบ<br>
+                                - ภาครัฐ (เช่น ใบกำกับภาษีอิเล็กทรอนิกส์) → ใช้ XML เพราะอ่านได้ทั้งคนและเครื่อง
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="link-cursor" style="text-align: justify;"><b>เก็บโครงสร้างเอกสาร (Structured Documents)</b>
+                        <ul>
+                            <li class="link-cursor" style="text-align: justify;">
+                                <mark>XML เหมาะสำหรับเอกสารที่มีโครงสร้างซ้ำๆ และช่วยให้ระบบซอฟต์แวร์เข้าใจ “เนื้อหา + ความสัมพันธ์” ของข้อมูล</mark> เช่น<br>
+                                - ไฟล์ Docx, XLSX, PPTX ของ Microsoft Office จริง ๆ ข้างในคือ XML ทั้งหมด<br>
+                                - ไฟล์ SVG (ภาพ Vector) ก็เป็น XML
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="link-cursor" style="text-align: justify;"><b>Feed ข้อมูลแบบ Realtime</b>
+                        <ul>
+                            <li class="link-cursor" style="text-align: justify;">
+                                เว็บข่าว, บล็อก, Podcast → <mark>ใช้ RSS/Atom Feed ซึ่งเขียนด้วย XML</mark>
+                            </li>
+                            <li class="link-cursor" style="text-align: justify;">
+                                แอปอ่านข่าวสามารถ subscribe feed แล้วดึงบทความล่าสุดได้
+                            </li>
+                            <li class="link-cursor" style="text-align: justify;">
+                                <mark>YouTube ยังมี RSS Feed ที่เป็น XML ให้ดึงรายการวิดีโอออกมา</mark>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="link-cursor" style="text-align: justify;"><b>Config / Setting ของระบบ</b>
+                        <ul>
+                            <li class="link-cursor" style="text-align: justify;">
+                                <mark>หลายซอฟต์แวร์ใช้ XML เป็นไฟล์ตั้งค่า</mark> (Configuration File) เช่น<br>
+                                - Android ใช้ XML สำหรับ layout ของ UI และ resource ต่าง ๆ<br>
+                                - Maven (เครื่องมือ build ของ Java) ใช้ pom.xml กำหนด dependency ของโปรเจกต์<br>
+                                - โปรแกรม 3D, เกม, เครื่องมือ DevOps หลายตัวใช้ XML เพื่อเก็บพารามิเตอร์
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="link-cursor" style="text-align: justify;"><b>Data Warehouse & BI</b>
+                        <ul>
+                            <li class="link-cursor" style="text-align: justify;">
+                                บางระบบ BI (เช่น SAP, Informatica) export ข้อมูลออกมาเป็น XML
+                            </li>
+                            <li class="link-cursor" style="text-align: justify;">
+                                <mark>🔥❗️Data Analyst ใช้ Python/R อ่าน XML → แปลงเป็น DataFrame → วิเคราะห์ → สร้างรายงาน</mark>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="link-cursor" style="text-align: justify;"><b>API และ Web Services</b>
+                        <ul>
+                            <li class="link-cursor" style="text-align: justify;">
+                                ก่อนจะมี REST API (JSON) <br>→ <mark>ระบบใช้ SOAP API ซึ่งใช้ XML ในการส่ง request/response</mark>
+                            </li>
+                            <li class="link-cursor" style="text-align: justify;">
+                                ปัจจุบันยังมีบริษัทใหญ่ ๆ (เช่น ระบบการบิน, ธนาคาร) ใช้ SOAP อยู่
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+
     </section>
 
-    <section id="file">
-        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand"><img src="github.png"
-                    width="30" class="notion-icon"></a> Github & <a href="https://drive.google.com/drive/folders/14SoYHxpYTKCJb2RuBJweBgQMLPKJMEhK?usp=sharing" class="hover-expand"><img src="googledrive.png"
-                    width="30" class="notion-icon"></a> Google Drive</h2>
-        <p>
-            <a href="https://drive.google.com/file/d/14TNlzveSSFh44lT7p0U1EQTSK49Y-1FF/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Resume : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15nJgYPrUrUmD8pAVQZIr0tJVHaJVO8g4/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Transcript : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span> <br>
-            <a href="https://drive.google.com/file/d/15n_nmZaSY619ehogn_O0V75CKyuq7max/view?usp=sharing"
-                class="download-btn" style="text-align: center; margin-top: 10px;">
-                Graduation Certificate : 📥
-            </a> <span class="text-description link-cursor">Open with google drive</span>
+    <!-- 2. Cafe Menu Table -->
+    <section>
+        <h2 class="link-cursor">2. Cafe Menu Table</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ด้านล่างจะเป็นตารางเมนูของเรานะครับ ซึ่งเราจะลองนำมาเขียนใหม่เป็นภาษา XML ดูครับ
         </p>
+        <!-- cafe menu table -->
+        <table  class="link-cursor tableizer-table">
+            <thead>
+                <tr class="tableizer-firstrow">
+                    <th>ประเภท</th>
+                    <th>ชื่อเมนู</th>
+                    <th>ราคา</th>
+                    <th>ขนาด</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td>Rice</td>
+                    <td>American Fried Rice</td>
+                    <td>$10</td>
+                    <td>250g</td>
+                </tr>
+                <tr>
+                    <td>Drink</td>
+                    <td>Cocoa</td>
+                    <td>$3</td>
+                    <td>22oz</td>
+                </tr>
+                <tr>
+                    <td>Dessert</td>
+                    <td>Chocolate Cake</td>
+                    <td>$4</td>
+                    <td>60g</td>
+                </tr>
+                <tr>
+                    <td>Pasta</td>
+                    <td>Spaghetti Kee Mao</td>
+                    <td>$10</td>
+                    <td>200g</td>
+                </tr>
+                <tr>
+                    <td>Bread</td>
+                    <td>Croissant</td>
+                    <td>$4</td>
+                    <td>60g</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ซึ่งจะถูกแปลงเลี่ยนเป็นโค้ด XML ตามหัวข้อด้านล่างครับ
+        </p>
+    </section>
+    
+    <!-- 3. Raw XML Code -->
+    <section>
+        <h2 class="link-cursor">3. Raw XML Code</h2>
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            เราจะมากำหนด syntax เองเลยในภาษา XML ว่าอันไหนเป็นประเภทอาหารเครื่องดื่มของเรา ดังนี้
+        </p>
+        
+        <ul>
+            <li class="link-cursor" style="text-align: justify;">
+                <code class="inline-code">&lt;rice&gt;</code> → เมนูข้าว
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                <code class="inline-code">&lt;drink&gt;</code> → เมนูเครื่องดื่ม
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                <code class="inline-code">&lt;dessert&gt;</code> → เมนูของหวาน
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                <code class="inline-code">&lt;pasta&gt;</code> → เมนูเส้นพาสต้า
+            </li>
+            <li class="link-cursor" style="text-align: justify;">
+                <code class="inline-code">&lt;bread&gt;</code> → เมนูขนมปัง
+            </li>
+
+        </ul>
+
+        <!-- raw xml code -->
+        <details class="detail1">
+            <summary>Code</summary>
+                <div class="code-container" style="position: relative;">
+                    <div class="code-header">
+                    <span class="language-label link-cursor">XML</span>
+                    <button class="copy-btn notion-icon">
+                        <img src="icon-copy1.png" alt="Copy" width="20">
+                    </button>
+                    </div>
+
+                    <pre>
+<code class="link-cursor language-markup">
+&lt;cafe&gt;
+    &lt;rice&gt;
+        &lt;name&gt;American Fried Rice&lt;/name&gt;
+        &lt;price&gt;$10&lt;/price&gt;
+        &lt;size&gt;250g&lt;/size&gt;
+    &lt;/rice&gt;
+    &lt;drink&gt;
+        &lt;name&gt;Cocoa&lt;/name&gt;
+        &lt;price&gt;$3&lt;/price&gt;
+        &lt;size&gt;22oz&lt;/size&gt;
+    &lt;/drink&gt;
+    &lt;dessert&gt;
+        &lt;name&gt;Chocolate Cake&lt;/name&gt;
+        &lt;price&gt;$4&lt;/price&gt;
+        &lt;size&gt;60g&lt;/size&gt;
+    &lt;/dessert&gt;
+    &lt;pasta&gt;
+        &lt;name&gt;Spaghetti Kee Mao&lt;/name&gt;
+        &lt;price&gt;$10&lt;/price&gt;
+        &lt;size&gt;200g&lt;/size&gt;
+    &lt;/pasta&gt;
+    &lt;bread&gt;
+        &lt;name&gt;Croissant&lt;/name&gt;
+        &lt;price&gt;$4&lt;/price&gt;
+        &lt;size&gt;60g&lt;/size&gt;
+    &lt;/bread&gt;
+&lt;/cafe&gt;
+</code></pre>
+
+                    <div id="toast" class="toast">✅ คัดลอกสำเร็จ!</div>
+                </div>
+        </details>
+        
+        <p class="link-cursor" style="text-align: justify; text-indent: 1em;">
+            ก็จบไปแล้วนะครับสำหรับ Mini-Project เล็กๆ หวังว่าพอเข้าใจ XML มากขึ้นเล็กน้อยนะครับ
+            <mark>ฝากโปรเจกต์อื่นๆของผมด้วยนะครับ โดยเฉพาะอันที่มี ⭐️ ผมชอบมากๆ ขอบคุณมากๆครับ</mark>
+        </p>
+
+    </section>
+    
+    <!-- Github -->
+    <section id="file">
+        <h2 class="link-cursor"><a href="https://github.com/Phubordin" class="hover-expand" target="_blank"><img src="github.png"
+                    width="30" class="notion-icon"></a> Github
+        </h2>
+        
+        <p>
+            <a href="https://github.com/Phubordin/portfolio-project/blob/c9c16e5d7802a9bfb1a5fd66ee35ead3c3f767ef/portfolio-project/P12-Cafe-Menu-Data-Structure-with-XML.md"
+                class="download-btn" style="text-align: center; margin-top: 10px;" target="_blank">
+                <img src="github.png" width="25">&nbsp;Github
+            </a>
+        </p>
+
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
     <script src="script.js"></script>
     <script src="certificate-script.js"></script>
 </body>
