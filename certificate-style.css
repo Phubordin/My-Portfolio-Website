@@ -508,8 +508,8 @@ verify-icon:hover {
     color: #ffffff;
 }
 
-.dark-mode .corner-text {
-    color: white;
+.dark-mode .corner-text span {
+    color: rgb(0, 0, 0);
 }
 
 .dark-mode .corner-text0 {

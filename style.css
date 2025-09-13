@@ -300,15 +300,37 @@ section {
 
 .corner-text {
     position: absolute;
-    color: white;
-    border-radius: 10px;
-    background-color: #000000;
-    bottom: 10px;
-    right: 10px;
-    font-size: 14px;
-    padding: 0.1rem 0.4rem;
-    cursor: url('cursor1.png'), auto;
+    top: 0px;
+    right: 0;
+    height: 40px; /* ความสูงของแถบ */
+    width: 120px; /* ความกว้างของแถบ */
+    background-color: #fbcebb; /* ฟ้าพาสเทล */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-top-left-radius: 20px; */
+    border-top-right-radius: 20px;
+    /* border-bottom-left-radius: 20px; */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: url("cursor1.png"), auto;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Prompt', sans-serif;
 }
+
+.corner-text span {
+    /*writing-mode: vertical-rl; /* หมุนตัวอักษรให้อ่านจากล่างขึ้นบน */
+    /*transform: rotate(180deg);  กลับหัวให้เริ่มอ่านจากล่าง */
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    letter-spacing: 2px;
+}
+
+.corner-text:hover {
+    background-color: #b7def2; /* เปลี่ยนสีตอน hover */
+    transform: translateX(-4px); /* เลื่อนเข้ามานิดหน่อย */
+}
+
 
 .corner-text0 {
     position: relative;
@@ -316,13 +338,6 @@ section {
     border-radius: 10px;
     background-color: #000000;
     padding: 0.1rem 0.4rem;
-}
-
-.corner-text:hover {
-    text-shadow: 0px 0px 10px cyan,
-        0px 0px 20px cyan,
-        0px 0px 30px cyan,
-        0px 0px 60px cyan;
 }
 
 /* ทำให้เฉพาะ About Me, Certificate, Contact ขยาย ---------------------------------------------------------------------------------------------*/
