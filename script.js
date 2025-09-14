@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleBtn = document.getElementById("toggle-toc-btn");
 
     // ✅ เพิ่มบรรทัดนี้ เพื่อซ่อน TOC ตอนเปิดบนมือถือครั้งแรก
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 932) {
         toc.classList.add("hidden");
     }
 
@@ -815,52 +815,68 @@ document.querySelectorAll("details").forEach((detail) => {
 });
 
 /*-------------------------------------------------------------------------------- */
-const hamburger = document.getElementById('hamburger')
-const mobileMenu = document.getElementById('mobileMenu')
-const closeBtn = document.getElementById('closeBtn')
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeBtn = document.getElementById('closeBtn');
 
+    function openMenu() {
+        mobileMenu.classList.add('open');
+        mobileMenu.setAttribute('aria-hidden', 'false');
+        hamburger.setAttribute('aria-expanded', 'true');
+        closeBtn.focus();
+        document.body.style.overflow = 'hidden';
+    }
 
-function openMenu(){
-mobileMenu.classList.add('open')
-mobileMenu.setAttribute('aria-hidden','false')
-hamburger.setAttribute('aria-expanded','true')
-closeBtn.focus()
-document.body.style.overflow = 'hidden'
-}
+    function closeMenu() {
+        mobileMenu.classList.remove('open');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.focus();
+        document.body.style.overflow = '';
+    }
 
+    hamburger.addEventListener('click', () => {
+        const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+        expanded ? closeMenu() : openMenu();
+    });
 
-function closeMenu(){
-mobileMenu.classList.remove('open')
-mobileMenu.setAttribute('aria-hidden','true')
-hamburger.setAttribute('aria-expanded','false')
-hamburger.focus()
-document.body.style.overflow = ''
-}
+    closeBtn.addEventListener('click', closeMenu);
 
+    mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) closeMenu();
+    });
 
-hamburger.addEventListener('click', ()=>{
-const expanded = hamburger.getAttribute('aria-expanded') === 'true'
-if(expanded) closeMenu(); else openMenu();
-})
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+            closeMenu();
+        }
+    });
 
+    document.querySelectorAll('.mobile-link').forEach(a => {
+        a.addEventListener('click', closeMenu);
+    });
+});
 
-closeBtn.addEventListener('click', closeMenu)
+document.addEventListener("DOMContentLoaded", function () {
+    const hbg = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
 
+    // ให้ปุ่มเลื่อนตามผู้ใช้
+    window.addEventListener("scroll", function () {
+        const offsetTop = window.scrollY + 80;
+        hbg.style.top = offsetTop + "px";
 
-mobileMenu.addEventListener('click', (e)=>{
-if(e.target === mobileMenu) closeMenu()
-})
+        // ✅ ให้ mobileMenu เลื่อนตามตำแหน่งปุ่มด้วย (ถ้าใช้ absolute)
+        if (!mobileMenu.classList.contains("open")) {
+            // ถ้ายังไม่เปิดเมนู ก็อัปเดตตำแหน่งไว้ล่วงหน้า
+            mobileMenu.style.top = offsetTop + "px";
+        }
+    });
 
-
-document.addEventListener('keydown', (e)=>{
-if(e.key === 'Escape' && mobileMenu.classList.contains('open')){
-closeMenu()
-}
-})
-
-
-document.querySelectorAll('.mobile-link').forEach(a=>{
-a.addEventListener('click', ()=>{
-closeMenu()
-})
-})
+    // ✅ เวลาที่เปิดเมนูให้จัดตำแหน่งอีกครั้ง
+    document.getElementById("hamburger").addEventListener("click", function () {
+        const offsetTop = window.scrollY + 0;
+        mobileMenu.style.top = offsetTop + "px";
+    });
+});

@@ -512,10 +512,6 @@ verify-icon:hover {
     color: rgb(0, 0, 0);
 }
 
-.dark-mode .corner-text0 {
-    color: white;
-}
-
 .dark-mode .certificate-links {
     border-top-color: rgba(255, 255, 255, 0.1);
 }

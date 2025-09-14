@@ -114,7 +114,7 @@ body.no-transition {
 }
 
 /* เพิ่ม Media Query ครอบคลุมมากขึ้น */
-@media screen and (max-width: 768px) {
+@media (max-width: 932px) {
     body {
         background-size: cover; /* เปลี่ยนจาก contain */
         background-position: center top;
@@ -143,6 +143,17 @@ body.no-transition {
     .project-page { min-height: 100vh; }
     .certificate-page { min-height: 100vh; }
     .contact-page { min-height: 100vh; }
+    
+    nav.primary{
+        display:none
+    }
+    .hamburger{
+        display:inline-flex
+    }
+    
+    /* .back-button {
+        display: none;
+    } */
 
     /* ปรับขนาดช่อง bar menu nav */
     nav ul li a {
@@ -310,7 +321,7 @@ section {
     justify-content: center;
     /* border-top-left-radius: 20px; */
     border-top-right-radius: 20px;
-    /* border-bottom-left-radius: 20px; */
+    border-bottom-left-radius: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     cursor: url("cursor1.png"), auto;
     transition: all 0.3s ease-in-out;
@@ -327,17 +338,8 @@ section {
 }
 
 .corner-text:hover {
-    background-color: #b7def2; /* เปลี่ยนสีตอน hover */
+    background-color: #fbcebb; /* ฟ้าพาสเทล */
     transform: translateX(-4px); /* เลื่อนเข้ามานิดหน่อย */
-}
-
-
-.corner-text0 {
-    position: relative;
-    color: white;
-    border-radius: 10px;
-    background-color: #000000;
-    padding: 0.1rem 0.4rem;
 }
 
 /* ทำให้เฉพาะ About Me, Certificate, Contact ขยาย ---------------------------------------------------------------------------------------------*/
@@ -761,10 +763,10 @@ nav ul li.dropdown.open .dropdown-menu {
 #toggle-toc-btn {
     position: fixed;
     /* เปลี่ยนเป็น fixed เพื่อให้เลื่อนตามหน้าจอ */
-    right: 1vw;
+    right: 0px /*1vw*/;
     top: 23vh;
     /* จัดกึ่งกลางหน้าจอในแนวตั้ง */
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     /* ปรับให้อยู่กึ่งกลางของตำแหน่ง top */
     background: rgba(0, 0, 0, 0.7);
     color: white;
@@ -779,7 +781,6 @@ nav ul li.dropdown.open .dropdown-menu {
     justify-content: center;
     font-size: 2.5vh;
     /* ขนาดฟอนต์สัมพันธ์กับความสูงของจอ */
-    transition: all 0.3s ease;
     z-index: 5000;
 }
 
@@ -798,7 +799,8 @@ nav ul li.dropdown.open .dropdown-menu {
 
 /* ปุ่ม hover */
 #toggle-toc-btn:hover {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(54, 54, 54, 0.9);
+    transform: rotate(-180deg); /* ขยาย + หมุนเล็กน้อยให้ดูเท่ */
 }
 
 /* ซ่อน TOC แต่ให้ปุ่มยังอยู่ */
@@ -806,8 +808,6 @@ nav ul li.dropdown.open .dropdown-menu {
     transform: translateX(90%);
     opacity: 0;
 }
-
-
 
 
 /* จากได้ text ที่ต้องการ ----------------------------------------------------------------------------------------------------------------------------*/
@@ -1493,7 +1493,7 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
 
 #scrollToTopBtn {
     position: fixed;
-    right: 30px;
+    right: 10px;
     background-color: #333;
     color: white;
     border: none;
@@ -1502,7 +1502,7 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
     font-size: 20px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease, top 0.3s ease;
+    transition: opacity 0.3s ease;
     z-index: 2000;
     cursor: url('cursor1.png'), auto;
 }
@@ -1605,12 +1605,12 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
 /* ปุ่ม Hamburger */
 .hamburger {
     display: none; /* ซ่อนบน desktop */
-    position: absolute;
+    position: fixed;
     top: 80px;                     /* ปรับจากให้ห่างจากด้านบน 12px */
     right: 0;                     /* ชิดขวาสุด */
-    background: linear-gradient(145deg, #6366f1 0%, #3b82f6 50%, #2563eb 100%);
+    background-color: #6fd6ff; /* ฟ้าพาสเทล */
     border-radius: 12px 0 0 12px;   /* มุมโค้งด้านซ้าย */
-    font-size: 16px;              /* ขนาดลูกศร */
+    font-size: 20px;              /* ขนาดลูกศร */
     width: 23px;
     height: 54px;
     align-items: center;
@@ -1629,7 +1629,8 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
 }
 
 .mobile-panel {
-    position: fixed;              /* กำหนดให้อยู่นิ่งกับตำแหน่งหน้าจอ (ไม่เลื่อนตาม scroll) */
+    position: fixed; /* ให้ยึดกับ document */
+    /* ที่เหลือเหมือนเดิม */
     inset: 0;                     /* ยึดเต็มพื้นที่จอ (top:0; right:0; bottom:0; left:0;) */
     display: flex;                /* ใช้ flexbox สำหรับจัดเรียงเนื้อหาภายใน */
     flex-direction: column;       /* จัดเรียงลูกในแนวตั้ง */
@@ -1692,7 +1693,7 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
     transform: scale(1.1) rotate(90deg); /* ขยาย + หมุนเล็กน้อยให้ดูเท่ */
 }
 
-@media (max-width:768px){
+@media (max-width:932px){
     nav.primary{
         display:none
     }
