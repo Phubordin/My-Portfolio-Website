@@ -655,6 +655,21 @@ nav ul li.dropdown.open .dropdown-menu {
     margin: 20px 0;
 }
 
+.scrollable-image {
+  overflow-x: auto;             /* ให้ scroll แนวนอน */
+  overflow-y: hidden;
+  max-width: 100%;              /* ไม่ให้เกินหน้าจอ */
+  border-radius: 12px;          /* ขอบโค้งนิดหน่อยสวยๆ */
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollable-image img.zoomed-img {
+  display: block;
+  width: auto;                  /* ทำให้ภาพกว้างกว่าปกติ (ซูมเข้า) */
+  max-width: none;              /* ยกเลิกการจำกัดความกว้าง */
+  height: 70vh;       /* สูง 80% ของ viewport */
+}
+
 /* Table of Contents Styles -----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 #table-of-contents {
     position: fixed;
@@ -1704,4 +1719,62 @@ pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
     /* .back-button {
         display: none;
     } */
+}
+
+.translation-header {
+  display: flex;
+  align-items: center;   /* ให้ปุ่มอยู่ระดับเดียวกับ summary */
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.drive-btn {
+  display: inline-flex;           /* ทำให้เป็น flexbox */
+  align-items: center;           /* จัดให้อยู่ระดับเดียวกัน */
+  gap: 8px;                      /* ระยะห่างระหว่างโลโก้กับข้อความ */
+  background-color: #e6f1ff;
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 12px;
+  border: 1px solid #b3d4ff;
+  transition: all 0.25s ease;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  cursor: url('cursor1.png'), auto;
+}
+
+.drive-btn:hover {
+  background-color: #0077ff;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 119, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.drive-logo {
+  width: 20px;        /* กำหนดขนาดให้พอดี */
+  height: auto;
+  display: block;
+}
+
+
+/* ปรับสำหรับหน้าจอเล็กกว่า 932px */
+@media (max-width: 932px) {
+  .translation-header {
+    flex-direction: column; /* เปลี่ยนเป็นแนวตั้ง */
+    align-items: flex-start; /* ชิดซ้าย */
+    gap: 8px; /* ลดระยะห่าง */
+  }
+
+  .drive-btn {
+    padding: 5px 12px; /* ลดขนาดปุ่ม */
+    font-size: 0.85rem; /* ลดฟอนต์ */
+    gap: 6px; /* ลดระยะห่างโลโก้กับข้อความ */
+  }
+
+  .drive-logo {
+    width: 16px; /* ลดขนาดโลโก้ */
+  }
 }
