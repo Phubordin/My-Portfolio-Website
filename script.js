@@ -465,33 +465,6 @@ function navigateToExperience_leowood() {
     window.location.href = "experience_leowood.html";
 }
 
-/*------------------------------------------------------------------------------------------------------------------------- */
-// เพิ่ม script เล็กน้อยเพื่อให้แน่ใจว่า tooltip แสดงผลถูกต้อง
-document.addEventListener('DOMContentLoaded', function () {
-    const gpaHover = document.querySelector('.gpa-hover');
-    const tooltip = document.querySelector('.tooltip');
-
-    gpaHover.addEventListener('mousemove', function (event) {
-        // ดึงค่าตำแหน่งของเมาส์
-        let mouseX = event.pageX;
-        let mouseY = event.pageY;
-
-        // ปรับตำแหน่ง tooltip ให้ใกล้กับเมาส์
-        tooltip.style.left = mouseX - 250 + 'px';  // ขยับ tooltip ไปทางขวาของเมาส์ 10px
-        tooltip.style.top = mouseY - 850 + 'px';   // ขยับ tooltip ไปทางล่างของเมาส์ 10px
-    });
-
-    gpaHover.addEventListener('mouseenter', function () {
-        tooltip.style.opacity = '1';
-        tooltip.style.visibility = 'visible';
-    });
-
-    gpaHover.addEventListener('mouseleave', function () {
-        tooltip.style.opacity = '0';
-        tooltip.style.visibility = 'hidden';
-    });
-});
-
 //-------------------------------------------------------------------------------------------------------------------------------------------- 
 function copyEmail() {
     let email = document.getElementById("email").textContent.trim(); // ดึงเฉพาะข้อความอีเมล
