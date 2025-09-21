@@ -223,6 +223,16 @@
     cursor: url("cursor1.png"), auto;
 }
 
+.certificate-title3:hover {
+    color: hsl(0, 0%, 100%); /* สีตัวอักษรเป็นสีน้ำเงินฟ้าเมื่อ hover */
+    text-decoration: solid;
+    text-shadow: 0px 0px 1px cyan,
+                 0px 0px 2px cyan,
+                 0px 0px 4px cyan,
+                 0px 0px 8px cyan;
+    cursor: url("cursor1.png"), auto;
+}
+
 .certificate-title2 {
     font-weight: 500;
     display:inline-block;
@@ -381,30 +391,6 @@
     gap: 2rem;
 }
 
-verify-icon {
-    color: #ffffff;
-    text-align: left;
-    gap: 0.5rem;
-    border-radius: 20px; /* ขอบมุมโค้งมน */
-    padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
-    text-shadow: 0px 0px 0.9px cyan,
-                 0px 0px 0.9px cyan,
-                 0px 0px 0.4px cyan,
-                 0px 0px 0.9px cyan;
-    background-color: rgba(0, 0, 0, 0.931); /* พื้นหลังใส */
-    font-size: 15.5px; /* ขนาดฟอนต์พอดีกับข้อความ */
-    cursor: url("cursor1.png") , auto;
-}
-
-verify-icon:hover {
-    color: #000000; /* สีตัวอักษรปกติ */
-    font-weight: 400; /* ตัวหนาเล็กน้อย */
-    background-color: rgb(234, 255, 0); /* พื้นหลังใส */
-    padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
-    border-radius: 20px; /* ขอบมุมโค้งมน */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.307);
-    text-shadow: none
-}
 
 /* Dark Mode Styles */
 .dark-mode .certificate-card,
@@ -708,7 +694,7 @@ verify-icon:hover {
 
 .list-table tbody tr:hover {
     background-color: #bbdefb;
-    cursor: url("cursor1.png"), auto;
+    /* cursor: url("cursor1.png"), auto; */
 }
 
 /* Table Data Cells */
@@ -731,15 +717,14 @@ verify-icon:hover {
     font-weight: 1500;
     transition: all 0.2s ease;
     position: relative;
-    padding-bottom: 2px;
+    padding: 0.3rem 0.8rem;
 }
 
 .list-table td a:hover {
     display:inline-flex;
-    color: #ffffff; /* สีตัวอักษรปกติ */
-    background: rgb(0, 0, 0);
-    padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
-    border-radius: 20px; /* ขอบมุมโค้งมน */
+    /* color: #ffffff; สีตัวอักษรปกติ */
+    background: snow; /* สีพื้นหลังเป็นสีน้ำเงินฟ้าเมื่อ hover */
+    /* border-radius: 20px; ขอบมุมโค้งมน */
     cursor: url("cursor2.png"), auto;
 }
 
@@ -830,13 +815,13 @@ verify-icon:hover {
 }
 
 .dark-mode .list-table td a {
-    color: #ffffff;
+    color: #ffffff;;
 }
 
 .dark-mode .list-table td a:hover {
-    color: #242424; /* สีตัวอักษรปกติ */
-    background: white;
-    padding: 0.3rem 0.8rem; /* เพิ่มระยะห่างรอบๆ ตัวอักษร */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    /* padding: 0.3rem 0.8rem; เพิ่มระยะห่างรอบๆ ตัวอักษร */
     border-radius: 20px; /* ขอบมุมโค้งมน */
     cursor: url("cursor2.png"), auto;
 }
@@ -844,3 +829,49 @@ verify-icon:hover {
 .cursor-zoom-in {
     cursor: url("zoom-in.png"), auto;
 }
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.school-containner a {
+  display: inline-flex; /* ทำให้โลโก้+ข้อความอยู่บรรทัดเดียวกัน */
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  background: #f8fbff; /* สีฟ้าอ่อน */
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  cursor: url("cursor1.png"), auto;
+}
+
+.school-containner a:hover {
+  transform: translateY(-2px);
+  background: #eaf4ff; /* hover แล้วฟ้าเข้มขึ้นเล็กน้อย */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.school-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+  padding: 2px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
+}
+
+.school-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0a3d62;
+  letter-spacing: 0.3px;
+}
+
+.dark-mode .school-containner a {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+

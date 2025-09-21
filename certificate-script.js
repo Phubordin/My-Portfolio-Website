@@ -1,17 +1,21 @@
 // สมมุติว่า certificates มีข้อมูลภาพ
 const certificates = [
+    
+    // 1. DSB10 by DataRockie
     {
         id: 1,
-        image: "cetificate-dsb10-datarockie.webp",
+        image: "certificate-dsb10-datarockie.webp",
         title: "Data Science Bootcamp Batch 10",
         school: "DataRockie",
         schoolLink: "https://bootcamp.datarockie.com/",
         description: "สอบผ่านหลักสูตร Data Science Bootcamp (หลักสูตร 6 เดือน 100 ชั่วโมง) โดย DataRockie สำเร็จ ! ข้อสอบประกอบด้วยคำถามแบบเลือกตอบ 240 ข้อ เพื่อจะผ่านการทดสอบ นักเรียนจะต้องได้คะแนนขั้นต่ำ 192/240 คะแนน(me 224/240 คะแนน) Solid foundations on these topics: Spreadsheets, SQL databases, R, Python, Data Transformation, Data Visualization, Statistics, Intro to Machine Learning, Dashboard with Looker Studio and Tableau Public. อ่านต่อเพื่มได้ที่ notion นะครับ",
         notionLink: "https://second-brain-phubordin.notion.site/Data-Science-Bootcamp-10-1a82ea218a1580a68f47e000b12e9b0a?pvs=4",
-        cost: "฿4,900 ($143.06)",
+        cost: "฿4,900 ($143)",
         costlink: "https://datarockie.com/data-science-bootcamp/",
         certificateLink: "https://api.badgr.io/public/assertions/99CX-fsTQ02SPkihaDTINQ?identity__email=poorider02%40gmail.com"
     },
+    
+    // 2. Intro to Data Science
     {
         id: 2,
         image: "certificate-Intro-to-data-science-skoodio.webp",
@@ -20,24 +24,40 @@ const certificates = [
         schoolLink: "https://www.skooldio.com/",
         description: "โลกของ Data Science, ศึกษากรณีตัวอย่างเพื่อใช้ข้อมูลขับเคลื่อนธุรกิจ, ศึกษา metric framework tools ต่างๆเพื่อใช้วัดผลเชิงธุรกิจ (Click-through Rate, Conversion Rate, AARRR!, A/B Testing), กระบวนการทำงาน Data Science(7 steps), การทำ Data Product อ่านต่อเพื่มได้ที่ notion นะครับ",
         notionLink: "https://second-brain-phubordin.notion.site/Intro-to-Data-Science-1aa2ea218a15805fa846c84d26145085?pvs=4",
-        cost: "฿1,490 ($43.50)",
+        cost: "฿1,490 ($44)",
         costlink: "https://www.skooldio.com/courses/data-science-01",
         certificateLink: "https://www.skooldio.com/certificate/b2d8f435-7e96-46e9-a85f-6dc066d83f0e"
     },
+    
+    // 12. Data Analytics Program by W3School
+    {
+        id: 12,
+        image: "certificate-w3-basic-python.webp",
+        title: "Data Analytics Program",
+        school: "W3School",
+        schoolLink: "https://www.w3schools.com/",
+        description: "เมื่อจบหลักสูตร Excel, SQL, R, Python, Statistics, Numpy, Pandas แล้ว จะได้รับประกาศนียบัตร Data Analyst",
+        notionLink: "https://second-brain-phubordin.notion.site/W3Schools-Data-Analytics-Bootcamp-1932ea218a1580fb8c0dfcc2bd1ad1fc?source=copy_link",
+        cost: "฿7,900 ($230) Scholarship",
+        costlink: "https://campus.w3schools.com/products/data-analytics-program",
+        certificateLink: "https://verify.w3schools.com/1PW0RVAM0B"
+    },
 
+    // 3. Excel Practitioner
     {
         id: 3,
         image: "certificate-w3schools-excel.webp",
-        title: "Excel",
+        title: "Excel Practitioner",
         school: "W3School",
         schoolLink: "https://www.w3schools.com/",
         description: "Excel Data Analysis(Table Pivot, การใช้ Conditional Formating แต่ละรูปแบบ bar, icon, highlight, color scale), ฟังก์ชันการคำนวณต่างๆ=AND, =AVERAGEIFS, =CONCAT, =COUNT, =COUNTA, =COUNTBLANK, =COUNTIF, =COUNTIFS, =IFS, =LOWER, =MAX, =MEDIAN, =MIN, =MODE, =NPV, =OR, =RAND, =RIGHT, =STDEV.P, =STDEV.S, =SUM, =SUMIF, =SUMIFS, =TRIM, =VLOOKUP, =XOR อ่านต่อเพื่มได้ที่ notion นะครับ",
         notionLink: "https://second-brain-phubordin.notion.site/W3Schools-Data-Analytics-Bootcamp-1932ea218a1580fb8c0dfcc2bd1ad1fc?pvs=4",
-        cost: "฿3,253.84 ($95)",
+        cost: "฿3,300 ($95) Scholarship",
         costlink: "https://campus.w3schools.com/products/excel-certificate?_pos=1&_sid=5eea90fd2&_ss=r",
         certificateLink: "https://verify.w3schools.com/1PNV4D3H6E"
     },
 
+    // 4. SQL Crash Course
     {
         id: 4,
         image: "certificate-sql-crash-course.webp",
@@ -50,6 +70,106 @@ const certificates = [
         costlink: "https://bootcamp.datarockie.com/p/sql-cc",
         certificateLink: "https://data-science-bootcamp1.teachable.com/courses/enrolled/1877587"
     },
+    
+    // 5. DSB11 by DataRockie
+    {
+        id: 5,
+        image: "certificate-dsb11-datarockie.webp",
+        title: "Data Science Bootcamp Batch 11",
+        school: "DataRockie",
+        schoolLink: "https://bootcamp.datarockie.com/",
+        description: "สอบผ่านหลักสูตร Data Science Bootcamp (หลักสูตร 6 เดือน 100 ชั่วโมง) โดย DataRockie สำเร็จ ! ข้อสอบประกอบด้วยคำถามแบบเลือกตอบ 240 ข้อ เพื่อจะผ่านการทดสอบ นักเรียนจะต้องได้คะแนนขั้นต่ำ 192/240 คะแนน(me 223/240 คะแนน) Solid foundations on these topics: Spreadsheets, SQL databases, R, Python, Data Transformation, Data Visualization, Statistics, Intro to Machine Learning, Dashboard with Looker Studio and Tableau Public. อ่านต่อเพื่มได้ที่ notion นะครับ",
+        notionLink: "https://www.notion.so/second-brain-phubordin/Data-Science-Bootcamp-11-1dd2ea218a1580eca268c44d2e25f40b?source=copy_link",
+        cost: "฿4,900 ($143) Scholarship",
+        costlink: "https://datarockie.com/data-science-bootcamp/",
+        certificateLink: "https://badgr.com/public/assertions/eT01MdhOTkqB70L1NYBkVw?identity__email=phubordin.phanyosri%40gmail.com"
+    },
+    
+    // 6. SQL Developer
+    {
+        id: 6,
+        image: "certificate-w3-sql.webp",
+        title: "SQL Developer",
+        school: "W3School",
+        schoolLink: "https://www.w3schools.com/",
+        description: "พื้นฐาน Syntax และ Operator เช่น Select, Where, And, Or, Like, Order By, AS, Betweeen, Join Table, Having, ALL, Any อื่นๆ เป็นต้น และการใช้ Aggregate Function เช่น Count, Sum, Avg, Min, Max เป็นต้น อ่านต่อเพื่มได้ที่ notion นะครับ",
+        notionLink: "https://second-brain-phubordin.notion.site/SQL-1982ea218a15806ba442e23c9d6b907d?source=copy_link",
+        cost: "฿3,300 ($95) Scholarship",
+        costlink: "https://campus.w3schools.com/collections/certifications/products/sql-certificate",
+        certificateLink: "https://verify.w3schools.com/1PRGZRSIM9"
+    },
+    
+    // 7. R Developer
+    {
+        id: 7,
+        image: "certificate-w3-r.webp",
+        title: "R Developer",
+        school: "W3School",
+        schoolLink: "https://www.w3schools.com/",
+        description: "Data Types, Vectors, Matrices, Lists, Data Frames, Factors, Date & Time, Operators, Control Structures (if-else, switch, for loop, while loop), Functions (user-defined functions, apply family functions), Basic Stats, Basic Plot อ่านต่อเพื่มได้ที่ notion นะครับ",
+        notionLink: "https://second-brain-phubordin.notion.site/R-Programing-1982ea218a158094a14dd70c63359fd7?source=copy_link",
+        cost: "฿3,300 ($95) Scholarship",
+        costlink: "https://campus.w3schools.com/collections/course-catalog/products/r-course",
+        certificateLink: "https://verify.w3schools.com/1PV590VMUV"
+    },
+    
+    // 8. Statistical Data Analyst
+    {
+        id: 8,
+        image: "certificate-w3-stats.webp",
+        title: "Statistical Data Analyst",
+        school: "W3School",
+        schoolLink: "https://www.w3schools.com/",
+        description: "Normal Distribution, Standard Normal Distribution, Z-Score, การวัดค่ากลาง อื่นๆ อ่านต่อเพื่มได้ที่ notion นะครับ",
+        notionLink: "https://second-brain-phubordin.notion.site/Statistics-1982ea218a158003a600fa27a978940c?source=copy_link",
+        cost: "฿3,300 ($95) Scholarship",
+        costlink: "https://campus.w3schools.com/products/statistics-certificate",
+        certificateLink: "https://verify.w3schools.com/1PVAX9R0EB"
+    },
+    
+    // 9. Numpy Developer
+    {
+        id: 9,
+        image: "certificate-w3-numpy.webp",
+        title: "Numpy Developer",
+        school: "W3School",
+        schoolLink: "https://www.w3schools.com/",
+        description: "library สำหรับการคำนวณทางวิทยาศาสตร์ (Scientific Computing) ในภาษา Python, การสร้าง Array, การเข้าถึงและการปรับเปลี่ยน Array import numpy as np และอื่นๆ อ่านต่อเพื่มได้ที่ notion นะครับ",
+        notionLink: "https://second-brain-phubordin.notion.site/Numpy-1982ea218a158084ad19f405f4c884a4?source=copy_link",
+        cost: "฿3,300 ($95) Scholarship",
+        costlink: "https://campus.w3schools.com/collections/certifications/products/numpy-certification-exam",
+        certificateLink: "https://verify.w3schools.com/1PVAX9R0EB"
+    },
+    
+    // 10. Pandas Developer
+    {
+        id: 10,
+        image: "certificate-w3-pandas.webp",
+        title: "Pandas Developer",
+        school: "W3School",
+        schoolLink: "https://www.w3schools.com/",
+        description: "Series, DataFrame, Read CSV, Read JSON, Correlation, Sorting, Filtering, Grouping, Missing Values และอื่นๆ อ่านต่อเพื่มได้ที่ notion นะครับ",
+        notionLink: "https://second-brain-phubordin.notion.site/Pandas-1982ea218a15800091cbc93ec81f2c5d?source=copy_link",
+        cost: "฿3,300 ($95) Scholarship",
+        costlink: "https://campus.w3schools.com/collections/certifications/products/pandas-certification-exam",
+        certificateLink: "https://verify.w3schools.com/1PW3GVK5HQ"
+    },
+    
+    // 11. Python Developer
+    {
+        id: 11,
+        image: "certificate-w3-basic-python.webp",
+        title: "Python Developer",
+        school: "W3School",
+        schoolLink: "https://www.w3schools.com/",
+        description: "list, tuple, set, dictionary, if-else, for loop, while loop, function, lambda function, class & object และอื่นๆ อ่านต่อเพื่มได้ที่ notion นะครับ",
+        notionLink: "https://second-brain-phubordin.notion.site/Basic-Python-1de2ea218a1580ba8ce8c18f27acf34f?source=copy_link",
+        cost: "฿3,300 ($95) Scholarship",
+        costlink: "https://campus.w3schools.com/products/python-certificate?utm_source=w3schools&utm_medium=referral&utm_campaign=python_exam&utm_content=get_your_certificate",
+        certificateLink: "https://verify.w3schools.com/1PW0RVAM0B"
+    }
+
+
 ];
 
 // Global variables
@@ -202,43 +322,66 @@ function findCertificateIndexById(certId) {
 //     }
 // }
 
+// ✅ ฟังก์ชันสร้าง school logo อัตโนมัติ
+function getSchoolLogo(schoolName) {
+  switch (schoolName) {
+    case "DataRockie":
+      return `<img src="logo-datarockie.png" alt="DataRockie Logo" class="school-logo">`;
+    case "Skooldio":
+      return `<img src="logo-skooldio.png" alt="Skooldio Logo" class="school-logo">`;
+    case "W3School":
+      return `<img src="logo-w3schools.png" alt="W3Schools Logo" class="school-logo">`;
+    default:
+      return ""; // ถ้าไม่มีโลโก้ ก็ปล่อยว่าง
+  }
+}
+
+
 // Render certificate card
 function renderCertificateCard(cert) {
     // ตรวจสอบโหมดปัจจุบันโดยตรงจาก body class
     const isDarkMode = document.body.classList.contains('dark-mode');
     const darkModeClass = isDarkMode ? 'dark-mode' : '';
+    const schoolLogo = getSchoolLogo(cert.school); // ✅ ดึงโลโก้มาใช้
 
     return `
-        <div class="certificate-card fade-in ${darkModeClass}" data-cert-id="${cert.id}" >
-            <img src="${cert.image}" alt="${cert.title}" class="certificate-image cursor-zoom-in" onclick="openGalleryModal('${cert.image}')">
-            <div class="certificate-details ${darkModeClass}">
-                <h3 class="certificate-title1" onclick="openGalleryModal('${cert.image}')">${cert.title}</h3>
-                <div><a target="_blank" href= "${cert.schoolLink}" class="certificate-school ${darkModeClass}">🏫 : ${cert.school}</a></div>
-                
-                <details>
-                    <summary>คำอธิบาย<span class="text-description">2x click to open just one</span></summary>
-                    ${cert.description}
-                </details>
+        <div class="certificate-card fade-in ${darkModeClass}" data-cert-id="${cert.id}">
+        <img src="${cert.image}" alt="${cert.title}" class="certificate-image cursor-zoom-in" onclick="openGalleryModal('${cert.image}')">
+        
+        <div class="certificate-details ${darkModeClass}">
+            <h3 class="certificate-title1" onclick="openGalleryModal('${cert.image}')">${cert.title}</h3>
+            
+            <div class="school-containner">
+            <a target="_blank" href="${cert.schoolLink}" class="${darkModeClass}">
+                ${schoolLogo} 
+                <span class="school-name">${cert.school}</span>
+            </a>
+            </div>
+            
+            <details>
+            <summary>คำอธิบาย<span class="text-description1">2x click to open just one</span></summary>
+            ${cert.description}
+            </details>
 
-                <div class="certificate-links">
-                    <a href="${cert.notionLink}" class="certificate-link ${darkModeClass}" target="_blank">
-                        <span class="notes-icon">
-                                View Notes : <img src="notion.webp" width="20" class="notion-icon">
-                                Notion
-                        </span>
-                    </a>
+            <div class="certificate-links">
+            <a href="${cert.notionLink}" class="certificate-link ${darkModeClass}" target="_blank">
+                <span class="notes-icon">
+                View Notes : <img src="notion.webp" width="20" class="notion-icon">
+                Notion
+                </span>
+            </a>
 
-                    <a href="${cert.costlink}" class="certificate-link ${darkModeClass}"  target="_blank">
-                        <span class="cost-icon"> Course Value : ${cert.cost}</span>
-                    </a>
+            <a href="${cert.costlink}" class="certificate-link ${darkModeClass}" target="_blank">
+                <span class="cost-icon"> Course Value : ${cert.cost}</span>
+            </a>
 
-                    <a href="${cert.certificateLink}" class="certificate-link ${darkModeClass}" target="_blank">
-                        <verify-icon class="${darkModeClass}"><span>Verify Certificate</span></verify-icon>
-                    </a>
-                </div>
+            <a href="${cert.certificateLink}" class="certificate-link ${darkModeClass}" target="_blank">
+                <span class="cost-icon">Verify Certificate</span>
+            </a>
             </div>
         </div>
-    `;
+        </div>
+  `;
 }
 
 // Render gallery view
@@ -277,15 +420,16 @@ function renderSlideshowView() {
 
     const filteredCerts = getFilteredCertificates();
     if (filteredCerts.length > 0) {
-        // Ensure currentIndex is valid for the filtered certificates
         if (currentIndex >= filteredCerts.length) {
             currentIndex = 0;
         }
 
-        const cert = filteredCerts[currentIndex]; // Display the current certificate in slideshow
-        // ตรวจสอบโหมดปัจจุบันโดยตรงจาก body class
+        const cert = filteredCerts[currentIndex];
         const isDarkMode = document.body.classList.contains('dark-mode');
         const darkModeClass = isDarkMode ? 'dark-mode' : '';
+
+        // ✅ ใช้ฟังก์ชันดึงโลโก้ + ชื่อโรงเรียน
+        const schoolLogo = getSchoolLogo(cert.school);
 
         slideshowView.innerHTML = `
             <div class="slideshow-container fade-in ${darkModeClass}">
@@ -302,8 +446,17 @@ function renderSlideshowView() {
                 </div>
                 <div class="slideshow-details ${darkModeClass}">
                     <h2 class="certificate-title1">${cert.title}</h2>
-                    <p><a target="_blank" href= "${cert.schoolLink}" class="certificate-school ${darkModeClass}">🏫: ${cert.school}</a></p>
-                    <p class="certificate-description">${cert.description}</p>
+                    
+                    <!-- ✅ ปรับตรงนี้ให้เป็น container แบบเดียวกับ card -->
+                    <div class="school-containner">
+                        <a target="_blank" href="${cert.schoolLink}" class="${darkModeClass}">
+                            ${schoolLogo}
+                            <span class="school-name">${cert.school}</span>
+                        </a>
+                    </div>
+
+                    <p class="certificate-description link-cursor">${cert.description}</p>
+
                     <div class="certificate-links">
                         <a href="${cert.notionLink}" class="certificate-link ${darkModeClass}" target="_blank">
                             <span class="notes-icon">
@@ -317,7 +470,7 @@ function renderSlideshowView() {
                         </a>
                         
                         <a href="${cert.certificateLink}" class="certificate-link ${darkModeClass}" target="_blank">
-                            <verify-icon class="${darkModeClass}"><span>Verify Certificate</span></verify-icon>
+                            <span class="cost-icon">Verify Certificate</span>
                         </a>
                     </div>
                 </div>
@@ -325,7 +478,6 @@ function renderSlideshowView() {
         `;
     }
 
-    // แสดง slideshow view และซ่อน views อื่น
     slideshowView.style.display = 'block';
 
     const galleryView = document.getElementById('gallery-view');
@@ -335,14 +487,26 @@ function renderSlideshowView() {
     if (listView) listView.style.display = 'none';
 }
 
+function renderSchoolInfo(cert, darkModeClass = '') {
+  return `
+    <div class="school-containner">
+      <a target="_blank" href="${cert.schoolLink}" class="${darkModeClass}">
+        ${getSchoolLogo(cert.school)}
+        <span class="school-name">${cert.school}</span>
+      </a>
+    </div>
+  `;
+}
+
+
 // Render list view
 function renderListView() {
     const listView = document.getElementById('list-view');
     if (!listView) return;
 
     const filteredCerts = getFilteredCertificates();
-    // ตรวจสอบโหมดปัจจุบันโดยตรงจาก body class
     const isDarkMode = document.body.classList.contains('dark-mode');
+    const darkModeClass = isDarkMode ? 'dark-mode' : '';
 
     listView.innerHTML = `
         <div class="certificate-list fade-in">
@@ -354,17 +518,36 @@ function renderListView() {
                             <th>School</th>
                             <th>Value Courses</th>
                             <th>View Notion</th>
-                            <th>Verify</th>
+                            <th>Check</th>
                         </tr>
                     </thead>
                     <tbody>
                         ${filteredCerts.map(cert => `
                             <tr>
-                                <td onclick="openGalleryModal('${cert.image}')" onmouseover="showPreview(event, '${cert.image}')" onmouseout="hidePreview()">${cert.title}</td>
-                                <td><a target="_blank" href="${cert.schoolLink}" class="certificate-school">${cert.school}</a></td>
-                                <td><a target="_blank" href="${cert.costlink}" class="check">${cert.cost}</a></td>
-                                <td><a target="_blank" href="${cert.notionLink}" class="check"><img src="notion.webp" width="20" class="notion-icon"> Notion</a></td>
-                                <td><a target="_blank" href="${cert.certificateLink}" class="check">Check</a></td>
+                                <td 
+                                  onclick="openGalleryModal('${cert.image}')" 
+                                  onmouseover="showPreview(event, '${cert.image}')" 
+                                  onmouseout="hidePreview()"
+                                  class="certificate-title3">${cert.title}</td>
+
+                                <!-- ✅ แสดง school logo + name -->
+                                <td>${renderSchoolInfo(cert, darkModeClass)}</td>
+
+                                <td>
+                                  <a target="_blank" href="${cert.costlink}" class="check">
+                                    ${cert.cost}
+                                  </a>
+                                </td>
+
+                                <td>
+                                  <a target="_blank" href="${cert.notionLink}" class="check">
+                                    <img src="notion.webp" width="20" class="notion-icon"> Notion
+                                  </a>
+                                </td>
+
+                                <td>
+                                  <a target="_blank" href="${cert.certificateLink}" class="check">Verify</a>
+                                </td>
                             </tr>
                         `).join('')}
                     </tbody>
@@ -373,7 +556,6 @@ function renderListView() {
         </div>
     `;
 
-    // แสดง list view และซ่อน views อื่น
     listView.style.display = 'block';
 
     const galleryView = document.getElementById('gallery-view');
